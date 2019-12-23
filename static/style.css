@@ -1,0 +1,13 @@
+.post-title a{
+text-transform: capitalize;
+}
+.post-meta{
+	color: #343a40;
+    font-size: .75rem;
+    text-transform: uppercase;
+}
+.dark-theme .post-meta{
+    color: #fff;
+font-size: .75rem;
+text-transform: uppercase;
+}
