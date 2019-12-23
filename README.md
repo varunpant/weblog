@@ -1,0 +1,2 @@
+# weblog
+My Static Blog
