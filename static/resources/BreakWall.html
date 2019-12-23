@@ -1,0 +1,431 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+ <head>
+  <title> Wall Breaker </title>
+  <meta name="Author" content="varun pant at http://www.varunpant.com">
+  <meta name="Keywords" content="">
+  <meta http-equiv="imagetoolbar" content="no">
+ </head>
+<style type="text/css">
+	html {
+		overflow: hidden;		
+	}
+	body {
+		margin: 0px;
+		padding: 0px;
+		background: #ccc;
+		width: 100%;
+		height: 100%;		
+	}
+	#screen {
+		position:absolute;
+		left: 50%;
+		top: 50%;
+		width: 800px;
+		height: 600px;
+		margin-left: -400px;
+		margin-top:-300px;
+		background: #fff;
+		overflow: hidden;
+		box-shadow: 3px 3px 7px #777;
+		-webkit-box-shadow: 3px 3px 7px #777;  		
+	}
+	 
+	span
+	{
+		margin:0;
+		padding:0px;
+		-moz-border-radius: 22px;  
+		-webkit-border-radius: 22px; 
+		box-shadow: 1px 1px 5px #777;
+		-webkit-box-shadow: 1px 1px 5px #777; 
+	}
+	#LifeBox
+	{
+	    position:absolute;		 
+		bottom: 10px;
+		left: 50%;
+		width: 50px;
+		padding:10px;
+		box-shadow: 3px 3px 7px #777;
+		-webkit-box-shadow: 3px 3px 7px #777;  
+		background: #fff;
+	}
+	#dbg
+	{
+	    position:absolute;
+		left:2px;
+		bottom: 2px;
+		color:#000;
+		background: #fff;	 	
+	}
+	#shim
+	{
+		opacity: .75; /* Standard: FF gt 1.5, Opera, Safari */
+		filter: alpha(opacity=75); /* IE lt 8 */
+		-ms-filter: "alpha(opacity=75)"; /* IE 8 */
+		-khtml-opacity: .75; /* Safari 1.x */
+		-moz-opacity: .75; /* FF lt 1.5, Netscape */
+		background:#B8B8B8;
+		position:absolute;
+		left: 0px;
+		top: 0px;
+		height:100%;
+		width:100%;
+		
+	}	
+	#msgbx
+    {
+		position:absolute;
+		left: 50%;
+		top: 50%;
+		height:150px;
+		width:350px;
+		margin-top :-75px;
+		margin-left : -175px;
+		background:#fff;
+		border:1px solid #ccc;
+		box-shadow: 3px 3px 7px #777;
+		-webkit-box-shadow: 3px 3px 7px #777; 
+		-moz-border-radius: 22px;  
+		-webkit-border-radius: 22px; 
+		
+	}
+	#btnStart
+	{
+		border:1px solid #F0F0F0 ;
+		width:100px;
+		padding-top:5px;
+		padding-bottom:5px; 
+		margin-left:125px;
+		background:#606060 ;
+		cursor:pointer;
+		color:#fff
+	}
+	#btnStart: hover
+	{
+	 color:#000;	
+	 background:green ;
+	}
+	#msg
+	{
+		text-align:center;
+		font-family: 'Bookman Old Style', 'Serifa BT', 'URW Bookman L', 'itc bookman', times, serif;
+		font-size: 30px;
+		padding:5;
+		color:#6666FF;	 
+	}
+	 
+	
+</style>
+
+<script type="text/javascript">
+/*
+   =================================================================
+	script: WallBreaker.html (Awsum version)
+	author: Varun Pant  
+	date: July 12, 2010
+	site: http://www.varunpant.com
+	----------------------------------------------------------------
+	 
+   =================================================================
+*/
+ 
+  var $ = function(id) { return document.getElementById(id); };
+  var dc = function(tag) { return document.createElement(tag); };
+
+ var game =
+ {	
+	bricks:[
+	[1,1,1,1,1],
+	[1,1,1,1,1],
+	[1,1,1,1,1],
+	[1,1,1,1,1]
+	],
+	hitCount:20,
+	lives:3,
+	score:0,
+	bar:null,
+	ball:null,
+	screen:null,
+	ballSpeedX:2,	 
+	bindKeys:function()
+	{ 
+		document.onkeydown = function(e)
+		{
+			e = e || window.event;
+	 
+			switch (e.keyCode) { // which key was pressed?	 			
+				
+				case 32: // release ball.
+				if(!game.ball.isFree)
+				{
+					game.ball.isFree = true;
+					game.ball.directionX = game.ball.directionY = 1;
+					game.ball.x = game.ball.offsetLeft;					
+					game.ball.y =   game.screen.offsetHeight - game.ball.offsetTop;
+				}
+					break;
+					
+				case 37: // left, rotate player left
+					game.bar.direction = -1;
+					break;
+	 
+				case 39: // right, rotate player right
+					game.bar.direction = 1;
+					break;
+			}
+		}
+
+		document.onkeyup = function(e)
+		{
+			e = e || window.event;
+	 
+			switch (e.keyCode) 
+			{					
+				case 37:
+				case 39:
+					game.bar.direction = 0;
+					break;
+			}
+		}
+	},	 
+	gameCycle:function()
+	{
+		game.move();  
+		setTimeout(game.gameCycle,1000/30);
+	},
+	move:function()
+    {	 
+		
+	 	var newX = game.bar.offsetLeft + (10 * game.bar.direction); 
+		if(newX > 0 && (newX+game.bar.offsetWidth) < 795 )
+		{		
+			game.bar.style.left =  newX + "px";
+			if(!game.ball.isFree)
+			{
+				game.ball.style.left =  newX + 45 + "px";
+			}
+		} 
+		if(game.ball.isFree){ 		  
+		
+			//Test for successfull bounce by pad.
+			if(game.ball.y <= 15 && game.ball.y >= 1)
+			{				 
+				if(game.ball.x > newX && game.ball.x < (newX + game.bar.offsetWidth))
+				{
+					game.ball.directionY = 1;
+					//If ball Hits somewhere near center of bar. 
+					if(game.ball.x > (newX + 20) && game.ball.x <(newX + 75))
+					{
+						game.ballSpeedX = (Math.random()<0.5)? 2 : 4;  
+					}					
+					else
+					{
+					    game.ballSpeedX = 6.3 + Math.random() * -game.bar.direction;	
+					}				  
+				}
+			}
+			
+			//Reset Ball.(Reduce chance.)
+			if(game.ball.y < 1)
+			{
+				game.ball.style.left = newX + 45 + "px";
+				game.ball.style.bottom = 15 + "px";
+				game.ball.isFree = false; 				
+				game.lives--;//$('dbg').innerHTML = game.lives;
+				if(game.lives>0){$("life" + game.lives).style.visibility = "hidden";}
+				if(game.lives == 0)
+				{
+			    	game.showMessage("Game Over :( ");
+				}				
+				return;
+			}
+			
+			//Check if ball is inside walls(top)
+			if(game.ball.y > 590 )
+			{			     
+				 game.ball.directionY = -1;
+			}			
+			
+			//Check is ball is inside walls (left and right)
+			if(game.ball.x <=0 || game.ball.x >= 785)
+			{			     
+				game.ball.directionX = -game.ball.directionX;
+			}
+			
+			//Check if ball hits a brick.
+			if(game.brickHit(game.ball.x,game.ball.y))
+			{
+			    game.score++;
+			    if(game.score ==  game.hitCount)
+				{
+					//Level Clear .
+					game.ball.style.left = newX + 45 + "px";
+				    game.ball.style.bottom = 15 + "px";
+				    game.ball.isFree = false;
+					game.showMessage("Level Clear !");
+				    return;
+				}
+				 
+				game.ball.directionY = -game.ball.directionY;
+				game.ball.directionX = -game.ball.directionX;
+			}
+			
+			
+			game.ball.y += 10 * game.ball.directionY;
+			game.ball.x += game.ballSpeedX * game.ball.directionX;			
+			
+		    game.ball.style.bottom =  Math.round(game.ball.y) + 'px';
+			game.ball.style.left = Math.round(game.ball.x) + 'px';				
+		}			
+		 
+			 
+    },
+	brickHit:function(x,y)
+	{		
+		var col =game.bricks[0].length;
+		for(i=0;i<game.bricks.length;i++)
+		{
+			for(j=0; j<col;j++)
+			{
+			    if(game.bricks[i][j] == 1)
+				{
+					var x1 = 135 + 105 * j;
+					var y1 = 570 - (30 * (i+1));
+					var x2 = x1 + 100;
+					var y2 = y1 - 25;	 
+					 
+					if( x + 10 >= x1 && x <= x2 && y - 35 <= y1 && y >= y2 )
+					{					 
+						var id = j+'b'+i;
+						game.bricks[i][j] = 0;
+						$(id).style.display = 'none';					 
+						return true;
+					}
+				}
+			}	 
+		}
+		return false;
+	},	
+	init:function()
+	{
+	    game.screen = $('screen');
+		
+		var col =game.bricks[0].length;
+		for(i=0;i<game.bricks.length;i++)
+		{
+			for(j=0; j<col;j++)
+			{
+				var brick = dc("span"); 
+				brick.style.position = "absolute";
+				brick.style.backgroundColor="green";
+				brick.style.left = 135 + 105 * (j) + "px";
+				brick.style.top = 30 * (i+1) + "px";
+				brick.style.width = "100px";
+				brick.style.height = "25px";
+				brick.id = j+'b'+i;
+				game.screen.appendChild(brick); 
+			}			
+		}	
+		
+		//////////////////////////
+		
+	    game.bar = dc("span"); 
+	    game.bar.style.position = "absolute";
+		game.bar.style.backgroundColor="#000";
+		game.bar.style.left = 150 + "px";
+		game.bar.style.bottom = 5 + "px";
+		game.bar.style.width = 100 + "px";
+		game.bar.style.height = "10px";
+		game.bar.direction = 0;
+		
+		game.ball = dc("span");
+	    game.ball.style.position = "absolute";
+		game.ball.style.backgroundColor = "red";
+		game.ball.style.left = 195 + "px";
+		game.ball.style.bottom = 15 + "px";
+		game.ball.style.height = game.ball.style.width = "10px";
+	 
+		game.ball.isFree = false;			//Indicates ball is not yet released.	
+		
+		game.screen.appendChild(game.ball); 
+		game.screen.appendChild(game.bar); 
+
+		
+		/////////////////////////
+		game.addLives(); 
+		game.bindKeys();
+		game.gameCycle();	
+		
+	},
+	addLives:function()
+	{
+	    $('LifeBox').innerHTML="";
+		for(l=0;l<game.lives;l++)
+		{
+		 var b = dc("span");
+		 b.className ="lives";
+	 	 b.style.position = "absolute";
+	 	 b.style.left = (l * 20) + 10 + 'px';
+		 b.id = "life" + (l+1);
+		 
+	 	 b.style.top = "5px";
+		 b.style.backgroundColor = "red";
+		 b.style.height = b.style.width = "10px";
+		 $('LifeBox').appendChild(b); 
+		}
+		
+		$("life" + game.lives).style.visibility = "hidden"; 
+		
+	},
+	showMessage:function(msg)
+	{
+	    if(msg)
+		{
+			$('msg').innerHTML = msg;
+			$('btnStart').innerHTML = "Restart !"
+		}
+		$('shim').style.display = $('msgbx').style.display ="block";
+	},
+	hideMessage:function()
+	{
+		game.score=0;
+		game.lives =3;
+		game.addLives();
+		$('msg').innerHTML ="";		  
+		for(i=0;i<game.bricks.length;i++){for(j=0; j<game.bricks[0].length;j++){game.bricks[i][j] = 1;$( j+'b'+i).style.display = 'inline';	}}
+		$('shim').style.display = $('msgbx').style.display ="none";
+	}
+ } 
+		
+		
+/* ==== onload ==== */
+onload = function () {	 
+	
+	$('btnStart').onclick = game.hideMessage ;
+	game.init();
+}
+		
+		
+</script>
+  
+
+
+
+ <body>
+ 
+  <div id="screen"> </div>
+  
+   <div id="dbg"> </div>
+   <div id="shim"> </div>
+   <div id="msgbx"> 
+	<p id="msg" >Click play to start.</p>	 
+	<button id="btnStart">Play</button>
+   </div>
+   <div id="LifeBox"> </div>
+ </body>
+
+
+
+</html>

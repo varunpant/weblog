@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+	html, body, #map-canvas { height: 100%; margin: 0; padding: 0;}
+	#map_controls
+	{
+		position:absolute;
+		right:20px;
+		top:150px;
+		width:90px;
+		height:320px;
+		z-index: 99;
+		padding: 8px;
+		padding-left: 25px;
+		padding-right: 25px;
+		background: none repeat scroll 0% 0% rgb(255, 255, 255);
+		border: 1px solid rgb(204, 204, 204);
+		box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+		border-radius: 0px;
+	}
+	#pc{
+		color: black;
+		border: 1px solid rgb(204, 204, 204);
+		box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+		border-radius: 50%;
+		height: 50px;
+		width: 50px;
+		margin-left: 22.5px;
+		text-align: center;
+		font-weight: bold;
+	}
+	.controls {
+		z-index: 99;
+		margin-top: 16px;
+		border: 1px solid transparent;
+		border-radius: 2px 0 0 2px;
+		box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		position:absolute;
+		left:500px;
+		top:10px;
+		height: 32px;
+		outline: none;
+		box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+	}
+
+	#pac-input {
+		left:100px;
+		background-color: #fff;
+		padding: 0 11px 0 13px;
+		width: 400px;
+		font-family: Roboto;
+		font-size: 15px;
+		font-weight: 300;
+		text-overflow: ellipsis;
+	}
+
+	#pac-input:focus {
+		border-color: #4d90fe;
+		margin-left: -1px;
+		padding-left: 14px;  /* Regular padding-left + 1. */
+		width: 401px;
+	}
+
+	.pac-container {
+		font-family: Roboto;
+	}
+
+	#type-selector {
+		color: #fff;
+		background-color: #4d90fe;
+		padding: 5px 11px 0px 11px;
+	}
+
+	#type-selector label {
+		font-family: Roboto;
+		font-size: 13px;
+		font-weight: 300;
+	}
+
+	#plotIsoChrones
+	{
+		border: 1px solid transparent;
+		border-radius: 2px 0 0 2px;
+		box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		background-color: #4d90fe;
+		width: 100%;
+		color: #fff;
+		cursor: pointer;
+	}
+	#step_cntrls
+	{
+		width: 100%;
+		height: 240px;
+		font-family: Roboto;
+		font-size: 13px;
+		font-weight: 300; 
+	}
+	#step_cntrls >*{margin: 5px 0px; text-align: center;}
+    #loadinggif{display: none;height: 130px;}
+    #ddlTravelDuration{display: none;}
+	</style>
+
+</head>
+<body>
+	<div id="map-canvas"></div>
+	<div id="map_controls">
+		<div id="pc"><p></p></div>
+		<div id="step_cntrls">
+		
+		<input type="radio" name="isc" id="Isodistance" onchange="isc_changed(0)" onclick="this.blur();" checked>
+		<label for="Isodistance">Isodistance</label>
+
+		<input type="radio" name="isc" id="Isochrone" onchange="isc_changed(1)" onclick="this.blur();" >
+		<label for="Isochrone">Isochrone</label>
+
+			<select id="ddlTravelDistance">
+				<option value = "-1">Distance</option>
+				<option value="1">1 Mile</option>
+				<option value="2">2 Mile</option>
+				<option value="3">3 Mile</option>
+				<option value="4">4 Mile</option>
+				<option value="5">5 Mile</option>
+			</select>
+			<select id="ddlTravelDuration">
+				<option value = "-1">Duration</option>
+				<option value="1">1 Minute</option>
+				<option value="2">2 Minute</option>
+				<option value="3">3 Minute</option>
+				<option value="4">4 Minute</option>
+				<option value="5">5 Minute</option>
+			</select>
+			<select id="ddlTravelMode">
+				<option value="DRIVING" selected>Driving</option>
+				<option value="WALKING">Walking</option>
+				<option value="BICYCLING">Bicycling</option>
+				<option value="TRANSIT">Transit</option>
+			</select>
+
+			<img src="working.gif" alt="working..." id="loadinggif">
+
+		</div>
+		<button id="plotIsoChrones" onclick="startPlotting();">Plot</button>
+	</div>
+	<input id="pac-input" class="controls" type="text" placeholder="Enter a location">
+	<div id="type-selector" class="controls">
+		<input type="radio" name="type" id="changetype-all" checked="checked">
+		<label for="changetype-all">All</label>
+
+		<input type="radio" name="type" id="changetype-establishment">
+		<label for="changetype-establishment">Establishments</label>
+
+		<input type="radio" name="type" id="changetype-address">
+		<label for="changetype-address">Addresses</label>
+
+		<input type="radio" name="type" id="changetype-geocode">
+		<label for="changetype-geocode">Geocodes</label>
+	</div>
+</body>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,places"></script>
+<script src="build/Isochrone.js"></script>
+<script type="text/javascript">
+var c_marker;
+function initialize() {
+
+			// =============================================================
+			// Some styling fun.
+			// =============================================================
+
+			var styles = [
+			{
+				"featureType": "landscape",
+				"stylers": [
+				{
+					"saturation": -100
+				},
+				{
+					"lightness": 65
+				},
+				{
+					"visibility": "on"
+				}
+				]
+			},
+			{
+				"featureType": "poi",
+				"stylers": [
+				{
+					"saturation": -100
+				},
+				{
+					"lightness": 51
+				},
+				{
+					"visibility": "simplified"
+				}
+				]
+			},
+			{
+				"featureType": "road.highway",
+				"stylers": [
+				{
+					"saturation": -100
+				},
+				{
+					"visibility": "simplified"
+				}
+				]
+			},
+			{
+				"featureType": "road.arterial",
+				"stylers": [
+				{
+					"saturation": -100
+				},
+				{
+					"lightness": 30
+				},
+				{
+					"visibility": "on"
+				}
+				]
+			},
+			{
+				"featureType": "road.local",
+				"stylers": [
+				{
+					"saturation": -100
+				},
+				{
+					"lightness": 40
+				},
+				{
+					"visibility": "on"
+				}
+				]
+			},
+			{
+				"featureType": "transit",
+				"stylers": [
+				{
+					"saturation": -100
+				},
+				{
+					"visibility": "simplified"
+				}
+				]
+			},
+			{
+				"featureType": "administrative.province",
+				"stylers": [
+				{
+					"visibility": "off"
+				}
+				]
+			},
+			{
+				"featureType": "water",
+				"elementType": "labels",
+				"stylers": [
+				{
+					"visibility": "on"
+				},
+				{
+					"lightness": -25
+				},
+				{
+					"saturation": -100
+				}
+				]
+			},
+			{
+				"featureType": "water",
+				"elementType": "geometry",
+				"stylers": [
+				{
+					"hue": "#ffff00"
+				},
+				{
+					"lightness": -25
+				},
+				{
+					"saturation": -97
+				}
+				]
+			}
+			];
+
+			var styledMap = new google.maps.StyledMapType(styles, {
+				name: "Isochrone Map"
+			});
+
+
+
+
+			var directionsService = new google.maps.DirectionsService();
+
+			var london = new google.maps.LatLng(51.49059839706688, -0.09384436035156707);
+
+			var mapOptions = {
+				center: london,
+				zoom: 15
+			};
+
+			window.map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+			map.mapTypes.set('Isochrone Map', styledMap);
+			map.setMapTypeId('Isochrone Map');
+
+
+
+
+		// =============================================================
+		// google removed getBounds from Polygon so had to improvise.
+		// =============================================================
+		if (!google.maps.Polygon.prototype.getBounds) {
+
+			google.maps.Polygon.prototype.getBounds = function() {
+				var bounds = new google.maps.LatLngBounds()
+				this.getPath().forEach(function(element, index) {
+					bounds.extend(element)
+				})
+				return bounds
+			}
+		}
+
+       // =============================================================
+	   // Autocomplete.
+	   // =============================================================
+
+
+	   var input =   document.getElementById('pac-input');
+
+	   var types = document.getElementById('type-selector');
+	   map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+	   map.controls[google.maps.ControlPosition.TOP_LEFT].push(types);
+
+	   var autocomplete = new google.maps.places.Autocomplete(input);
+		//autocomplete.bindTo('bounds', map);
+		c_marker = new google.maps.Marker({
+			map: map,
+			anchorPoint: new google.maps.Point(0, -29),
+			draggable:true,
+			animation: google.maps.Animation.DROP
+		});
+
+		c_marker.setPosition(london);
+
+		google.maps.event.addListener(autocomplete, 'place_changed', function() {
+
+			c_marker.setVisible(false);
+			var place = autocomplete.getPlace();
+			if (!place.geometry) {
+				return;
+			}
+
+	    // If the place has a geometry, then present it on a map.
+	    if (place.geometry.viewport) {
+	    	map.fitBounds(place.geometry.viewport);
+	    } else {
+	    	map.setCenter(place.geometry.location);
+	      map.setZoom(17);  // Why 17? Because it looks good.
+	  }
+	  c_marker.setIcon(/** @type {google.maps.Icon} */({
+	  	url: place.icon,
+	  	size: new google.maps.Size(71, 71),
+	  	origin: new google.maps.Point(0, 0),
+	  	anchor: new google.maps.Point(17, 34),
+	  	scaledSize: new google.maps.Size(35, 35)
+	  }));
+
+	  c_marker.setPosition(place.geometry.location);
+	  c_marker.setVisible(true);
+
+	});
+
+		function setupClickListener(id, types) {
+			var radioButton = document.getElementById(id);
+			google.maps.event.addDomListener(radioButton, 'click', function() {
+				autocomplete.setTypes(types);
+			});
+		}
+
+		setupClickListener('changetype-all', []);
+		setupClickListener('changetype-address', ['address']);
+		setupClickListener('changetype-establishment', ['establishment']);
+		setupClickListener('changetype-geocode', ['geocode']);
+
+		// =============================================================
+		// This is where the fun begins.
+		// =============================================================
+		var startPlotting = function(){
+
+			var tdist = document.getElementById("ddlTravelDistance");
+			var dist = Number(tdist.options[tdist.selectedIndex].value);
+
+			var tdur = document.getElementById("ddlTravelDuration");
+			var duration = Number(tdur.options[tdur.selectedIndex].value);
+
+			var tm = document.getElementById("ddlTravelMode");
+			var selectedMode = tm.options[tm.selectedIndex].value;
+
+			var travelMode =  google.maps.TravelMode[selectedMode];
+
+			if(window.ISOCHRONE)
+			{
+				if(duration > -1){
+					var posi = c_marker.getPosition(); 
+					c_marker.setVisible(false);
+					drawIsochrones(posi,directionsService,3,duration,travelMode);
+				}
+				else
+					alert("Choose a duration.")
+			}
+			else
+			{
+				if(dist > -1){
+					var posi = c_marker.getPosition(); 
+					c_marker.setVisible(false);
+					drawIsochrones(posi,directionsService,dist,null,travelMode);
+				}
+				else
+					alert("Choose a distance.")
+			}
+
+			
+		}
+
+		window.startPlotting = startPlotting;
+		window.ISOCHRONE = false;
+		window.isc_changed = function(val)
+		{
+			if(val == 0)
+			{   
+				 document.getElementById("ddlTravelDistance").style.display = 'block';
+ 				 document.getElementById("ddlTravelDuration").style.display = 'none';
+ 				 window.ISOCHRONE = false;
+			}
+			else
+			{
+				 document.getElementById("ddlTravelDistance").style.display = 'none';
+ 				 document.getElementById("ddlTravelDuration").style.display = 'block';
+ 				 window.ISOCHRONE = true;
+			}
+		}
+	}
+
+
+
+
+
+	google.maps.event.addDomListener(window, 'load', initialize);
+	</script>
+	</html>

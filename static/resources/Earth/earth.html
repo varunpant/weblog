@@ -1,0 +1,74 @@
+<html>
+
+<head>
+<meta name="Author" content="Varun Pant at http://www.varunpant.com"> 
+<meta http-equiv="imagetoolbar" content="no"> 
+<title>Earth on Canvas</title>
+
+<style>
+ 
+  body.black {
+    background-color: black;
+    color: white;
+  }
+  span.spaceyspan { margin-right: 20px; }
+  div.centeredDiv { text-align: center; }
+ #dbg
+ {
+	background-color: #fff;
+	color:#000;
+	position:absolute;
+	height:50px;
+	width:150px;
+	right:5px;
+	top:0px;
+ }
+ #MSG
+ {
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-left:-100px;
+	margin-top:-20px;
+	width:200px;
+	height:40px;
+	font-size:25px;
+	text-align:center;
+ }
+</style>
+
+<script src="pre3d.js"></script>
+<script src="pre3d_shape_utils.js"></script>
+<script src="demo_utils.js"></script>
+<script src="Earth.js"></script>
+ 
+</head>
+
+<body class="black">
+
+<div class="centeredDiv">
+<span id="MSG">Loading Texture...</span>
+<canvas id="canvas" width="800" height="600">
+  Sorry, this demo requires a web browser which supports HTML5 canvas!
+  Try Crome!!!
+</canvas>
+
+</div>
+
+<table>
+<tr><td><input id="tglStroke" type="checkbox"  OnClick="Earth.ToggleStoke(this);" />Toggel Quad Borders</td><td></td><td></td></tr>
+<tr><td>Choose Texture</td><td>&rarr;</td><td>
+<FORM>
+
+<input TYPE="radio" id="r1" name="myradio"  style="visibility:hidden;" VALUE="1.jpg" onClick="Earth.ToggleTexture(this)" />Earth
+<input TYPE="radio" id="r2" name="myradio" style="visibility:hidden;" VALUE="2.jpg" onClick="Earth.ToggleTexture(this)" /> Lights
+<input TYPE="radio" id="r3" name="myradio" style="visibility:hidden;" VALUE="3.jpg" onClick="Earth.ToggleTexture(this)" />Dark Earth
+<input TYPE="radio" id="r4" name="myradio" style="visibility:hidden;" VALUE="4.jpg" onClick="Earth.ToggleTexture(this)" />Black & White
+ 
+ 
+</FORM>
+</td></tr>
+</table>
+<div id="preloadCache" style="display:none;"></div>
+</body>
+</html>
