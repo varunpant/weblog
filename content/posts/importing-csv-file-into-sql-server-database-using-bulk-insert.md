@@ -12,9 +12,17 @@ category = ["sqlserver","database","general"]
 
   BULK INSERT is a SQL command which can be typed in management console,takes various parameters to control the import and is very simple to use. 
 
-  A typical use would look like this:  GO BULK INSERT  from 'C:\sourceFile.csv' WITH ( FIELDTERMINATOR =',', ROWTERMINATOR ='\n' )  and that's it, the command will automatically read csv file, try to do any default type conversion(determined by the TargetTables colum types) and will fail if there are any errors. 
+  A typical use would look like this: ```
+GO
+BULK INSERT  from 'C:\sourceFile.csv' WITH ( FIELDTERMINATOR =',', ROWTERMINATOR ='\n' ) 
+```
+ and that's it, the command will automatically read csv file, try to do any default type conversion(determined by the TargetTables colum types) and will fail if there are any errors. 
 
-  There are many other properties which can be set to make import easy ti handle, the ones I typically use are  GO BULK INSERT  from 'C:\sourceFile.csv' WITH ( FIELDTERMINATOR =',', ROWTERMINATOR ='\n', CODEPAGE='RAW',--Helps in Determining the source/destination Encoding (UTF8 etc) MaxErrors = 999999-- This will allow 999999 errors to be ignored before the whole import fails. This is a workaround as its not possible to tell the importer to ignore errors completely. )  Here is a full syntax and supported properties, for their explanation, please visit < href="http://msdn.microsoft.com/en-us/library/aa225968(v=sql.80).aspx" >this 
+  There are many other properties which can be set to make import easy ti handle, the ones I typically use are ```
+GO
+BULK INSERT  from 'C:\sourceFile.csv' WITH ( FIELDTERMINATOR =',', ROWTERMINATOR ='\n', CODEPAGE='RAW',--Helps in Determining the source/destination Encoding (UTF8 etc) MaxErrors = 999999-- This will allow 999999 errors to be ignored before the whole import fails. This is a workaround as its not possible to tell the importer to ignore errors completely. ) 
+```
+ Here is a full syntax and supported properties, for their explanation, please visit < href="http://msdn.microsoft.com/en-us/library/aa225968(v=sql.80).aspx" >this 
 
 
 

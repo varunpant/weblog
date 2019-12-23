@@ -1,0 +1,221 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"> 
+<html> 
+<head> 
+<title>Iphone Scrolling in JavaScript Demo</title> 
+<meta name="Author" content="Varun Pant at http://www.varunpant.com"> 
+<meta http-equiv="imagetoolbar" content="no"> 
+<style type="text/css"> 
+	html { 
+		overflow: hidden; 
+	} 
+	body { 
+		position: absolute; 
+		margin: 0px; 
+		padding: 0px; 		
+		width: 100%; 
+		height: 100%;   
+	} 
+	img
+	{
+	 position: absolute;
+	 height:750px;
+	 width:478px;
+	 margin-left: -247px; 	
+	 left:50%;
+	}
+	#screen { 
+		position: absolute; 
+		left: 50%; 
+		top: 112px; 
+		width: 330px; 
+		height:438px; 
+		margin-left: -170px; 		
+		background: #fff; 
+		overflow: hidden; 
+	} 
+	#scrollMe
+	{	
+		position: absolute;
+		color:#000;
+		top:0px;
+	}
+	#scrollMe p
+	{
+		border-bottom:1px solid #ccc;
+		height:45px;
+		width:295px;
+		text-align:left;
+		line-height:2.7em;
+		padding-left: 10px;
+		padding-right:15px;
+		background:#ffffff url('arrow.png') no-repeat right center ;
+		margin:0px;
+	}
+	
+	#debug
+	{
+		background: #fff; 
+		position: absolute; 
+		height:30px;
+		width:200px
+		visibility:hidden;
+	}
+
+
+</style> 
+ 
+<script type="text/javascript"> 
+/* 
+   ========================================================================== 
+         script: Iphone Scroll 
+         author: Varun Pant 
+	     date: 16 June, 2010 
+	     site: http://www.varunpant.com            
+               ------------ 
+        license: CC-BY-NC - please do not remove this notice ! 
+   ========================================================================== 
+*/
+  
+var scroll = 
+{
+	down:false,
+	verticalOffset:-5,
+	ym:0,
+	decay : .93,
+    mdDecay : 0.27,
+	speedOffset : 0.4,
+	sprinessOffset : 0.08,
+	_velocity : 0,
+    _mouseDownY : 0,
+	$:function(id)
+	{
+		return document.getElementById(id);
+	},
+	/* --- events --- */
+	addEvent : function  (o, e, f) {
+		if (window.addEventListener) o.addEventListener(e, f, false);
+		else if (window.attachEvent) r = o.attachEvent('on' + e, f);
+	},
+	init :function()
+	{ 
+		   setInterval(scroll.compositiontarget_rendering,30);
+		    
+		   scroll.verticalOffset= scroll.$('scrollMe').offsetTop;
+
+			scroll.addEvent(scroll.$('scrollMe'), 'mousedown', function(e) 
+			{
+				scroll.$('scrollMe').style.cursor = 'move';
+				if(!scroll.down)
+				{
+					scroll.down = true;					 
+					scroll.ym = e.clientY;
+					scroll._mouseDownY = scroll.$('scrollMe').offsetTop;
+				}
+			 
+				 if (e.preventDefault) e.preventDefault(); 
+			});
+
+			scroll.addEvent(scroll.$('scrollMe'), 'mouseup', function() 
+			{
+				scroll.down = false;
+				scroll.$('scrollMe').style.cursor = 'default';
+				 
+			});
+			
+		 
+			scroll.addEvent(scroll.$('scrollMe'), 'mousemove', function(e) 
+			{
+				if(scroll.down)
+				{ 
+				if(scroll.canScrollFurther())
+					scroll.$('scrollMe').style.top = (scroll._mouseDownY + (e.clientY - scroll.ym)) + 'px';					
+					 // update the velocity
+					scroll._velocity += ((e.clientY - scroll.ym) * scroll.speedOffset);					
+				}
+				 
+			});
+
+			document.onselectstart = function () { return false; }
+	} ,
+	compositiontarget_rendering:function()
+	{
+			 // decay the velocity
+            if(scroll.down)
+			{
+				scroll._velocity *= scroll.mdDecay;
+			}
+            else 
+			{
+				scroll._velocity *= scroll.decay;
+			 
+				var screenHeight = scroll.$('screen').offsetHeight;
+                var scrolRegionHeight = scroll.$('scrollMe').offsetHeight;
+
+                var y = scroll.$('scrollMe').offsetTop-scroll.verticalOffset;
+                var spriness = 0;
+
+                // calculate a spriness when the text moves over the canvas size
+                if (y > 0)
+                {
+                    spriness = -y * scroll.sprinessOffset;
+                }
+			 	else if(y + scrolRegionHeight  < screenHeight)
+				{
+                    spriness = ((screenHeight - scrolRegionHeight - y) * scroll.sprinessOffset) ;
+                } 
+				if(!scroll.canScrollFurther()){scroll._velocity = -(scroll._velocity/8)}
+				scroll.$('scrollMe').style.top = ( y + scroll._velocity + spriness) + 'px';
+			}
+
+			
+	},
+	canScrollFurther:function()
+	{
+		var _top = scroll.$('scrollMe').offsetTop;
+		var bottom = _top +  scroll.$('scrollMe').offsetHeight;
+		var center = (scroll.$('screen').offsetTop + scroll.$('screen').offsetHeight)/2;
+		return (_top < center && bottom > center);
+	}
+
+
+} ;
+ 
+ 
+  
+/* ==== start script ==== */
+ 
+onload = function() { 
+
+	var lst="";
+	for(i=0;i<50;i++)
+	{
+		lst += "<p> Lorem Ipsum Sit amet " + i + "</p>";
+	}
+	document.getElementById('scrollMe').innerHTML= lst;
+	scroll.init();
+}
+
+ 
+  
+</script>
+
+
+</head>
+
+
+ <body id="body"> 
+ <img src="body.jpg" />
+	<div id="screen">
+
+		<div id="scrollMe">
+	    
+	 
+	 
+		</div>
+
+	</div> 
+ 
+<div id="debug"></div>
+
+</body> 
+</html> 

@@ -12,7 +12,11 @@ Generally, when I am in a middle of prototyping a concept or in a need of quickl
 
  Python's SimpleHTTPServer is a great way of serve the contents of the current directory,all one needs to do is change directory and execute a command which will expose all contents as if they were hosted in a web page. 
 
- cd myfolder python -m SimpleHTTPServer   you don't need a line of code or a even a python file anywhere inside the directory for this to work, the module works all on its own and just needs a **port number**. 
+ ```python
+ cd myfolder
+ python -m SimpleHTTPServer  
+```
+ you don't need a line of code or a even a python file anywhere inside the directory for this to work, the module works all on its own and just needs a **port number**. 
 
  If there is a file called index.html inside the root, then its served when the user types localhost:port. 
 
@@ -20,7 +24,22 @@ Generally, when I am in a middle of prototyping a concept or in a need of quickl
 
  Another use of this module is a quick utility Proxy. This does need a few lines of code though :!
 
- import SocketServer import SimpleHTTPServer import urllib PORT = 3333 class Proxy(SimpleHTTPServer.SimpleHTTPRequestHandler): def do\_GET(self): self.copyfile(urllib.urlopen(self.path), self.wfile) httpd = SocketServer.ForkingTCPServer(('', PORT), Proxy) print "serving at port", PORT httpd.serve\_forever() Hope it helps.
+ ```python
+import SocketServer
+import SimpleHTTPServer
+import urllib
+
+PORT = 3333
+
+class Proxy(SimpleHTTPServer.SimpleHTTPRequestHandler):
+    def do\_GET(self):
+        self.copyfile(urllib.urlopen(self.path), self.wfile)
+
+httpd = SocketServer.ForkingTCPServer(('', PORT), Proxy)
+print "serving at port", PORT
+httpd.serve\_forever()
+```
+ Hope it helps.
 
 
 

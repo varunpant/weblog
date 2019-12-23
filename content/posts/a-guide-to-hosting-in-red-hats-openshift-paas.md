@@ -31,7 +31,13 @@ In this post,I am going to write about [OpenShift](https://openshift.redhat.com/
 
  When changes have been made then type 
 
- $ cd myapp $ vim php/index.php (Make a change... :wq) $ git commit -a -m "My first change" $ git push To get you up and running quickly OpenShift has a bunch of quick starts [here](https://openshift.redhat.com/community/developers/get-started), there is also a getting started [guide](https://openshift.redhat.com/community/developers/get-involved/creating-quickstarts). 
+ ```$ cd myapp
+$ vim php/index.php
+(Make a change...  :wq)
+$ git commit -a -m "My first change"
+$ git push
+```
+ To get you up and running quickly OpenShift has a bunch of quick starts [here](https://openshift.redhat.com/community/developers/get-started), there is also a getting started [guide](https://openshift.redhat.com/community/developers/get-involved/creating-quickstarts). 
 
  OpenShift also has a well maintained [blog](https://openshift.redhat.com/community/blogs) , a [FAQ](https://openshift.redhat.com/community/faq) and even [videos](https://openshift.redhat.com/community/videos).
 

@@ -52,7 +52,22 @@ In this blog post, I will write about using [Google cloud storage](https://cloud
 
  Here is a quick example of styling states of America, the style used in TileMill is below
 
- #ne110madmin1statespr { line-color:#fff; line-width:1; polygon-opacity:0.5; text-name: "[name]"; text-face-name: "Arial Bold"; } #ne110madmin1statespr { polygon-fill: #FFFFCC; } #ne110madmin1statespr[name\_len >= 4 ] { polygon-fill: #D9F0A3; } #ne110madmin1statespr[name\_len >= 7] { polygon-fill: #ADDD8E; } #ne110madmin1statespr[name\_len >= 10] { polygon-fill: #78C679; } #ne110madmin1statespr[name\_len >= 13] { polygon-fill: #41AB5D; } #ne110madmin1statespr[name\_len >= 15] { polygon-fill: #238443; } #ne110madmin1statespr[name\_len >= 20] { polygon-fill: #005A32; } Here is how it looks. 
+ ```#ne110madmin1statespr {
+  line-color:#fff;
+  line-width:1;
+  polygon-opacity:0.5;
+  text-name: "[name]";
+  text-face-name: "Arial Bold";
+}
+#ne110madmin1statespr { polygon-fill: #FFFFCC; }
+#ne110madmin1statespr[name\_len >= 4 ] { polygon-fill: #D9F0A3; }
+#ne110madmin1statespr[name\_len >= 7] { polygon-fill: #ADDD8E; }
+#ne110madmin1statespr[name\_len >= 10] { polygon-fill: #78C679; }
+#ne110madmin1statespr[name\_len >= 13] { polygon-fill: #41AB5D; }
+#ne110madmin1statespr[name\_len >= 15] { polygon-fill: #238443; }
+#ne110madmin1statespr[name\_len >= 20] { polygon-fill: #005A32; }
+```
+ Here is how it looks. 
 
  [![image](http://varunpant.com/static/resources/image_thumb_1.png "image")](http://varunpant.com/static/resources/image_4.png)
 
@@ -60,13 +75,58 @@ In this blog post, I will write about using [Google cloud storage](https://cloud
 
  Next step is to configure a tilestache config file which is essentially a json document which is used by rendering engine to draw tiles. Here is a sample configuration
 
- { "cache": { "name": "Disk", "path": "tiles", "dirs": "portable", "umask": "0000" }, "layers": { "NE": { "provider": {"name": "mapnik", "mapfile": "C:\\Users\\Varun Pant\\Desktop\\NE\\NE.xml"}, "projection": "spherical mercator" } } } Few things to note in the above configuration is the attribute **cache **and attribute **layers**. [Cache](http://tilestache.org/doc/TileStache.Caches.html) instructs the library to save the files onto the disk, the **dirs** attribute instructs the file structure to be of portable type which essentially means to save is **X/Y/Z.png** format on the disk.
+ ```javascript
+ {
+  "cache":
+  {
+    "name": "Disk",
+    "path": "tiles",
+    "dirs": "portable",
+    "umask": "0000"
+  },
+  "layers":
+  {
+    "NE":
+    {
+        "provider": {"name": "mapnik", "mapfile": "C:\\Users\\Varun Pant\\Desktop\\NE\\NE.xml"},
+        "projection": "spherical mercator"
+    }
+  }
+}
+```
+ Few things to note in the above configuration is the attribute **cache **and attribute **layers**. [Cache](http://tilestache.org/doc/TileStache.Caches.html) instructs the library to save the files onto the disk, the **dirs** attribute instructs the file structure to be of portable type which essentially means to save is **X/Y/Z.png** format on the disk.
 
  Now to start the webserver, one can simply type in tilestache-server.py -c ne.cfg 
 
  I have also added a quick javascript below, which shows ,how to add a custom overlay on google maps and point it to our raster service.
 
- function CustomOverlay(tileSize) { this.tileSize = tileSize; } CustomOverlay.prototype.getTile = function(coord, zoom, ownerDocument) { var img = ownerDocument.createElement('img'); img.src = "http://localhost:8080/NE/" + zoom + "/" + coord.x + "/" + coord.y + ".png"; img.style.width = this.tileSize.width + 'px'; img.style.height = this.tileSize.height + 'px'; return img; }; var map; function initialize() { map = new google.maps.Map( document.getElementById("map-canvas"), { center: new google.maps.LatLng(42.660851192127, -96.5624457296875), zoom: 4 }); map.overlayMapTypes.insertAt(0, new CustomOverlay(new google.maps.Size(256, 256))); } google.maps.event.addDomListener(window, 'load', initialize); If all goes well, then this is how the end result will look like.
+ ```javascript
+ function CustomOverlay(tileSize) {
+    this.tileSize = tileSize;
+}
+CustomOverlay.prototype.getTile = function(coord, zoom, ownerDocument) {
+    var img = ownerDocument.createElement('img');
+    img.src = "http://localhost:8080/NE/" + zoom + "/" + coord.x + "/" + coord.y + ".png";
+    img.style.width = this.tileSize.width + 'px';
+    img.style.height = this.tileSize.height + 'px';
+    return img;
+};
+
+var map;
+
+function initialize() {
+    map = new google.maps.Map(
+        document.getElementById("map-canvas"), {
+            center: new google.maps.LatLng(42.660851192127, -96.5624457296875),
+            zoom: 4
+        });
+
+    map.overlayMapTypes.insertAt(0, new CustomOverlay(new google.maps.Size(256, 256)));
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+```
+ If all goes well, then this is how the end result will look like.
 
  [![image](http://varunpant.com/static/resources/image_thumb_2.png "image")](http://varunpant.com/static/resources/image_6.png)
 
@@ -107,18 +167,41 @@ In this blog post, I will write about using [Google cloud storage](https://cloud
 
  If we choose to generate large number of tiles and cover more than few countries we are possibly looking at millions to tiles specially around the street level (zoom 19 to 22), to cover such a scenario, I will recommend using another option in tilestache ,which directly allows saving the tiles in Google cloud storage. Tilestache, has a [plugin](http://tilestache.org/doc/TileStache.Goodies.Caches.GoogleCloud.html) which can be used instead of a disk based cache. here is how to configure it
 
- { "cache": { "class": "TileStache.Goodies.Caches.GoogleCloud:Cache", "kwargs": { "bucket": "daa-transfers-static", "access": "accesstoken", "secret": "clientsecret"" } }, "layers": { "NE": { "provider": {"name": "mapnik", "mapfile": "C:\\Users\\Varun Pant\\Desktop\\NE\\NE.xml"}, "projection": "spherical mercator" } } } You will notice that to work with this plugin,one needs to have **access token** and** client secret**. This can be easily generated using the [developer console](https://console.developers.google.com/). 
+ ```javascript
+ {
+  "cache":
+  {
+    "class": "TileStache.Goodies.Caches.GoogleCloud:Cache",
+    "kwargs": {
+      "bucket":  "daa-transfers-static",
+      "access": "accesstoken",
+      "secret": "clientsecret""
+    }
+  },
+  "layers":
+  {
+    "NE":
+    {
+        "provider": {"name": "mapnik", "mapfile": "C:\\Users\\Varun Pant\\Desktop\\NE\\NE.xml"},
+        "projection": "spherical mercator"
+    }
+  }
+}
+```
+ You will notice that to work with this plugin,one needs to have **access token** and** client secret**. This can be easily generated using the [developer console](https://console.developers.google.com/). 
 
  To setup, follow these steps
 
  GS Security Credentials:
 
-  2. Select the project for Google cloud storage [Google APIs Console] 
+ 
+ 2. Select the project for Google cloud storage [Google APIs Console] 
  4. Select Google Cloud Storage 
  6. Select Make this my default project for interoperable storage access. 
  8. Select Interoperable Access. 
  10. You can find **gs\_access\_key\_id** ,**gs\_secret\_access\_key** for your project. 
-  [![image](http://varunpant.com/static/resources/image_thumb_7.png "image")](http://varunpant.com/static/resources/image_16.png)
+ 
+ [![image](http://varunpant.com/static/resources/image_thumb_7.png "image")](http://varunpant.com/static/resources/image_16.png)
 
  Once configured run the tile seed command again and now, the tiles would be directly stored in the bucket, to access them use the following format <http://storage.googleapis.com/><bucket\_name>/<path>/<tile.png>.
 
@@ -126,5 +209,8 @@ In this blog post, I will write about using [Google cloud storage](https://cloud
 
  [http://storage.googleapis.com/states-demo/NE/8/68/103.png](http://storage.googleapis.com/states-demo/NE/8/68/103.png "http://storage.googleapis.com/states-demo/NE/8/68/103.png") , in the Html code given above, one can easily change the url from img.src = "http://localhost:8080/NE/" + zoom + "/" + coord.x + "/" + coord.y + ".png"; to img.src = "
 
+ ```javascript
  [http://storage.googleapis.com/states-demo](http://storage.googleapis.com/states-demo/NE/)/NE/
+```
+
 

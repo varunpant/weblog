@@ -14,5 +14,15 @@ category = ["how to","html5","web","programming","javascript","raphael js"]
 
  Lets begin with some basic concepts. [Raphael.JS](http://raphaeljs.com/) uses the SVG W3C Recommendation and VML as a base for creating graphics, it hides quite a lot of technology specific nitty-gritties and instead present a unified api model . Here is a quick code sample
 
-  // Creates canvas 250 × 250 at 0, 0 **var** canvas = Raphael(0, 0, 250, 250 ); // Creates circle at x = 125, y = 125, with radius 50 **var** circle = canvas .circle(125, 125, 50); // Sets the fill attribute of the circle to red (#f00) circle.attr(*"fill"*, *"#f00"*); // Sets the stroke attribute of the circle to white circle.attr(*"stroke"*, *"#fff"*);
+ ```javascript
+// Creates canvas 250 × 250 at 0, 0
+**var** canvas = Raphael(0, 0, 250, 250 );
+// Creates circle at x = 125, y = 125, with radius 50
+**var** circle = canvas .circle(125, 125, 50);
+// Sets the fill attribute of the circle to red (#f00)
+circle.attr(*"fill"*, *"#f00"*);
+// Sets the stroke attribute of the circle to white
+circle.attr(*"stroke"*, *"#fff"*);
+```
+
 

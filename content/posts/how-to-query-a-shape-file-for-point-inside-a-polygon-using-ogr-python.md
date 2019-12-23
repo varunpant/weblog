@@ -18,7 +18,30 @@ Recently I was trying to build a quick geo lookup service in python, which could
 
   You will need python-gdal bindings. sudo apt-get install python-gdal 
 
-from osgeo import ogr ogr.UseExceptions() from pprint import pprint path = "TM\_WORLD\_BORDERS\_SIMPL-0.3.shp" drv = ogr.GetDriverByName("ESRI Shapefile") ds = drv.Open(path, 0) result = ds.ExecuteSQL("select name from 'TM\_WORLD\_BORDERS\_SIMPL-0.3' where ST\_Intersects('TM\_WORLD\_BORDERS\_SIMPL-0.3'.geometry,makePoint(-0.2225382,51.5253007) )",dialect="SQLITE") c = result.GetFeatureCount() for i in range(c): print result.GetFeature(i).GetField(0) ds.ReleaseResultSet(result)   Hope this helps. 
+```from osgeo import ogr
+ogr.UseExceptions()
+from pprint import pprint
+
+ 
+
+path = "TM\_WORLD\_BORDERS\_SIMPL-0.3.shp"
+drv = ogr.GetDriverByName("ESRI Shapefile")
+ds = drv.Open(path, 0) 
+
+ 
+
+result = ds.ExecuteSQL("select name from 'TM\_WORLD\_BORDERS\_SIMPL-0.3' where ST\_Intersects('TM\_WORLD\_BORDERS\_SIMPL-0.3'.geometry,makePoint(-0.2225382,51.5253007) )",dialect="SQLITE")
+
+c = result.GetFeatureCount()
+for i in range(c):
+    print result.GetFeature(i).GetField(0)
+ 
+
+ds.ReleaseResultSet(result)
+
+
+```
+  Hope this helps. 
 
 
 

@@ -26,11 +26,48 @@ In this post I will demonstrate using [ElasticSearch](http://www.elasticsearch.o
 
  We can do this easily by issuing a curl request
 
-  curl -XPUT http://localhost:9200/places -d ' { "mappings": { "place": { "properties": { "id": {"type": "double"}, "name": {"type": "string"}, "type": {"type": "string"}, "location": {"type": "geo\_point"} } } } }  Once the schema for index places has been set up, its now time to add records to the index.
+ ```bash
+curl -XPUT http://localhost:9200/places -d '
+{
+    "mappings": {
+        "place": {
+            "properties": {
+                "id": {"type": "double"},
+                "name": {"type": "string"},
+                "type": {"type": "string"},
+                "location": {"type": "geo\_point"}
+            }
+        }
+    }
+}
+
+```
+ Once the schema for index places has been set up, its now time to add records to the index.
 
  In the python script below modify the name of the shape file path and execute.
 
-  import shapefile import urllib2 import json sf = shapefile.Reader("points") sr = sf.shapeRecords() for r in sr: try : if r.record[2].strip() and r.record[3].strip(): req = urllib2.Request('http://localhost:9200/places/place/') req.add\_header('Content-Type', 'application/json') data = {'id': r.record[0].strip(),'name':r.record[2].strip(),'type':r.record[3].strip(),'location':{'lat':r.shape.points[0][1],'lon':r.shape.points[0][0]}} response = urllib2.urlopen(req, json.dumps(data)) print r.record[2] except Exception,e: print e #print "ERROR ",r.record[0],r.record[2],r.record[3] , r.shape.points[0][0], r.shape.points[0][1] pass  The script inserts all records which have a valid **name** and **type** column into index.
+ ```python
+import shapefile
+import urllib2
+import json
+sf = shapefile.Reader("points")
+sr = sf.shapeRecords()
+
+for r in sr:
+    try :
+        if r.record[2].strip() and r.record[3].strip():
+            req = urllib2.Request('http://localhost:9200/places/place/')
+            req.add\_header('Content-Type', 'application/json')
+            data = {'id': r.record[0].strip(),'name':r.record[2].strip(),'type':r.record[3].strip(),'location':{'lat':r.shape.points[0][1],'lon':r.shape.points[0][0]}}
+            response = urllib2.urlopen(req, json.dumps(data))
+            print r.record[2]
+    except Exception,e:
+        print e
+        #print "ERROR ",r.record[0],r.record[2],r.record[3] , r.shape.points[0][0], r.shape.points[0][1]
+        pass
+
+```
+ The script inserts all records which have a valid **name** and **type** column into index.
 
  ### Verify
 
@@ -42,11 +79,117 @@ In this post I will demonstrate using [ElasticSearch](http://www.elasticsearch.o
 
  In **Marvel/Sense**
 
-  GET places/\_search { "sort" : [ { "\_geo\_distance" : { "location" : { "lat": 51.5286416, "lon": -0.10159870000006777 }, "order" : "asc", "unit" : "km" } } ], "query": { "filtered" : { "query" : { "match\_all" : {} }, "filter" : { "geo\_distance" : { "distance" : "20km", "location" : { "lat": 51.5286416, "lon": -0.10159870000006777 } } } } } }  or by **curl**
+ ```
+GET places/\_search
+{
+  "sort" : [
+      {
+          "\_geo\_distance" : {
+              "location" : {
+                    "lat": 51.5286416,
+                "lon": -0.10159870000006777
+              },
+              "order" : "asc",
+              "unit" : "km"
+          }
+      }
+  ],
+  "query": {
+    "filtered" : {
+        "query" : {
+            "match\_all" : {}
+        },
+        "filter" : {
+            "geo\_distance" : {
+                "distance" : "20km",
+                "location" : {
+                   "lat": 51.5286416,
+                   "lon": -0.10159870000006777
+                }
+            }
+        }
+    }
+  }
+}
 
-  curl -XGET 'http://localhost:9200/places/place/\_search?pretty=true' -d ' { "sort" : [ { "\_geo\_distance" : { "location" : { "lat": 51.5286416, "lon": -0.10159870000006777 }, "order" : "asc", "unit" : "km" } } ], "query": { "filtered" : { "query" : { "match\_all" : {} }, "filter" : { "geo\_distance" : { "distance" : "20km", "location" : { "lat": 51.5286416, "lon": -0.10159870000006777 } } } } } }'  To search by **Geodistance** as well as a **term filter**, modify the query to.
+```
+ or by **curl**
 
-  GET places / \_search ? size = 100 & from = 0 { "sort": [{ "\_geo\_distance": { "location": { "lat": 51.5286416, "lon": -0.10159870000006777 }, "order": "asc", "unit": "km" } }], "query": { "filtered": { "query": { "bool": { "should": [{ "term": { "type": "pub" } }] } }, "filter": { "geo\_distance": { "distance": "1km", "location": { "lat": 51.5286416, "lon": -0.10159870000006777 } } } } } }  For better visualisation I have created a nice webapp [here](https://github.com/varunpant/AroundMe).
+ ```
+curl -XGET 'http://localhost:9200/places/place/\_search?pretty=true' -d '
+{
+  "sort" : [
+      {
+          "\_geo\_distance" : {
+              "location" : {
+                    "lat": 51.5286416,
+                   "lon": -0.10159870000006777
+              },
+              "order" : "asc",
+              "unit" : "km"
+          }
+      }
+  ],
+  "query": {
+    "filtered" : {
+        "query" : {
+            "match\_all" : {}
+        },
+        "filter" : {
+            "geo\_distance" : {
+                "distance" : "20km",
+                "location" : {
+                    "lat": 51.5286416,
+                   "lon": -0.10159870000006777
+                }
+            }
+        }
+    }
+  }
+}'
+
+```
+ To search by **Geodistance** as well as a **term filter**, modify the query to.
+
+ ```
+GET places / \_search ? size = 100 & from = 0 {
+    "sort": [{
+        "\_geo\_distance": {
+            "location": {
+                "lat": 51.5286416,
+                "lon": -0.10159870000006777
+            },
+            "order": "asc",
+            "unit": "km"
+        }
+    }],
+    "query": {
+        "filtered": {
+            "query": {
+                "bool": {
+                    "should": [{
+                        "term": {
+                            "type": "pub"
+                        }
+                    }]
+                }
+            },
+            "filter": {
+                "geo\_distance": {
+                    "distance": "1km",
+                    "location": {
+                        "lat": 51.5286416,
+                        "lon": -0.10159870000006777
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+```
+ For better visualisation I have created a nice webapp [here](https://github.com/varunpant/AroundMe).
 
  ![Web App](https://raw.githubusercontent.com/varunpant/AroundMe/master/screenshot.png)
 

@@ -18,7 +18,10 @@ category = ["programming","utility","how to","redis"]
 
  Issue the following commands to update your system's package repositories and ensure that all installed packages are up to date: 
 
- apt-get update apt-get upgrade You may also need to prepare a vanilla system to get some installation tools. 
+ ```apt-get update
+apt-get upgrade
+```
+ You may also need to prepare a vanilla system to get some installation tools. 
 
 
 

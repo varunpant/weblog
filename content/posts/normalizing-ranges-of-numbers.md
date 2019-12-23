@@ -22,9 +22,43 @@ Range Normalization is a [normalization](http://www.heatonresearch.com/wiki/Norm
 
  translated to Python 
 
- from \_\_future\_\_ import division class Normaliser: def \_\_init\_\_(self,dH,dL,nH,nL): self.dH = dH self.dL = dL self.nH = nH self.nL = nL def normalize(self,x): return ((x - self.dL) / (self.dH - self.dL)) * (self.nH - self.nL) + self.nL def denormalize(self,x): return ((self.dL - self.dH) * x - self.nH * self.dL + self.dH * self.nL) / (self.nL - self.nH) if \_\_name\_\_ == "\_\_main\_\_": norm = Normaliser(10,1,5,0); for a in range(1,11): x = norm.normalize(a); y = norm.denormalize(x); print str(a) + " : " + str(x) + " : " + str(y) The results
+ ```from \_\_future\_\_ import division
+class Normaliser:
 
- 1 : 0.0 : 1.0 2 : 0.555555555556 : 2.0 3 : 1.11111111111 : 3.0 4 : 1.66666666667 : 4.0 5 : 2.22222222222 : 5.0 6 : 2.77777777778 : 6.0 7 : 3.33333333333 : 7.0 8 : 3.88888888889 : 8.0 9 : 4.44444444444 : 9.0 10 : 5.0 : 10.0  
+    def \_\_init\_\_(self,dH,dL,nH,nL):
+        self.dH = dH
+        self.dL = dL
+        self.nH = nH
+        self.nL = nL
+
+    def normalize(self,x):
+        return ((x - self.dL) / (self.dH - self.dL))  * (self.nH - self.nL) + self.nL
+
+    def denormalize(self,x):
+        return ((self.dL - self.dH) * x - self.nH * self.dL + self.dH * self.nL) / (self.nL - self.nH)
+
+if \_\_name\_\_ == "\_\_main\_\_":
+    norm = Normaliser(10,1,5,0);
+
+    for a in range(1,11):
+        x = norm.normalize(a);
+        y = norm.denormalize(x);
+        print str(a) + " : " + str(x) + " : " + str(y)
+```
+ The results
+
+ ```1 : 0.0 : 1.0
+2 : 0.555555555556 : 2.0
+3 : 1.11111111111 : 3.0
+4 : 1.66666666667 : 4.0
+5 : 2.22222222222 : 5.0
+6 : 2.77777777778 : 6.0
+7 : 3.33333333333 : 7.0
+8 : 3.88888888889 : 8.0
+9 : 4.44444444444 : 9.0
+10 : 5.0 : 10.0
+```
+  
 
  Hope this helps.
 

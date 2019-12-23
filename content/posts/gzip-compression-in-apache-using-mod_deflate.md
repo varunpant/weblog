@@ -20,7 +20,24 @@ category = ["how to","web","utility"]
 
  **configure /etc/apache2/httpd.conf mod\_deflate ** by adding content mentioned below.
 
-  # compress text, html, javascript, css, xml: AddOutputFilterByType DEFLATE text/plain AddOutputFilterByType DEFLATE text/html AddOutputFilterByType DEFLATE text/xml AddOutputFilterByType DEFLATE text/css AddOutputFilterByType DEFLATE application/xml AddOutputFilterByType DEFLATE application/xhtml+xml AddOutputFilterByType DEFLATE application/rss+xml AddOutputFilterByType DEFLATE application/javascript AddOutputFilterByType DEFLATE application/x-javascript # Or, compress certain file types by extension: <files *.html> SetOutputFilter DEFLATE </files>  **Restart apache to anable the changes** sudo apachectl graceful 
+ ```
+# compress text, html, javascript, css, xml:
+AddOutputFilterByType DEFLATE text/plain
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE text/xml
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE application/xml
+AddOutputFilterByType DEFLATE application/xhtml+xml
+AddOutputFilterByType DEFLATE application/rss+xml
+AddOutputFilterByType DEFLATE application/javascript
+AddOutputFilterByType DEFLATE application/x-javascript
+# Or, compress certain file types by extension:
+<files *.html>
+SetOutputFilter DEFLATE
+</files>
+
+```
+ **Restart apache to anable the changes** sudo apachectl graceful 
 
   There is another powerfull apache module called mod\_gzip which can precompress output as well. 
 

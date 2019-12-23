@@ -52,7 +52,22 @@ category = ["programming","websockets","httppush",".net","javascript"]
 > 
 >    I was trying to find an alternative which is comfortable enough to be used in my pet projects in Microsoft Tech stack, at the time of writing I couldn’t any so I here it is my very own HTTP Web Socket server written in .Net via C#, this implementation does not use WCF and is basically written using HTTP Async Sockets, the client API is pretty straight forward 
 
-  var url = "ws://localhost:999&rdquo" var sock = new WebSocket(url); sock.onopen = function () { log("open"); sock.send("Message…."); } sock.onmessage = function (e) { log(e.data); } sock.onclose = function (e) { log(" closed"); }   and that's it!!! I plan to add some more examples and perhaps come with something more concrete later, till then I hope you enjoy using this code sample and enhancing it as you desire. 
+ ```
+var url = "ws://localhost:999&rdquo"
+var sock = new WebSocket(url);
+sock.onopen = function () {
+    log("open");
+    sock.send("Message….");
+}
+sock.onmessage = function (e) {
+    log(e.data);
+}
+sock.onclose = function (e) {
+    log(" closed");
+}
+
+```
+  and that's it!!! I plan to add some more examples and perhaps come with something more concrete later, till then I hope you enjoy using this code sample and enhancing it as you desire. 
 
  [A complete example in c# can be downloaded from here ](http://www.varunpant.com/demo/WebSocketServer.rar)
 

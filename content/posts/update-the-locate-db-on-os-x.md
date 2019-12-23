@@ -12,7 +12,8 @@ Apparently out OS X does not have an updatedb command like linux has, so I was s
 
  I have quickly added this command here, incase I need to use it again.
 
-  sudo /usr/libexec/locate.updatedb 
-
+```bash
+sudo /usr/libexec/locate.updatedb 
+```
 
 

@@ -22,7 +22,46 @@ Here I demonstrate the process of [Basic Authentication](http://en.wikipedia.org
 
  To decode the string on server side, the reverse of above mentioned process is performed.
 
-  ############################################################################### # BASIC AUTH ############################################################# ############################################################################### def check\_auth(username, password): return username == 'username' and password == 'password' def requires\_auth(f): @wraps(f) def decorated(*args, **kwargs): auth = web.ctx.env['HTTP\_AUTHORIZATION'] if 'HTTP\_AUTHORIZATION' in web.ctx.env else None if auth: auth = re.sub('^Basic ', '', auth) username, password = base64.decodestring(auth).split(':') if not auth or not check\_auth(username, password): web.header('WWW-Authenticate', 'Basic realm="admin"') web.ctx.status = '401 Unauthorized' return Unauthorized() return f(*args, **kwargs) return decorated class Unauthorized(): def GET(self): return "401 Unauthorized" def POST(self): return "401 Unauthorized" So basically if a route handler needs authentication, all it needs is an attribute  @requires\_auth class Index: def GET(self): pass; 
+ ```
+###############################################################################
+# BASIC AUTH      #############################################################
+###############################################################################
+
+def check\_auth(username, password):
+    return username == 'username' and password == 'password'
+
+
+def requires\_auth(f):
+    @wraps(f)
+    def decorated(*args, **kwargs):
+        auth = web.ctx.env['HTTP\_AUTHORIZATION'] if 'HTTP\_AUTHORIZATION' in  web.ctx.env else None
+        if auth:
+            auth = re.sub('^Basic ', '', auth)
+            username, password = base64.decodestring(auth).split(':')
+        if not auth or not check\_auth(username, password):
+            web.header('WWW-Authenticate', 'Basic realm="admin"')
+            web.ctx.status = '401 Unauthorized'
+            return Unauthorized()
+
+        return f(*args, **kwargs)
+
+    return decorated
+
+class Unauthorized():
+    def GET(self):
+        return "401 Unauthorized"
+
+    def POST(self):
+        return "401 Unauthorized"
+```
+ So basically if a route handler needs authentication, all it needs is an attribute ```
+@requires\_auth
+class Index:
+    def GET(self):
+	pass;
+
+```
+
 
  Hope this helps. 
 

@@ -16,7 +16,8 @@ category = ["unix","windows"]
 
  This build contains the first public release of Bash on Ubuntu on Windows and the underlying Windows Subsystem for Linux.
 
-   2. Turn on Developer Mode: Settings | Update & Security | For Developers | Check the Developer Mode radio button:  
+  
+ 2. Turn on Developer Mode: Settings | Update & Security | For Developers | Check the Developer Mode radio button:  
  ![](http://www.varunpant.com/static/resources/uow/screen1.png) 
  4. From the start menu, open “Turn Windows Features on or off”:  
  ![](http://www.varunpant.com/static/resources/uow/screen2.png) 
@@ -29,7 +30,8 @@ category = ["unix","windows"]
  ![](http://www.varunpant.com/static/resources/uow/screen5.png) ![](http://www.varunpant.com/static/resources/uow/screen6.png) 
 
  
-  
+ 
+ 
 
 
 

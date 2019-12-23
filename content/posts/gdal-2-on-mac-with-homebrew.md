@@ -29,7 +29,25 @@ GDAL is one of the most frequently used utility in my toolkit. I am writing this
 
   
 
-brew unlink gdal brew tap osgeo/osgeo4mac && brew tap --repair brew install jasper netcdf # gdal dependencies brew install gdal2 --with-armadillo \ --with-complete --with-libkml --with-unsupported brew link --force gdal2   Finally Verify
+```bash
+brew unlink gdal
+brew tap osgeo/osgeo4mac && brew tap --repair
+brew install jasper netcdf # gdal dependencies
+brew install gdal2 --with-armadillo \
+--with-complete --with-libkml --with-unsupported
+brew link --force gdal2
 
- $> gdal-config --version 2.1.1 $> gdal-config --libs -L/usr/local/Cellar/gdal2/2.1.1/lib -lgdal $> gdal-config --cflags -I/usr/local/Cellar/gdal2/2.1.1/include 
+```
+  Finally Verify
+
+ ```bash
+gdal-config --version
+2.1.1
+gdal-config --libs
+-L/usr/local/Cellar/gdal2/2.1.1/lib -lgdal
+gdal-config --cflags
+-I/usr/local/Cellar/gdal2/2.1.1/include
+
+```
+
 

@@ -7,7 +7,116 @@ These sections are mostly of rectangular form (which can be easily converted int
 You can read a good tutorial from mapbox using Qgis with a mmqgis plugin here."><meta property="og:type" content="article"><meta property="og:url" content="https://varunpant.github.io/weblog/posts/how-to-create-fishnets-or-geospatial-grids/"><meta property="article:published_time" content="2016-12-11T00:00:00+00:00"><meta property="article:modified_time" content="2016-12-11T00:00:00+00:00"><meta property="og:site_name" content="Varun Pant"></head><body><div class=container><header class=header><span class=header__inner><a href=/ class=logo style=text-decoration:none><span class=logo__mark><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44"><path fill="none" d="M15 8l14.729 14.382L15 35.367"/></svg></span><span class=logo__text>Varun Pant</span>
 <span class=logo__cursor></span></a><span class=header__right><nav class=menu><ul class="menu__inner menu__inner--desktop"><li><a href=/weblog/about>About</a></li><li><a href=/weblog/archives>Archives</a></li><li><a href=/weblog/feed.xml>Feed</a></li><li><a href=/weblog/showcase>Showcase</a></li></ul><ul class="menu__inner menu__inner--mobile"><li><a href=/weblog/about>About</a></li><li><a href=/weblog/archives>Archives</a></li><li><a href=/weblog/feed.xml>Feed</a></li><li><a href=/weblog/showcase>Showcase</a></li></ul></nav><span class=menu-trigger><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg></span><span class=theme-toggle><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 41C32.4934 41 41 32.4934 41 22 41 11.5066 32.4934 3 22 3 11.5066 3 3 11.5066 3 22s8.5066 19 19 19zM7 22C7 13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22z"/></svg></span></span></span></header><div class=content><div class=post><h2 class=post-title><a href=https://varunpant.github.io/weblog/posts/how-to-create-fishnets-or-geospatial-grids/>How to create fishnets or geospatial grids</a></h2><div class=post-meta><span class=post-date>2016-12-11</span>
 <span class=post-author>— Varun Pant</span>
-<span class=post-read-time>— 4 min read</span></div><div class=post-content><p>There are many use cases in GIS world, where the information has to be aggregated, an easy way to achieve this is via gridding or binning, where the area of interest is divided into small sections called grids or bins.</p><p>These sections are mostly of rectangular form (which can be easily converted into geotiffs), but in some cases even circles or hexagons are also used.</p><p><img src=/media/image_963791002841481453621913.png alt></p><p>You can read a good tutorial from <a href=https://www.mapbox.com/>mapbox</a> using <a href=http://www.qgis.org/en/site/>Qgis</a> with a <a href=http://michaelminn.com/linux/mmqgis/>mmqgis</a> plugin <a href=https://www.mapbox.com/blog/binning-alternative-point-maps/>here</a>.</p><p>While MMQGIS is a good enough for most use cases, I was looking for a way to create fishnets or grids by giving the bbox of the region and width/height in meters, which would then make it easy to script the process for any dynamic use.</p><p>Luckily there is a &ldquo;recipe&rdquo; available which takes input in <a href=EPSG:3857>EPSG:3857</a> projections and hence takes the width/height of grid cell in meter, <a href=https://pcjericks.github.io/py-gdalogr-cookbook/vector_layers.html#create>here</a>.</p><p>The code is pretty easy to comprehend and creates simple polygons for each computed cell in the layer.</p><p>import os, sys import ogr from math import ceil def main(outputGridfn,xmin,xmax,ymin,ymax,gridHeight,gridWidth): # convert sys.argv to float xmin = float(xmin) xmax = float(xmax) ymin = float(ymin) ymax = float(ymax) gridWidth = float(gridWidth) gridHeight = float(gridHeight) # get rows rows = ceil((ymax-ymin)/gridHeight) # get columns cols = ceil((xmax-xmin)/gridWidth) # start grid cell envelope ringXleftOrigin = xmin ringXrightOrigin = xmin + gridWidth ringYtopOrigin = ymax ringYbottomOrigin = ymax-gridHeight # create output file outDriver = ogr.GetDriverByName(&lsquo;ESRI Shapefile&rsquo;) if os.path.exists(outputGridfn): os.remove(outputGridfn) outDataSource = outDriver.CreateDataSource(outputGridfn) outLayer = outDataSource.CreateLayer(outputGridfn,geom_type=ogr.wkbPolygon ) featureDefn = outLayer.GetLayerDefn() # create grid cells countcols = 0 while countcols &lt; cols: countcols += 1 # reset envelope for rows ringYtop = ringYtopOrigin ringYbottom =ringYbottomOrigin countrows = 0 while countrows &lt; rows: countrows += 1 ring = ogr.Geometry(ogr.wkbLinearRing) ring.AddPoint(ringXleftOrigin, ringYtop) ring.AddPoint(ringXrightOrigin, ringYtop) ring.AddPoint(ringXrightOrigin, ringYbottom) ring.AddPoint(ringXleftOrigin, ringYbottom) ring.AddPoint(ringXleftOrigin, ringYtop) poly = ogr.Geometry(ogr.wkbPolygon) poly.AddGeometry(ring) # add new geom to layer outFeature = ogr.Feature(featureDefn) outFeature.SetGeometry(poly) outLayer.CreateFeature(outFeature) outFeature.Destroy # new envelope for next poly ringYtop = ringYtop - gridHeight ringYbottom = ringYbottom - gridHeight # new envelope for next poly ringXleftOrigin = ringXleftOrigin + gridWidth ringXrightOrigin = ringXrightOrigin + gridWidth # Close DataSources outDataSource.Destroy() if __name__ == &ldquo;__main__": # # example run : $ python grid.py .shp xmin xmax ymin ymax gridHeight gridWidth # if len( sys.argv ) != 8: print &ldquo;[ ERROR ] you must supply seven arguments: output-shapefile-name.shp xmin xmax ymin ymax gridHeight gridWidth&rdquo; sys.exit( 1 ) main( sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5], sys.argv[6], sys.argv[7] ) Here is an example usage: python grid.py grid.shp 992325.66 1484723.41 494849.32 781786.14 10000 10000</p><p>Here is an example of a 10km/10 km grid</p><p><img src=/media/image_1504214621671481454352189.png alt></p><p>Python scripts are generally usable in most use cases, how ever incase one needs a Postgis alternative, i.e a function which runs in Postgis database and creates a fishnet in a table, then It might be useful to use a query which I found <a href=http://gis.stackexchange.com/questions/16374/how-to-create-a-regular-polygon-grid-in-postgis>here</a>.</p><p>CREATE OR REPLACE FUNCTION public.makegrid_2d ( bound_polygon public.geometry, grid_step integer, metric_srid integer = 3857 &ndash;metric SRID ) RETURNS public.geometry AS $body$ DECLARE BoundM public.geometry; &ndash;Bound polygon transformed to the metric projection (with metric_srid SRID) Xmin DOUBLE PRECISION; Xmax DOUBLE PRECISION; Ymax DOUBLE PRECISION; X DOUBLE PRECISION; Y DOUBLE PRECISION; sectors public.geometry[]; i INTEGER; BEGIN BoundM := ST_Transform($1, $3); &ndash;From WGS84 (SRID 4326) to the metric projection, to operate with step in meters Xmin := ST_XMin(BoundM); Xmax := ST_XMax(BoundM); Ymax := ST_YMax(BoundM); Y := ST_YMin(BoundM); &ndash;current sector's corner coordinate i := -1; &lt;> LOOP IF (Y > Ymax) THEN &ndash;Better if generating polygons exceeds the bound for one step. You always can crop the result. But if not you may get not quite correct data for outbound polygons (e.g. if you calculate frequency per sector) EXIT; END IF; X := Xmin; &lt;> LOOP IF (X > Xmax) THEN EXIT; END IF; i := i + 1; sectors[i] := ST_GeomFromText(&lsquo;POLYGON((&lsquo;||X||&rsquo; &lsquo;||Y||&rsquo;, &lsquo;||(X+$2)||&rsquo; &lsquo;||Y||&rsquo;, &lsquo;||(X+$2)||&rsquo; &lsquo;||(Y+$2)||&rsquo;, &lsquo;||X||&rsquo; &lsquo;||(Y+$2)||&rsquo;, &lsquo;||X||&rsquo; &lsquo;||Y||&rsquo;))', $3); X := X + $2; END LOOP xloop; Y := Y + $2; END LOOP yloop; RETURN ST_Transform(ST_Collect(sectors), ST_SRID($1)); END; $body$ LANGUAGE &lsquo;plpgsql&rsquo;; I hope this helps.</p></div><div class=pagination><div class=pagination__title><span class=pagination__title-h>Read other posts</span><hr></div><div class=pagination__buttons><span class="button previous"><a href=https://varunpant.github.io/weblog/posts/using-geotiff-as-datasource-via-gdal/><span class=button__icon>←</span>
+<span class=post-read-time>— 4 min read</span></div><div class=post-content><p>There are many use cases in GIS world, where the information has to be aggregated, an easy way to achieve this is via gridding or binning, where the area of interest is divided into small sections called grids or bins.</p><p>These sections are mostly of rectangular form (which can be easily converted into geotiffs), but in some cases even circles or hexagons are also used.</p><p><img src=/media/image_963791002841481453621913.png alt></p><p>You can read a good tutorial from <a href=https://www.mapbox.com/>mapbox</a> using <a href=http://www.qgis.org/en/site/>Qgis</a> with a <a href=http://michaelminn.com/linux/mmqgis/>mmqgis</a> plugin <a href=https://www.mapbox.com/blog/binning-alternative-point-maps/>here</a>.</p><p>While MMQGIS is a good enough for most use cases, I was looking for a way to create fishnets or grids by giving the bbox of the region and width/height in meters, which would then make it easy to script the process for any dynamic use.</p><p>Luckily there is a &ldquo;recipe&rdquo; available which takes input in <a href=EPSG:3857>EPSG:3857</a> projections and hence takes the width/height of grid cell in meter, <a href=https://pcjericks.github.io/py-gdalogr-cookbook/vector_layers.html#create>here</a>.</p><p>The code is pretty easy to comprehend and creates simple polygons for each computed cell in the layer.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#f92672>import</span> os<span style=color:#f92672>,</span> sys
+<span style=color:#f92672>import</span> ogr
+<span style=color:#f92672>from</span> math <span style=color:#f92672>import</span> ceil
+
+
+<span style=color:#66d9ef>def</span> <span style=color:#a6e22e>main</span>(outputGridfn,xmin,xmax,ymin,ymax,gridHeight,gridWidth):
+
+   <span style=color:#75715e># convert sys.argv to float</span>
+   xmin <span style=color:#f92672>=</span> float(xmin)
+   xmax <span style=color:#f92672>=</span> float(xmax)
+   ymin <span style=color:#f92672>=</span> float(ymin)
+   ymax <span style=color:#f92672>=</span> float(ymax)
+   gridWidth <span style=color:#f92672>=</span> float(gridWidth)
+   gridHeight <span style=color:#f92672>=</span> float(gridHeight)
+
+   <span style=color:#75715e># get rows</span>
+   rows <span style=color:#f92672>=</span> ceil((ymax<span style=color:#f92672>-</span>ymin)<span style=color:#f92672>/</span>gridHeight)
+   <span style=color:#75715e># get columns</span>
+   cols <span style=color:#f92672>=</span> ceil((xmax<span style=color:#f92672>-</span>xmin)<span style=color:#f92672>/</span>gridWidth)
+
+   <span style=color:#75715e># start grid cell envelope</span>
+   ringXleftOrigin <span style=color:#f92672>=</span> xmin
+   ringXrightOrigin <span style=color:#f92672>=</span> xmin <span style=color:#f92672>+</span> gridWidth
+   ringYtopOrigin <span style=color:#f92672>=</span> ymax
+   ringYbottomOrigin <span style=color:#f92672>=</span> ymax<span style=color:#f92672>-</span>gridHeight
+
+   <span style=color:#75715e># create output file</span>
+   outDriver <span style=color:#f92672>=</span> ogr<span style=color:#f92672>.</span>GetDriverByName(<span style=color:#e6db74></span><span style=color:#e6db74>&#39;</span><span style=color:#e6db74>ESRI Shapefile</span><span style=color:#e6db74>&#39;</span>)
+   <span style=color:#66d9ef>if</span> os<span style=color:#f92672>.</span>path<span style=color:#f92672>.</span>exists(outputGridfn):
+       os<span style=color:#f92672>.</span>remove(outputGridfn)
+   outDataSource <span style=color:#f92672>=</span> outDriver<span style=color:#f92672>.</span>CreateDataSource(outputGridfn)
+   outLayer <span style=color:#f92672>=</span> outDataSource<span style=color:#f92672>.</span>CreateLayer(outputGridfn,geom\_type<span style=color:#f92672>=</span>ogr<span style=color:#f92672>.</span>wkbPolygon )
+   featureDefn <span style=color:#f92672>=</span> outLayer<span style=color:#f92672>.</span>GetLayerDefn()
+
+   <span style=color:#75715e># create grid cells</span>
+   countcols <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>
+   <span style=color:#66d9ef>while</span> countcols <span style=color:#f92672>&lt;</span> cols:
+       countcols <span style=color:#f92672>+</span><span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>
+
+       <span style=color:#75715e># reset envelope for rows</span>
+       ringYtop <span style=color:#f92672>=</span> ringYtopOrigin
+       ringYbottom <span style=color:#f92672>=</span>ringYbottomOrigin
+       countrows <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>
+
+       <span style=color:#66d9ef>while</span> countrows <span style=color:#f92672>&lt;</span> rows:
+           countrows <span style=color:#f92672>+</span><span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>
+           ring <span style=color:#f92672>=</span> ogr<span style=color:#f92672>.</span>Geometry(ogr<span style=color:#f92672>.</span>wkbLinearRing)
+           ring<span style=color:#f92672>.</span>AddPoint(ringXleftOrigin, ringYtop)
+           ring<span style=color:#f92672>.</span>AddPoint(ringXrightOrigin, ringYtop)
+           ring<span style=color:#f92672>.</span>AddPoint(ringXrightOrigin, ringYbottom)
+           ring<span style=color:#f92672>.</span>AddPoint(ringXleftOrigin, ringYbottom)
+           ring<span style=color:#f92672>.</span>AddPoint(ringXleftOrigin, ringYtop)
+           poly <span style=color:#f92672>=</span> ogr<span style=color:#f92672>.</span>Geometry(ogr<span style=color:#f92672>.</span>wkbPolygon)
+           poly<span style=color:#f92672>.</span>AddGeometry(ring)
+
+           <span style=color:#75715e># add new geom to layer</span>
+           outFeature <span style=color:#f92672>=</span> ogr<span style=color:#f92672>.</span>Feature(featureDefn)
+           outFeature<span style=color:#f92672>.</span>SetGeometry(poly)
+           outLayer<span style=color:#f92672>.</span>CreateFeature(outFeature)
+           outFeature<span style=color:#f92672>.</span>Destroy
+
+           <span style=color:#75715e># new envelope for next poly</span>
+           ringYtop <span style=color:#f92672>=</span> ringYtop <span style=color:#f92672>-</span> gridHeight
+           ringYbottom <span style=color:#f92672>=</span> ringYbottom <span style=color:#f92672>-</span> gridHeight
+
+       <span style=color:#75715e># new envelope for next poly</span>
+       ringXleftOrigin <span style=color:#f92672>=</span> ringXleftOrigin <span style=color:#f92672>+</span> gridWidth
+       ringXrightOrigin <span style=color:#f92672>=</span> ringXrightOrigin <span style=color:#f92672>+</span> gridWidth
+
+   <span style=color:#75715e># Close DataSources</span>
+   outDataSource<span style=color:#f92672>.</span>Destroy()
+
+
+<span style=color:#66d9ef>if</span> \_\_name\_\_ <span style=color:#f92672>==</span> <span style=color:#e6db74></span><span style=color:#e6db74>&#34;</span><span style=color:#e6db74>\</span><span style=color:#e6db74>_</span><span style=color:#e6db74>\</span><span style=color:#e6db74>_main</span><span style=color:#e6db74>\</span><span style=color:#e6db74>_</span><span style=color:#e6db74>\</span><span style=color:#e6db74>_</span><span style=color:#e6db74>&#34;</span>:
+
+   <span style=color:#75715e>#</span>
+   <span style=color:#75715e># example run : $ python grid.py &lt;full-path&gt;&lt;output-shapefile-name&gt;.shp xmin xmax ymin ymax gridHeight gridWidth</span>
+   <span style=color:#75715e>#</span>
+
+   <span style=color:#66d9ef>if</span> len( sys<span style=color:#f92672>.</span>argv ) <span style=color:#f92672>!=</span> <span style=color:#ae81ff>8</span>:
+       <span style=color:#66d9ef>print</span> <span style=color:#e6db74></span><span style=color:#e6db74>&#34;</span><span style=color:#e6db74>[ ERROR ] you must supply seven arguments: output-shapefile-name.shp xmin xmax ymin ymax gridHeight gridWidth</span><span style=color:#e6db74>&#34;</span>
+       sys<span style=color:#f92672>.</span>exit( <span style=color:#ae81ff>1</span> )
+
+   main( sys<span style=color:#f92672>.</span>argv[<span style=color:#ae81ff>1</span>], sys<span style=color:#f92672>.</span>argv[<span style=color:#ae81ff>2</span>], sys<span style=color:#f92672>.</span>argv[<span style=color:#ae81ff>3</span>], sys<span style=color:#f92672>.</span>argv[<span style=color:#ae81ff>4</span>], sys<span style=color:#f92672>.</span>argv[<span style=color:#ae81ff>5</span>], sys<span style=color:#f92672>.</span>argv[<span style=color:#ae81ff>6</span>], sys<span style=color:#f92672>.</span>argv[<span style=color:#ae81ff>7</span>] )
+</code></pre></div><p>Here is an example usage: python grid.py grid.shp 992325.66 1484723.41 494849.32 781786.14 10000 10000</p><p>Here is an example of a 10km/10 km grid</p><p><img src=/media/image_1504214621671481454352189.png alt></p><p>Python scripts are generally usable in most use cases, how ever incase one needs a Postgis alternative, i.e a function which runs in Postgis database and creates a fishnet in a table, then It might be useful to use a query which I found <a href=http://gis.stackexchange.com/questions/16374/how-to-create-a-regular-polygon-grid-in-postgis>here</a>.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=color:#66d9ef>CREATE</span> <span style=color:#66d9ef>OR</span> <span style=color:#66d9ef>REPLACE</span> <span style=color:#66d9ef>FUNCTION</span> <span style=color:#66d9ef>public</span>.makegrid<span style=color:#960050;background-color:#1e0010>\</span>_2d (
+ bound<span style=color:#960050;background-color:#1e0010>\</span>_polygon <span style=color:#66d9ef>public</span>.geometry,
+ grid<span style=color:#960050;background-color:#1e0010>\</span>_step integer,
+ metric<span style=color:#960050;background-color:#1e0010>\</span>_srid integer <span style=color:#f92672>=</span> <span style=color:#ae81ff>3857</span> <span style=color:#75715e>--metric SRID  
+</span><span style=color:#75715e></span>)
+<span style=color:#66d9ef>RETURNS</span> <span style=color:#66d9ef>public</span>.geometry <span style=color:#66d9ef>AS</span>
+<span style=color:#960050;background-color:#1e0010>$</span>body$
+<span style=color:#66d9ef>DECLARE</span>
+ BoundM <span style=color:#66d9ef>public</span>.geometry; <span style=color:#75715e>--Bound polygon transformed to the metric projection (with metric\_srid SRID)
+</span><span style=color:#75715e></span> Xmin DOUBLE <span style=color:#66d9ef>PRECISION</span>;
+ Xmax DOUBLE <span style=color:#66d9ef>PRECISION</span>;
+ Ymax DOUBLE <span style=color:#66d9ef>PRECISION</span>;
+ X DOUBLE <span style=color:#66d9ef>PRECISION</span>;
+ Y DOUBLE <span style=color:#66d9ef>PRECISION</span>;
+ sectors <span style=color:#66d9ef>public</span>.geometry[];
+ i INTEGER;
+<span style=color:#66d9ef>BEGIN</span>
+ BoundM :<span style=color:#f92672>=</span> ST<span style=color:#960050;background-color:#1e0010>\</span>_Transform(<span style=color:#960050;background-color:#1e0010>$</span><span style=color:#ae81ff>1</span>, <span style=color:#960050;background-color:#1e0010>$</span><span style=color:#ae81ff>3</span>); <span style=color:#75715e>--From WGS84 (SRID 4326) to the metric projection, to operate with step in meters
+</span><span style=color:#75715e></span> Xmin :<span style=color:#f92672>=</span> ST<span style=color:#960050;background-color:#1e0010>\</span>_XMin(BoundM);
+ Xmax :<span style=color:#f92672>=</span> ST<span style=color:#960050;background-color:#1e0010>\</span>_XMax(BoundM);
+ Ymax :<span style=color:#f92672>=</span> ST<span style=color:#960050;background-color:#1e0010>\</span>_YMax(BoundM);
+
+ Y :<span style=color:#f92672>=</span> ST<span style=color:#960050;background-color:#1e0010>\</span>_YMin(BoundM); <span style=color:#75715e>--current sector&#39;s corner coordinate
+</span><span style=color:#75715e></span> i :<span style=color:#f92672>=</span> <span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>;
+ <span style=color:#f92672>&lt;</span><span style=color:#f92672>&gt;</span> LOOP <span style=color:#66d9ef>IF</span> (Y <span style=color:#f92672>&gt;</span> Ymax) <span style=color:#66d9ef>THEN</span> <span style=color:#75715e>--Better if generating polygons exceeds the bound for one step. You always can crop the result. But if not you may get not quite correct data for outbound polygons (e.g. if you calculate frequency per sector) EXIT; END IF; X := Xmin; &lt;&gt; LOOP IF (X &gt; Xmax) THEN EXIT; END IF; i := i + 1; sectors[i] := ST\_GeomFromText(&#39;POLYGON((&#39;||X||&#39; &#39;||Y||&#39;, &#39;||(X+$2)||&#39; &#39;||Y||&#39;, &#39;||(X+$2)||&#39; &#39;||(Y+$2)||&#39;, &#39;||X||&#39; &#39;||(Y+$2)||&#39;, &#39;||X||&#39; &#39;||Y||&#39;))&#39;, $3); X := X + $2; END LOOP xloop; Y := Y + $2; END LOOP yloop; RETURN ST\_Transform(ST\_Collect(sectors), ST\_SRID($1)); END; $body$ LANGUAGE &#39;plpgsql&#39;; 
+</span></code></pre></div><p>I hope this helps.</p></div><div class=pagination><div class=pagination__title><span class=pagination__title-h>Read other posts</span><hr></div><div class=pagination__buttons><span class="button previous"><a href=https://varunpant.github.io/weblog/posts/using-geotiff-as-datasource-via-gdal/><span class=button__icon>←</span>
 <span class=button__text>Using Geotiff as datasource via gdal</span></a></span>
 <span class="button next"><a href=https://varunpant.github.io/weblog/posts/how-to-transform-projections-between-spherical-mercator-and-epsg-4326/><span class=button__text>How to transform projections between Spherical Mercator and EPSG 4326</span>
 <span class=button__icon>→</span></a></span></div></div></div></div><footer class=footer><div class=footer__inner><a href=/ class=logo style=text-decoration:none><span class=logo__mark><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44"><path fill="none" d="M15 8l14.729 14.382L15 35.367"/></svg></span><span class=logo__text>Varun Pant</span>

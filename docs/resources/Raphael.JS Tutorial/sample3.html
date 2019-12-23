@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+		<meta name="author" content="varun pant">
+		<meta name="google-site-verification" content="yu9tlev9-FkUUc0UkPrKP-8ren886--1FcSINU0TJDY" />
+		<meta name="msvalidate.01" content="B96ED99B0213B547253C91D27272A5E4" />                
+		<meta http-equiv="X-XRDS-Location" content="http://www.myopenid.com/xrds?username=varunpant.myopenid.com" />
+        <title>Raphael sample </title>		
+		<script src="raphael.js"></script>
+		<style>
+			body{
+			margin:0px;
+			padding:0px;
+			}
+			#canvas {
+			width: 250px;
+			height: 250px;
+			margin:0px;
+			padding:0px;	 
+			background-color: #F2F2F2;
+			}
+		</style>
+		<script>
+			var canvas;
+			window.onload = function () {
+				// Creates canvas 250 × 250 at 0, 0
+				canvas = Raphael(0, 0, 250, 250 );
+				// draw a diagonal line:
+				// move to 10,10, line to 90,90
+				var path = canvas.path("M10 10 L 190 190");				
+				// Sets the stroke attribute of the path to red
+				path.attr("stroke", "red");
+				// Sets the stroke-width attribute of the path to 3.
+				path.attr("stroke-width", "3");
+				//Here is an example of drawing a circle using path.
+				var circleDrawnasPath = canvas.path(getCircletoPath(125, 125, 50));
+				circleDrawnasPath.attr("stroke", "green");
+				circleDrawnasPath.attr("stroke-width", "3");
+			};
+			// x and y are center and r is the radius
+			function getCircletoPath(x , y, r)  {  return "M"+ x + "," + (y - r) + "A" + r + "," + r + ",0,1,1," + (x - 0.1) + "," + (y - r) +" z"; }
+			
+		</script>
+	</head>
+	<body>
+		
+		<div id="canvas"></div>
+		
+	</body>
+</html>

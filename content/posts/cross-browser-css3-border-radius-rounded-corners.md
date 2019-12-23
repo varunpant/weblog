@@ -14,11 +14,39 @@ When I started programming and had to begin designing my first user interface in
 
   Here I present a cross browser css3 class which will introduce a curve on otherwise rectangular elements. #### **Border-radius for modern browsers including IE9 **
 
-  .curve{ -webkit-border-radius: 10px; /* Safari, Chrome */ -moz-border-radius: 10px; /* Firefox */ border-radius: 10px; /* CSS3 */ }  #### **Border-radius for IE (version < 9)**
+ ```css
+.curve{
+  -webkit-border-radius: 10px; /* Safari, Chrome */
+
+  -moz-border-radius: 10px; /* Firefox */
+
+  border-radius: 10px; /* CSS3 */
+}
+
+```
+ ### **Border-radius for IE (version < 9)**
 
  Download the [border-radius.htc](http://curved-corner.googlecode.com/files/border-radius.htc) file,and put it on the website.
 
-  .curve{ behavior: url(http://mywebsite.com/border-radius.htc); }  If you would like to convert your rectangular element to circle the trick is to make your corner radius half the width/height of your shape and make sure that the shape is originally a square,i.e. height and width of the shape should be same.  #circular { height: 100px; width: 100px; -webkit-border-radius: 50px; -moz-border-radius: 50px; border-radius: 50px; }  In above example, a div of id *circular* with height and width of **100px** will look circular as the border radius is 100 / 2 = 50px . Hope this helps ;) 
+ ```css
+.curve{
+  behavior: url(http://mywebsite.com/border-radius.htc);
+}
+
+```
+ If you would like to convert your rectangular element to circle the trick is to make your corner radius half the width/height of your shape and make sure that the shape is originally a square,i.e. height and width of the shape should be same. 
+ ```css
+ 
+#circular {
+height: 100px;
+width: 100px;
+-webkit-border-radius: 50px;
+-moz-border-radius: 50px;
+border-radius: 50px;
+}
+
+```
+ In above example, a div of id *circular* with height and width of **100px** will look circular as the border radius is 100 / 2 = 50px . Hope this helps ;) 
 
 
 

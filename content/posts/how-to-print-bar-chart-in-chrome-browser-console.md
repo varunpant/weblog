@@ -14,7 +14,11 @@ This post doesn't really have anything valuable to contribute, just some cool co
 
  Here is a simple , yet neat way to plot out bunch of numbers in chrome console as a** horizontal bar chart.**
 
- for(i = 5;i<20;i++){console.log(`%c ${Array(Math.round(i*2)).join('█')}`, 'color: crimson');}   ![](/media/image.png)
+ ```javasript
+ for(i = 5;i<20;i++){console.log(`%c ${Array(Math.round(i*2)).join('█')}`, 'color: crimson');}
+
+ ```
+  ![](/media/image.png)
 
     
  

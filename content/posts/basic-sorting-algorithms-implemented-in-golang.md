@@ -20,7 +20,9 @@ This post includes go-lang based implementation of some of the classic sorting a
 
   
 
-package main func BubbleSort( items []int) {  
+```package main
+
+func BubbleSort( items []int) {  
   
  L:=len(items)  
   
@@ -33,7 +35,9 @@ package main func BubbleSort( items []int) {
  }  
  }  
   
-}   ### Insertion Sort
+} 
+```
+  ### Insertion Sort
 
   [wiki](https://en.wikipedia.org/wiki/Insertion_sort) ![](https://upload.wikimedia.org/wikipedia/commons/0/0f/Insertion-sort-example-300px.gif) 
 
@@ -41,21 +45,26 @@ package main func BubbleSort( items []int) {
 
   
 
-package main func InsertionSort(items []int) {  
+```package main
+
+func InsertionSort(items []int) {  
   
- L := len(items)  
+   L := len(items)  
   
- for i := 1; i < L; i++ {  
+   for i := 1; i < L; i++ {  
   
- j := i  
- for j > 0 && items[j] < items[j-1] {  
- items[j], items[j-1] = items[j-1], items[j]  
- j -= 1  
- }  
+      j := i  
+      for j > 0 && items[j] < items[j-1] {  
+         items[j], items[j-1] = items[j-1], items[j]  
+         j -= 1  
+      }  
   
- }  
+   }  
   
-}   ### Merge Sort
+}
+
+```
+  ### Merge Sort
 
   [wiki](https://en.wikipedia.org/wiki/Merge_sort) ![](https://upload.wikimedia.org/wikipedia/commons/c/cc/Merge-sort-example-300px.gif) 
 
@@ -63,55 +72,59 @@ package main func InsertionSort(items []int) {
 
   
 
-package main  
+```package main  
   
 const NADA int = -1  
   
 func DeepCopy(vals []int) []int {  
- tmp := make([]int, len(vals))  
- copy(tmp, vals)  
- return tmp  
+   tmp := make([]int, len(vals))  
+   copy(tmp, vals)  
+   return tmp  
 }  
   
 func MergeSort(items []int) {  
   
- if len(items) > 1 {  
- mid := len(items) / 2  
- left := DeepCopy(items[0:mid])  
- right := DeepCopy(items[mid:])  
+   if len(items) > 1 {  
+      mid := len(items) / 2  
+      left := DeepCopy(items[0:mid])  
+      right := DeepCopy(items[mid:])  
   
- MergeSort(left)  
- MergeSort(right)  
+      MergeSort(left)  
+      MergeSort(right)  
   
- l := 0  
- r := 0  
+      l := 0  
+      r := 0  
   
- for i := 0; i < len(items); i++ {  
+      for i := 0; i < len(items); i++ {  
   
- lval := NADA  
- rval := NADA  
+         lval := NADA  
+         rval := NADA  
   
- if l < len(left) {  
- lval = left[l]  
- }  
+         if l < len(left) {  
+            lval = left[l]  
+         }  
   
- if r < len(right) {  
- rval = right[r]  
- }  
+         if r < len(right) {  
+            rval = right[r]  
+         }  
   
- if (lval != NADA && rval != NADA && lval < rval) || rval == NADA {  
- items[i] = lval  
- l += 1  
- } else if (lval != NADA && rval != NADA && lval >= rval) || lval == NADA {  
- items[i] = rval  
- r += 1  
- }  
+         if (lval != NADA && rval != NADA && lval < rval) || rval == NADA {  
+            items[i] = lval  
+            l += 1  
+         } else if (lval != NADA && rval != NADA && lval >= rval) || lval == NADA {  
+            items[i] = rval  
+            r += 1  
+         }  
   
- }  
- }  
+      }  
+   }  
   
 }  
-   ### Quicksort Sort
+
+
+
+```
+  ### Quicksort Sort
 
   [wiki](https://en.wikipedia.org/wiki/Quicksort)
 
@@ -121,38 +134,41 @@ func MergeSort(items []int) {
 
   
 
-func QuickSort(items []int) {  
+```func QuickSort(items []int) {  
   
- if len(items) > 1 {  
- pivot\_index := len(items) / 2  
- var smaller\_items = []int{}  
- var larger\_items = []int{}  
+   if len(items) > 1 {  
+      pivot\_index := len(items) / 2  
+      var smaller\_items = []int{}  
+      var larger\_items = []int{}  
   
- for i := range items {  
- val := items[i]  
- if i != pivot\_index {  
- if val < items[pivot\_index] {  
- smaller\_items = append(smaller\_items, val)  
- } else {  
- larger\_items = append(larger\_items, val)  
- }  
- }  
- }  
+      for i := range items {  
+         val := items[i]  
+         if i != pivot\_index {  
+            if val < items[pivot\_index] {  
+               smaller\_items = append(smaller\_items, val)  
+            } else {  
+               larger\_items = append(larger\_items, val)  
+            }  
+         }  
+      }  
   
- QuickSort(smaller\_items)  
- QuickSort(larger\_items)  
+      QuickSort(smaller\_items)  
+      QuickSort(larger\_items)  
   
- var merged []int = append(append(append([]int{}, smaller\_items...), []int{items[pivot\_index]}...), larger\_items...)  
- //merged := MergeLists(smaller\_items, items[pivot\_index], larger\_items)  
+      var merged []int = append(append(append([]int{}, smaller\_items...), []int{items[pivot\_index]}...), larger\_items...)  
+      //merged := MergeLists(smaller\_items, items[pivot\_index], larger\_items)  
   
- for j := 0; j < len(items); j++ {  
- items[j] = merged[j]  
- }  
+      for j := 0; j < len(items); j++ {  
+         items[j] = merged[j]  
+      }  
   
- }  
+   }  
   
 }  
-   ### Heap Sort
+
+
+```
+  ### Heap Sort
 
   [wiki](http://en.wikipedia.org/wiki/Heapsort) 
 
@@ -162,54 +178,89 @@ func QuickSort(items []int) {
 
   
 
-package main   
+```package main
+
+  
 func heapify(items []int, idx int, size int) {  
- l := 2*idx + 1 // left = 2*i + 1  
- r := 2*idx + 2 // right = 2*i + 2  
+   l := 2*idx + 1 // left = 2*i + 1  
+   r := 2*idx + 2 // right = 2*i + 2  
   
- var largest int;  
- if l <= size && items[l] > items[idx] {  
- largest = l  
- } else {  
- largest = idx  
- }  
+   var largest int;  
+   if l <= size && items[l] > items[idx] {  
+      largest = l  
+   } else {  
+      largest = idx  
+   }  
   
- if r <= size && items[r] > items[largest] {  
- largest = r  
- }  
+   if r <= size && items[r] > items[largest] {  
+      largest = r  
+   }  
   
- if largest != idx {  
- t := items[idx]  
- items[idx] = items[largest]  
- items[largest] = t  
- heapify(items, largest, size)  
- }  
+   if largest != idx {  
+      t := items[idx]  
+      items[idx] = items[largest]  
+      items[largest] = t  
+      heapify(items, largest, size)  
+   }  
   
 }  
   
 func HeapSort(items []int) {  
   
- L := len(items) //heap size  
- m := int(L / 2) //middle  
+   L := len(items) //heap size  
+   m := int(L / 2) //middle  
   
- for i := m; i >= 0; i-- {  
+   for i := m; i >= 0; i-- {  
   
- heapify(items, i, L-1)  
- }  
+      heapify(items, i, L-1)  
+   }  
   
- F := L - 1  
- for j := F; j >= 0; j-- {  
- t := items[0]  
- items[0] = items[j]  
- items[j] = t  
- F -= 1  
- heapify(items, 0, F)  
- }  
+   F := L - 1  
+   for j := F; j >= 0; j-- {  
+      t := items[0]  
+      items[0] = items[j]  
+      items[j] = t  
+      F -= 1  
+      heapify(items, 0, F)  
+   }  
   
 }  
-   Finally to run these algos I have written a quick main program
+
+
+```
+  Finally to run these algos I have written a quick main program
 
   
 
-import ( "fmt" "time" "math/rand" ) func main() { fmt.Println("Preparing!") var randomVals = []int{} s1 := rand.NewSource(time.Now().UnixNano()) r1 := rand.New(s1) for i := 0; i < 11; i++ { randomVals = append(randomVals, r1.Intn(99)+1) } fmt.Println("Unsorted!") fmt.Println(randomVals) //BubbleSortrandomVals() //InsertionSort(randomVals) //MergeSort(randomVals) //QuickSort(randomVals) HeapSort(randomVals) fmt.Println("sorted!") fmt.Println(randomVals) }finally some nice visuals [here](https://imgur.com/gallery/RM3wl)
+```import (
+  "fmt"
+  "time"
+  "math/rand"
+)
+
+func main() {
+
+  fmt.Println("Preparing!")
+  var randomVals = []int{}
+  s1 := rand.NewSource(time.Now().UnixNano())
+  r1 := rand.New(s1)
+  for i := 0; i < 11; i++ {
+    randomVals = append(randomVals, r1.Intn(99)+1)
+  }
+
+  fmt.Println("Unsorted!")
+  fmt.Println(randomVals)
+  //BubbleSortrandomVals()
+  //InsertionSort(randomVals)
+  //MergeSort(randomVals)
+  //QuickSort(randomVals)
+  HeapSort(randomVals)
+
+  fmt.Println("sorted!")
+  fmt.Println(randomVals)
+}
+```
+```finally some nice visuals [here](https://imgur.com/gallery/RM3wl)
+```
+
 

@@ -16,8 +16,81 @@ I generally have been using loading gifs in my work most of the time to inform t
 
  ### Basic Code
 
- We will use nested divs to create the loading animation control  <div class="wrap"> <div class='circle'> <div class="clockNeedle"></div> </div> </div>    
- and css looks like this  body{ background-color: #fff; text-align: center; height: 100%; } html { height: 100%; overflow: hidden; } .wrap{ position: absolute; top:0; left:0; bottom:0; right:0; margin: auto; width: 150px; height: 150px; border: 1px solid transparent; } .circle{ width: 80%; height: 80%; border: 5px solid black; border-radius: 50%; position: absolute; bottom:0; margin-left: auto; margin-right: auto; left:0; right:0; } .clockNeedle{ width: 50px; height: 5px; background: black; position: absolute; top: 50%; left: 10px; transform-origin:100% 50%; -webkit-transform-origin:100% 50%; -webkit-animation: needleAnimation 3s linear 0s infinite; animation: needleAnimation 3s linear 0s infinite; } /* Chrome, Safari, Opera */ @-webkit-keyframes needleAnimation { from { } to { -ms-transform:rotate(360deg); -moz-transform:rotate(360deg); -webkit-transform:rotate(360deg); } } @keyframes needleAnimation { from { } to { -ms-transform:rotate(360deg); -moz-transform:rotate(360deg); -webkit-transform:rotate(360deg); } }  
+ We will use nested divs to create the loading animation control ```
+<div class="wrap">
+   <div class='circle'>
+      <div class="clockNeedle"></div>
+    </div>
+</div>
+
+```
+   
+ and css looks like this ```
+body{
+  background-color: #fff;
+  text-align: center;
+  height: 100%;
+}
+
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+.wrap{
+ position: absolute;
+  top:0; left:0; bottom:0; right:0;
+  margin: auto;
+  width: 150px;
+  height: 150px;
+  border: 1px solid transparent;
+}
+
+.circle{
+  width: 80%;
+  height: 80%;
+  border: 5px solid black;
+  border-radius: 50%;
+  position: absolute;
+  bottom:0;
+  margin-left: auto; margin-right: auto; left:0; right:0;
+}
+
+
+.clockNeedle{
+  width: 50px;
+  height: 5px;
+  background: black;
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform-origin:100% 50%;
+  -webkit-transform-origin:100% 50%;
+  -webkit-animation: needleAnimation 3s linear 0s infinite;
+  animation: needleAnimation 3s linear 0s infinite;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes needleAnimation {
+    from {   }
+    to {
+    	-ms-transform:rotate(360deg);
+    	-moz-transform:rotate(360deg);
+    	-webkit-transform:rotate(360deg);
+	}
+}
+
+@keyframes needleAnimation {
+   from { }
+    to {
+    	-ms-transform:rotate(360deg);
+    	-moz-transform:rotate(360deg);
+    	-webkit-transform:rotate(360deg);
+	}
+}
+
+```
+ 
 
  ### Explanation
 

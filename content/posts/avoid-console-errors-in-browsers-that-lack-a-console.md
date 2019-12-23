@@ -20,13 +20,52 @@ I love JavaScript and code a lot in it .Since I code, I also encounter problems 
 
  Here is a workaround
 
-  
+ HTML5 Boilerplate guys present us with this technique
 
-  HTML5 Boilerplate guys present us with this technique
+ ```javascript
+(function() {
+    var method;
+    var noop = function () {};
+    var methods = [
+        'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error',
+        'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log',
+        'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd',
+        'timeStamp', 'trace', 'warn'
+    ];
+    var length = methods.length;
+    var console = (window.console = window.console || {});
 
-  (function() { var method; var noop = function () {}; var methods = [ 'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error', 'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log', 'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd', 'timeStamp', 'trace', 'warn' ]; var length = methods.length; var console = (window.console = window.console || {}); while (length--) { method = methods[length]; // Only stub undefined methods. if (!console[method]) { console[method] = noop; } } }());  my personal fav is this
+    while (length--) {
+        method = methods[length];
 
-  var log = function (text) { // if (!window.console) window.console = {}; // if (!window.console.log) window.console.log = function () { }; "use strict"; if (typeof (console) !== "undefined" && console.log !== undefined) { try { console.log.apply(console, arguments); } catch (e) { var log = Function.prototype.bind.call(console.log, console); log.apply(console, arguments); } } }  use which ever you prefer. Hope this helps.
+        // Only stub undefined methods.
+        if (!console[method]) {
+            console[method] = noop;
+        }
+    }
+}());
+
+```
+ my personal fav is this
+
+ ```javascript
+var log = function (text) {
+    // if (!window.console) window.console = {};
+    // if (!window.console.log) window.console.log = function () { };
+    "use strict";
+
+    if (typeof (console) !== "undefined" && console.log !== undefined) {
+        try {
+            console.log.apply(console, arguments);
+        } catch (e) {
+            var log = Function.prototype.bind.call(console.log, console);
+            log.apply(console, arguments);
+        }
+    }
+}
+
+```
+ use which ever you prefer. Hope this helps.
 
 
 

@@ -32,5 +32,17 @@ IIS7 is quite modular, it is [shipped](http://blogs.iis.net/bills/archive/2008/0
 
  In the patterns text box entering something like ^/service(.*) will trap all requests going to <http://localdomain/service> and they will be proxyed as if the requests were made like <http://anotherdomain.com/service> , The query strings if present are also carried forward, all these settings and modification are preserved in web.config of the web application, under tag. The rules after configuration look like 
 
-  <rewrite> <rules> <rule stopprocessing="true" name="ReverseProxyInboundRule1"> <match url="^service/(.*)" /> <action url="http://anotherdomain.com/service{R:1}" type="Rewrite" /> <servervariables /> </rule> </rules> </rewrite> 
+ ```
+<rewrite>
+    <rules>
+        <rule stopprocessing="true" name="ReverseProxyInboundRule1">
+            <match url="^service/(.*)" />
+            <action url="http://anotherdomain.com/service{R:1}" type="Rewrite" />
+            <servervariables />
+        </rule>
+    </rules>
+</rewrite>
+
+```
+
 

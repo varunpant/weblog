@@ -23,7 +23,23 @@ Insertion sort, is an efficient algorithm for sorting a small number of elements
  Here is the python version of it
 
   ![](https://upload.wikimedia.org/wikipedia/commons/9/9c/Insertion-sort-example.gif)   
-  def insertionSort(a): for j in range(1, len(a)): key = a[j] i = j - 1 while (i > -1 and a[i] > key): a[i + 1] = a[i] i = i - 1 a[i + 1] = key return a a = [6, 5, 3, 1, 8, 7, 2, 4] print insertionSort(a) Hope this helps :)
+  ```def insertionSort(a):
+    for j in range(1, len(a)):  
+        key = a[j]
+        i = j - 1
+        while (i > -1 and a[i] > key): 
+            a[i + 1] = a[i]
+            i = i - 1
+        a[i + 1] = key
+       
+
+    return a
+
+
+a = [6, 5, 3, 1, 8, 7, 2, 4] 
+print insertionSort(a)
+```
+ Hope this helps :)
 
     
  

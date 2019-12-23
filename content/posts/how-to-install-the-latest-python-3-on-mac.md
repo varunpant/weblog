@@ -12,7 +12,7 @@ Here is a quick guide on installing Python3 on a mac
 
  ### Installation
 
-```bash
+ ```bash
 brew update
 brew upgrade
 sudo mkdir -p /usr/local/Frameworks
@@ -21,8 +21,24 @@ brew install python3
 brew link python3
 brew doctor
 ```
+ ### Aliasing
 
-I hope this is useful
+```bash
+ echo "alias python=/usr/local/bin/python3.7" >> ~/.zshrc
+```
+ or
+
+ ```bash
+ echo "alias python=/usr/local/bin/python3.7" >> ~/.bashrc
+```
+ You could probably have just done this as well
+
+ ```bash
+ alias python='python3'
+ alias pip='pip3'
+
+```
+ I hope this is useful
 
 
 

@@ -20,29 +20,31 @@ category = ["gis","python","osgeo","gdal"]
 
  In python its quite easy to transform coordinates using [OGR](http://gdal.org/1.11/ogr/) and OSR tools with their python wrapper.
 
-def transform(pointX, pointY):  
- # Spatial Reference System  
- inputEPSG = 4326  
- outputEPSG = 3857  
+```def transform(pointX, pointY):  
+    # Spatial Reference System  
+    inputEPSG = 4326  
+    outputEPSG = 3857  
   
- # create a geometry from coordinates  
- point = ogr.Geometry(ogr.wkbPoint)  
- point.AddPoint(pointX, pointY)  
+    # create a geometry from coordinates  
+    point = ogr.Geometry(ogr.wkbPoint)  
+    point.AddPoint(pointX, pointY)  
   
- # create coordinate transformation  
- inSpatialRef = osr.SpatialReference()  
- inSpatialRef.ImportFromEPSG(inputEPSG)  
+    # create coordinate transformation  
+    inSpatialRef = osr.SpatialReference()  
+    inSpatialRef.ImportFromEPSG(inputEPSG)  
   
- outSpatialRef = osr.SpatialReference()  
- outSpatialRef.ImportFromEPSG(outputEPSG)  
+    outSpatialRef = osr.SpatialReference()  
+    outSpatialRef.ImportFromEPSG(outputEPSG)  
   
- coordTransform = osr.CoordinateTransformation(inSpatialRef, outSpatialRef)  
+    coordTransform = osr.CoordinateTransformation(inSpatialRef, outSpatialRef)  
   
- # transform point  
- point.Transform(coordTransform)  
+    # transform point  
+    point.Transform(coordTransform)  
   
- # return point in EPSG 3857  
- return point.GetX(), point.GetY()  
+    # return point in EPSG 3857  
+    return point.GetX(), point.GetY()  
+
+```
     
  
 

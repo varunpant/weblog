@@ -1,0 +1,407 @@
+<!DOCTYPE HTML PUBLIC"-// W3C//DTD HTML 4.01//EN"" http://www.w3.org/TR/html4/strict.dtd"> 
+<html> 
+  <head> 
+    <title>JavaScipt Carousel
+    </title> 
+    <meta name="Author" content="Varun Pant at http://www.varunpant.com"> 
+    <meta http-equiv="imagetoolbar" content="no"> 
+    <style type="text/css"> 
+      html { 
+      overflow: hidden; 
+      } 
+      body { 
+      position: absolute; 
+      margin: 0px; 
+      padding: 0px; 		
+      width: 100%; 
+      height: 100%;  
+      background: #D2D1D0;		
+      } 
+
+      #screen { 
+      position: absolute; 
+      left: 50%; 
+      top: 50%; 		
+      width: 600px; 
+      height:400px; 
+      background: #F4F4F4;
+      border:1px solid #FEFEFE;
+      margin-left: -300px; 
+      margin-top: -200px; 
+      overflow: hidden; 
+      }
+      #controlBar
+      {
+      position: absolute; 
+      left: 50%; 
+      top: 50%; 
+      margin-left: -500px;
+      margin-top: -200px; 
+      width: 180px;
+      height:400px; 
+      border:1px solid #F9F9F9;
+      background-color:#E0E0E0;
+
+      }	
+      table
+      {
+      width:100%;
+      height:70%
+      }
+      .title
+      {
+      width:30px;
+      color:#808080;
+      text-shadow:#fff 0px 1px 0, #000 0 -1px 0;
+      vertical-align:top;
+      padding-top:12px;
+      }
+      input
+      {
+      border:1px solid #ccc;		 
+      width:2em;
+
+      } 
+      p
+      {
+      text-align:center;		
+      font-weight:bold;
+      font-size:20px;
+      margin:2px;
+      color:#808080;
+      text-shadow:#fff 0px 1px 0, #000 0 -1px 0;
+      }
+	 
+	 a
+	 {
+	  color:#808080;
+      text-shadow:#fff 0px 1px 0, #000 0 -1px 0;
+	  clear:both;
+	  text-decoration:none;
+	 }
+	 #lft,#rt
+	 {	
+		width:48px;
+		height:48px;
+        cursor:pointer;
+		filter:alpha(opacity=50);
+	   -moz-opacity:0.5;
+	   -khtml-opacity: 0.5;
+	    opacity: 0.5;		
+		z-index:9000;
+	 }
+	 #lft
+	 {
+		float:left;
+		background:url(br_prev.png) no-repeat;
+	 }
+	 #lft:hover
+	 {
+	   filter:alpha(opacity=90);
+	   -moz-opacity:0.9;
+	   -khtml-opacity: 0.9;
+	    opacity: 0.9;
+	 }
+	 #rt
+	 {
+		float:right;
+		background:url(br_next.png) no-repeat;
+	 }
+	 #rt:hover
+	 {
+	  filter:alpha(opacity=90);
+	  -moz-opacity:0.9;
+	  -khtml-opacity: 0.9;
+	  opacity: 0.9;		
+	 }
+.msg
+{
+	font-size:16px;
+}
+
+    </style> 
+    <link rel="stylesheet" type="text/css" media="screen, projection" href="./slider.css"/>
+	<script type="text/javascript" src="./slider.js"></script>
+
+
+<script type="text/javascript"> 
+/* 
+   ========================================================================== 
+         script: Javascript Carousel 
+         author: Varun Pant 
+	     date: 27 June, 2010 
+	     site: http://www.varunpant.com            
+               ------------ 
+        license: CC-BY-NC - please do not remove this notice ! 
+   ========================================================================== 
+*/ 
+	var $ = function(id) { return document.getElementById(id); };
+	var dc = function(tag) { return document.createElement(tag); };
+	
+	var Carousel = 
+	{
+		 image_width : 128,            // image width
+         image_height : 128,           // image height        
+         spriness : 0.4,		       // control the spring speed
+         decay : 0.5,			       // control the bounce speed
+         scale_down_factor : 0.5,      // scale between images
+         offset_factor : 100,          // distance between images
+         opacity_down_factor : 0.4,    // alpha between images
+         max_scale : 2,                // Maximum Scale
+		 _xCenter:0,
+         _yCenter:0,
+		 _target :0,					// Target moving position
+		 _current:0,					// Current position
+		 _spring :0,					// Temp used to store last moving 
+		 _images:[],
+		
+		 init:function()
+		 {   
+			Carousel._xCenter = $('screen').offsetWidth / 2;
+            Carousel._yCenter =  $('screen').offsetHeight / 2;
+			
+			for(i=0;i<9;i++)
+			{				 
+				var img = dc("img");
+				img.src = "image"+ (i + 1) +".png";
+				img.style.position = 'absolute';
+				img.style.width = Carousel.image_width  +'px';
+				img.style.hight = Carousel.image_height +'px';
+				$('screen').appendChild(img);
+				Carousel.posImage(img, i);
+				Carousel._images.push(img);
+			} 
+			document.onkeydown = function(e)
+			{
+				e = e || window.event;
+		 
+				switch (e.keyCode) {  
+		 
+					case 38: 
+						 Carousel.moveIndex(1);
+						break;
+		 
+					case 40: 
+						 Carousel.moveIndex(-1);
+						break;
+		 
+					case 37: 
+						 Carousel.moveIndex(1);
+						break;
+		 
+					case 39: 
+						Carousel.moveIndex(-1);
+						break;
+				}
+			}
+			$('lft').onclick = function(e)
+			{  
+				Carousel.moveIndex(1);
+			}
+			
+			$('rt').onclick = function(e)
+			{  
+				Carousel.moveIndex(-1);
+			}
+			
+			if (window.addEventListener)
+				window.addEventListener('DOMMouseScroll', Carousel.wheel, false);
+			    window.onmousewheel = Carousel.wheel;
+			    if(!!document.attachEvent && !window.opera)document.onmousewheel =  Carousel.wheel;
+			Carousel.mainLoop();
+		 },
+		 wheel:function(event)
+		 {
+			 var delta = 0;
+			 if (!event) event = window.event;
+			 if (event.wheelDelta) 
+			 {
+                delta = event.wheelDelta/120; 
+                if (window.opera) delta = -delta; 
+             } 
+			 else if (event.detail) 
+			 {
+                delta = -event.detail/3; 
+			 }
+			if (delta)
+			{
+				if (delta <0)
+					Carousel.moveIndex(-1);             
+				else
+					Carousel.moveIndex(1);
+			}
+		 },
+		 posImage:function(img,index)
+		 {
+			var diffFactor = index - Carousel._current;            
+            var scalex = Carousel.max_scale - (Math.abs(diffFactor) * Carousel.scale_down_factor);
+            var scaley = Carousel.max_scale - (Math.abs(diffFactor) * Carousel.scale_down_factor);
+            img.style.width = Math.abs(Carousel.image_width * scalex) + 'px'; 
+			img.style.height = Math.abs(Carousel.image_height * scaley)  + 'px'; 
+            // reposition the image
+            var left = Carousel._xCenter - ((Carousel.image_width * scalex) / 2) + (diffFactor * Carousel.offset_factor);
+            var top  = Carousel._yCenter - ((Carousel.image_height * scaley) / 2);
+            img.style.opacity = 1 - Math.abs(diffFactor) * Carousel.opacity_down_factor;
+			//img.style.filter = 'alpha(opacity=' +  Math.abs(Number(img.style.opacity *90)) + ')';	
+			 
+		    img.style.left = left + 'px';
+		    img.style.top = top + 'px'; 
+
+            // order the element by the scaleX
+            img.style.zIndex  = Math.round(Number(Math.abs(scalex * 100)));
+		 },         
+         moveIndex:function(value)
+         {
+            Carousel._target += value;
+            Carousel._target = Math.max(0,Carousel._target);
+            Carousel._target = Math.min(Carousel._images.length - 1, Carousel._target);
+         },
+		 mainLoop:function()
+		 {			
+            for(i = 0; i < Carousel._images.length; i++){
+                var image = Carousel._images[i];
+                Carousel.posImage(image, i);
+            }
+			Carousel._spring = ((Carousel._target - Carousel._current) * Carousel.spriness) + (Carousel._spring * Carousel.decay);
+			Carousel._current += Carousel._spring;
+			 
+			setTimeout(Carousel.mainLoop,1000/32);
+		 }
+	};
+	
+  
+  onload = function()
+  {   
+       Carousel.init();  
+  }
+   
+  /////////////////////////////////////////////////////        
+  // Callbacks
+  /////////////////////////////////////////////////////
+  
+  function updateSpriness()
+  {
+    Carousel.spriness = parseInt($('spriness').value, 10)/10 ||  0.4; 
+  }
+  function updateOffsetFactor()
+  {
+    Carousel.offset_factor = parseInt($('offset_factor').value, 10) || 100;
+  }
+  function updateDecay()
+  {
+    Carousel.decay = parseInt($('decay').value, 10)/10 || 0.5;
+  }
+  function updateScaleDownFactor()
+  {
+     Carousel.scale_down_factor = parseInt($('scale_down_factor').value/10, 10)  || 0.5;
+  }
+  
+  function applyPreset(choice)
+  {
+	switch(choice)
+	{
+		case 1:
+		{
+			$('spriness').value = 2;			
+			$('offset_factor').value=50;			
+			$('decay').value=2; 		
+			$('scale_down_factor').value=10;
+			updateScaleDownFactor();	
+			updateDecay();
+			updateOffsetFactor();
+			updateSpriness();
+			 
+		}
+		break;
+		case 2:
+		{
+			$('spriness').value = 1;updateSpriness();
+			$('offset_factor').value=249;updateOffsetFactor();
+			$('decay').value=2; updateDecay();
+			$('scale_down_factor').value=1;updateScaleDownFactor();
+		}
+		break;
+		case 3:
+		{
+			$('spriness').value = 1;updateSpriness();
+			$('offset_factor').value=1;updateOffsetFactor();
+			$('decay').value=1; updateDecay();
+			$('scale_down_factor').value=15;updateScaleDownFactor();
+		}
+		break;
+	}
+  }
+    
+</script>
+
+
+  </head>
+
+
+  <body id="body">	 
+
+    <div id="screen"> 
+	
+	<div id="lft"></div>
+	<div id="rt"></div>
+	
+    </div> 
+    <div id="controlBar">
+
+      <p>
+	  Settings Panel
+      </p>
+
+      <table>
+        <tr>
+          <td class="title">Wobble:
+          </td>
+          <td>
+            <input name="slider1" id="spriness" type="text" title="Range: 1 - 10" class="fd_range_1_9 fd_classname_extraclass fd_callback_updateSpriness" value="4"/>
+          </td>
+
+        </tr>
+
+        <tr>
+          <td class="title">Distance:
+          </td>
+          <td>
+            <input name="slider2" id="offset_factor" type="text" title="Range: 1 - 250" class="fd_range_1_250 fd_classname_extraclass fd_callback_updateOffsetFactor" value="100"/>
+          </td>
+
+        </tr>
+
+        <tr>
+          <td class="title">Bounce:
+          </td>
+          <td>
+            <input name="slider3" id="decay" type="text" title="Range: 1 - 9" class="fd_range_1_10 fd_classname_extraclass fd_callback_updateDecay" value="5"/>
+          </td>
+
+        </tr>
+
+        <tr>
+          <td class="title">Scale:
+          </td>
+          <td>
+            <input name="slider4" id="scale_down_factor" type="text" title="Range: 1- 9" class="fd_range_1_15 fd_classname_extraclass fd_callback_updateScaleDownFactor" value="5"/>
+          </td>
+
+        </tr>
+      </table>	
+		
+		 <a href="JavaScript:void(0);" onclick="applyPreset(1)" > Sample 1</a>
+		 <a href="JavaScript:void(0);" onclick="applyPreset(2)" > Sample 2</a>
+		 <a href="JavaScript:void(0);" onclick="applyPreset(3)">  Sample 3</a>
+		   
+		 <p class="msg">
+		 Use navigational buttons or mouse wheel, to animate contents.
+		 </p>
+		 
+
+    </div>
+
+  </body> 
+
+
+</html> 

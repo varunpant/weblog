@@ -18,17 +18,44 @@ I am a big fan and user of python. one of the most popular ways to create quick 
 
  First lets configure modwsgi in Ubuntu 
 
+```bash
  sudo apt-get install libapache2-mod-wsgi
 
-  sudo a2enmod wsgi
+ sudo a2enmod wsgi
 
  sudo service apache2 restart
+```
 
- ##### configuration in /etc/apache2/sites-available/defaults
+ ### configuration in /etc/apache2/sites-available/defaults
 
-  WSGIScriptAlias /appname /var/www/webpy-app/code.py/ Alias /appname/static /var/www/webpy-app/static/ AddType text/html .py <Directory /var/www/webpy-app/> Order deny,allow Allow from all </Directory>   There is generally a handler present in most web applications for wsgi calls, here is one from web.py 
+ ```xml  
+ WSGIScriptAlias /appname /var/www/webpy-app/code.py/
 
-  import web urls = ( '/.*', 'hello', ) class hello: def GET(self): return "Hello, world." application = web.application(urls, globals()).wsgifunc()   and that's it.Hope it helps 
+  Alias /appname/static /var/www/webpy-app/static/
+  AddType text/html .py
+
+  <Directory /var/www/webpy-app/>
+      Order deny,allow
+      Allow from all
+  </Directory> 
+```
+  There is generally a handler present in most web applications for wsgi calls, here is one from web.py 
+
+ ```python 
+ import web
+
+  urls = (
+      '/.*', 'hello',
+      )
+
+  class hello:
+      def GET(self):
+          return "Hello, world."
+
+  application = web.application(urls, globals()).wsgifunc() 
+
+```
+  and that's it.Hope it helps 
 
 
 

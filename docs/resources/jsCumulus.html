@@ -1,0 +1,497 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"> 
+<html> 
+<head> 
+<title>Javascript TAG Cloud</title> 
+<meta name="Author" content="varun pant at http://www.varunpant.com"> 
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8"> 
+<meta http-equiv="imagetoolbar" content="no"> 
+<style type="text/css"> 
+	html { 
+		overflow: hidden; 
+	} 
+	body { 
+		 
+		margin: 0px; 
+		padding: 0px; 
+		background: #ccc; 
+		width: 100%; 
+		height: 100%; 
+	} 
+	 
+
+	#screen { 
+		position: absolute; 		
+		width:500px; 
+		height:500px;
+		left:50%;
+		top:50%;
+		margin-left:-250px;
+		margin-top:-250px;	
+		-moz-border-radius: 22px;  
+		-webkit-border-radius: 22px; 
+		box-shadow: 1px 1px 5px #777;
+		-webkit-box-shadow: 1px 1px 5px #777; 		
+		background: #FFF; 
+		overflow: hidden; 
+	} 
+	
+	#screen .tag {
+		position: absolute;			 
+		font-family: arial;
+		white-space: nowrap;
+		text-align: center;
+		font-weight:bold;		 
+		padding:2px;
+		margin:0;		
+	}
+	#screen .tag a
+	{
+		color:#2D3773;
+		text-decoration:none;
+	}
+
+	#screen .tag:hover
+	{
+		border :1px solid #6374AB;
+		color:#6374AB;
+		opacity:1;
+		filter: alpha(opacity=100);
+	}
+	#dbg{right:0px}
+	
+</style> 
+ 
+<script type="text/javascript"> 
+// =============================================================
+// script written by Varun Pant - June, 2010
+// http://www.varunpant.com
+// use under CC-BY-NC license
+// Original Inspiration from http://varunpant.com/2008/03/06/wordpress-plugin-wp-cumulus-flash-based-tag-cloud/
+// =============================================================
+ 
+ var stage = {
+
+	/* ==== variables ==== */ 
+	scale:0, 
+	dtr:0,
+	screen:null,
+	radius:0,
+	mcList:[],
+	active:true,
+	lasta:0,
+	lastb:0,
+	ofX:0,
+	ofY:0,
+	dX:0,
+	dY:0,
+	d:300,
+	tspeed:1,
+	distr:true,
+	sa:0,
+	ca:0,
+	sb:0,
+	cb:0,
+	sc:0,
+	cc:0, 
+	cow:0,//Center offset width.
+	coh:0,//Center offset height.
+	/* --- events --- */
+	addEvent : function  (o, e, f) {
+		if (window.addEventListener) o.addEventListener(e, f, false);
+		else if (window.attachEvent) r = o.attachEvent('on' + e, f);
+	},
+	/* ==== init script ==== */ 
+	init : function () { 
+		stage.screen= document.getElementById('screen');
+		stage.radius = 150;
+		stage.dtr = Math.PI/180;		
+		stage.sineCosine( 0,0,0 );
+		stage.mcList = [];
+		stage.active = false;
+		stage.lasta = stage.lastb = 1; 
+		stage.dX = (stage.screen.offsetWidth/2);
+		stage.dY = (stage.screen.offsetHeight/2);
+		stage.ofX = stage.screen.offsetLeft + stage.dX ;
+		stage.ofY =	stage.screen.offsetTop + stage.dY ; 
+		
+		for (var i = 0; i < tags.length; i++) 
+		{
+			tag = document.createElement('div');
+			tag.className = 'tag';
+			tag.innerHTML = "<a href= '" + tags[i].href + "' rel='' >" + tags[i].title + "</a>";
+			tag.scale = Number(tags[i].weight);			 
+			stage.screen.appendChild(tag);
+			stage.mcList.push(tag);	
+			stage.cow = Math.max(stage.cow,tag.offsetWidth);		
+			stage.coh = Math.max(stage.coh,tag.offsetHeight);					
+		}		
+		 
+		
+		stage.addEvent(document.getElementById('screen'),"mouseleave", function(){stage.active = false; });
+	
+		stage.addEvent(stage.screen,"mousemove", function(e)
+		{
+			stage.active = true;
+			if (window.event) e = window.event; 
+				mouse.x = e.clientX;
+				mouse.y = e.clientY;	
+		});
+
+		/* ==== start script ==== */ 
+		stage.resize(); 
+		stage.positionAll();
+		setInterval(stage.updateTags,33);
+	}, 
+ 
+	/* ==== resize window ==== */ 
+	resize : function () 
+	{ 
+		stage.screen.w = stage.screen.offsetWidth / 2;  
+		stage.screen.h = stage.screen.offsetHeight / 2; 
+		 
+	}, 
+	updateTags : function()
+	{
+		var a,b;
+			 
+		if( stage.active ){		 	 
+			 
+			 a = (-Math.min( Math.max(mouse.y -stage.ofY, -stage.dX ), stage.dX ) / 150 ) * stage.tspeed; 
+			 b = (Math.min( Math.max(mouse.x -stage.ofX, -stage.dY ), stage.dY ) / 150 ) * stage.tspeed;  			
+		} 
+		else
+		{
+			 
+			a = stage.lasta * 0.98;
+			b = stage.lastb * 0.98;
+		};
+		
+		
+		 stage.lasta = a;
+		 stage.lastb = b;
+
+		// if a and b under threshold, skip motion calculations to free up the processor
+		if( Math.abs(a) > 0.01 || Math.abs(b) > 0.01 ){
+			var c = 0;
+			 stage.sineCosine( a, b, c );
+			 	
+			for( var j=0; j<stage.mcList.length; j++ ) {
+				
+				// multiply positions by a x-rotation matrix
+				var rx1 = stage.mcList[j].cx;
+				var ry1 = stage.mcList[j].cy *  stage.ca + stage.mcList[j].cz * - stage.sa;
+				var rz1 = stage.mcList[j].cy *  stage.sa + stage.mcList[j].cz *  stage.ca;
+				
+				// multiply new positions by a y-rotation matrix
+				var rx2 = rx1 *  stage.cb + rz1 *  stage.sb;
+				var ry2 = ry1;
+				var rz2 = rx1 * - stage.sb + rz1 *  stage.cb;
+				
+				// multiply new positions by a z-rotation matrix
+				var rx3 = rx2 *  stage.cc + ry2 * - stage.sc;
+				var ry3 = rx2 *  stage.sc + ry2 *  stage.cc;
+				var rz3 = rz2;
+				
+				// set arrays to new positions
+				stage.mcList[j].cx = rx3 ;//x
+				stage.mcList[j].cy = ry3 ;//y
+				stage.mcList[j].cz = rz3 ;//z
+				  
+				// add perspective
+				var per = stage.d / ( stage.d+rz3);
+
+				// setmc position, scale, alpha
+				stage.mcList[j].style.left = (stage.screen.w - stage.cow/2)  + ( rx3 * per )+ 'px';
+				stage.mcList[j].style.top = (stage.screen.h - stage.coh/2) + ( ry3 * per ) + 'px';
+				stage.mcList[j].style.zIndex = per/2 + 'px';				
+				stage.mcList[j].style.fontSize = (1.5 * stage.mcList[j].scale * per) + 'pt'; 	
+				stage.mcList[j].style.opacity = Math.max(per - 0.7, 0) / 0.5 + 0.2;				 
+				stage.mcList[j].style.filter = 'alpha(opacity=' + (Math.max(per - 0.7, 0) / 0.5 + 0.2)*100 + ')'; 
+			}
+			
+			//stage.mcList.sort(stage.depthSort);
+			
+		}	
+			
+	},
+	positionAll : function()
+	{
+		var phi  = 0;
+		var theta  = 0;
+		var max  = stage.mcList.length;
+		
+		// mix up the list so not all a' live on the north pole
+		stage.mcList.sort( function(){ return Math.random()<0.5 ? 1 : -1; } );
+		
+		// distibute
+		for(i=1; i<max+1; i++)
+		{
+			if(stage.distr)
+			{
+				phi = Math.acos(-1+(2*i-1)/max);
+				theta = Math.sqrt(max*Math.PI)*phi;
+			}
+			else
+			{
+				phi = Math.random()*(Math.PI);
+				theta = Math.random()*(2*Math.PI);
+			}
+
+			// Coordinate conversion
+			stage.mcList[i-1].cx =  stage.radius * Math.cos(theta)*Math.sin(phi);//x
+			stage.mcList[i-1].cy =  stage.radius * Math.sin(theta)*Math.sin(phi);//y
+			stage.mcList[i-1].cz = stage.radius * Math.cos(phi);//z			
+		}
+	},
+	
+	sineCosine : function(a,b,c)
+	{
+		stage.sa = Math.sin(a * stage.dtr);
+		stage.ca = Math.cos(a * stage.dtr);
+		stage.sb = Math.sin(b * stage.dtr);
+		stage.cb = Math.cos(b * stage.dtr);
+		stage.sc = Math.sin(c * stage.dtr);
+		stage.cc = Math.cos(c * stage.dtr);
+	},
+	depthSort :function(a,b)
+	{
+	  var val = 0;
+	  if(a.cz < b.cz)
+	  {
+		val = 1;
+	  }
+	  if(a.cz > b.cz)
+	  {
+		val = -1;		
+	  }	 
+	 
+	  return val;
+	  
+	}
+	
+ }
+ /* ==== global mouse position ==== */ 
+var mouse = { 
+	x : 0, 
+	y : 0 
+} 
+
+/* ==== Dummy Tags Data ==== */ 
+ 
+ var tags = [ 
+
+      {
+        "title": "Cumulus",
+        "href": "http://varunpant.com",
+        "weight": "16",
+        "target": "_top",
+        "color": "0x000000",
+        rel:'tag'
+      },
+      {
+        "title": "Roy Tanck",
+        "href": "http://varunpant.com",
+        "weight": "16",
+        "target": "_top",
+        "color": "0x000000",
+        rel:'tag'
+      },
+      {
+        "title": "WordPress",
+        "href": "http://varunpant.com",
+        "weight": "16",
+        "target": "_top",
+        "color": "0x000000",
+        rel:'tag'
+      },
+      {
+        "title": "Plugin",
+        "href": "http://varunpant.com",
+        "weight": "16",
+        "target": "_top",
+        "color": "0x000000",
+        rel:'tag'
+      },
+      {
+        "title": "Flash",
+        "href": "http://varunpant.com",
+        "weight": "16",
+        "target": "_top",
+        "color": "0x000000",
+        rel:'tag'
+      },
+      {
+        "title": "HTML5",
+        "href": "http://varunpant.com",
+        "weight": "16",
+        "target": "_top",
+        "color": "0x000000",
+        rel:'tag'
+      },
+      {
+        "title": "Sphere",
+        "href": "http://varunpant.com",
+        "weight": "16",
+        "target": "_top",
+        "color": "0x000000",
+        rel:'tag'
+      },
+      {
+        "title": "3D",
+        "href": "http://varunpant.com",
+        "weight": "16",
+        "target": "_top",
+        "color": "0x000000",
+        rel:'tag'
+      },
+      {
+        "title": "Tag cloud",
+        "href": "http://varunpant.com",
+        "weight": "16",
+        "target": "_top",
+        "color": "0x000000",
+        rel:'tag'
+      },
+      {
+        "title": "Unicode",
+        "href": "http://varunpant.com",
+        "weight": "16",
+        "target": "_top",
+        "color": "0x000000",
+        rel:'tag'
+      },
+      {
+        "title": "Fonts",
+        "href": "http://varunpant.com",
+        "weight": "16",
+        "target": "_top",
+        "color": "0x000000",
+        rel:'tag'
+      },
+      {
+        "title": "Version 2.0",
+        "href": "http://varunpant.com",
+        "weight": "16",
+        "target": "_top",
+        "color": "0x000000",
+        rel:'tag'
+      },
+      {
+        "title": "Cumulus",
+        "href": "http://varunpant.com",
+        "weight": "15",
+        "target": "_top",
+        "color": "0x000000",
+        rel:'tag'
+      },
+      {
+        "title": "Roy Tanck",
+        "href": "http://varunpant.com",
+        "weight": "14",
+        "target": "_top",
+        "color": "0x000000",
+        rel:'tag'
+      },
+      {
+        "title": "WordPress",
+        "href": "http://varunpant.com",
+        "weight": "13",
+        "target": "_top",
+        "color": "0x000000",
+        rel:'tag'
+      },
+      {
+        "title": "Plugin",
+        "href": "http://varunpant.com",
+        "weight": "12",
+        "target": "_top",
+        "color": "0x000000",
+        rel:'tag'
+      },
+      {
+        "title": "Flash",
+        "href": "http://varunpant.com",
+        "weight": "15",
+        "target": "_top",
+        "color": "0x000000",
+        rel:'tag'
+      },
+      {
+        "title": "HTML5",
+        "href": "http://varunpant.com",
+        "weight": "14",
+        "target": "_top",
+        "color": "0x000000",
+        rel:'tag'
+      },
+      {
+        "title": "Sphere",
+        "href": "http://varunpant.com",
+        "weight": "13",
+        "target": "_top",
+        "color": "0x000000",
+        rel:'tag'
+      },
+      {
+        "title": "3D",
+        "href": "http://varunpant.com",
+        "weight": "12",
+        "target": "_top",
+        "color": "0x000000",
+        rel:'tag'
+      },
+      {
+        "title": "Tag cloud",
+        "href": "http://varunpant.com",
+        "weight": "14",
+        "target": "_top",
+        "color": "0x000000",
+        rel:'tag'
+      },
+      {
+        "title": "Unicode",
+        "href": "http://varunpant.com",
+        "weight": "14",
+        "target": "_top",
+        "color": "0x000000",
+         rel:'tag'
+      },
+      {
+        "title": "Fonts",
+        "href": "http://varunpant.com",
+        "weight": "13",
+        "target": "_top",
+        "color": "0x000000",
+        rel:'tag'
+      },
+      {
+        "title": "Version 2.0",
+        "href": "http://varunpant.com",
+        "weight": "12",
+        "target": "_top",
+        "color": "0x000000",
+        rel:'tag'
+      }
+    ]
+  
+ 
+ 
+ 
+/* ==== start script ==== */ 
+onload = function () { 
+	 stage.init();
+} 
+ 
+</script> 
+</head> 
+ 
+<body id="body"> 
+ 
+<div id="screen" > 
+ 
+</div> 
+ <div id="dbg" style=" position:absolute; width:200px;height:30px; color:#fff"></div>
+ 
+</body> 
+</html> 

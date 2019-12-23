@@ -7,7 +7,195 @@ This article primarily, has been written, as an academic exercise, to not forget
 Bubble Sort wiki Bubble sort is perhaps the simplest of all sorting algorithms, the basic principle is to bubble up the largest (or the smallest) and then the second largest and then the third largest and so on. Each bubble takes the full sweep of the list, hence best-case, average-case as well as the worst-case performance are all O(n2)"><meta property="og:type" content="article"><meta property="og:url" content="https://varunpant.github.io/weblog/posts/basic-sorting-algorithms-implemented-in-golang/"><meta property="article:published_time" content="2017-09-04T00:00:00+00:00"><meta property="article:modified_time" content="2017-09-04T00:00:00+00:00"><meta property="og:site_name" content="Varun Pant"></head><body><div class=container><header class=header><span class=header__inner><a href=/ class=logo style=text-decoration:none><span class=logo__mark><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44"><path fill="none" d="M15 8l14.729 14.382L15 35.367"/></svg></span><span class=logo__text>Varun Pant</span>
 <span class=logo__cursor></span></a><span class=header__right><nav class=menu><ul class="menu__inner menu__inner--desktop"><li><a href=/weblog/about>About</a></li><li><a href=/weblog/archives>Archives</a></li><li><a href=/weblog/feed.xml>Feed</a></li><li><a href=/weblog/showcase>Showcase</a></li></ul><ul class="menu__inner menu__inner--mobile"><li><a href=/weblog/about>About</a></li><li><a href=/weblog/archives>Archives</a></li><li><a href=/weblog/feed.xml>Feed</a></li><li><a href=/weblog/showcase>Showcase</a></li></ul></nav><span class=menu-trigger><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg></span><span class=theme-toggle><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 41C32.4934 41 41 32.4934 41 22 41 11.5066 32.4934 3 22 3 11.5066 3 3 11.5066 3 22s8.5066 19 19 19zM7 22C7 13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22z"/></svg></span></span></span></header><div class=content><div class=post><h2 class=post-title><a href=https://varunpant.github.io/weblog/posts/basic-sorting-algorithms-implemented-in-golang/>basic sorting algorithms implemented in golang</a></h2><div class=post-meta><span class=post-date>2017-09-04</span>
 <span class=post-author>— Varun Pant</span>
-<span class=post-read-time>— 4 min read</span></div><div class=post-content><p>This post includes go-lang based implementation of some of the classic sorting algorithms.</p><p>This article primarily, has been written, as an academic exercise, to not forget the basic principles of sorting.</p><h3 id=bubble-sort>Bubble Sort</h3><p><a href=http://en.wikipedia.org/wiki/Bubble_sort>wiki</a> <img src=https://upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif alt></p><p>Bubble sort is perhaps the simplest of all sorting algorithms, the basic principle is to bubble up the largest (or the smallest) and then the second largest and then the third largest and so on. Each bubble takes the full sweep of the list, hence best-case, average-case as well as the worst-case performance are all O(n2)</p><p>package main func BubbleSort( items []int) {</p><p>L:=len(items)</p><p>for i:=0;i&lt;L;i++{</p><p>for j:=0;j&lt; (L-1-i);j++{<br>if items[j] > items[j+1]{<br>items[j], items[j+1] = items[j+1], items[j]<br>}<br>}<br>}</p><p>} ### Insertion Sort</p><p><a href=https://en.wikipedia.org/wiki/Insertion_sort>wiki</a> <img src=https://upload.wikimedia.org/wikipedia/commons/0/0f/Insertion-sort-example-300px.gif alt></p><p>Insertion sort takes each element through the list and inserts it at the right place. At each iteration, insertion sort removes one element from the input data, finds the location it belongs within the sorted list, and inserts it there. It repeats until no input elements remain. Worst-case and average-case performance is O(n2), however the best case is O(n).</p><p>package main func InsertionSort(items []int) {</p><p>L := len(items)</p><p>for i := 1; i &lt; L; i++ {</p><p>j := i<br>for j > 0 && items[j] &lt; items[j-1] {<br>items[j], items[j-1] = items[j-1], items[j]<br>j -= 1<br>}</p><p>}</p><p>} ### Merge Sort</p><p><a href=https://en.wikipedia.org/wiki/Merge_sort>wiki</a> <img src=https://upload.wikimedia.org/wikipedia/commons/c/cc/Merge-sort-example-300px.gif alt></p><p>Mergesort operates by diving the list into two sublist recursively till each sublist contains only one element, it then merges the adjacent list back while sorting each element in the merged list. Best-case, average-case as well as the worst-case eprformance are all O(nlogn)</p><p>package main</p><p>const NADA int = -1</p><p>func DeepCopy(vals []int) []int {<br>tmp := make([]int, len(vals))<br>copy(tmp, vals)<br>return tmp<br>}</p><p>func MergeSort(items []int) {</p><p>if len(items) > 1 {<br>mid := len(items) / 2<br>left := DeepCopy(items[0:mid])<br>right := DeepCopy(items[mid:])</p><p>MergeSort(left)<br>MergeSort(right)</p><p>l := 0<br>r := 0</p><p>for i := 0; i &lt; len(items); i++ {</p><p>lval := NADA<br>rval := NADA</p><p>if l &lt; len(left) {<br>lval = left[l]<br>}</p><p>if r &lt; len(right) {<br>rval = right[r]<br>}</p><p>if (lval != NADA && rval != NADA && lval &lt; rval) || rval == NADA {<br>items[i] = lval<br>l += 1<br>} else if (lval != NADA && rval != NADA && lval >= rval) || lval == NADA {<br>items[i] = rval<br>r += 1<br>}</p><p>}<br>}</p><p>}</p><h3 id=quicksort-sort>Quicksort Sort</h3><p><a href=https://en.wikipedia.org/wiki/Quicksort>wiki</a></p><p><img src=https://upload.wikimedia.org/wikipedia/commons/6/6a/Sorting_quicksort_anim.gif alt></p><p>Quick sort works by first selecting a pivot element from the list. It then creates two lists, one containing elements less than the pivot and the other containing elements higher than the pivot. It then sorts the two lists and join them with the pivot in between. Just like the Merge sort, when the lists are subdivided to lists of size 1, they are considered as already sorted. Best-case and avergae-case is O(n log n) however the worstcase(very rare) is O(n2)</p><p>func QuickSort(items []int) {</p><p>if len(items) > 1 {<br>pivot_index := len(items) / 2<br>var smaller_items = []int{}<br>var larger_items = []int{}</p><p>for i := range items {<br>val := items[i]<br>if i != pivot_index {<br>if val &lt; items[pivot_index] {<br>smaller_items = append(smaller_items, val)<br>} else {<br>larger_items = append(larger_items, val)<br>}<br>}<br>}</p><p>QuickSort(smaller_items)<br>QuickSort(larger_items)</p><p>var merged []int = append(append(append([]int{}, smaller_items&mldr;), []int{items[pivot_index]}&mldr;), larger_items&mldr;)<br>//merged := MergeLists(smaller_items, items[pivot_index], larger_items)</p><p>for j := 0; j &lt; len(items); j++ {<br>items[j] = merged[j]<br>}</p><p>}</p><p>}</p><h3 id=heap-sort>Heap Sort</h3><p><a href=http://en.wikipedia.org/wiki/Heapsort>wiki</a></p><p><img src=https://upload.wikimedia.org/wikipedia/commons/1/1b/Sorting_heapsort_anim.gif alt></p><p>Heapsort can be thought of as an improved selection sort: like that algorithm, it divides its input into a sorted and an unsorted region, and it iteratively shrinks the unsorted region by extracting the largest element and moving that to the sorted region. The improvement consists of the use of a heap data structure rather than a linear-time search to find the maximum,best-case, average-case as well as the worst-caseeprformance are all O(nlogn)</p><p>package main<br>func heapify(items []int, idx int, size int) {<br>l := 2<em>idx + 1 // left = 2</em>i + 1<br>r := 2<em>idx + 2 // right = 2</em>i + 2</p><p>var largest int;<br>if l &lt;= size && items[l] > items[idx] {<br>largest = l<br>} else {<br>largest = idx<br>}</p><p>if r &lt;= size && items[r] > items[largest] {<br>largest = r<br>}</p><p>if largest != idx {<br>t := items[idx]<br>items[idx] = items[largest]<br>items[largest] = t<br>heapify(items, largest, size)<br>}</p><p>}</p><p>func HeapSort(items []int) {</p><p>L := len(items) //heap size<br>m := int(L / 2) //middle</p><p>for i := m; i >= 0; i&ndash; {</p><p>heapify(items, i, L-1)<br>}</p><p>F := L - 1<br>for j := F; j >= 0; j&ndash; {<br>t := items[0]<br>items[0] = items[j]<br>items[j] = t<br>F -= 1<br>heapify(items, 0, F)<br>}</p><p>}<br>Finally to run these algos I have written a quick main program</p><p>import ( &ldquo;fmt&rdquo; &ldquo;time&rdquo; &ldquo;math/rand&rdquo; ) func main() { fmt.Println(&ldquo;Preparing!") var randomVals = []int{} s1 := rand.NewSource(time.Now().UnixNano()) r1 := rand.New(s1) for i := 0; i &lt; 11; i++ { randomVals = append(randomVals, r1.Intn(99)+1) } fmt.Println(&ldquo;Unsorted!") fmt.Println(randomVals) //BubbleSortrandomVals() //InsertionSort(randomVals) //MergeSort(randomVals) //QuickSort(randomVals) HeapSort(randomVals) fmt.Println(&ldquo;sorted!") fmt.Println(randomVals) }finally some nice visuals <a href=https://imgur.com/gallery/RM3wl>here</a></p></div><div class=pagination><div class=pagination__title><span class=pagination__title-h>Read other posts</span><hr></div><div class=pagination__buttons><span class="button previous"><a href=https://varunpant.github.io/weblog/posts/inverse-weighted-distance-interpolation-in-golang/><span class=button__icon>←</span>
+<span class=post-read-time>— 4 min read</span></div><div class=post-content><p>This post includes go-lang based implementation of some of the classic sorting algorithms.</p><p>This article primarily, has been written, as an academic exercise, to not forget the basic principles of sorting.</p><h3 id=bubble-sort>Bubble Sort</h3><p><a href=http://en.wikipedia.org/wiki/Bubble_sort>wiki</a> <img src=https://upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif alt></p><p>Bubble sort is perhaps the simplest of all sorting algorithms, the basic principle is to bubble up the largest (or the smallest) and then the second largest and then the third largest and so on. Each bubble takes the full sweep of the list, hence best-case, average-case as well as the worst-case performance are all O(n2)</p><pre><code class=language-package data-lang=package>
+func BubbleSort( items []int) {  
+  
+ L:=len(items)  
+  
+ for i:=0;i&lt;L;i++{  
+  
+ for j:=0;j&lt; (L-1-i);j++{  
+ if items[j] &gt; items[j+1]{  
+ items[j], items[j+1] = items[j+1], items[j]  
+ }  
+ }  
+ }  
+  
+} 
+</code></pre><h3 id=insertion-sort>Insertion Sort</h3><p><a href=https://en.wikipedia.org/wiki/Insertion_sort>wiki</a> <img src=https://upload.wikimedia.org/wikipedia/commons/0/0f/Insertion-sort-example-300px.gif alt></p><p>Insertion sort takes each element through the list and inserts it at the right place. At each iteration, insertion sort removes one element from the input data, finds the location it belongs within the sorted list, and inserts it there. It repeats until no input elements remain. Worst-case and average-case performance is O(n2), however the best case is O(n).</p><pre><code class=language-package data-lang=package>
+func InsertionSort(items []int) {  
+  
+   L := len(items)  
+  
+   for i := 1; i &lt; L; i++ {  
+  
+      j := i  
+      for j &gt; 0 &amp;&amp; items[j] &lt; items[j-1] {  
+         items[j], items[j-1] = items[j-1], items[j]  
+         j -= 1  
+      }  
+  
+   }  
+  
+}
+
+</code></pre><h3 id=merge-sort>Merge Sort</h3><p><a href=https://en.wikipedia.org/wiki/Merge_sort>wiki</a> <img src=https://upload.wikimedia.org/wikipedia/commons/c/cc/Merge-sort-example-300px.gif alt></p><p>Mergesort operates by diving the list into two sublist recursively till each sublist contains only one element, it then merges the adjacent list back while sorting each element in the merged list. Best-case, average-case as well as the worst-case eprformance are all O(nlogn)</p><pre><code class=language-package data-lang=package>  
+const NADA int = -1  
+  
+func DeepCopy(vals []int) []int {  
+   tmp := make([]int, len(vals))  
+   copy(tmp, vals)  
+   return tmp  
+}  
+  
+func MergeSort(items []int) {  
+  
+   if len(items) &gt; 1 {  
+      mid := len(items) / 2  
+      left := DeepCopy(items[0:mid])  
+      right := DeepCopy(items[mid:])  
+  
+      MergeSort(left)  
+      MergeSort(right)  
+  
+      l := 0  
+      r := 0  
+  
+      for i := 0; i &lt; len(items); i++ {  
+  
+         lval := NADA  
+         rval := NADA  
+  
+         if l &lt; len(left) {  
+            lval = left[l]  
+         }  
+  
+         if r &lt; len(right) {  
+            rval = right[r]  
+         }  
+  
+         if (lval != NADA &amp;&amp; rval != NADA &amp;&amp; lval &lt; rval) || rval == NADA {  
+            items[i] = lval  
+            l += 1  
+         } else if (lval != NADA &amp;&amp; rval != NADA &amp;&amp; lval &gt;= rval) || lval == NADA {  
+            items[i] = rval  
+            r += 1  
+         }  
+  
+      }  
+   }  
+  
+}  
+
+
+
+</code></pre><h3 id=quicksort-sort>Quicksort Sort</h3><p><a href=https://en.wikipedia.org/wiki/Quicksort>wiki</a></p><p><img src=https://upload.wikimedia.org/wikipedia/commons/6/6a/Sorting_quicksort_anim.gif alt></p><p>Quick sort works by first selecting a pivot element from the list. It then creates two lists, one containing elements less than the pivot and the other containing elements higher than the pivot. It then sorts the two lists and join them with the pivot in between. Just like the Merge sort, when the lists are subdivided to lists of size 1, they are considered as already sorted. Best-case and avergae-case is O(n log n) however the worstcase(very rare) is O(n2)</p><pre><code class=language-func data-lang=func>  
+   if len(items) &gt; 1 {  
+      pivot\_index := len(items) / 2  
+      var smaller\_items = []int{}  
+      var larger\_items = []int{}  
+  
+      for i := range items {  
+         val := items[i]  
+         if i != pivot\_index {  
+            if val &lt; items[pivot\_index] {  
+               smaller\_items = append(smaller\_items, val)  
+            } else {  
+               larger\_items = append(larger\_items, val)  
+            }  
+         }  
+      }  
+  
+      QuickSort(smaller\_items)  
+      QuickSort(larger\_items)  
+  
+      var merged []int = append(append(append([]int{}, smaller\_items...), []int{items[pivot\_index]}...), larger\_items...)  
+      //merged := MergeLists(smaller\_items, items[pivot\_index], larger\_items)  
+  
+      for j := 0; j &lt; len(items); j++ {  
+         items[j] = merged[j]  
+      }  
+  
+   }  
+  
+}  
+
+
+</code></pre><h3 id=heap-sort>Heap Sort</h3><p><a href=http://en.wikipedia.org/wiki/Heapsort>wiki</a></p><p><img src=https://upload.wikimedia.org/wikipedia/commons/1/1b/Sorting_heapsort_anim.gif alt></p><p>Heapsort can be thought of as an improved selection sort: like that algorithm, it divides its input into a sorted and an unsorted region, and it iteratively shrinks the unsorted region by extracting the largest element and moving that to the sorted region. The improvement consists of the use of a heap data structure rather than a linear-time search to find the maximum,best-case, average-case as well as the worst-caseeprformance are all O(nlogn)</p><pre><code class=language-package data-lang=package>
+  
+func heapify(items []int, idx int, size int) {  
+   l := 2*idx + 1 // left = 2*i + 1  
+   r := 2*idx + 2 // right = 2*i + 2  
+  
+   var largest int;  
+   if l &lt;= size &amp;&amp; items[l] &gt; items[idx] {  
+      largest = l  
+   } else {  
+      largest = idx  
+   }  
+  
+   if r &lt;= size &amp;&amp; items[r] &gt; items[largest] {  
+      largest = r  
+   }  
+  
+   if largest != idx {  
+      t := items[idx]  
+      items[idx] = items[largest]  
+      items[largest] = t  
+      heapify(items, largest, size)  
+   }  
+  
+}  
+  
+func HeapSort(items []int) {  
+  
+   L := len(items) //heap size  
+   m := int(L / 2) //middle  
+  
+   for i := m; i &gt;= 0; i-- {  
+  
+      heapify(items, i, L-1)  
+   }  
+  
+   F := L - 1  
+   for j := F; j &gt;= 0; j-- {  
+      t := items[0]  
+      items[0] = items[j]  
+      items[j] = t  
+      F -= 1  
+      heapify(items, 0, F)  
+   }  
+  
+}  
+
+
+</code></pre><p>Finally to run these algos I have written a quick main program</p><pre><code class=language-import data-lang=import>  &quot;fmt&quot;
+  &quot;time&quot;
+  &quot;math/rand&quot;
+)
+
+func main() {
+
+  fmt.Println(&quot;Preparing!&quot;)
+  var randomVals = []int{}
+  s1 := rand.NewSource(time.Now().UnixNano())
+  r1 := rand.New(s1)
+  for i := 0; i &lt; 11; i++ {
+    randomVals = append(randomVals, r1.Intn(99)+1)
+  }
+
+  fmt.Println(&quot;Unsorted!&quot;)
+  fmt.Println(randomVals)
+  //BubbleSortrandomVals()
+  //InsertionSort(randomVals)
+  //MergeSort(randomVals)
+  //QuickSort(randomVals)
+  HeapSort(randomVals)
+
+  fmt.Println(&quot;sorted!&quot;)
+  fmt.Println(randomVals)
+}
+</code></pre><pre><code class=language-finally data-lang=finally></code></pre></div><div class=pagination><div class=pagination__title><span class=pagination__title-h>Read other posts</span><hr></div><div class=pagination__buttons><span class="button previous"><a href=https://varunpant.github.io/weblog/posts/inverse-weighted-distance-interpolation-in-golang/><span class=button__icon>←</span>
 <span class=button__text>Inverse weighted distance interpolation in golang</span></a></span>
 <span class="button next"><a href=https://varunpant.github.io/weblog/posts/reading-and-writing-binary-files-in-go-lang/><span class=button__text>reading and writing binary files in go lang</span>
 <span class=button__icon>→</span></a></span></div></div></div></div><footer class=footer><div class=footer__inner><a href=/ class=logo style=text-decoration:none><span class=logo__mark><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44"><path fill="none" d="M15 8l14.729 14.382L15 35.367"/></svg></span><span class=logo__text>Varun Pant</span>

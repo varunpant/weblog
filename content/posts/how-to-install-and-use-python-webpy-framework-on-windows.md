@@ -24,7 +24,25 @@ category = ["programming","python","utility","web","how to"]
 > 
 >   and that’s it, you are all set , to test if things work properly, create a test.py file and paste this code from [Web.py](http://webpy.org/) web site
 
-  import web urls = ( '/(.*)', 'hello' ) app = web.application(urls, globals()) class hello: def GET(self, name): if not name: name = 'World' return 'Hello, ' + name + '!' if \_\_name\_\_ == "\_\_main\_\_": app.run()  run the code by typing python test.py 3333, then open the web browser and go to
+ ```python
+  import web
+
+  urls = (
+      '/(.*)', 'hello'
+  )
+  app = web.application(urls, globals())
+
+  class hello:
+      def GET(self, name):
+          if not name:
+              name = 'World'
+          return 'Hello, ' + name + '!'
+
+  if \_\_name\_\_ == "\_\_main\_\_":
+      app.run()
+
+```
+ run the code by typing python test.py 3333, then open the web browser and go to
 
   <http://localhost:3333/Einstein>, on the browser you should see Hello,Einstein.
 

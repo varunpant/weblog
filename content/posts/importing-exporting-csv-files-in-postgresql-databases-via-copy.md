@@ -46,5 +46,26 @@ This is going to be a short article which will illustrate importing and exportin
 
  A complete list of all supported settings can be found [here](http://www.postgresql.org/docs/9.1/static/sql-copy.html)
 
- COPY table\_name [ ( column [, ...] ) ] FROM { 'filename' | STDIN } [ [ WITH ] ( option [, ...] ) ] COPY { table\_name [ ( column [, ...] ) ] | ( query ) } TO { 'filename' | STDOUT } [ [ WITH ] ( option [, ...] ) ] where option can be one of: FORMAT format\_name OIDS [ boolean ] DELIMITER 'delimiter\_character' NULL 'null\_string' HEADER [ boolean ] QUOTE 'quote\_character' ESCAPE 'escape\_character' FORCE\_QUOTE { ( column [, ...] ) | * } FORCE\_NOT\_NULL ( column [, ...] ) | ENCODING 'encoding\_name'
+ ```COPY table\_name [ ( column [, ...] ) ]
+    FROM { 'filename' | STDIN }
+    [ [ WITH ] ( option [, ...] ) ]
+
+COPY { table\_name [ ( column [, ...] ) ] | ( query ) }
+    TO { 'filename' | STDOUT }
+    [ [ WITH ] ( option [, ...] ) ]
+
+where option can be one of:
+
+    FORMAT format\_name
+    OIDS [ boolean ]
+    DELIMITER 'delimiter\_character'
+    NULL 'null\_string'
+    HEADER [ boolean ]
+    QUOTE 'quote\_character'
+    ESCAPE 'escape\_character'
+    FORCE\_QUOTE { ( column [, ...] ) | * }
+    FORCE\_NOT\_NULL ( column [, ...] ) |
+    ENCODING 'encoding\_name'
+```
+
 

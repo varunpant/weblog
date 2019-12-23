@@ -22,17 +22,112 @@ category = ["tilestache"]
 
  Here is the Carto Css if you are wondering.
 
-   /* Color variables */ @r1:#28ee00; @r2:#4fee00; @r3:#77ee00; @r4:#9fee00; @r5:#c6ee00; @r6:#eec600; @r7:#ee9f00; @r8:#ee7700; @r9:#ee4f00; @r10:#ee2800; /* Layers */ #sectors { [zoom<8] { line-width:0.2; polygon-opacity:0.9; } [zoom>=8] { line-width:0.8; polygon-opacity:0.7; } [zoom>=12] { line-width:1; polygon-opacity:0.6; } [zoom>20] { line-width:1.2; polygon-opacity:0.4; } line-opacity: 1; [PNTCNT=0]{polygon-opacity:0;line-opacity:0;} [PNTCNT > 0][PNTCNT <= 24]{polygon-fill:@r1;line-color:#FFF;} [PNTCNT > 24][PNTCNT <= 48]{polygon-fill:@r2;line-color:#FFF;} [PNTCNT > 48][PNTCNT <= 72]{polygon-fill:@r3;line-color:#FFF;} [PNTCNT > 72][PNTCNT <= 96]{polygon-fill:@r4;line-color:#FFF;} [PNTCNT > 96][PNTCNT <= 120]{polygon-fill:@r5;line-color:#FFF;} [PNTCNT > 120][PNTCNT <= 144]{polygon-fill:@r6;line-color:#FFF;} [PNTCNT > 144][PNTCNT <= 168]{polygon-fill:@r7;line-color:#FFF;} [PNTCNT > 168][PNTCNT <= 192]{polygon-fill:@r8;line-color:#FFF;} [PNTCNT > 192][PNTCNT <= 216]{polygon-fill:@r9;line-color:#FFF;} [PNTCNT > 216]{polygon-fill:@r10;line-color:#FFF;} }  
+  ```css
+/* Color variables */
+@r1:#28ee00;
+@r2:#4fee00;
+@r3:#77ee00;
+@r4:#9fee00;
+@r5:#c6ee00;
+@r6:#eec600;
+@r7:#ee9f00;
+@r8:#ee7700;
+@r9:#ee4f00;
+@r10:#ee2800;
+/* Layers */
+#sectors {
+  [zoom<8]
+  {
+    line-width:0.2;
+    polygon-opacity:0.9;
+  }
+  [zoom>=8]
+  {
+  line-width:0.8;
+   polygon-opacity:0.7;
+  }
+
+  [zoom>=12]
+  {
+  line-width:1;
+   polygon-opacity:0.6;
+  }
+  [zoom>20]
+  {
+    line-width:1.2;
+    polygon-opacity:0.4;
+  }
+
+  line-opacity: 1;
+  [PNTCNT=0]{polygon-opacity:0;line-opacity:0;}
+  [PNTCNT > 0][PNTCNT <= 24]{polygon-fill:@r1;line-color:#FFF;}
+  [PNTCNT > 24][PNTCNT <= 48]{polygon-fill:@r2;line-color:#FFF;}
+  [PNTCNT > 48][PNTCNT <= 72]{polygon-fill:@r3;line-color:#FFF;}
+  [PNTCNT > 72][PNTCNT <= 96]{polygon-fill:@r4;line-color:#FFF;}
+  [PNTCNT > 96][PNTCNT <= 120]{polygon-fill:@r5;line-color:#FFF;}
+  [PNTCNT > 120][PNTCNT <= 144]{polygon-fill:@r6;line-color:#FFF;}
+  [PNTCNT > 144][PNTCNT <= 168]{polygon-fill:@r7;line-color:#FFF;}
+  [PNTCNT > 168][PNTCNT <= 192]{polygon-fill:@r8;line-color:#FFF;}
+  [PNTCNT > 192][PNTCNT <= 216]{polygon-fill:@r9;line-color:#FFF;}
+  [PNTCNT > 216]{polygon-fill:@r10;line-color:#FFF;}
+}
+
+
+```
+ 
 
   Its very easy to export Mapnik Configuration xml of your TileMill Project. ![](http://www.varunpant.com/static/resources/tilestachedemo/image02.png) 
 
-  This is my Map configuration for TileStache.  { "cache": { "name": "Test", "path": "/tmp/stache", "umask": "0000" }, "layers": { "sectors": { "provider": {"name": "mapnik", "mapfile": "crime.xml"}, "projection": "spherical mercator" } } }  
+  This is my Map configuration for TileStache. 
+  ```javascript
+{
+  "cache":
+  {
+    "name": "Test",
+    "path": "/tmp/stache",
+    "umask": "0000"
+  },
+  "layers":
+  {
+     "sectors":
+     {
+         "provider": {"name": "mapnik", "mapfile": "crime.xml"},
+         "projection": "spherical mercator"
+     }
+  }
+}
+
+
+```
+ 
 
   Finally start the server . TileStache-master/scripts/tilestache-server.py -c /path/to/my/configuration/tiles.cfg 
 
   ### Creating a Custom Overlay for Google Maps
 
- Its quite easy to add a TileStache Overlay on top of google maps. TileStache URLs are already based on a Google Maps-like scheme: /{layer name}/{zoom}/{column}/{row}.{extension} So we create a CoordMapType overlay.  /** @constructor */ function CoordMapType(tileSize) { this.tileSize = tileSize; } CoordMapType.prototype.getTile = function(coord, zoom, ownerDocument) { var img = ownerDocument.createElement('img'); img.src="http://localhost:8080/sectors/"+ zoom+"/"+coord.x+"/"+ coord.y+".png"; img.style.width = this.tileSize.width + 'px'; img.style.height = this.tileSize.height + 'px'; return img; };  and then we simply add this overlay to map to overlayMapTypes .  map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions); map.overlayMapTypes.insertAt( 0, new CoordMapType(new google.maps.Size(256, 256)));  and thats it, we are done. Here is a screenshot of how the map looks. 
+ Its quite easy to add a TileStache Overlay on top of google maps. TileStache URLs are already based on a Google Maps-like scheme: /{layer name}/{zoom}/{column}/{row}.{extension} So we create a CoordMapType overlay. 
+ ```javascript
+ /** @constructor */
+  function CoordMapType(tileSize) {
+    this.tileSize = tileSize;
+  }
+  CoordMapType.prototype.getTile = function(coord, zoom, ownerDocument) {
+    var img = ownerDocument.createElement('img');
+    img.src="http://localhost:8080/sectors/"+ zoom+"/"+coord.x+"/"+ coord.y+".png";
+    img.style.width = this.tileSize.width + 'px';
+    img.style.height = this.tileSize.height + 'px';
+    return img;
+  };
+
+```javascript
+ and then we simply add this overlay to map to overlayMapTypes . ```
+map = new google.maps.Map(document.getElementById('map-canvas'),
+      mapOptions);
+    map.overlayMapTypes.insertAt(
+      0, new CoordMapType(new google.maps.Size(256, 256)));
+
+```
+ and thats it, we are done. Here is a screenshot of how the map looks. 
 
   ![](http://www.varunpant.com/static/resources/tilestachedemo/image01.png) 
 

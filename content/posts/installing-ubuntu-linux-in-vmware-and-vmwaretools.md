@@ -24,10 +24,52 @@ I have been using Ubuntu for last two years as a deployment environment for my p
 
  If this is your first time dealing with this stuff then you may need a little help installing the script written in pearl, If GNOME has been your baby for a while, then the installed location and booting your image is not so obvious for the command line server interface.
 
-  #install kernel headers so modules will work #needed this on a 10.04 guest running in a Fusion 3 host apt-get install linux-headers-virtual # install kernel modules apt-get install --no-install-recommends open-vm-dkms # EITHER: install tools for an xorg install apt-get install open-vm-tools # OR: a headless install apt-get install --no-install-recommends open-vm-tools  
+ ```
+
+  #install kernel headers so modules will work
+  #needed this on a 10.04 guest running in a Fusion 3 host
+  apt-get install linux-headers-virtual
+
+  # install kernel modules
+  apt-get install --no-install-recommends open-vm-dkms
+
+  # EITHER: install tools for an xorg install
+  apt-get install open-vm-tools
+  # OR: a headless install
+  apt-get install --no-install-recommends open-vm-tools
+
+ 
+```
+ 
 > Start up a terminal window and do the following to ensure that you have the required packages for building VMware Tools or your kernel.  sudo apt-get install build-essential linux-headers-`uname -r` psmisc  If the cdrom was not automatically mounted, mount the cdrom (in your guest OS) by doing
 
-  # make a mount point if needed : sudo mkdir /media/cdrom # Mount the CD sudo mount /dev/cdrom /media/cdrom # Copy and extract VMWareTools sudo cp /media/cdrom/VMwareTools*.tar.gz /tmp # You can extract with archive manager, right click on the archive and extract ... or cd tmp tar xvf VMwareTools*.tar.gz cd vmware-tools-distrib sudo ./vmware-install.pl #You can configure the tools as root sudo vmware-toolbox  Once you are done installing you can simply issue sudo shutdown –P or sudo init 0 and shutdown the VM safely. Have fun Vm-innnng :)
+ ```
+
+	# make a mount point if needed :
+	sudo mkdir /media/cdrom
+
+	# Mount the CD
+	sudo mount /dev/cdrom /media/cdrom
+
+	# Copy and extract VMWareTools
+
+	sudo cp /media/cdrom/VMwareTools*.tar.gz /tmp
+
+	# You can extract with archive manager, right click on the archive and extract ... or
+
+	cd tmp
+
+	tar xvf VMwareTools*.tar.gz
+
+	cd vmware-tools-distrib
+	sudo ./vmware-install.pl
+
+	#You can configure the tools as root
+	sudo vmware-toolbox
+
+
+```
+ Once you are done installing you can simply issue sudo shutdown –P or sudo init 0 and shutdown the VM safely. Have fun Vm-innnng :)
 
  
 

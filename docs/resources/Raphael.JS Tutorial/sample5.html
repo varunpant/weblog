@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+		<meta name="author" content="varun pant">
+		<meta name="google-site-verification" content="yu9tlev9-FkUUc0UkPrKP-8ren886--1FcSINU0TJDY" />
+		<meta name="msvalidate.01" content="B96ED99B0213B547253C91D27272A5E4" />                
+		<meta http-equiv="X-XRDS-Location" content="http://www.myopenid.com/xrds?username=varunpant.myopenid.com" />
+        <title>Raphael sample </title>		
+		<script src="raphael.js"></script>
+		<style>
+			body{
+			margin:0px;
+			padding:0px;
+			}
+			#canvas {
+			width: 250px;
+			height: 250px;
+			margin:0px;
+			padding:0px;	 
+			background-color: #F2F2F2;
+			}
+		</style>
+		<script>
+			var canvas;
+			window.onload = function () {
+				// Creates canvas 250  250 at 0, 0
+				canvas = Raphael(0, 0, 250, 250 );
+				canvas.text(50, 50, "Some text Goes here");
+				canvas.text(60,90,"First line \n Second Line \n Third line");
+				canvas.text(114, 140, "blah").attr({"text-anchor":"middle",'font-size':16,"font-family":"arial","fill":"red"});
+			};
+		</script>
+	</head>
+	<body>
+		
+		<div id="canvas"></div>
+		
+	</body>
+</html>

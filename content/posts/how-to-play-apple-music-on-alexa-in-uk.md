@@ -12,6 +12,7 @@ category = ["general"]
 
  It's just available for Echo devices and now customers in UK can also connect their apple music account with Alexa.
 
+  
  1. Open the Alexa app then sign into your Amazon account and make sure that your Echo device is connected.
 
  2. Open Menu (top left icon), then select settings.
