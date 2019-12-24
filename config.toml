@@ -3,6 +3,8 @@ languageCode = "en-us"
 theme = "hello-friend"
 paginate = 5
 publishDir = "docs"
+googleAnalytics = "UA-16978408-1"
+disqusShortname = "varunpant"
 
 [params]
   # dir name of your blog content (default is `content/posts`)
@@ -13,8 +15,8 @@ publishDir = "docs"
   showMenuItems = 5
   # Show reading time in minutes for posts
   showReadingTime = true
-  GoogleAnalytics = "UA-16978408-1"
-  disqusShortname = "varunpant"
+ 
+  
   
 
 [languages]

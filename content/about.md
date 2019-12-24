@@ -16,4 +16,4 @@ I frequesntly write about intresting tech stuff that I encounter.
  [mail](mailto:varun@varunpant.com)
  [github](https://github.com/varunpant)
 
- ![Varun Pant](/weblog/img/varunpant.jpeg "Varun")
+ ![Varun Pant](/img/varunpant.jpeg "Varun")
