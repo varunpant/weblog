@@ -11,3 +11,8 @@ text-transform: capitalize;
 font-size: .75rem;
 text-transform: uppercase;
 }
+#blog-comments{
+    padding:5px;
+    background: var(--light-header);
+
+}
