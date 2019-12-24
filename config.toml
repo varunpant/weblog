@@ -1,4 +1,4 @@
-baseurl = "https://varunpant.github.io/weblog/"
+baseurl = "https://varunpant.com/"
 languageCode = "en-us"
 theme = "hello-friend"
 paginate = 5
