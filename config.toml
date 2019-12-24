@@ -13,10 +13,9 @@ publishDir = "docs"
   showMenuItems = 5
   # Show reading time in minutes for posts
   showReadingTime = true
-  googleAnalytics = "UA-16978408-1"
+  GoogleAnalytics = "UA-16978408-1"
   disqusShortname = "varunpant"
-  enableGoogleAnalytics = true
-  enableDisqus = true
+  
 
 [languages]
   [languages.en]
