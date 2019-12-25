@@ -5,7 +5,7 @@ date = "2013-01-29"
 author = " "
 cover = ""
 description = ""
-category = ["general","database","sqlite"]
+tags = ["general","database","sqlite"]
 +++
 
 I absolutely love [SQLite](http://www.sqlite.org/), be it windows, linux or mac, this light weight database never stops to amaze me.

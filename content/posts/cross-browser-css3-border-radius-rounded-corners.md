@@ -5,7 +5,7 @@ date = "2013-01-22"
 author = " "
 cover = ""
 description = ""
-category = ["css","how to","util"]
+tags = ["css","how to","util"]
 +++
 
 When I started programming and had to begin designing my first user interface in HTML, I was always puzzled as to why are all visual elements in HTML rectangular. I soon learned that in those days if one would want a circle to be drawn on a page, then the only way possible was using an image, the same was true for drawing elements with rounded corners.

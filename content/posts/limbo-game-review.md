@@ -5,7 +5,7 @@ date = "2011-10-19"
 author = " "
 cover = ""
 description = ""
-category = ["animation","fun","simulation"]
+tags = ["animation","fun","simulation"]
 +++
 
  [ ![limbo_psn](http://varunpant.com/static/resources/limbo_psn_thumb_1.jpg "limbo_psn") ](http://varunpant.com/static/resources/limbo_psn_4.jpg) 

@@ -5,7 +5,7 @@ date = "2013-02-08"
 author = " "
 cover = ""
 description = ""
-category = ["python","utility","web"]
+tags = ["python","utility","web"]
 +++
 
 Generally, when I am in a middle of prototyping a concept or in a need of quickly executing Ajax requests or using browser features which would need the page to be hosted on a web server, I use Python's [SimpleHTTPServer](http://docs.python.org/2/library/simplehttpserver.html) module.

@@ -5,7 +5,7 @@ date = "2010-06-29"
 author = " "
 cover = ""
 description = ""
-category = ["programming","fun","utility","javascript","carousel","fluid","css"]
+tags = ["programming","fun","utility","javascript","carousel","fluid","css"]
 +++
 
 Here is another of many JavaScript based Image Carousel, I had seen many similar to these made in SilverLight and Flash, I came across a wonderful [carousel](http://www.shinedraw.com/animation-effect/flash-vs-silverlight-image-carousel/) made in SilverLight sometimes back which was very fluid in behavior and could easily be customized and configured to take various shape and form.

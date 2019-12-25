@@ -5,7 +5,7 @@ date = "2010-06-12"
 author = " "
 cover = ""
 description = ""
-category = ["general"]
+tags = ["general"]
 +++
 
 After long period of wait, here it is my very first and personal Blogging Space.

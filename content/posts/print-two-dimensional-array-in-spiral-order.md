@@ -5,7 +5,7 @@ date = "2014-10-15"
 author = " "
 cover = ""
 description = ""
-category = ["algorithm","python"]
+tags = ["algorithm","python"]
 +++
 
 So I saw this problem in a book today about printing a 2d matrix in spiral order

@@ -5,7 +5,7 @@ date = "2010-07-03"
 author = " "
 cover = ""
 description = ""
-category = ["programming","fun","silverlight","html5","particles","simulation"]
+tags = ["programming","fun","silverlight","html5","particles","simulation"]
 +++
 
 After ages of constantly being one of the most used browser as well as a serious pain in Butt!!! IE is finally about to mature into something good and perhaps a useful software , with its support to [most](http://www.quirksmode.org/blog/archives/2010/06/more_ie9_goodne.html) of the standards being used today , IE will join back the league of web 3.0 browsers, hopefully very soon

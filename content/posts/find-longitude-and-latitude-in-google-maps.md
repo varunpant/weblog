@@ -5,7 +5,7 @@ date = "2012-04-15"
 author = " "
 cover = ""
 description = ""
-category = ["utility","gis","how to","programming","general"]
+tags = ["utility","gis","how to","programming","general"]
 +++
 
 This post is basically a way of quick appreciation to the **Google maps Team**, they are obviously a bunch of caring, loving people ,who make useful (although **surreptitious**) tools for the betterment of Geek Kind.

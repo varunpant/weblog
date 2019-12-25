@@ -5,7 +5,7 @@ date = "2013-03-11"
 author = " "
 cover = ""
 description = ""
-category = ["database","utility","how to","postgres"]
+tags = ["database","utility","how to","postgres"]
 +++
 
 This is going to be a short article which will illustrate importing and exporting a table from or to a csv file using PostgreSQL [COPY](http://www.postgresql.org/docs/9.1/static/sql-copy.html) command.

@@ -5,7 +5,7 @@ date = "2013-01-27"
 author = " "
 cover = ""
 description = ""
-category = ["css","how to","programming","utility","web"]
+tags = ["css","how to","programming","utility","web"]
 +++
 
 When I first started web programming, creating a center aligned div was one of the most common task that I saw myself doing. 

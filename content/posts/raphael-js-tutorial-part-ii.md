@@ -5,7 +5,7 @@ date = "2013-12-25"
 author = " "
 cover = ""
 description = ""
-category = ["how to","fun","javascript","programming","raphael js"]
+tags = ["how to","fun","javascript","programming","raphael js"]
 +++
 
 This is second part of the tutorial about getting started with [Raphael.js](http://raphaeljs.com/). To see this first part go [here](http://www.varunpant.com/posts/raphael-js-tutorial-part-i).

@@ -5,7 +5,7 @@ date = "2012-05-06"
 author = " "
 cover = ""
 description = ""
-category = ["programming","python","utility","web","how to"]
+tags = ["programming","python","utility","web","how to"]
 +++
 
  [Web.py](http://webpy.org/) has been one of my favorite web frameworks as its pretty easy to get cracking on it.

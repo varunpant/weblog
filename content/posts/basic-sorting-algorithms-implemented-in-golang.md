@@ -5,7 +5,7 @@ date = "2017-09-04"
 author = " "
 cover = ""
 description = ""
-category = ["golang","algorithms"]
+tags = ["golang","algorithms"]
 +++
 
 This post includes go-lang based implementation of some of the classic sorting algorithms.

@@ -5,7 +5,7 @@ date = "2018-08-03"
 author = " "
 cover = ""
 description = ""
-category = ["dataflow","apache-beam","java","google","bigdata","testing"]
+tags = ["dataflow","apache-beam","java","google","bigdata","testing"]
 +++
 
 ### Summary

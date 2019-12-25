@@ -5,7 +5,7 @@ date = "2016-12-11"
 author = " "
 cover = ""
 description = ""
-category = ["gis","python","osgeo","gdal"]
+tags = ["gis","python","osgeo","gdal"]
 +++
 
 There are many use cases in GIS world, where the information has to be aggregated, an easy way to achieve this is via gridding or binning, where the area of interest is divided into small sections called grids or bins. 

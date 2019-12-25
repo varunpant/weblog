@@ -5,7 +5,7 @@ date = "2010-06-15"
 author = " "
 cover = ""
 description = ""
-category = ["programming","utility","web","data uri",".net"]
+tags = ["programming","utility","web","data uri",".net"]
 +++
 
 Few days ago I was experimenting with a nifty technique of embedding images in web pages by base64 encoding them first and then using a standard known as [Data URI Scheme](http://en.wikipedia.org/wiki/Data_URI_scheme), which basically defines a method of assigning a ‘src’ of an image tag as a base64 serialized string, like this:

@@ -5,7 +5,7 @@ date = "2013-01-20"
 author = " "
 cover = ""
 description = ""
-category = ["redis","ubuntu","how to","utility"]
+tags = ["redis","ubuntu","how to","utility"]
 +++
 
 [Redis](http://redis.io/) is an open source, advanced key-value store. Installing it on Linux debian platforms is pretty easy.

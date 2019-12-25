@@ -5,7 +5,7 @@ date = "2010-06-15"
 author = " "
 cover = ""
 description = ""
-category = ["general","fun","python","notepad++"]
+tags = ["general","fun","python","notepad++"]
 +++
 
 After reading an excellent article by [Kazi Manzur Rashid](http://weblogs.asp.net/rashid/)on setting up a development environment for Iron Ruby using [Notepad++](http://notepad-plus-plus.org/), I was immediately struck with an idea of using the same excellent tool with Python 2.6.

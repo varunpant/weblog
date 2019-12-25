@@ -5,7 +5,7 @@ date = "2017-08-28"
 author = " "
 cover = ""
 description = ""
-category = ["golang"]
+tags = ["golang"]
 +++
 
 Go doesn't have any builtin gradient functions to paint/fill the background of a raster, however it has all the required primitives one needs to create a very basic linear gradient.

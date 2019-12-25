@@ -5,7 +5,7 @@ date = "2013-12-01"
 author = " "
 cover = ""
 description = ""
-category = ["snippet"]
+tags = ["snippet"]
 +++
 
 The autocomplete attribute specifies whether or not an input field should have autocomplete enabled.

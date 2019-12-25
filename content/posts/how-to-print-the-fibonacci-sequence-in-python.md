@@ -5,7 +5,7 @@ date = "2014-08-09"
 author = " "
 cover = ""
 description = ""
-category = []
+tags = []
 +++
 
 The Fibonacci numbers are the sequence of numbers ![{F_n}_(n=1)^infty](http://mathworld.wolfram.com/images/equations/FibonacciNumber/Inline1.gif) defined by the [linear recurrence equation](http://mathworld.wolfram.com/LinearRecurrenceEquation.html)

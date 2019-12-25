@@ -5,7 +5,7 @@ date = "2016-12-10"
 author = " "
 cover = ""
 description = ""
-category = ["gis","python","osgeo","gdal"]
+tags = ["gis","python","osgeo","gdal"]
 +++
 
  Projections in GIS are commonly referred to by their “EPSG” codes, these are identifiers managed by the European Petroleum Survey Group. 

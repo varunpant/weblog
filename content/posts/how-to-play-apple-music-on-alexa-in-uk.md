@@ -5,7 +5,7 @@ date = "2019-04-10"
 author = " "
 cover = ""
 description = ""
-category = ["general"]
+tags = ["general"]
 +++
 
  You can now use Alexa to play Apple Music on Amazon Echo speakers.

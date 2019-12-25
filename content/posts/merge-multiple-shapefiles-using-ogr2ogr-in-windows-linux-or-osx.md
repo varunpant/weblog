@@ -5,7 +5,7 @@ date = "2014-12-22"
 author = " "
 cover = ""
 description = ""
-category = ["gdal","qgis"]
+tags = ["gdal","qgis"]
 +++
 
 ### Introduction

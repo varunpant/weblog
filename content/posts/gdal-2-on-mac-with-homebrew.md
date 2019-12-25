@@ -5,7 +5,7 @@ date = "2018-02-13"
 author = " "
 cover = ""
 description = ""
-category = ["gdal","homebrew","mac","gis"]
+tags = ["gdal","homebrew","mac","gis"]
 +++
 
 GDAL is one of the most frequently used utility in my toolkit. I am writing this post to make it easier for others to install it from scratch on their macs. 

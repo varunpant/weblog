@@ -5,7 +5,7 @@ date = "2019-02-24"
 author = " "
 cover = ""
 description = ""
-category = ["docker","python"]
+tags = ["docker","python"]
 +++
 
 Selenium is one of my favourite tool for automation.

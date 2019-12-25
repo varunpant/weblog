@@ -5,7 +5,7 @@ date = "2014-07-13"
 author = " "
 cover = ""
 description = ""
-category = ["css","html5","web"]
+tags = ["css","html5","web"]
 +++
 
 I generally have been using loading gifs in my work most of the time to inform the user that the resources are being fetched asynchronously from the server.

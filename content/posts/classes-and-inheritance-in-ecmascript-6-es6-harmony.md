@@ -5,7 +5,7 @@ date = "2014-11-30"
 author = " "
 cover = ""
 description = ""
-category = ["javascript"]
+tags = ["javascript"]
 +++
 
  So if you are a JavaScript geek and haven't yet heard,(if every one is listening to ECMA announcements, who's gonna drink beer :) ) ECMA 6 feature set has been drafted,its [feature set ](http://wiki.ecmascript.org/doku.php?id=harmony:specification_drafts) is frozen, it is mostly being refined now. You can already program in it and compile it to current JavaScript . The JavaScript frameworks AngularJS and Ember.js will be based on it (with ways to opt out). Again, via cross-compilation.

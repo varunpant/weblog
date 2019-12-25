@@ -5,7 +5,7 @@ date = "2014-07-20"
 author = " "
 cover = ""
 description = ""
-category = ["elasticsearch","geo_point","geo_distance","search","web"]
+tags = ["elasticsearch","geo_point","geo_distance","search","web"]
 +++
 
 In this post I will demonstrate using [ElasticSearch](http://www.elasticsearch.org/) to spatially query records and filter them by attributes.

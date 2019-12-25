@@ -5,7 +5,7 @@ date = "2013-01-25"
 author = " "
 cover = ""
 description = ""
-category = ["how to","general","linux","web","ubuntu"]
+tags = ["how to","general","linux","web","ubuntu"]
 +++
 
 In this post,I am going to write about [OpenShift](https://openshift.redhat.com/app/), which is Red hat's free, auto-scaling Platform as a Service ([PaaS](http://en.wikipedia.org/wiki/Platform_as_a_service)) for applications.

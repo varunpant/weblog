@@ -5,7 +5,7 @@ date = "2012-05-06"
 author = " "
 cover = ""
 description = ""
-category = ["general","python","programming","utility","how to","web"]
+tags = ["general","python","programming","utility","how to","web"]
 +++
 
  If one has been using python, then installing various libraries and modules is basically a breeze using easy\_install utility, however for folks using windows, easy\_install utility has to be setup properly before using it. 

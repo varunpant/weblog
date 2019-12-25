@@ -5,7 +5,7 @@ date = "2012-04-14"
 author = " "
 cover = ""
 description = ""
-category = ["programming","utility","how to","redis"]
+tags = ["programming","utility","how to","redis"]
 +++
 
 [Redis](http://redis.io/) is an open source, advanced key-value store, and is quickly picking up momentum in real-time software development , it is now a well known and trusted product and can be used in various problem scenarios as a No SQL implementation. 

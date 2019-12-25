@@ -5,7 +5,7 @@ date = "2016-07-25"
 author = " "
 cover = ""
 description = ""
-category = ["python","algorithms"]
+tags = ["python","algorithms"]
 +++
 
 The (binary) heap data structure is an array object that we can view as a nearly complete binary tree.    

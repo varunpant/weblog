@@ -5,7 +5,7 @@ date = "2014-12-21"
 author = " "
 cover = ""
 description = ""
-category = ["html5","maps","javascript"]
+tags = ["html5","maps","javascript"]
 +++
 
 HTML5 Geolocation is a feature which allows the browser on a computer or a mobile phone, to acquire the position from the wifi,2g/3g/4g network or GPS.

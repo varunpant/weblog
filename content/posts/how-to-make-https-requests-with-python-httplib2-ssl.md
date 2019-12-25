@@ -5,7 +5,7 @@ date = "2018-02-02"
 author = " "
 cover = ""
 description = ""
-category = ["ssl","python","httplib"]
+tags = ["ssl","python","httplib"]
 +++
 
 Here are few snippets to make **secure** **http** requests using various python libraries.

@@ -5,7 +5,7 @@ date = "2013-08-25"
 author = " "
 cover = ""
 description = ""
-category = ["android","how to","programming","utility"]
+tags = ["android","how to","programming","utility"]
 +++
 
 This post is probably out too late ,as almost all IDE's these days (which support android development) ,probably have an Integrated **release signing** or **debug signing** utility/wizard built in, but if somebody is using an old IDE or perhaps want to integrate release in a CI(continues integration) environment , this tutorial might come in handy.

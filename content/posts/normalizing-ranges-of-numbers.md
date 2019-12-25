@@ -5,7 +5,7 @@ date = "2014-07-09"
 author = " "
 cover = ""
 description = ""
-category = ["utility","general","how to","python"]
+tags = ["utility","general","how to","python"]
 +++
 
 Range Normalization is a [normalization](http://www.heatonresearch.com/wiki/Normalization) technique that allows you to map a number to a specific range.

@@ -5,7 +5,7 @@ date = "2014-01-26"
 author = " "
 cover = ""
 description = ""
-category = [".net","datastructure"]
+tags = [".net","datastructure"]
 +++
 
 In [computer science](http://en.wikipedia.org/wiki/Computer_science), a **ternary search tree** is a type of [prefix tree](http://en.wikipedia.org/wiki/Trie) where nodes are arranged as a [binary search tree](http://en.wikipedia.org/wiki/Binary_search_tree). Like other prefix trees, a ternary search tree can be used as an [associative map](http://en.wikipedia.org/wiki/Associative_map) structure with the ability for incremental [string search](http://en.wikipedia.org/wiki/String_search). However, ternary search trees are more space efficient compared to standard prefix trees, at the cost of speed. Common applications for ternary search trees include [spell-checking](http://en.wikipedia.org/wiki/Spell-check) and [auto-completion](http://en.wikipedia.org/wiki/Auto-completion).

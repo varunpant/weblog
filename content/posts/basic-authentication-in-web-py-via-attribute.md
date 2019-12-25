@@ -5,7 +5,7 @@ date = "2013-01-23"
 author = " "
 cover = ""
 description = ""
-category = ["python","utility","how to","web.py"]
+tags = ["python","utility","how to","web.py"]
 +++
 
 Here I demonstrate the process of [Basic Authentication](http://en.wikipedia.org/wiki/Basic_access_authentication) in [web.py](http://webpy.org/) python web framework. 

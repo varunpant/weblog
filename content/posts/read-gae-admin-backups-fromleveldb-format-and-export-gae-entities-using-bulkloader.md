@@ -5,7 +5,7 @@ date = "2016-01-11"
 author = " "
 cover = ""
 description = ""
-category = ["gae","appengine","python"]
+tags = ["gae","appengine","python"]
 +++
 
 Google datastore is pretty awesome when one needs a quick no-sql data storage. However recently I have experienced a problem in exporting my GAE Datastore as csv and in certain cases as a line delimited Json file. Its not very hard to do so and perhaps the easiest way to handle such thing is to write an export handler in you web app, however, there are alternative ways which I have highlighted below. 

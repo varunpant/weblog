@@ -5,7 +5,7 @@ date = "2016-04-07"
 author = " "
 cover = ""
 description = ""
-category = ["unix","windows"]
+tags = ["unix","windows"]
 +++
 
 ![](http://www.varunpant.com/static/resources/uow/uow.jpg)

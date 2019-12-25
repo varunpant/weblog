@@ -5,7 +5,7 @@ date = "2014-09-10"
 author = " "
 cover = ""
 description = ""
-category = []
+tags = []
 +++
 
 Apparently out OS X does not have an updatedb command like linux has, so I was stumped on how to update the locate database.

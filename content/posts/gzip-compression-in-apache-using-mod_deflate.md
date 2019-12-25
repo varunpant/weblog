@@ -5,7 +5,7 @@ date = "2013-01-19"
 author = " "
 cover = ""
 description = ""
-category = ["how to","web","utility"]
+tags = ["how to","web","utility"]
 +++
 
 [HTTP Compression](http://en.wikipedia.org/wiki/HTTP_compression) is a very simple and effective way to save bandwidth and improve web applications performance over network.

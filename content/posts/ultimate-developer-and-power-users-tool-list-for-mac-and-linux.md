@@ -5,7 +5,7 @@ date = "2015-02-07"
 author = " "
 cover = ""
 description = ""
-category = ["tools"]
+tags = ["tools"]
 +++
 
 This is a collection of tools and utilities which I have found indispensable as an engineer. Each has a distinct purpose, and I probably touch each at least a few times a week. These tools save me time and I hope that you will find some of them useful as well.

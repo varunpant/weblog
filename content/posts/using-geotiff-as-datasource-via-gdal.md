@@ -5,7 +5,7 @@ date = "2016-12-21"
 author = " "
 cover = ""
 description = ""
-category = ["python","gdal","osgeo","geotiff"]
+tags = ["python","gdal","osgeo","geotiff"]
 +++
 
 ![](/media/image_377996742841482328085822.png)

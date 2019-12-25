@@ -5,7 +5,7 @@ date = "2013-01-22"
 author = " "
 cover = ""
 description = ""
-category = ["css","how to"]
+tags = ["css","how to"]
 +++
 
 Css has a very useful property called Opacity, which basically is a measure of transparency of an element.

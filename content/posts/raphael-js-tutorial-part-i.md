@@ -5,7 +5,7 @@ date = "2013-03-10"
 author = " "
 cover = ""
 description = ""
-category = ["how to","html5","web","programming","javascript","raphael js"]
+tags = ["how to","html5","web","programming","javascript","raphael js"]
 +++
 
 [Raphael.JS](http://raphaeljs.com/) is a SVG/VML library which helps you to create quick vector shapes and images. Its very small and compact (only 86kb),easy to use,well documented and works in all browsers and yes even IE. Here is a list of all major browsers this library works on: [Chrome](http://en.wikipedia.org/wiki/Chrome_browser) 5.0+ [Firefox](http://en.wikipedia.org/wiki/Firefox) 3.0+, [Safari](http://en.wikipedia.org/wiki/Safari_(web_browser)) 3.0+, [Opera](http://en.wikipedia.org/wiki/Opera_(web_browser)) 9.5+ and [Internet Explorer](http://en.wikipedia.org/wiki/Internet_Explorer) 6.0+

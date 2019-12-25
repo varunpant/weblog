@@ -5,7 +5,7 @@ date = "2013-08-25"
 author = " "
 cover = ""
 description = ""
-category = [".net","utility","web","how to","iis"]
+tags = [".net","utility","web","how to","iis"]
 +++
 
 IIS7 is quite modular, it is [shipped](http://blogs.iis.net/bills/archive/2008/06/02/how-iis-ships-software.aspx) with lots of goodies as separate modules and together it is now one of the most powerful and flexible web server.

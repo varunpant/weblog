@@ -5,7 +5,7 @@ date = "2013-01-30"
 author = " "
 cover = ""
 description = ""
-category = ["javascript","programming","web"]
+tags = ["javascript","programming","web"]
 +++
 
 I love JavaScript and code a lot in it .Since I code, I also encounter problems and bugs from time to time and therefore need a Debugger and a debug mechanism to view whats going on.

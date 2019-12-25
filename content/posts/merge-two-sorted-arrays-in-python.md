@@ -5,7 +5,7 @@ date = "2014-10-11"
 author = " "
 cover = ""
 description = ""
-category = ["python","algorithm"]
+tags = ["python","algorithm"]
 +++
 
 Here is a quick code snippet to merge two sorted arrays in python

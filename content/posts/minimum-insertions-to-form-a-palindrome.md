@@ -5,7 +5,7 @@ date = "2017-10-15"
 author = " "
 cover = ""
 description = ""
-category = ["python","algorithm"]
+tags = ["python","algorithm"]
 +++
 
 ### Brute-force approach

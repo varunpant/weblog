@@ -5,7 +5,7 @@ date = "2018-12-02"
 author = " "
 cover = ""
 description = ""
-category = ["python"]
+tags = ["python"]
 +++
 
  Scrapy is a very popular web scraping/crawling framework, I have been using it for quite some time now.

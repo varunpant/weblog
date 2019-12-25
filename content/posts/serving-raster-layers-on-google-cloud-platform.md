@@ -5,7 +5,7 @@ date = "2015-09-21"
 author = " "
 cover = ""
 description = ""
-category = ["google","gis","google cloud storage"]
+tags = ["google","gis","google cloud storage"]
 +++
 
 In this blog post, I will write about using [Google cloud storage](https://cloud.google.com/storage/) as a Raster Tile Server for static imagery.

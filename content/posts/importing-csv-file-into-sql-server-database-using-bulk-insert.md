@@ -5,7 +5,7 @@ date = "2013-03-11"
 author = " "
 cover = ""
 description = ""
-category = ["sqlserver","database","general"]
+tags = ["sqlserver","database","general"]
 +++
 
  Importing data into a database from a delimited file is perhaps one of the most common tasks that one might have to perform. SQL server gives us an import utility which supports various data sources and has an intutive interface as well,however there is another way which can be utilized to quickly get the job done, its called [BULK INSERT](http://msdn.microsoft.com/en-us/library/aa225968(v=sql.80).aspx) 

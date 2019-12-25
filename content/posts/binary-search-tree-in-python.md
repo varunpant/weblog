@@ -5,7 +5,7 @@ date = "2016-08-01"
 author = " "
 cover = ""
 description = ""
-category = ["python","algorithms"]
+tags = ["python","algorithms"]
 +++
 
 BST data structure supports many dynamic-set operations including

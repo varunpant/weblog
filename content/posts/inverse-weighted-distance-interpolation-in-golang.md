@@ -5,7 +5,7 @@ date = "2017-09-07"
 author = " "
 cover = ""
 description = ""
-category = ["golang","algorithms"]
+tags = ["golang","algorithms"]
 +++
 
 **Inverse distance weighting** (IDW) is a type of deterministic method for multivariate **interpolation** with a known scattered set of points. The assigned values to unknown points are calculated with a **weighted** average of the values available at the known points.

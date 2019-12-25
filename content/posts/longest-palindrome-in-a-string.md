@@ -5,17 +5,18 @@ date = "2014-10-15"
 author = " "
 cover = ""
 description = ""
-category = ["python","algorithms"]
+tags = ["python","algorithms"]
 +++
 
  
 
-```  def isPailenDrome(s):
+```python
+def isPailenDrome(s):
         if len(s)==1:
                 return False
         L = len(s)
         for i in range(L):
-            if s[i] != s[L-1-i]:
+                if s[i] != s[L-1-i]:
                 return False
         return True
                 

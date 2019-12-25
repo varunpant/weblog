@@ -5,7 +5,7 @@ date = "2014-01-24"
 author = " "
 cover = ""
 description = ""
-category = ["utility","gis","general","java"]
+tags = ["utility","gis","general","java"]
 +++
 
 [![heat_map](http://varunpant.com/static/resources/heat_map_thumb.jpg "heat_map")](http://varunpant.com/static/resources/heat_map_2.jpg) 

@@ -5,7 +5,7 @@ date = "2015-07-23"
 author = " "
 cover = ""
 description = ""
-category = ["python","algorithms"]
+tags = ["python","algorithms"]
 +++
 
 Bubble sort is a sorting algo that repeatedly steps through the list to be sorted, compares each pair of adjacent items and [swaps](https://en.wikipedia.org/wiki/Swap_(computer_science) "Swap (computer science)") them if they are in the wrong order. 

@@ -5,7 +5,7 @@ date = "2013-01-23"
 author = " "
 cover = ""
 description = ""
-category = ["how to","util","css"]
+tags = ["how to","util","css"]
 +++
 
 When **css3** arrived, one of the goodies that I found was, the inclusion of **Drop Shadow effect**, namely **Box Shadow **and **Text Shadow**. 

@@ -5,7 +5,7 @@ date = "2019-09-09"
 author = " "
 cover = ""
 description = ""
-category = ["python"]
+tags = ["python"]
 +++
 
 Here is a quick guide on installing Python3 on a mac

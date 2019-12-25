@@ -5,7 +5,7 @@ date = "2014-02-01"
 author = " "
 cover = ""
 description = ""
-category = ["python"]
+tags = ["python"]
 +++
 
 Here is a very simple web crawler in python

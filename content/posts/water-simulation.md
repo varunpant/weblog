@@ -5,7 +5,7 @@ date = "2010-09-25"
 author = " "
 cover = ""
 description = ""
-category = ["programming","silverlight","animation","simulation","water"]
+tags = ["programming","silverlight","animation","simulation","water"]
 +++
 
 Its been a while since my last post, had been busy with office work…sigh!!!

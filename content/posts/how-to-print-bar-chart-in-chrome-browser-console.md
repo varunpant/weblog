@@ -5,7 +5,7 @@ date = "2018-02-05"
 author = " "
 cover = ""
 description = ""
-category = ["fun","javascript"]
+tags = ["fun","javascript"]
 +++
 
 This post doesn't really have anything valuable to contribute, just some cool console trick.

@@ -5,7 +5,7 @@ date = "2016-08-04"
 author = " "
 cover = ""
 description = ""
-category = ["google container engine","kubernaties","cloud","google"]
+tags = ["google container engine","kubernaties","cloud","google"]
 +++
 
 Most folks have been using [Grafana](http://grafana.org/) or something [similar](http://kubernetes.io/docs/user-guide/monitoring/) to monitor [Kubernaties](http://kubernetes.io/) cluster.

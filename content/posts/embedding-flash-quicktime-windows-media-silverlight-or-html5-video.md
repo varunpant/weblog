@@ -5,7 +5,7 @@ date = "2013-10-01"
 author = " "
 cover = ""
 description = ""
-category = ["snippet","utility"]
+tags = ["snippet","utility"]
 +++
 
 ### Flash Object

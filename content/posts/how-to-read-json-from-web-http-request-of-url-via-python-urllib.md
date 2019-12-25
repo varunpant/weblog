@@ -5,7 +5,7 @@ date = "2018-01-30"
 author = " "
 cover = ""
 description = ""
-category = ["python","http","web","urllib2"]
+tags = ["python","http","web","urllib2"]
 +++
 
 I generally am looking for a quick snippet to issue an http request using urllib2 lib. 

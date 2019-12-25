@@ -5,7 +5,7 @@ date = "2014-12-26"
 author = " "
 cover = ""
 description = ""
-category = ["tilestache"]
+tags = ["tilestache"]
 +++
 
 ### Introduction

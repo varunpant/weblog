@@ -5,7 +5,7 @@ date = "2012-01-09"
 author = " "
 cover = ""
 description = ""
-category = ["linux","ubuntu","general"]
+tags = ["linux","ubuntu","general"]
 +++
 
 I have been using Ubuntu for last two years as a deployment environment for my pet projects, however recently, after having installed “Natty Narwhal” on one of my old ‘HP’ laptop I moved into using Ubuntu as a full time development environment.

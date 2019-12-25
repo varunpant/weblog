@@ -5,7 +5,7 @@ date = "2013-02-26"
 author = " "
 cover = ""
 description = ""
-category = ["general","python"]
+tags = ["general","python"]
 +++
 
 I am a big fan and user of python. one of the most popular ways to create quick web app in python is via using mod wsgi.

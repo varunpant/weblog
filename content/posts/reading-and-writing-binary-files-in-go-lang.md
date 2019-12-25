@@ -5,7 +5,7 @@ date = "2017-08-29"
 author = " "
 cover = ""
 description = ""
-category = ["golang"]
+tags = ["golang"]
 +++
 
 Reading and writing binary files can often be a fast and very efficient alternatives to csv. They obviously have their challenges, however in this post I intent to present a very basic example of saving models (struct) into binary file and later reading it.

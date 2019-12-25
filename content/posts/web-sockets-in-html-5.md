@@ -5,7 +5,7 @@ date = "2011-01-10"
 author = " "
 cover = ""
 description = ""
-category = ["programming","websockets","httppush",".net","javascript"]
+tags = ["programming","websockets","httppush",".net","javascript"]
 +++
 
  HTML5 [WebSockets](http://en.wikipedia.org/wiki/WebSockets), defines a full-duplex communication channel that operates through a single socket over the web. **WebSocket** is not just another incremental enhancement to conventional HTTP communications, it represents a large advance, especially for real-time, [event driven](http://en.wikipedia.org/wiki/Event-driven_programming) web applications. 

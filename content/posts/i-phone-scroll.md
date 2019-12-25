@@ -5,7 +5,7 @@ date = "2010-06-18"
 author = " "
 cover = ""
 description = ""
-category = ["programming","fun","iphone scroll","javascript","animation"]
+tags = ["programming","fun","iphone scroll","javascript","animation"]
 +++
 
 One of the amazing features of i-phone user interface is smooth panning/scrolling animation.

@@ -5,7 +5,7 @@ date = "2013-01-19"
 author = " "
 cover = ""
 description = ""
-category = ["utility","how to"]
+tags = ["utility","how to"]
 +++
 
  I have been using Linux environment a lot lately, particularly for hosting my web experiments and other application. One of the biggest and most searched question for newbies have been 

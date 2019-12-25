@@ -5,7 +5,7 @@ date = "2016-07-22"
 author = " "
 cover = ""
 description = ""
-category = ["python","algorithms"]
+tags = ["python","algorithms"]
 +++
 
 Insertion sort, is an efficient algorithm for sorting a small number of elements.

@@ -5,7 +5,7 @@ date = "2016-08-30"
 author = " "
 cover = ""
 description = ""
-category = ["golang"]
+tags = ["golang"]
 +++
 
 One of the most common task for a programmer is either to read or write a csv file 

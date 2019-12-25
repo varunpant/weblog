@@ -5,7 +5,7 @@ date = "2016-09-01"
 author = " "
 cover = ""
 description = ""
-category = ["gdal","ogr","how to","python","gis"]
+tags = ["gdal","ogr","how to","python","gis"]
 +++
 
 Recently I was trying to build a quick geo lookup service in python, which could be used like an "info tool" in QGIS. This task is trivial in almost all geospatial databases, however I wasn't able to find much online around querying a shape file.

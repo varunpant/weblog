@@ -5,7 +5,7 @@ date = "2014-07-08"
 author = " "
 cover = ""
 description = ""
-category = ["utility"]
+tags = ["utility"]
 +++
 
 This is quick tutorial about installing [Tilestache](http://tilestache.org/) library in OSX Mavericks.
