@@ -34,9 +34,9 @@ df = pd.DataFrame(
 )
 ```
 
-<img src="/Users/varunpant/Github/weblog/static/img/image-20191225165022171.png" alt="image-20191225165022171" style="zoom:50%;" />
+<img src="/img/image-20191225165022171.png" alt="image-20191225165022171" style="zoom:50%;" />
 
-![img](/Users/varunpant/Github/weblog/static/img/sales-10003455.png)
+![img](/img/sales-10003455.png)
 
 ### Moving and Centred average
 
@@ -76,11 +76,11 @@ def StItDescription(v):
 df["StItD"] = df["StIt"].apply(lambda x:StItDescription(x))
 ```
 
-<img src="/Users/varunpant/Github/weblog/static/img/image-20200105203318518.png" alt="image-20200105203318518" style="zoom:50%;" />
+<img src="/img/image-20200105203318518.png" alt="image-20200105203318518" style="zoom:50%;" />
 
 So take a moment to understand what these values really indicate. The number **1.095890**  indicate that in year 1, quarter 4  the **seasonal** and **irregular** components were **13% above** (*yellow line in figure below*) the smoothened baseline, or year 3 quarter 3 the **seasonal** and **irregular** components were **11%(rounded) above** baseline.
 
-![image-20200105210230472](/Users/varunpant/Github/weblog/static/img/image-20200105210230472.png)
+![image-20200105210230472](/img/image-20200105210230472.png)
 
 ### Seasonal components
 
@@ -130,7 +130,7 @@ coef_ = 0.14713872
 intercept_ = 5.09961009
 ```
 
- <img src="/Users/varunpant/Github/weblog/static/img/img-2324242342342.png" alt="img" style="zoom:150%;" />
+ <img src="/img/img-2324242342342.png" alt="img" style="zoom:150%;" />
 
 
 
@@ -161,9 +161,9 @@ Here is a view of what has been achieved so far, **Sales** column is actuals and
 
 
 
-![image-20200105200738898](/Users/varunpant/Github/weblog/static/img/image-20200105200738898.png)
+![image-20200105200738898](/img/image-20200105200738898.png)
 
-![img](/Users/varunpant/Github/weblog/static/img/predicted-1003846555.png)
+![img](/img/predicted-1003846555.png)
 
 ### Forecasting Future
 
@@ -196,4 +196,4 @@ merged = pd.concat([training,future], axis=0,copy=True,sort=True)
 
 Here is the final plot.
 
-![img](/Users/varunpant/Github/weblog/static/img/finale-32435432312.png)
+![img](/img/finale-32435432312.png)
