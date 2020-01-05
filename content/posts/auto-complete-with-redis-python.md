@@ -1,4 +1,3 @@
-
 +++
 title = "Auto Complete with Redis (Python)"
 date = "2012-05-06"
@@ -12,7 +11,7 @@ This is a quick port of [auto complete](http://antirez.com/post/autocomplete-wit
 
  I like python and had little time to burn today, so here goes:
 
-   The file used for input is [female-names.txt](http://antirez.com/misc/female-names.txt)
+The file used for input is [female-names.txt](http://antirez.com/misc/female-names.txt)
 
  Hope it helps :)
 
