@@ -5,7 +5,7 @@
 <span class=logo__cursor></span></a><span class=header__right><nav class=menu><ul class="menu__inner menu__inner--desktop"><li><a href=/about>About</a></li><li><a href=/archives>Archives</a></li><li><a href=/feed.xml>Feed</a></li><li><a href=/showcase>Showcase</a></li></ul><ul class="menu__inner menu__inner--mobile"><li><a href=/about>About</a></li><li><a href=/archives>Archives</a></li><li><a href=/feed.xml>Feed</a></li><li><a href=/showcase>Showcase</a></li></ul></nav><span class=menu-trigger><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg></span><span class=theme-toggle><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 41C32.4934 41 41 32.4934 41 22 41 11.5066 32.4934 3 22 3 11.5066 3 3 11.5066 3 22s8.5066 19 19 19zM7 22C7 13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22z"/></svg></span></span></span></header><div class=content><div class=post><h2 class=post-title><a href=https://varunpant.com/posts/heap-sort/>Heap Sort in python</a></h2><div class=post-meta><span class=post-date>2016-07-25</span>
 <span class=post-author>— Varun Pant</span>
 <span class=post-read-time>— 2 min read</span></div><span class=post-tags>#<a href=https://varunpant.com/tags/python/>python</a>&nbsp;
-#<a href=https://varunpant.com/tags/algorithms/>algorithms</a>&nbsp;</span><div class=post-content><p>The (binary) heap data structure is an array object that we can view as a nearly complete binary tree.<br>Each node of the tree corresponds to an element of the array.<br>The tree is completely filled on all levels except possibly the lowest, which is filled from the left up to a point.<br>An array A that represents a heap is an object with two attributes:</p><ul><li><p>length, which (as usual) gives the number of elements in the array.</p></li><li><p>heap-size, which represents how many elements in the heap are stored within array A.</p></li></ul><p>Here is the implementation in python.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#f92672>/</span><span style=color:#f92672>/</span><span style=color:#f92672>not</span> used
+#<a href=https://varunpant.com/tags/algorithms/>algorithms</a>&nbsp;</span><div class=post-content><p>The (binary) heap data structure is an array object that we can view as a nearly complete binary tree.<br>Each node of the tree corresponds to an element of the array.<br>The tree is completely filled on all levels except possibly the lowest, which is filled from the left up to a point.<br>An array A that represents a heap is an object with two attributes:</p><ul><li><p>length, which (as usual) gives the number of elements in the array.</p></li><li><p>heap-size, which represents how many elements in the heap are stored within array A.</p></li></ul><p>Here is the implementation in python.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#f92672>//</span><span style=color:#f92672>not</span> used
 <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>parent</span>(i):
     <span style=color:#66d9ef>return</span> int(i<span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>)
 
@@ -19,12 +19,12 @@
     l <span style=color:#f92672>=</span> left(i)
     r <span style=color:#f92672>=</span> right(i)
     largest <span style=color:#f92672>=</span> None
-    <span style=color:#66d9ef>if</span> l <span style=color:#f92672>&lt;</span><span style=color:#f92672>=</span> sz <span style=color:#f92672>and</span> A[l] <span style=color:#f92672>&gt;</span> A[i]:
+    <span style=color:#66d9ef>if</span> l <span style=color:#f92672>&lt;=</span> sz <span style=color:#f92672>and</span> A[l] <span style=color:#f92672>&gt;</span> A[i]:
         largest <span style=color:#f92672>=</span> l
     <span style=color:#66d9ef>else</span>:
         largest <span style=color:#f92672>=</span> i
 
-    <span style=color:#66d9ef>if</span> r <span style=color:#f92672>&lt;</span><span style=color:#f92672>=</span> sz <span style=color:#f92672>and</span> A[r] <span style=color:#f92672>&gt;</span> A[largest]:
+    <span style=color:#66d9ef>if</span> r <span style=color:#f92672>&lt;=</span> sz <span style=color:#f92672>and</span> A[r] <span style=color:#f92672>&gt;</span> A[largest]:
         largest <span style=color:#f92672>=</span> r
 
     <span style=color:#66d9ef>if</span> largest <span style=color:#f92672>!=</span> i:
@@ -52,9 +52,9 @@
 
 A <span style=color:#f92672>=</span> [<span style=color:#ae81ff>16</span>,<span style=color:#ae81ff>4</span>,<span style=color:#ae81ff>10</span>,<span style=color:#ae81ff>14</span>,<span style=color:#ae81ff>8</span>,<span style=color:#ae81ff>7</span>,<span style=color:#ae81ff>9</span>,<span style=color:#ae81ff>3</span>,<span style=color:#ae81ff>2</span>,<span style=color:#ae81ff>4</span>,<span style=color:#ae81ff>1</span>]
 
-<span style=color:#66d9ef>print</span> <span style=color:#e6db74></span><span style=color:#e6db74>&#34;</span><span style=color:#e6db74>Unsorted: </span><span style=color:#e6db74>&#34;</span>, A 
+<span style=color:#66d9ef>print</span> <span style=color:#e6db74>&#34;Unsorted: &#34;</span>, A 
 heapsort(A)
-<span style=color:#66d9ef>print</span> <span style=color:#e6db74></span><span style=color:#e6db74>&#34;</span><span style=color:#e6db74>Heap Sorted: </span><span style=color:#e6db74>&#34;</span>, A
+<span style=color:#66d9ef>print</span> <span style=color:#e6db74>&#34;Heap Sorted: &#34;</span>, A
 
 </code></pre></div></div><div class=pagination><div class=pagination__title><span class=pagination__title-h>Read other posts</span><hr></div><div class=pagination__buttons><span class="button previous"><a href=https://varunpant.com/posts/binary-search-tree-in-python/><span class=button__icon>←</span>
 <span class=button__text>Binary Search Tree in python</span></a></span>

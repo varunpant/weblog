@@ -37,7 +37,7 @@ You can read a good tutorial from mapbox using Qgis with a mmqgis plugin here.">
    ringYbottomOrigin <span style=color:#f92672>=</span> ymax<span style=color:#f92672>-</span>gridHeight
 
    <span style=color:#75715e># create output file</span>
-   outDriver <span style=color:#f92672>=</span> ogr<span style=color:#f92672>.</span>GetDriverByName(<span style=color:#e6db74></span><span style=color:#e6db74>&#39;</span><span style=color:#e6db74>ESRI Shapefile</span><span style=color:#e6db74>&#39;</span>)
+   outDriver <span style=color:#f92672>=</span> ogr<span style=color:#f92672>.</span>GetDriverByName(<span style=color:#e6db74>&#39;ESRI Shapefile&#39;</span>)
    <span style=color:#66d9ef>if</span> os<span style=color:#f92672>.</span>path<span style=color:#f92672>.</span>exists(outputGridfn):
        os<span style=color:#f92672>.</span>remove(outputGridfn)
    outDataSource <span style=color:#f92672>=</span> outDriver<span style=color:#f92672>.</span>CreateDataSource(outputGridfn)
@@ -47,7 +47,7 @@ You can read a good tutorial from mapbox using Qgis with a mmqgis plugin here.">
    <span style=color:#75715e># create grid cells</span>
    countcols <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>
    <span style=color:#66d9ef>while</span> countcols <span style=color:#f92672>&lt;</span> cols:
-       countcols <span style=color:#f92672>+</span><span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>
+       countcols <span style=color:#f92672>+=</span> <span style=color:#ae81ff>1</span>
 
        <span style=color:#75715e># reset envelope for rows</span>
        ringYtop <span style=color:#f92672>=</span> ringYtopOrigin
@@ -55,7 +55,7 @@ You can read a good tutorial from mapbox using Qgis with a mmqgis plugin here.">
        countrows <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>
 
        <span style=color:#66d9ef>while</span> countrows <span style=color:#f92672>&lt;</span> rows:
-           countrows <span style=color:#f92672>+</span><span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>
+           countrows <span style=color:#f92672>+=</span> <span style=color:#ae81ff>1</span>
            ring <span style=color:#f92672>=</span> ogr<span style=color:#f92672>.</span>Geometry(ogr<span style=color:#f92672>.</span>wkbLinearRing)
            ring<span style=color:#f92672>.</span>AddPoint(ringXleftOrigin, ringYtop)
            ring<span style=color:#f92672>.</span>AddPoint(ringXrightOrigin, ringYtop)
@@ -83,14 +83,14 @@ You can read a good tutorial from mapbox using Qgis with a mmqgis plugin here.">
    outDataSource<span style=color:#f92672>.</span>Destroy()
 
 
-<span style=color:#66d9ef>if</span> \_\_name\_\_ <span style=color:#f92672>==</span> <span style=color:#e6db74></span><span style=color:#e6db74>&#34;</span><span style=color:#e6db74>\</span><span style=color:#e6db74>_</span><span style=color:#e6db74>\</span><span style=color:#e6db74>_main</span><span style=color:#e6db74>\</span><span style=color:#e6db74>_</span><span style=color:#e6db74>\</span><span style=color:#e6db74>_</span><span style=color:#e6db74>&#34;</span>:
+<span style=color:#66d9ef>if</span> \_\_name\_\_ <span style=color:#f92672>==</span> <span style=color:#e6db74>&#34;\_\_main\_\_&#34;</span>:
 
    <span style=color:#75715e>#</span>
    <span style=color:#75715e># example run : $ python grid.py &lt;full-path&gt;&lt;output-shapefile-name&gt;.shp xmin xmax ymin ymax gridHeight gridWidth</span>
    <span style=color:#75715e>#</span>
 
    <span style=color:#66d9ef>if</span> len( sys<span style=color:#f92672>.</span>argv ) <span style=color:#f92672>!=</span> <span style=color:#ae81ff>8</span>:
-       <span style=color:#66d9ef>print</span> <span style=color:#e6db74></span><span style=color:#e6db74>&#34;</span><span style=color:#e6db74>[ ERROR ] you must supply seven arguments: output-shapefile-name.shp xmin xmax ymin ymax gridHeight gridWidth</span><span style=color:#e6db74>&#34;</span>
+       <span style=color:#66d9ef>print</span> <span style=color:#e6db74>&#34;[ ERROR ] you must supply seven arguments: output-shapefile-name.shp xmin xmax ymin ymax gridHeight gridWidth&#34;</span>
        sys<span style=color:#f92672>.</span>exit( <span style=color:#ae81ff>1</span> )
 
    main( sys<span style=color:#f92672>.</span>argv[<span style=color:#ae81ff>1</span>], sys<span style=color:#f92672>.</span>argv[<span style=color:#ae81ff>2</span>], sys<span style=color:#f92672>.</span>argv[<span style=color:#ae81ff>3</span>], sys<span style=color:#f92672>.</span>argv[<span style=color:#ae81ff>4</span>], sys<span style=color:#f92672>.</span>argv[<span style=color:#ae81ff>5</span>], sys<span style=color:#f92672>.</span>argv[<span style=color:#ae81ff>6</span>], sys<span style=color:#f92672>.</span>argv[<span style=color:#ae81ff>7</span>] )
@@ -118,7 +118,7 @@ You can read a good tutorial from mapbox using Qgis with a mmqgis plugin here.">
 
  Y :<span style=color:#f92672>=</span> ST<span style=color:#960050;background-color:#1e0010>\</span>_YMin(BoundM); <span style=color:#75715e>--current sector&#39;s corner coordinate
 </span><span style=color:#75715e></span> i :<span style=color:#f92672>=</span> <span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>;
- <span style=color:#f92672>&lt;</span><span style=color:#f92672>&gt;</span> LOOP <span style=color:#66d9ef>IF</span> (Y <span style=color:#f92672>&gt;</span> Ymax) <span style=color:#66d9ef>THEN</span> <span style=color:#75715e>--Better if generating polygons exceeds the bound for one step. You always can crop the result. But if not you may get not quite correct data for outbound polygons (e.g. if you calculate frequency per sector) EXIT; END IF; X := Xmin; &lt;&gt; LOOP IF (X &gt; Xmax) THEN EXIT; END IF; i := i + 1; sectors[i] := ST\_GeomFromText(&#39;POLYGON((&#39;||X||&#39; &#39;||Y||&#39;, &#39;||(X+$2)||&#39; &#39;||Y||&#39;, &#39;||(X+$2)||&#39; &#39;||(Y+$2)||&#39;, &#39;||X||&#39; &#39;||(Y+$2)||&#39;, &#39;||X||&#39; &#39;||Y||&#39;))&#39;, $3); X := X + $2; END LOOP xloop; Y := Y + $2; END LOOP yloop; RETURN ST\_Transform(ST\_Collect(sectors), ST\_SRID($1)); END; $body$ LANGUAGE &#39;plpgsql&#39;; 
+ <span style=color:#f92672>&lt;&gt;</span> LOOP <span style=color:#66d9ef>IF</span> (Y <span style=color:#f92672>&gt;</span> Ymax) <span style=color:#66d9ef>THEN</span> <span style=color:#75715e>--Better if generating polygons exceeds the bound for one step. You always can crop the result. But if not you may get not quite correct data for outbound polygons (e.g. if you calculate frequency per sector) EXIT; END IF; X := Xmin; &lt;&gt; LOOP IF (X &gt; Xmax) THEN EXIT; END IF; i := i + 1; sectors[i] := ST\_GeomFromText(&#39;POLYGON((&#39;||X||&#39; &#39;||Y||&#39;, &#39;||(X+$2)||&#39; &#39;||Y||&#39;, &#39;||(X+$2)||&#39; &#39;||(Y+$2)||&#39;, &#39;||X||&#39; &#39;||(Y+$2)||&#39;, &#39;||X||&#39; &#39;||Y||&#39;))&#39;, $3); X := X + $2; END LOOP xloop; Y := Y + $2; END LOOP yloop; RETURN ST\_Transform(ST\_Collect(sectors), ST\_SRID($1)); END; $body$ LANGUAGE &#39;plpgsql&#39;; 
 </span></code></pre></div><p>I hope this helps.</p></div><div class=pagination><div class=pagination__title><span class=pagination__title-h>Read other posts</span><hr></div><div class=pagination__buttons><span class="button previous"><a href=https://varunpant.com/posts/using-geotiff-as-datasource-via-gdal/><span class=button__icon>←</span>
 <span class=button__text>Using Geotiff as datasource via gdal</span></a></span>
 <span class="button next"><a href=https://varunpant.com/posts/how-to-transform-projections-between-spherical-mercator-and-epsg-4326/><span class=button__text>How to transform projections between Spherical Mercator and EPSG 4326</span>

@@ -19,29 +19,29 @@ from pyvirtualdisplay import Display from selenium import webdriver from seleniu
 <span style=color:#f92672>import</span> os
 <span style=color:#f92672>import</span> time
 
-<span style=color:#66d9ef>print</span>(<span style=color:#e6db74></span><span style=color:#e6db74>&#34;</span><span style=color:#e6db74>******************************** STARTING ********************************</span><span style=color:#e6db74>&#34;</span>)
+<span style=color:#66d9ef>print</span>(<span style=color:#e6db74>&#34;******************************** STARTING ********************************&#34;</span>)
 
 display <span style=color:#f92672>=</span> Display(visible<span style=color:#f92672>=</span><span style=color:#ae81ff>0</span>, size<span style=color:#f92672>=</span>(<span style=color:#ae81ff>1024</span>, <span style=color:#ae81ff>768</span>))
 display<span style=color:#f92672>.</span>start()
 
 <span style=color:#75715e># To prevent download dialog</span>
 profile <span style=color:#f92672>=</span> webdriver<span style=color:#f92672>.</span>FirefoxProfile()
-profile<span style=color:#f92672>.</span>set\_preference(<span style=color:#e6db74></span><span style=color:#e6db74>&#39;</span><span style=color:#e6db74>browser.download.folderList</span><span style=color:#e6db74>&#39;</span>, <span style=color:#ae81ff>2</span>) <span style=color:#75715e># custom location</span>
-profile<span style=color:#f92672>.</span>set\_preference(<span style=color:#e6db74></span><span style=color:#e6db74>&#39;</span><span style=color:#e6db74>browser.download.manager.showWhenStarting</span><span style=color:#e6db74>&#39;</span>, False)
-profile<span style=color:#f92672>.</span>set\_preference(<span style=color:#e6db74></span><span style=color:#e6db74>&#39;</span><span style=color:#e6db74>browser.download.dir</span><span style=color:#e6db74>&#39;</span>, <span style=color:#e6db74></span><span style=color:#e6db74>&#39;</span><span style=color:#e6db74>/srv/download</span><span style=color:#e6db74>&#39;</span>)
-profile<span style=color:#f92672>.</span>set\_preference(<span style=color:#e6db74></span><span style=color:#e6db74>&#34;</span><span style=color:#e6db74>browser.download.manager.alertOnEXEOpen</span><span style=color:#e6db74>&#34;</span>, False)
-profile<span style=color:#f92672>.</span>set\_preference(<span style=color:#e6db74></span><span style=color:#e6db74>&#34;</span><span style=color:#e6db74>browser.download.manager.closeWhenDone</span><span style=color:#e6db74>&#34;</span>, False)
-profile<span style=color:#f92672>.</span>set\_preference(<span style=color:#e6db74></span><span style=color:#e6db74>&#34;</span><span style=color:#e6db74>browser.download.manager.focusWhenStarting</span><span style=color:#e6db74>&#34;</span>, False)
+profile<span style=color:#f92672>.</span>set\_preference(<span style=color:#e6db74>&#39;browser.download.folderList&#39;</span>, <span style=color:#ae81ff>2</span>) <span style=color:#75715e># custom location</span>
+profile<span style=color:#f92672>.</span>set\_preference(<span style=color:#e6db74>&#39;browser.download.manager.showWhenStarting&#39;</span>, False)
+profile<span style=color:#f92672>.</span>set\_preference(<span style=color:#e6db74>&#39;browser.download.dir&#39;</span>, <span style=color:#e6db74>&#39;/srv/download&#39;</span>)
+profile<span style=color:#f92672>.</span>set\_preference(<span style=color:#e6db74>&#34;browser.download.manager.alertOnEXEOpen&#34;</span>, False)
+profile<span style=color:#f92672>.</span>set\_preference(<span style=color:#e6db74>&#34;browser.download.manager.closeWhenDone&#34;</span>, False)
+profile<span style=color:#f92672>.</span>set\_preference(<span style=color:#e6db74>&#34;browser.download.manager.focusWhenStarting&#34;</span>, False)
 <span style=color:#75715e>#application/octet-stream,application/vnd.ms-excel </span>
-profile<span style=color:#f92672>.</span>set\_preference(<span style=color:#e6db74></span><span style=color:#e6db74>&#39;</span><span style=color:#e6db74>browser.helperApps.neverAsk.saveToDisk</span><span style=color:#e6db74>&#39;</span>, <span style=color:#e6db74></span><span style=color:#e6db74>&#39;</span><span style=color:#e6db74>application/x-msdownload,application/octet-stream</span><span style=color:#e6db74>&#39;</span>)
+profile<span style=color:#f92672>.</span>set\_preference(<span style=color:#e6db74>&#39;browser.helperApps.neverAsk.saveToDisk&#39;</span>, <span style=color:#e6db74>&#39;application/x-msdownload,application/octet-stream&#39;</span>)
 <span style=color:#66d9ef>try</span>:
     browser <span style=color:#f92672>=</span> webdriver<span style=color:#f92672>.</span>Firefox(profile)
-    browser<span style=color:#f92672>.</span>get(<span style=color:#e6db74></span><span style=color:#e6db74>&#39;</span><span style=color:#e6db74>https://www.7-zip.org/</span><span style=color:#e6db74>&#39;</span>)
-    download\_button <span style=color:#f92672>=</span> WebDriverWait(browser, <span style=color:#ae81ff>20</span>)<span style=color:#f92672>.</span>until(EC<span style=color:#f92672>.</span>element\_to\_be\_clickable((By<span style=color:#f92672>.</span>CSS\_SELECTOR, <span style=color:#e6db74></span><span style=color:#e6db74>&#39;</span><span style=color:#e6db74>td.Item a</span><span style=color:#e6db74>&#39;</span>)))
+    browser<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#39;https://www.7-zip.org/&#39;</span>)
+    download\_button <span style=color:#f92672>=</span> WebDriverWait(browser, <span style=color:#ae81ff>20</span>)<span style=color:#f92672>.</span>until(EC<span style=color:#f92672>.</span>element\_to\_be\_clickable((By<span style=color:#f92672>.</span>CSS\_SELECTOR, <span style=color:#e6db74>&#39;td.Item a&#39;</span>)))
     download\_button<span style=color:#f92672>.</span>click()
-    <span style=color:#66d9ef>print</span>(<span style=color:#e6db74></span><span style=color:#e6db74>&#34;</span><span style=color:#e6db74>clicked...</span><span style=color:#e6db74>&#34;</span>)
+    <span style=color:#66d9ef>print</span>(<span style=color:#e6db74>&#34;clicked...&#34;</span>)
     time<span style=color:#f92672>.</span>sleep(<span style=color:#ae81ff>10</span>) 
-    <span style=color:#66d9ef>print</span> (os<span style=color:#f92672>.</span>listdir(<span style=color:#e6db74></span><span style=color:#e6db74>&#34;</span><span style=color:#e6db74>/srv/download</span><span style=color:#e6db74>&#34;</span>))
+    <span style=color:#66d9ef>print</span> (os<span style=color:#f92672>.</span>listdir(<span style=color:#e6db74>&#34;/srv/download&#34;</span>))
 <span style=color:#66d9ef>except</span> <span style=color:#a6e22e>Exception</span> <span style=color:#66d9ef>as</span> ex:
     <span style=color:#66d9ef>print</span>(ex)
  
@@ -49,7 +49,7 @@ browser<span style=color:#f92672>.</span>close()
 display<span style=color:#f92672>.</span>stop()
 
 
-<span style=color:#66d9ef>print</span>(<span style=color:#e6db74></span><span style=color:#e6db74>&#34;</span><span style=color:#e6db74>******************************** FINITO ********************************</span><span style=color:#e6db74>&#34;</span>)
+<span style=color:#66d9ef>print</span>(<span style=color:#e6db74>&#34;******************************** FINITO ********************************&#34;</span>)
 
 </code></pre></div><p>The code is fairly simple , we need</p><ol><li>pyvirtualdisplay, to support the webdriver .</li><li>FirefoxProfile, to auto accept the firefox download model screen.</li><li>The code sets /srv/download as the download location, more details in Makefile shown in the end of this post.</li><li>Finally, we set &lsquo;application/x-msdownload,application/octet-stream&rsquo; as our allowed file mime type.</li></ol><h3 id=python-dependencies>Python dependencies</h3><ol><li>selenium</li><li>pyvirtualdisplay</li></ol><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>pip install selenium pyvirtualdisplay
 
@@ -95,7 +95,7 @@ RUN pip install selenium pyvirtualdisplay
 </code></pre></div><h3 id=running-python-code-inside-docker-container>Running python code inside Docker container</h3><p>A simple command as shown below will execute the script in docker, which will create a folder locally called download and download the 7zip.exe into it.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#75715e>#Build image from Dockerfile</span>
 docker build -t docker-selenium
 <span style=color:#75715e>#Run image after mounting the folder at &#34;${PWD}:/srv&#34; and mapping it with /srv in docker container.</span>
-docker run -v <span style=color:#e6db74>&#34;</span><span style=color:#e6db74>${</span>PWD<span style=color:#e6db74>}</span><span style=color:#e6db74>:/srv</span><span style=color:#e6db74>&#34;</span>  -w /srv --name img -d docker-selenium tail -f /dev/null
+docker run -v <span style=color:#e6db74>&#34;</span><span style=color:#e6db74>${</span>PWD<span style=color:#e6db74>}</span><span style=color:#e6db74>:/srv&#34;</span>  -w /srv --name img -d docker-selenium tail -f /dev/null
 <span style=color:#75715e># I have used a make file locally to execute python command python run main.py</span>
 docker exec img make run
 docker stop img
@@ -113,7 +113,7 @@ run:
 
 
 docker-run:
-	docker run -v <span style=color:#e6db74>&#34;</span><span style=color:#e6db74>${</span>PWD<span style=color:#e6db74>}</span><span style=color:#e6db74>:/srv</span><span style=color:#e6db74>&#34;</span>  -w /srv --name img -d <span style=color:#66d9ef>$(</span>img<span style=color:#ae81ff>\_</span>name<span style=color:#66d9ef>)</span> tail -f /dev/null
+	docker run -v <span style=color:#e6db74>&#34;</span><span style=color:#e6db74>${</span>PWD<span style=color:#e6db74>}</span><span style=color:#e6db74>:/srv&#34;</span>  -w /srv --name img -d <span style=color:#66d9ef>$(</span>img<span style=color:#ae81ff>\_</span>name<span style=color:#66d9ef>)</span> tail -f /dev/null
 	docker exec img make run
 	docker stop img
 	docker rm img
@@ -131,8 +131,8 @@ build:
 
 
 browser <span style=color:#f92672>=</span> webdriver<span style=color:#f92672>.</span>Chrome()
-browser<span style=color:#f92672>.</span>get(<span style=color:#e6db74></span><span style=color:#e6db74>&#39;</span><span style=color:#e6db74>https://www.7-zip.org/</span><span style=color:#e6db74>&#39;</span>)
-download\_button <span style=color:#f92672>=</span> WebDriverWait(browser, <span style=color:#ae81ff>20</span>)<span style=color:#f92672>.</span>until(EC<span style=color:#f92672>.</span>element\_to\_be\_clickable((By<span style=color:#f92672>.</span>CSS\_SELECTOR, <span style=color:#e6db74></span><span style=color:#e6db74>&#39;</span><span style=color:#e6db74>td.Item a</span><span style=color:#e6db74>&#39;</span>)))
+browser<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#39;https://www.7-zip.org/&#39;</span>)
+download\_button <span style=color:#f92672>=</span> WebDriverWait(browser, <span style=color:#ae81ff>20</span>)<span style=color:#f92672>.</span>until(EC<span style=color:#f92672>.</span>element\_to\_be\_clickable((By<span style=color:#f92672>.</span>CSS\_SELECTOR, <span style=color:#e6db74>&#39;td.Item a&#39;</span>)))
 download\_button<span style=color:#f92672>.</span>click()
 time<span style=color:#f92672>.</span>sleep(<span style=color:#ae81ff>10</span>) 
 

@@ -19,10 +19,10 @@ merged = [] l = 0 r = 0 for i in range(len(a)+len(b) ): lval = None rval = None 
                 
                 if (lval <span style=color:#f92672>&lt;</span> rval and rval and lval)  or rval <span style=color:#f92672>==</span> None:
                         merged.append(lval)
-                        l<span style=color:#f92672>+</span><span style=color:#f92672>=</span><span style=color:#ae81ff>1</span>
+                        l<span style=color:#f92672>+=</span><span style=color:#ae81ff>1</span>
                 elif (lval <span style=color:#f92672>&gt;=</span> rval and rval and lval)or lval <span style=color:#f92672>==</span> None:
                         merged.append(rval)
-                        r<span style=color:#f92672>+</span><span style=color:#f92672>=</span><span style=color:#ae81ff>1</span>
+                        r<span style=color:#f92672>+=</span><span style=color:#ae81ff>1</span>
 
         return merged
 
