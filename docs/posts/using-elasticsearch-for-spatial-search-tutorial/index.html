@@ -7,138 +7,135 @@ You will need to install ElasticSearch, read about installing it here, also inst
 For this demonstration I have used data from Geofabrik."><meta property="og:title" content="Using ElasticSearch for Spatial Search tutorial"><meta property="og:description" content="In this post I will demonstrate using ElasticSearch to spatially query records and filter them by attributes.
 ElasticSearch is built on top of Lucence which in version 4.0 supports Spatial query features, for those interested here is an example and link to javadocs.
 You will need to install ElasticSearch, read about installing it here, also install marvel plugin for configuration and testing.
-For this demonstration I have used data from Geofabrik."><meta property="og:type" content="article"><meta property="og:url" content="https://varunpant.com/posts/using-elasticsearch-for-spatial-search-tutorial/"><meta property="article:published_time" content="2014-07-20T00:00:00+00:00"><meta property="article:modified_time" content="2014-07-20T00:00:00+00:00"><meta property="og:site_name" content="Varun Pant"><section><div id=ta class=advert><script type=text/javascript>google_ad_client="ca-pub-1110730152886910";google_ad_slot="7384719372";google_ad_width=468;google_ad_height=60;</script><script type=text/javascript src=//pagead2.googlesyndication.com/pagead/show_ads.js></script></div></section></head><body><div class=container><header class=header><span class=header__inner><a href=/ class=logo style=text-decoration:none><span class=logo__mark><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44"><path fill="none" d="M15 8l14.729 14.382L15 35.367"/></svg></span><span class=logo__text>Varun Pant</span>
-<span class=logo__cursor></span></a><span class=header__right><nav class=menu><ul class="menu__inner menu__inner--desktop"><li><a href=/about>About</a></li><li><a href=/archives>Archives</a></li><li><a href=/feed.xml>Feed</a></li><li><a href=/showcase>Showcase</a></li></ul><ul class="menu__inner menu__inner--mobile"><li><a href=/about>About</a></li><li><a href=/archives>Archives</a></li><li><a href=/feed.xml>Feed</a></li><li><a href=/showcase>Showcase</a></li></ul></nav><span class=menu-trigger><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg></span><span class=theme-toggle><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 41C32.4934 41 41 32.4934 41 22 41 11.5066 32.4934 3 22 3 11.5066 3 3 11.5066 3 22s8.5066 19 19 19zM7 22C7 13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22z"/></svg></span></span></span></header><div class=content><div class=post><h2 class=post-title><a href=https://varunpant.com/posts/using-elasticsearch-for-spatial-search-tutorial/>Using ElasticSearch for Spatial Search tutorial</a></h2><div class=post-meta><span class=post-date>2014-07-20</span>
+For this demonstration I have used data from Geofabrik."><meta property="og:type" content="article"><meta property="og:url" content="https://varunpant.com/posts/using-elasticsearch-for-spatial-search-tutorial/"><meta property="article:section" content="posts"><meta property="article:published_time" content="2014-07-20T00:00:00+00:00"><meta property="article:modified_time" content="2014-07-20T00:00:00+00:00"><meta property="og:site_name" content="Varun Pant"><section><div id=ta class=advert><script type=text/javascript>google_ad_client="ca-pub-1110730152886910",google_ad_slot="7384719372",google_ad_width=468,google_ad_height=60</script><script type=text/javascript src=//pagead2.googlesyndication.com/pagead/show_ads.js></script></div></section></head><body><div class=container><header class=header><span class=header__inner><a href=/ class=logo style=text-decoration:none><span class=logo__mark><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44"><path fill="none" d="M15 8l14.729 14.382L15 35.367"/></svg></span><span class=logo__text>Varun Pant</span>
+<span class=logo__cursor></span></a>
+<span class=header__right><nav class=menu><ul class="menu__inner menu__inner--desktop"><li><a href=/about>About</a></li><li><a href=/archives>Archives</a></li><li><a href=/feed.xml>Feed</a></li><li><a href=/showcase>Showcase</a></li></ul><ul class="menu__inner menu__inner--mobile"><li><a href=/about>About</a></li><li><a href=/archives>Archives</a></li><li><a href=/feed.xml>Feed</a></li><li><a href=/showcase>Showcase</a></li></ul></nav><span class=menu-trigger><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg></span><span class=theme-toggle><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 41c10.4934.0 19-8.5066 19-19C41 11.5066 32.4934 3 22 3 11.5066 3 3 11.5066 3 22s8.5066 19 19 19zM7 22C7 13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22z"/></svg></span></span></span></header><div class=content><div class=post><h2 class=post-title><a href=https://varunpant.com/posts/using-elasticsearch-for-spatial-search-tutorial/>Using ElasticSearch for Spatial Search tutorial</a></h2><div class=post-meta><span class=post-date>2014-07-20</span>
 <span class=post-author>— Varun Pant</span>
 <span class=post-read-time>— 3 min read</span></div><span class=post-tags>#<a href=https://varunpant.com/tags/elasticsearch/>elasticsearch</a>&nbsp;
 #<a href=https://varunpant.com/tags/geo_point/>geo_point</a>&nbsp;
 #<a href=https://varunpant.com/tags/geo_distance/>geo_distance</a>&nbsp;
 #<a href=https://varunpant.com/tags/search/>search</a>&nbsp;
-#<a href=https://varunpant.com/tags/web/>web</a>&nbsp;</span><div class=post-content><p>In this post I will demonstrate using <a href=http://www.elasticsearch.org/>ElasticSearch</a> to spatially query records and filter them by attributes.</p><p><a href=http://www.elasticsearch.org/>ElasticSearch</a> is built on top of <a href=http://lucene.apache.org/>Lucence</a> which in version 4.0 supports Spatial query features, for those interested here is an <a href="http://svn.apache.org/viewvc/lucene/dev/branches/branch_4x/lucene/spatial/src/test/org/apache/lucene/spatial/SpatialExample.java?view=markup">example</a> and <a href=http://lucene.apache.org/core/4_0_0/spatial/index.html>link</a> to javadocs.</p><p>You will need to install <a href=http://www.elasticsearch.org/>ElasticSearch</a>, read about installing it <a href=http://www.elasticsearch.org/guide/en/elasticsearch/guide/current/_installing_elasticsearch.html>here</a>, also install <a href=http://www.elasticsearch.org/guide/en/marvel/current/>marvel</a> plugin for configuration and testing.</p><p>For this demonstration I have used data from <a href=http://download.geofabrik.de/>Geofabrik</a>. I have used <strong>point.shp</strong> file from <a href=http://download.geofabrik.de/europe/great-britain.html>Great Britan</a> but you can use data from any other country as well.</p><p>To extract the data,I wrote a quick python script using <a href=https://code.google.com/p/pyshp/>pyshp</a> library</p><p>One can easily install it by typing sudo easy_install pyshp in shell</p><h3 id=mapping-type-setup>Mapping type setup</h3><p>Before uploading the records we need to create an Index in elasticsearch and apply schema mapping where we will instruct elasticsearch to create a geo index on location attribute.</p><p>We can do this easily by issuing a curl request</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>curl -XPUT http://localhost:9200/places -d <span style=color:#960050;background-color:#1e0010>&#39;</span>
-<span style=color:#f92672>{</span>
-   <span style=color:#e6db74>&#34;mappings&#34;</span>: <span style=color:#f92672>{</span>
-       <span style=color:#e6db74>&#34;place&#34;</span>: <span style=color:#f92672>{</span>
-           <span style=color:#e6db74>&#34;properties&#34;</span>: <span style=color:#f92672>{</span>
-               <span style=color:#e6db74>&#34;id&#34;</span>: <span style=color:#f92672>{</span><span style=color:#e6db74>&#34;type&#34;</span>: <span style=color:#e6db74>&#34;double&#34;</span><span style=color:#f92672>}</span>,
-               <span style=color:#e6db74>&#34;name&#34;</span>: <span style=color:#f92672>{</span><span style=color:#e6db74>&#34;type&#34;</span>: <span style=color:#e6db74>&#34;string&#34;</span><span style=color:#f92672>}</span>,
-               <span style=color:#e6db74>&#34;type&#34;</span>: <span style=color:#f92672>{</span><span style=color:#e6db74>&#34;type&#34;</span>: <span style=color:#e6db74>&#34;string&#34;</span><span style=color:#f92672>}</span>,
-               <span style=color:#e6db74>&#34;location&#34;</span>: <span style=color:#f92672>{</span><span style=color:#e6db74>&#34;type&#34;</span>: <span style=color:#e6db74>&#34;geo\_point&#34;</span><span style=color:#f92672>}</span>
-           <span style=color:#f92672>}</span>
-       <span style=color:#f92672>}</span>
-   <span style=color:#f92672>}</span>
-<span style=color:#f92672>}</span>
-
-</code></pre></div><p>Once the schema for index places has been set up, its now time to add records to the index.</p><p>In the python script below modify the name of the shape file path and execute.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#f92672>import</span> shapefile
-<span style=color:#f92672>import</span> urllib2
-<span style=color:#f92672>import</span> json
-sf <span style=color:#f92672>=</span> shapefile<span style=color:#f92672>.</span>Reader(<span style=color:#e6db74>&#34;points&#34;</span>)
-sr <span style=color:#f92672>=</span> sf<span style=color:#f92672>.</span>shapeRecords()
-
-<span style=color:#66d9ef>for</span> r <span style=color:#f92672>in</span> sr:
-   <span style=color:#66d9ef>try</span> :
-       <span style=color:#66d9ef>if</span> r<span style=color:#f92672>.</span>record[<span style=color:#ae81ff>2</span>]<span style=color:#f92672>.</span>strip() <span style=color:#f92672>and</span> r<span style=color:#f92672>.</span>record[<span style=color:#ae81ff>3</span>]<span style=color:#f92672>.</span>strip():
-           req <span style=color:#f92672>=</span> urllib2<span style=color:#f92672>.</span>Request(<span style=color:#e6db74>&#39;http://localhost:9200/places/place/&#39;</span>)
-           req<span style=color:#f92672>.</span>add\_header(<span style=color:#e6db74>&#39;Content-Type&#39;</span>, <span style=color:#e6db74>&#39;application/json&#39;</span>)
-           data <span style=color:#f92672>=</span> {<span style=color:#e6db74>&#39;id&#39;</span>: r<span style=color:#f92672>.</span>record[<span style=color:#ae81ff>0</span>]<span style=color:#f92672>.</span>strip(),<span style=color:#e6db74>&#39;name&#39;</span>:r<span style=color:#f92672>.</span>record[<span style=color:#ae81ff>2</span>]<span style=color:#f92672>.</span>strip(),<span style=color:#e6db74>&#39;type&#39;</span>:r<span style=color:#f92672>.</span>record[<span style=color:#ae81ff>3</span>]<span style=color:#f92672>.</span>strip(),<span style=color:#e6db74>&#39;location&#39;</span>:{<span style=color:#e6db74>&#39;lat&#39;</span>:r<span style=color:#f92672>.</span>shape<span style=color:#f92672>.</span>points[<span style=color:#ae81ff>0</span>][<span style=color:#ae81ff>1</span>],<span style=color:#e6db74>&#39;lon&#39;</span>:r<span style=color:#f92672>.</span>shape<span style=color:#f92672>.</span>points[<span style=color:#ae81ff>0</span>][<span style=color:#ae81ff>0</span>]}}
-           response <span style=color:#f92672>=</span> urllib2<span style=color:#f92672>.</span>urlopen(req, json<span style=color:#f92672>.</span>dumps(data))
-           <span style=color:#66d9ef>print</span> r<span style=color:#f92672>.</span>record[<span style=color:#ae81ff>2</span>]
-   <span style=color:#66d9ef>except</span> <span style=color:#a6e22e>Exception</span>,e:
-       <span style=color:#66d9ef>print</span> e
-       <span style=color:#75715e>#print &#34;ERROR &#34;,r.record[0],r.record[2],r.record[3] , r.shape.points[0][0], r.shape.points[0][1]</span>
-       <span style=color:#66d9ef>pass</span>
-
-</code></pre></div><p>The script inserts all records which have a valid <strong>name</strong> and <strong>type</strong> column into index.</p><h3 id=verify>Verify</h3><p>Once complete we can quickly verify the number of records in the index by issuing.</p><p>GET places/_count from <strong>marvel</strong> or from a browser http://localhost:9200/places/_count</p><h3 id=spatial-search>Spatial Search</h3><p>In <strong>Marvel/Sense</strong></p><pre><code>GET places/\_search
+#<a href=https://varunpant.com/tags/web/>web</a>&nbsp;</span><div class=post-content><p>In this post I will demonstrate using <a href=http://www.elasticsearch.org/>ElasticSearch</a> to spatially query records and filter them by attributes.</p><p><a href=http://www.elasticsearch.org/>ElasticSearch</a> is built on top of <a href=http://lucene.apache.org/>Lucence</a> which in version 4.0 supports Spatial query features, for those interested here is an <a href="http://svn.apache.org/viewvc/lucene/dev/branches/branch_4x/lucene/spatial/src/test/org/apache/lucene/spatial/SpatialExample.java?view=markup">example</a> and <a href=http://lucene.apache.org/core/4_0_0/spatial/index.html>link</a> to javadocs.</p><p>You will need to install <a href=http://www.elasticsearch.org/>ElasticSearch</a>, read about installing it <a href=http://www.elasticsearch.org/guide/en/elasticsearch/guide/current/_installing_elasticsearch.html>here</a>, also install <a href=http://www.elasticsearch.org/guide/en/marvel/current/>marvel</a> plugin for configuration and testing.</p><p>For this demonstration I have used data from <a href=http://download.geofabrik.de/>Geofabrik</a>. I have used <strong>point.shp</strong> file from <a href=http://download.geofabrik.de/europe/great-britain.html>Great Britan</a> but you can use data from any other country as well.</p><p>To extract the data,I wrote a quick python script using <a href=https://code.google.com/p/pyshp/>pyshp</a> library</p><p>One can easily install it by typing sudo easy_install pyshp in shell</p><h3 id=mapping-type-setup>Mapping type setup</h3><p>Before uploading the records we need to create an Index in elasticsearch and apply schema mapping where we will instruct elasticsearch to create a geo index on location attribute.</p><p>We can do this easily by issuing a curl request</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>curl -XPUT http://localhost:9200/places -d <span style=color:#960050;background-color:#1e0010>&#39;</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>   <span style=color:#e6db74>&#34;mappings&#34;</span>: <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>       <span style=color:#e6db74>&#34;place&#34;</span>: <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>           <span style=color:#e6db74>&#34;properties&#34;</span>: <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>               <span style=color:#e6db74>&#34;id&#34;</span>: <span style=color:#f92672>{</span><span style=color:#e6db74>&#34;type&#34;</span>: <span style=color:#e6db74>&#34;double&#34;</span><span style=color:#f92672>}</span>,
+</span></span><span style=display:flex><span>               <span style=color:#e6db74>&#34;name&#34;</span>: <span style=color:#f92672>{</span><span style=color:#e6db74>&#34;type&#34;</span>: <span style=color:#e6db74>&#34;string&#34;</span><span style=color:#f92672>}</span>,
+</span></span><span style=display:flex><span>               <span style=color:#e6db74>&#34;type&#34;</span>: <span style=color:#f92672>{</span><span style=color:#e6db74>&#34;type&#34;</span>: <span style=color:#e6db74>&#34;string&#34;</span><span style=color:#f92672>}</span>,
+</span></span><span style=display:flex><span>               <span style=color:#e6db74>&#34;location&#34;</span>: <span style=color:#f92672>{</span><span style=color:#e6db74>&#34;type&#34;</span>: <span style=color:#e6db74>&#34;geo\_point&#34;</span><span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span>           <span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span>       <span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span>   <span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>}</span>
+</span></span></code></pre></div><p>Once the schema for index places has been set up, its now time to add records to the index.</p><p>In the python script below modify the name of the shape file path and execute.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#f92672>import</span> shapefile
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> urllib2
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> json
+</span></span><span style=display:flex><span>sf <span style=color:#f92672>=</span> shapefile<span style=color:#f92672>.</span>Reader(<span style=color:#e6db74>&#34;points&#34;</span>)
+</span></span><span style=display:flex><span>sr <span style=color:#f92672>=</span> sf<span style=color:#f92672>.</span>shapeRecords()
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>for</span> r <span style=color:#f92672>in</span> sr:
+</span></span><span style=display:flex><span>   <span style=color:#66d9ef>try</span> :
+</span></span><span style=display:flex><span>       <span style=color:#66d9ef>if</span> r<span style=color:#f92672>.</span>record[<span style=color:#ae81ff>2</span>]<span style=color:#f92672>.</span>strip() <span style=color:#f92672>and</span> r<span style=color:#f92672>.</span>record[<span style=color:#ae81ff>3</span>]<span style=color:#f92672>.</span>strip():
+</span></span><span style=display:flex><span>           req <span style=color:#f92672>=</span> urllib2<span style=color:#f92672>.</span>Request(<span style=color:#e6db74>&#39;http://localhost:9200/places/place/&#39;</span>)
+</span></span><span style=display:flex><span>           req<span style=color:#f92672>.</span>add\_header(<span style=color:#e6db74>&#39;Content-Type&#39;</span>, <span style=color:#e6db74>&#39;application/json&#39;</span>)
+</span></span><span style=display:flex><span>           data <span style=color:#f92672>=</span> {<span style=color:#e6db74>&#39;id&#39;</span>: r<span style=color:#f92672>.</span>record[<span style=color:#ae81ff>0</span>]<span style=color:#f92672>.</span>strip(),<span style=color:#e6db74>&#39;name&#39;</span>:r<span style=color:#f92672>.</span>record[<span style=color:#ae81ff>2</span>]<span style=color:#f92672>.</span>strip(),<span style=color:#e6db74>&#39;type&#39;</span>:r<span style=color:#f92672>.</span>record[<span style=color:#ae81ff>3</span>]<span style=color:#f92672>.</span>strip(),<span style=color:#e6db74>&#39;location&#39;</span>:{<span style=color:#e6db74>&#39;lat&#39;</span>:r<span style=color:#f92672>.</span>shape<span style=color:#f92672>.</span>points[<span style=color:#ae81ff>0</span>][<span style=color:#ae81ff>1</span>],<span style=color:#e6db74>&#39;lon&#39;</span>:r<span style=color:#f92672>.</span>shape<span style=color:#f92672>.</span>points[<span style=color:#ae81ff>0</span>][<span style=color:#ae81ff>0</span>]}}
+</span></span><span style=display:flex><span>           response <span style=color:#f92672>=</span> urllib2<span style=color:#f92672>.</span>urlopen(req, json<span style=color:#f92672>.</span>dumps(data))
+</span></span><span style=display:flex><span>           print r<span style=color:#f92672>.</span>record[<span style=color:#ae81ff>2</span>]
+</span></span><span style=display:flex><span>   <span style=color:#66d9ef>except</span> <span style=color:#a6e22e>Exception</span>,e:
+</span></span><span style=display:flex><span>       print e
+</span></span><span style=display:flex><span>       <span style=color:#75715e>#print &#34;ERROR &#34;,r.record[0],r.record[2],r.record[3] , r.shape.points[0][0], r.shape.points[0][1]</span>
+</span></span><span style=display:flex><span>       <span style=color:#66d9ef>pass</span>
+</span></span></code></pre></div><p>The script inserts all records which have a valid <strong>name</strong> and <strong>type</strong> column into index.</p><h3 id=verify>Verify</h3><p>Once complete we can quickly verify the number of records in the index by issuing.</p><p>GET places/_count from <strong>marvel</strong> or from a browser http://localhost:9200/places/_count</p><h3 id=spatial-search>Spatial Search</h3><p>In <strong>Marvel/Sense</strong></p><pre tabindex=0><code>GET places/\_search
 {
- &quot;sort&quot; : [
+ &#34;sort&#34; : [
      {
-         &quot;\_geo\_distance&quot; : {
-             &quot;location&quot; : {
-                   &quot;lat&quot;: 51.5286416,
-               &quot;lon&quot;: -0.10159870000006777
+         &#34;\_geo\_distance&#34; : {
+             &#34;location&#34; : {
+                   &#34;lat&#34;: 51.5286416,
+               &#34;lon&#34;: -0.10159870000006777
              },
-             &quot;order&quot; : &quot;asc&quot;,
-             &quot;unit&quot; : &quot;km&quot;
+             &#34;order&#34; : &#34;asc&#34;,
+             &#34;unit&#34; : &#34;km&#34;
          }
      }
  ],
- &quot;query&quot;: {
-   &quot;filtered&quot; : {
-       &quot;query&quot; : {
-           &quot;match\_all&quot; : {}
+ &#34;query&#34;: {
+   &#34;filtered&#34; : {
+       &#34;query&#34; : {
+           &#34;match\_all&#34; : {}
        },
-       &quot;filter&quot; : {
-           &quot;geo\_distance&quot; : {
-               &quot;distance&quot; : &quot;20km&quot;,
-               &quot;location&quot; : {
-                  &quot;lat&quot;: 51.5286416,
-                  &quot;lon&quot;: -0.10159870000006777
+       &#34;filter&#34; : {
+           &#34;geo\_distance&#34; : {
+               &#34;distance&#34; : &#34;20km&#34;,
+               &#34;location&#34; : {
+                  &#34;lat&#34;: 51.5286416,
+                  &#34;lon&#34;: -0.10159870000006777
                }
            }
        }
    }
  }
 }
-
-</code></pre><p>or by <strong>curl</strong></p><pre><code>curl -XGET 'http://localhost:9200/places/place/\_search?pretty=true' -d '
+</code></pre><p>or by <strong>curl</strong></p><pre tabindex=0><code>curl -XGET &#39;http://localhost:9200/places/place/\_search?pretty=true&#39; -d &#39;
 {
- &quot;sort&quot; : [
+ &#34;sort&#34; : [
      {
-         &quot;\_geo\_distance&quot; : {
-             &quot;location&quot; : {
-                   &quot;lat&quot;: 51.5286416,
-                  &quot;lon&quot;: -0.10159870000006777
+         &#34;\_geo\_distance&#34; : {
+             &#34;location&#34; : {
+                   &#34;lat&#34;: 51.5286416,
+                  &#34;lon&#34;: -0.10159870000006777
              },
-             &quot;order&quot; : &quot;asc&quot;,
-             &quot;unit&quot; : &quot;km&quot;
+             &#34;order&#34; : &#34;asc&#34;,
+             &#34;unit&#34; : &#34;km&#34;
          }
      }
  ],
- &quot;query&quot;: {
-   &quot;filtered&quot; : {
-       &quot;query&quot; : {
-           &quot;match\_all&quot; : {}
+ &#34;query&#34;: {
+   &#34;filtered&#34; : {
+       &#34;query&#34; : {
+           &#34;match\_all&#34; : {}
        },
-       &quot;filter&quot; : {
-           &quot;geo\_distance&quot; : {
-               &quot;distance&quot; : &quot;20km&quot;,
-               &quot;location&quot; : {
-                   &quot;lat&quot;: 51.5286416,
-                  &quot;lon&quot;: -0.10159870000006777
+       &#34;filter&#34; : {
+           &#34;geo\_distance&#34; : {
+               &#34;distance&#34; : &#34;20km&#34;,
+               &#34;location&#34; : {
+                   &#34;lat&#34;: 51.5286416,
+                  &#34;lon&#34;: -0.10159870000006777
                }
            }
        }
    }
  }
-}'
-
-</code></pre><p>To search by <strong>Geodistance</strong> as well as a <strong>term filter</strong>, modify the query to.</p><pre><code>GET places / \_search ? size = 100 &amp; from = 0 {
-   &quot;sort&quot;: [{
-       &quot;\_geo\_distance&quot;: {
-           &quot;location&quot;: {
-               &quot;lat&quot;: 51.5286416,
-               &quot;lon&quot;: -0.10159870000006777
+}&#39;
+</code></pre><p>To search by <strong>Geodistance</strong> as well as a <strong>term filter</strong>, modify the query to.</p><pre tabindex=0><code>GET places / \_search ? size = 100 &amp; from = 0 {
+   &#34;sort&#34;: [{
+       &#34;\_geo\_distance&#34;: {
+           &#34;location&#34;: {
+               &#34;lat&#34;: 51.5286416,
+               &#34;lon&#34;: -0.10159870000006777
            },
-           &quot;order&quot;: &quot;asc&quot;,
-           &quot;unit&quot;: &quot;km&quot;
+           &#34;order&#34;: &#34;asc&#34;,
+           &#34;unit&#34;: &#34;km&#34;
        }
    }],
-   &quot;query&quot;: {
-       &quot;filtered&quot;: {
-           &quot;query&quot;: {
-               &quot;bool&quot;: {
-                   &quot;should&quot;: [{
-                       &quot;term&quot;: {
-                           &quot;type&quot;: &quot;pub&quot;
+   &#34;query&#34;: {
+       &#34;filtered&#34;: {
+           &#34;query&#34;: {
+               &#34;bool&#34;: {
+                   &#34;should&#34;: [{
+                       &#34;term&#34;: {
+                           &#34;type&#34;: &#34;pub&#34;
                        }
                    }]
                }
            },
-           &quot;filter&quot;: {
-               &quot;geo\_distance&quot;: {
-                   &quot;distance&quot;: &quot;1km&quot;,
-                   &quot;location&quot;: {
-                       &quot;lat&quot;: 51.5286416,
-                       &quot;lon&quot;: -0.10159870000006777
+           &#34;filter&#34;: {
+               &#34;geo\_distance&#34;: {
+                   &#34;distance&#34;: &#34;1km&#34;,
+                   &#34;location&#34;: {
+                       &#34;lat&#34;: 51.5286416,
+                       &#34;lon&#34;: -0.10159870000006777
                    }
                }
            }
@@ -146,11 +143,10 @@ sr <span style=color:#f92672>=</span> sf<span style=color:#f92672>.</span>shapeR
 
    }
 }
-
 </code></pre><p>For better visualisation I have created a nice webapp <a href=https://github.com/varunpant/AroundMe>here</a>.</p><p><img src=https://raw.githubusercontent.com/varunpant/AroundMe/master/screenshot.png alt="Web App"></p><p>Hope this helps</p></div><div class=pagination><div class=pagination__title><span class=pagination__title-h>Read other posts</span><hr></div><div class=pagination__buttons><span class="button previous"><a href=https://varunpant.com/posts/how-to-print-the-fibonacci-sequence-in-python/><span class=button__icon>←</span>
 <span class=button__text>How to print the Fibonacci Sequence in Python</span></a></span>
 <span class="button next"><a href=https://varunpant.com/posts/ccs3-only-loading-icon/><span class=button__text>CCS3 only Loading Icon</span>
-<span class=button__icon>→</span></a></span></div></div><div id=blog-comments><div id=disqus_thread></div><script type=application/javascript>var disqus_config=function(){};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return;}
-var d=document,s=d.createElement('script');s.async=true;s.src='//'+"varunpant"+'.disqus.com/embed.js';s.setAttribute('data-timestamp',+new Date());(d.head||d.body).appendChild(s);})();</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></div></div></div><footer class=footer><div class=footer__inner><a href=/ class=logo style=text-decoration:none><span class=logo__mark><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44"><path fill="none" d="M15 8l14.729 14.382L15 35.367"/></svg></span><span class=logo__text>Varun Pant</span>
-<span class=logo__cursor></span></a><div class=copyright><span>© 2020 Powered by <a href=https://gohugo.io target=_blank rel=noopener>Hugo</a></span>
-<span>Theme created by <a href=https://twitter.com/panr target=_blank rel=noopener>panr</a></span></div></div></footer><script src=https://varunpant.com/assets/main.js></script><script src=https://varunpant.com/assets/prism.js></script><section><div class=advert id=ta2><script type=text/javascript>google_ad_client="ca-pub-1110730152886910";google_ad_slot="1639236970";google_ad_width=728;google_ad_height=90;</script><script type=text/javascript src=//pagead2.googlesyndication.com/pagead/show_ads.js></script></div></section><script id=dsq-count-scr src=//varunpant.disqus.com/count.js async></script></div><script type=application/javascript>var doNotTrack=false;if(!doNotTrack){(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create','UA-16978408-1','auto');ga('send','pageview');}</script></body></html>
+<span class=button__icon>→</span></a></span></div></div><div id=blog-comments><div id=disqus_thread></div><script type=application/javascript>window.disqus_config=function(){},function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById("disqus_thread").innerHTML="Disqus comments not available by default when the website is previewed locally.";return}var t=document,e=t.createElement("script");e.async=!0,e.src="//varunpant.disqus.com/embed.js",e.setAttribute("data-timestamp",+new Date),(t.head||t.body).appendChild(e)}()</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></div></div></div><footer class=footer><div class=footer__inner><a href=/ class=logo style=text-decoration:none><span class=logo__mark><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44"><path fill="none" d="M15 8l14.729 14.382L15 35.367"/></svg></span><span class=logo__text>Varun Pant</span>
+<span class=logo__cursor></span></a><div class=copyright><span>© 2023 Powered by <a href=https://gohugo.io target=_blank rel=noopener>Hugo</a></span>
+<span>Theme created by <a href=https://twitter.com/panr target=_blank rel=noopener>panr</a></span></div></div></footer><script src=https://varunpant.com/assets/main.js></script>
+<script src=https://varunpant.com/assets/prism.js></script><section><div class=advert id=ta2><script type=text/javascript>google_ad_client="ca-pub-1110730152886910",google_ad_slot="1639236970",google_ad_width=728,google_ad_height=90</script><script type=text/javascript src=//pagead2.googlesyndication.com/pagead/show_ads.js></script></div></section><script id=dsq-count-scr src=//varunpant.disqus.com/count.js async></script></div><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(e,t,n,s,o,i,a){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,i=t.createElement(n),a=t.getElementsByTagName(n)[0],i.async=1,i.src=s,a.parentNode.insertBefore(i,a)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-16978408-1","auto"),ga("send","pageview"))</script></body></html>

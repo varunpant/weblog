@@ -5,5 +5,5 @@ COPY FROM &amp;lsquo;/path/to/csv/SourceCSVFile.csv&amp;rsquo; DELIMITERS &amp;l
 Exporting a CSV from a table. COPY TO &amp;lsquo;/path/to/csv/TargetCSVFile&amp;rsquo; DELIMITERS &amp;lsquo;,&amp;rsquo; CSV;
 Its important to mention here that generally if your data is in unicode or need strict Encoding, then Always set client_encoding before running any of the above mentioned commands.</description></item><item><title>sqlite3 Bulk Import CSV from command line</title><link>https://varunpant.com/posts/sqlite3-bulk-import-csv-from-command-line/</link><pubDate>Tue, 29 Jan 2013 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/sqlite3-bulk-import-csv-from-command-line/</guid><description>I absolutely love SQLite, be it windows, linux or mac, this light weight database never stops to amaze me.
 Few days ago I wanted to import a chunk of CSV data, which was 4 GB in size into a table in SQLite.
-I generally use Firefox &amp;lsquo;s sqlite-manager plug-in for usual tasks with SQLite database ,hence decided to use the import interface .
+I generally use Firefox &amp;rsquo;s sqlite-manager plug-in for usual tasks with SQLite database ,hence decided to use the import interface .
 I have had a very good experience with this GUI tool and it has rarely failed me, but this time I was disappointed.</description></item></channel></rss>

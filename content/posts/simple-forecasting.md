@@ -11,7 +11,7 @@ tags = ["general", "python"]
 
 
 
-# 	Simple Forecasting
+# 	Timeseries financial forecasting
 
 Recently , I have been looking into various ways to forecast a time series dataset. This is an old pursuit in the field of statistics and there are many well known ways to achieve this.
 

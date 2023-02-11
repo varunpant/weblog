@@ -7,139 +7,134 @@ Python Code Here is some basic code which will make an attempt to download a **7
 from pyvirtualdisplay import Display from selenium import webdriver from selenium.webdriver.support.ui import WebDriverWait from selenium."><meta property="og:title" content="download file using webdriver firefox and python selenium"><meta property="og:description" content="Selenium is one of my favourite tool for automation.
 In this post, I will demonstrate some basic code to download a file from a website in a headless mode , and also provide a docker file to make things simpler.
 Python Code Here is some basic code which will make an attempt to download a **7zip exe. **
-from pyvirtualdisplay import Display from selenium import webdriver from selenium.webdriver.support.ui import WebDriverWait from selenium."><meta property="og:type" content="article"><meta property="og:url" content="https://varunpant.com/posts/download-file-using-webdriver-firefox-and-python-selenium/"><meta property="article:published_time" content="2019-02-24T00:00:00+00:00"><meta property="article:modified_time" content="2019-02-24T00:00:00+00:00"><meta property="og:site_name" content="Varun Pant"><section><div id=ta class=advert><script type=text/javascript>google_ad_client="ca-pub-1110730152886910";google_ad_slot="7384719372";google_ad_width=468;google_ad_height=60;</script><script type=text/javascript src=//pagead2.googlesyndication.com/pagead/show_ads.js></script></div></section></head><body><div class=container><header class=header><span class=header__inner><a href=/ class=logo style=text-decoration:none><span class=logo__mark><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44"><path fill="none" d="M15 8l14.729 14.382L15 35.367"/></svg></span><span class=logo__text>Varun Pant</span>
-<span class=logo__cursor></span></a><span class=header__right><nav class=menu><ul class="menu__inner menu__inner--desktop"><li><a href=/about>About</a></li><li><a href=/archives>Archives</a></li><li><a href=/feed.xml>Feed</a></li><li><a href=/showcase>Showcase</a></li></ul><ul class="menu__inner menu__inner--mobile"><li><a href=/about>About</a></li><li><a href=/archives>Archives</a></li><li><a href=/feed.xml>Feed</a></li><li><a href=/showcase>Showcase</a></li></ul></nav><span class=menu-trigger><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg></span><span class=theme-toggle><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 41C32.4934 41 41 32.4934 41 22 41 11.5066 32.4934 3 22 3 11.5066 3 3 11.5066 3 22s8.5066 19 19 19zM7 22C7 13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22z"/></svg></span></span></span></header><div class=content><div class=post><h2 class=post-title><a href=https://varunpant.com/posts/download-file-using-webdriver-firefox-and-python-selenium/>download file using webdriver firefox and python selenium</a></h2><div class=post-meta><span class=post-date>2019-02-24</span>
+from pyvirtualdisplay import Display from selenium import webdriver from selenium.webdriver.support.ui import WebDriverWait from selenium."><meta property="og:type" content="article"><meta property="og:url" content="https://varunpant.com/posts/download-file-using-webdriver-firefox-and-python-selenium/"><meta property="article:section" content="posts"><meta property="article:published_time" content="2019-02-24T00:00:00+00:00"><meta property="article:modified_time" content="2019-02-24T00:00:00+00:00"><meta property="og:site_name" content="Varun Pant"><section><div id=ta class=advert><script type=text/javascript>google_ad_client="ca-pub-1110730152886910",google_ad_slot="7384719372",google_ad_width=468,google_ad_height=60</script><script type=text/javascript src=//pagead2.googlesyndication.com/pagead/show_ads.js></script></div></section></head><body><div class=container><header class=header><span class=header__inner><a href=/ class=logo style=text-decoration:none><span class=logo__mark><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44"><path fill="none" d="M15 8l14.729 14.382L15 35.367"/></svg></span><span class=logo__text>Varun Pant</span>
+<span class=logo__cursor></span></a>
+<span class=header__right><nav class=menu><ul class="menu__inner menu__inner--desktop"><li><a href=/about>About</a></li><li><a href=/archives>Archives</a></li><li><a href=/feed.xml>Feed</a></li><li><a href=/showcase>Showcase</a></li></ul><ul class="menu__inner menu__inner--mobile"><li><a href=/about>About</a></li><li><a href=/archives>Archives</a></li><li><a href=/feed.xml>Feed</a></li><li><a href=/showcase>Showcase</a></li></ul></nav><span class=menu-trigger><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg></span><span class=theme-toggle><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 41c10.4934.0 19-8.5066 19-19C41 11.5066 32.4934 3 22 3 11.5066 3 3 11.5066 3 22s8.5066 19 19 19zM7 22C7 13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22z"/></svg></span></span></span></header><div class=content><div class=post><h2 class=post-title><a href=https://varunpant.com/posts/download-file-using-webdriver-firefox-and-python-selenium/>download file using webdriver firefox and python selenium</a></h2><div class=post-meta><span class=post-date>2019-02-24</span>
 <span class=post-author>— Varun Pant</span>
 <span class=post-read-time>— 3 min read</span></div><span class=post-tags>#<a href=https://varunpant.com/tags/docker/>docker</a>&nbsp;
-#<a href=https://varunpant.com/tags/python/>python</a>&nbsp;</span><div class=post-content><p>Selenium is one of my favourite tool for automation.</p><p>In this post, I will demonstrate some basic code to download a file from a website in a headless mode , and also provide a docker file to make things simpler.</p><h3 id=python-code>Python Code</h3><p>Here is some basic code which will make an attempt to download a **7zip exe. **</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#f92672>from</span> pyvirtualdisplay <span style=color:#f92672>import</span> Display
-<span style=color:#f92672>from</span> selenium <span style=color:#f92672>import</span> webdriver
-<span style=color:#f92672>from</span> selenium.webdriver.support.ui <span style=color:#f92672>import</span> WebDriverWait
-<span style=color:#f92672>from</span> selenium.webdriver.support <span style=color:#f92672>import</span> expected\_conditions <span style=color:#66d9ef>as</span> EC
-<span style=color:#f92672>from</span> selenium.webdriver.common.by <span style=color:#f92672>import</span> By
-<span style=color:#f92672>import</span> os
-<span style=color:#f92672>import</span> time
-
-<span style=color:#66d9ef>print</span>(<span style=color:#e6db74>&#34;******************************** STARTING ********************************&#34;</span>)
-
-display <span style=color:#f92672>=</span> Display(visible<span style=color:#f92672>=</span><span style=color:#ae81ff>0</span>, size<span style=color:#f92672>=</span>(<span style=color:#ae81ff>1024</span>, <span style=color:#ae81ff>768</span>))
-display<span style=color:#f92672>.</span>start()
-
-<span style=color:#75715e># To prevent download dialog</span>
-profile <span style=color:#f92672>=</span> webdriver<span style=color:#f92672>.</span>FirefoxProfile()
-profile<span style=color:#f92672>.</span>set\_preference(<span style=color:#e6db74>&#39;browser.download.folderList&#39;</span>, <span style=color:#ae81ff>2</span>) <span style=color:#75715e># custom location</span>
-profile<span style=color:#f92672>.</span>set\_preference(<span style=color:#e6db74>&#39;browser.download.manager.showWhenStarting&#39;</span>, False)
-profile<span style=color:#f92672>.</span>set\_preference(<span style=color:#e6db74>&#39;browser.download.dir&#39;</span>, <span style=color:#e6db74>&#39;/srv/download&#39;</span>)
-profile<span style=color:#f92672>.</span>set\_preference(<span style=color:#e6db74>&#34;browser.download.manager.alertOnEXEOpen&#34;</span>, False)
-profile<span style=color:#f92672>.</span>set\_preference(<span style=color:#e6db74>&#34;browser.download.manager.closeWhenDone&#34;</span>, False)
-profile<span style=color:#f92672>.</span>set\_preference(<span style=color:#e6db74>&#34;browser.download.manager.focusWhenStarting&#34;</span>, False)
-<span style=color:#75715e>#application/octet-stream,application/vnd.ms-excel </span>
-profile<span style=color:#f92672>.</span>set\_preference(<span style=color:#e6db74>&#39;browser.helperApps.neverAsk.saveToDisk&#39;</span>, <span style=color:#e6db74>&#39;application/x-msdownload,application/octet-stream&#39;</span>)
-<span style=color:#66d9ef>try</span>:
-    browser <span style=color:#f92672>=</span> webdriver<span style=color:#f92672>.</span>Firefox(profile)
-    browser<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#39;https://www.7-zip.org/&#39;</span>)
-    download\_button <span style=color:#f92672>=</span> WebDriverWait(browser, <span style=color:#ae81ff>20</span>)<span style=color:#f92672>.</span>until(EC<span style=color:#f92672>.</span>element\_to\_be\_clickable((By<span style=color:#f92672>.</span>CSS\_SELECTOR, <span style=color:#e6db74>&#39;td.Item a&#39;</span>)))
-    download\_button<span style=color:#f92672>.</span>click()
-    <span style=color:#66d9ef>print</span>(<span style=color:#e6db74>&#34;clicked...&#34;</span>)
-    time<span style=color:#f92672>.</span>sleep(<span style=color:#ae81ff>10</span>) 
-    <span style=color:#66d9ef>print</span> (os<span style=color:#f92672>.</span>listdir(<span style=color:#e6db74>&#34;/srv/download&#34;</span>))
-<span style=color:#66d9ef>except</span> <span style=color:#a6e22e>Exception</span> <span style=color:#66d9ef>as</span> ex:
-    <span style=color:#66d9ef>print</span>(ex)
- 
-browser<span style=color:#f92672>.</span>close()
-display<span style=color:#f92672>.</span>stop()
-
-
-<span style=color:#66d9ef>print</span>(<span style=color:#e6db74>&#34;******************************** FINITO ********************************&#34;</span>)
-
-</code></pre></div><p>The code is fairly simple , we need</p><ol><li>pyvirtualdisplay, to support the webdriver .</li><li>FirefoxProfile, to auto accept the firefox download model screen.</li><li>The code sets /srv/download as the download location, more details in Makefile shown in the end of this post.</li><li>Finally, we set &lsquo;application/x-msdownload,application/octet-stream&rsquo; as our allowed file mime type.</li></ol><h3 id=python-dependencies>Python dependencies</h3><ol><li>selenium</li><li>pyvirtualdisplay</li></ol><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>pip install selenium pyvirtualdisplay
-
-</code></pre></div><h3 id=dockerfile>DockerFile</h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>
-FROM python:2.7-stretch
-
-RUN apt-get update <span style=color:#f92672>&amp;&amp;</span> apt-get install -yq <span style=color:#ae81ff>\
-</span><span style=color:#ae81ff></span>    firefox-esr <span style=color:#ae81ff>\
-</span><span style=color:#ae81ff></span>    chromium <span style=color:#ae81ff>\
-</span><span style=color:#ae81ff></span>    git-core <span style=color:#ae81ff>\
-</span><span style=color:#ae81ff></span>    xvfb <span style=color:#ae81ff>\
-</span><span style=color:#ae81ff></span>    xsel <span style=color:#ae81ff>\
-</span><span style=color:#ae81ff></span>    unzip <span style=color:#ae81ff>\
-</span><span style=color:#ae81ff></span>    python-pytest <span style=color:#ae81ff>\
-</span><span style=color:#ae81ff></span>    libgconf2-4 <span style=color:#ae81ff>\
-</span><span style=color:#ae81ff></span>    libncurses5 <span style=color:#ae81ff>\
-</span><span style=color:#ae81ff></span>    libxml2-dev <span style=color:#ae81ff>\
-</span><span style=color:#ae81ff></span>    libxslt-dev <span style=color:#ae81ff>\
-</span><span style=color:#ae81ff></span>    libz-dev <span style=color:#ae81ff>\
-</span><span style=color:#ae81ff></span>    xclip<span style=color:#f92672>=</span>0.12+svn84-4+b1
-
-
-<span style=color:#75715e># GeckoDriver v0.19.1</span>
-RUN wget -q <span style=color:#e6db74>&#34;https://github.com/mozilla/geckodriver/releases/download/v0.19.1/geckodriver-v0.19.1-linux64.tar.gz&#34;</span> -O /tmp/geckodriver.tgz <span style=color:#ae81ff>\
-</span><span style=color:#ae81ff></span>    <span style=color:#f92672>&amp;&amp;</span> tar zxf /tmp/geckodriver.tgz -C /usr/bin/ <span style=color:#ae81ff>\
-</span><span style=color:#ae81ff></span>    <span style=color:#f92672>&amp;&amp;</span> rm /tmp/geckodriver.tgz
-
-
-<span style=color:#75715e># chromeDriver v2.35</span>
-RUN wget -q <span style=color:#e6db74>&#34;https://chromedriver.storage.googleapis.com/2.35/chromedriver\_linux64.zip&#34;</span> -O /tmp/chromedriver.zip <span style=color:#ae81ff>\
-</span><span style=color:#ae81ff></span>    <span style=color:#f92672>&amp;&amp;</span> unzip /tmp/chromedriver.zip -d /usr/bin/ <span style=color:#ae81ff>\
-</span><span style=color:#ae81ff></span>    <span style=color:#f92672>&amp;&amp;</span> rm /tmp/chromedriver.zip
-
-
-<span style=color:#75715e># create symlinks to chromedriver and geckodriver (to the PATH)</span>
-RUN ln -s /usr/bin/geckodriver /usr/bin/chromium-browser <span style=color:#ae81ff>\
-</span><span style=color:#ae81ff></span>    <span style=color:#f92672>&amp;&amp;</span> chmod <span style=color:#ae81ff>777</span> /usr/bin/geckodriver <span style=color:#ae81ff>\
-</span><span style=color:#ae81ff></span>    <span style=color:#f92672>&amp;&amp;</span> chmod <span style=color:#ae81ff>777</span> /usr/bin/chromium-browser
-
-
-RUN pip install selenium pyvirtualdisplay
-
-</code></pre></div><h3 id=running-python-code-inside-docker-container>Running python code inside Docker container</h3><p>A simple command as shown below will execute the script in docker, which will create a folder locally called download and download the 7zip.exe into it.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#75715e>#Build image from Dockerfile</span>
-docker build -t docker-selenium
-<span style=color:#75715e>#Run image after mounting the folder at &#34;${PWD}:/srv&#34; and mapping it with /srv in docker container.</span>
-docker run -v <span style=color:#e6db74>&#34;</span><span style=color:#e6db74>${</span>PWD<span style=color:#e6db74>}</span><span style=color:#e6db74>:/srv&#34;</span>  -w /srv --name img -d docker-selenium tail -f /dev/null
-<span style=color:#75715e># I have used a make file locally to execute python command python run main.py</span>
-docker exec img make run
-docker stop img
-docker rm img
-
-</code></pre></div><h3 id=makefile>Makefile</h3><p>Here is the make file which will makes things easier.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>img_name :<span style=color:#f92672>=</span> docker-selenium
-
-
-deps:
-	pip install selenium pyvirtualdisplay
-
-
-run:
-	python main.py
-
-
-docker-run:
-	docker run -v <span style=color:#e6db74>&#34;</span><span style=color:#e6db74>${</span>PWD<span style=color:#e6db74>}</span><span style=color:#e6db74>:/srv&#34;</span>  -w /srv --name img -d <span style=color:#66d9ef>$(</span>img<span style=color:#ae81ff>\_</span>name<span style=color:#66d9ef>)</span> tail -f /dev/null
-	docker exec img make run
-	docker stop img
-	docker rm img
-
-
-build:
-	docker build -t <span style=color:#66d9ef>$(</span>img<span style=color:#ae81ff>\_</span>name<span style=color:#66d9ef>)</span> .
-
-</code></pre></div><h3 id=chorme-in-ui-mode>Chorme in UI Mode</h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#f92672>from</span> selenium <span style=color:#f92672>import</span> webdriver
-<span style=color:#f92672>import</span> os
-<span style=color:#f92672>import</span> time
-<span style=color:#f92672>from</span> selenium.webdriver.support.ui <span style=color:#f92672>import</span> WebDriverWait
-<span style=color:#f92672>from</span> selenium.webdriver.support <span style=color:#f92672>import</span> expected\_conditions <span style=color:#66d9ef>as</span> EC
-<span style=color:#f92672>from</span> selenium.webdriver.common.by <span style=color:#f92672>import</span> By
-
-
-browser <span style=color:#f92672>=</span> webdriver<span style=color:#f92672>.</span>Chrome()
-browser<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#39;https://www.7-zip.org/&#39;</span>)
-download\_button <span style=color:#f92672>=</span> WebDriverWait(browser, <span style=color:#ae81ff>20</span>)<span style=color:#f92672>.</span>until(EC<span style=color:#f92672>.</span>element\_to\_be\_clickable((By<span style=color:#f92672>.</span>CSS\_SELECTOR, <span style=color:#e6db74>&#39;td.Item a&#39;</span>)))
-download\_button<span style=color:#f92672>.</span>click()
-time<span style=color:#f92672>.</span>sleep(<span style=color:#ae81ff>10</span>) 
-
-</code></pre></div><p>The Code above is just a snippet if someone needs to quickly download any file from web url using selenium.</p><p>Hope this helps.</p></div><div class=pagination><div class=pagination__title><span class=pagination__title-h>Read other posts</span><hr></div><div class=pagination__buttons><span class="button previous"><a href=https://varunpant.com/posts/how-to-play-apple-music-on-alexa-in-uk/><span class=button__icon>←</span>
+#<a href=https://varunpant.com/tags/python/>python</a>&nbsp;</span><div class=post-content><p>Selenium is one of my favourite tool for automation.</p><p>In this post, I will demonstrate some basic code to download a file from a website in a headless mode , and also provide a docker file to make things simpler.</p><h3 id=python-code>Python Code</h3><p>Here is some basic code which will make an attempt to download a **7zip exe. **</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#f92672>from</span> pyvirtualdisplay <span style=color:#f92672>import</span> Display
+</span></span><span style=display:flex><span><span style=color:#f92672>from</span> selenium <span style=color:#f92672>import</span> webdriver
+</span></span><span style=display:flex><span><span style=color:#f92672>from</span> selenium.webdriver.support.ui <span style=color:#f92672>import</span> WebDriverWait
+</span></span><span style=display:flex><span><span style=color:#f92672>from</span> selenium.webdriver.support <span style=color:#f92672>import</span> expected\_conditions <span style=color:#66d9ef>as</span> EC
+</span></span><span style=display:flex><span><span style=color:#f92672>from</span> selenium.webdriver.common.by <span style=color:#f92672>import</span> By
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> os
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> time
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>print(<span style=color:#e6db74>&#34;******************************** STARTING ********************************&#34;</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>display <span style=color:#f92672>=</span> Display(visible<span style=color:#f92672>=</span><span style=color:#ae81ff>0</span>, size<span style=color:#f92672>=</span>(<span style=color:#ae81ff>1024</span>, <span style=color:#ae81ff>768</span>))
+</span></span><span style=display:flex><span>display<span style=color:#f92672>.</span>start()
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># To prevent download dialog</span>
+</span></span><span style=display:flex><span>profile <span style=color:#f92672>=</span> webdriver<span style=color:#f92672>.</span>FirefoxProfile()
+</span></span><span style=display:flex><span>profile<span style=color:#f92672>.</span>set\_preference(<span style=color:#e6db74>&#39;browser.download.folderList&#39;</span>, <span style=color:#ae81ff>2</span>) <span style=color:#75715e># custom location</span>
+</span></span><span style=display:flex><span>profile<span style=color:#f92672>.</span>set\_preference(<span style=color:#e6db74>&#39;browser.download.manager.showWhenStarting&#39;</span>, <span style=color:#66d9ef>False</span>)
+</span></span><span style=display:flex><span>profile<span style=color:#f92672>.</span>set\_preference(<span style=color:#e6db74>&#39;browser.download.dir&#39;</span>, <span style=color:#e6db74>&#39;/srv/download&#39;</span>)
+</span></span><span style=display:flex><span>profile<span style=color:#f92672>.</span>set\_preference(<span style=color:#e6db74>&#34;browser.download.manager.alertOnEXEOpen&#34;</span>, <span style=color:#66d9ef>False</span>)
+</span></span><span style=display:flex><span>profile<span style=color:#f92672>.</span>set\_preference(<span style=color:#e6db74>&#34;browser.download.manager.closeWhenDone&#34;</span>, <span style=color:#66d9ef>False</span>)
+</span></span><span style=display:flex><span>profile<span style=color:#f92672>.</span>set\_preference(<span style=color:#e6db74>&#34;browser.download.manager.focusWhenStarting&#34;</span>, <span style=color:#66d9ef>False</span>)
+</span></span><span style=display:flex><span><span style=color:#75715e>#application/octet-stream,application/vnd.ms-excel </span>
+</span></span><span style=display:flex><span>profile<span style=color:#f92672>.</span>set\_preference(<span style=color:#e6db74>&#39;browser.helperApps.neverAsk.saveToDisk&#39;</span>, <span style=color:#e6db74>&#39;application/x-msdownload,application/octet-stream&#39;</span>)
+</span></span><span style=display:flex><span><span style=color:#66d9ef>try</span>:
+</span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010> </span> <span style=color:#960050;background-color:#1e0010> </span> browser <span style=color:#f92672>=</span> webdriver<span style=color:#f92672>.</span>Firefox(profile)
+</span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010> </span> <span style=color:#960050;background-color:#1e0010> </span> browser<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#39;https://www.7-zip.org/&#39;</span>)
+</span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010> </span> <span style=color:#960050;background-color:#1e0010> </span> download\_button <span style=color:#f92672>=</span> WebDriverWait(browser, <span style=color:#ae81ff>20</span>)<span style=color:#f92672>.</span>until(EC<span style=color:#f92672>.</span>element\_to\_be\_clickable((By<span style=color:#f92672>.</span>CSS\_SELECTOR, <span style=color:#e6db74>&#39;td.Item a&#39;</span>)))
+</span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010> </span> <span style=color:#960050;background-color:#1e0010> </span> download\_button<span style=color:#f92672>.</span>click()
+</span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010> </span> <span style=color:#960050;background-color:#1e0010> </span> print(<span style=color:#e6db74>&#34;clicked...&#34;</span>)
+</span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010> </span> <span style=color:#960050;background-color:#1e0010> </span> time<span style=color:#f92672>.</span>sleep(<span style=color:#ae81ff>10</span>)<span style=color:#960050;background-color:#1e0010> </span>
+</span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010> </span> <span style=color:#960050;background-color:#1e0010> </span> print (os<span style=color:#f92672>.</span>listdir(<span style=color:#e6db74>&#34;/srv/download&#34;</span>))
+</span></span><span style=display:flex><span><span style=color:#66d9ef>except</span> <span style=color:#a6e22e>Exception</span> <span style=color:#66d9ef>as</span> ex:
+</span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010> </span> <span style=color:#960050;background-color:#1e0010> </span> print(ex)
+</span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010> </span>
+</span></span><span style=display:flex><span>browser<span style=color:#f92672>.</span>close()
+</span></span><span style=display:flex><span>display<span style=color:#f92672>.</span>stop()
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>print(<span style=color:#e6db74>&#34;******************************** FINITO ********************************&#34;</span>)
+</span></span></code></pre></div><p>The code is fairly simple , we need</p><ol><li>pyvirtualdisplay, to support the webdriver .</li><li>FirefoxProfile, to auto accept the firefox download model screen.</li><li>The code sets /srv/download as the download location, more details in Makefile shown in the end of this post.</li><li>Finally, we set &lsquo;application/x-msdownload,application/octet-stream&rsquo; as our allowed file mime type.</li></ol><h3 id=python-dependencies>Python dependencies</h3><ol><li>selenium</li><li>pyvirtualdisplay</li></ol><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span>pip install selenium pyvirtualdisplay
+</span></span></code></pre></div><h3 id=dockerfile>DockerFile</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>
+</span></span><span style=display:flex><span>FROM python:2.7-stretch
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>RUN apt-get update <span style=color:#f92672>&amp;&amp;</span> apt-get install -yq <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    firefox-esr <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    chromium <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    git-core <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    xvfb <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    xsel <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    unzip <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    python-pytest <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    libgconf2-4 <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    libncurses5 <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    libxml2-dev <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    libxslt-dev <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    libz-dev <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    xclip<span style=color:#f92672>=</span>0.12+svn84-4+b1
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># GeckoDriver v0.19.1</span>
+</span></span><span style=display:flex><span>RUN wget -q <span style=color:#e6db74>&#34;https://github.com/mozilla/geckodriver/releases/download/v0.19.1/geckodriver-v0.19.1-linux64.tar.gz&#34;</span> -O /tmp/geckodriver.tgz <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    <span style=color:#f92672>&amp;&amp;</span> tar zxf /tmp/geckodriver.tgz -C /usr/bin/ <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    <span style=color:#f92672>&amp;&amp;</span> rm /tmp/geckodriver.tgz
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># chromeDriver v2.35</span>
+</span></span><span style=display:flex><span>RUN wget -q <span style=color:#e6db74>&#34;https://chromedriver.storage.googleapis.com/2.35/chromedriver\_linux64.zip&#34;</span> -O /tmp/chromedriver.zip <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    <span style=color:#f92672>&amp;&amp;</span> unzip /tmp/chromedriver.zip -d /usr/bin/ <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    <span style=color:#f92672>&amp;&amp;</span> rm /tmp/chromedriver.zip
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># create symlinks to chromedriver and geckodriver (to the PATH)</span>
+</span></span><span style=display:flex><span>RUN ln -s /usr/bin/geckodriver /usr/bin/chromium-browser <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    <span style=color:#f92672>&amp;&amp;</span> chmod <span style=color:#ae81ff>777</span> /usr/bin/geckodriver <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    <span style=color:#f92672>&amp;&amp;</span> chmod <span style=color:#ae81ff>777</span> /usr/bin/chromium-browser
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>RUN pip install selenium pyvirtualdisplay
+</span></span></code></pre></div><h3 id=running-python-code-inside-docker-container>Running python code inside Docker container</h3><p>A simple command as shown below will execute the script in docker, which will create a folder locally called download and download the 7zip.exe into it.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e>#Build image from Dockerfile</span>
+</span></span><span style=display:flex><span>docker build -t docker-selenium
+</span></span><span style=display:flex><span><span style=color:#75715e>#Run image after mounting the folder at &#34;${PWD}:/srv&#34; and mapping it with /srv in docker container.</span>
+</span></span><span style=display:flex><span>docker run -v <span style=color:#e6db74>&#34;</span><span style=color:#e6db74>${</span>PWD<span style=color:#e6db74>}</span><span style=color:#e6db74>:/srv&#34;</span>  -w /srv --name img -d docker-selenium tail -f /dev/null
+</span></span><span style=display:flex><span><span style=color:#75715e># I have used a make file locally to execute python command python run main.py</span>
+</span></span><span style=display:flex><span>docker exec img make run
+</span></span><span style=display:flex><span>docker stop img
+</span></span><span style=display:flex><span>docker rm img
+</span></span></code></pre></div><h3 id=makefile>Makefile</h3><p>Here is the make file which will makes things easier.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>img_name :<span style=color:#f92672>=</span> docker-selenium
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>deps:
+</span></span><span style=display:flex><span>	pip install selenium pyvirtualdisplay
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>run:
+</span></span><span style=display:flex><span>	python main.py
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>docker-run:
+</span></span><span style=display:flex><span>	docker run -v <span style=color:#e6db74>&#34;</span><span style=color:#e6db74>${</span>PWD<span style=color:#e6db74>}</span><span style=color:#e6db74>:/srv&#34;</span>  -w /srv --name img -d <span style=color:#66d9ef>$(</span>img<span style=color:#ae81ff>\_</span>name<span style=color:#66d9ef>)</span> tail -f /dev/null
+</span></span><span style=display:flex><span>	docker exec img make run
+</span></span><span style=display:flex><span>	docker stop img
+</span></span><span style=display:flex><span>	docker rm img
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>build:
+</span></span><span style=display:flex><span>	docker build -t <span style=color:#66d9ef>$(</span>img<span style=color:#ae81ff>\_</span>name<span style=color:#66d9ef>)</span> .
+</span></span></code></pre></div><h3 id=chorme-in-ui-mode>Chorme in UI Mode</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#f92672>from</span> selenium <span style=color:#f92672>import</span> webdriver
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> os
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> time
+</span></span><span style=display:flex><span><span style=color:#f92672>from</span> selenium.webdriver.support.ui <span style=color:#f92672>import</span> WebDriverWait
+</span></span><span style=display:flex><span><span style=color:#f92672>from</span> selenium.webdriver.support <span style=color:#f92672>import</span> expected\_conditions <span style=color:#66d9ef>as</span> EC
+</span></span><span style=display:flex><span><span style=color:#f92672>from</span> selenium.webdriver.common.by <span style=color:#f92672>import</span> By
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>browser <span style=color:#f92672>=</span> webdriver<span style=color:#f92672>.</span>Chrome()
+</span></span><span style=display:flex><span>browser<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#39;https://www.7-zip.org/&#39;</span>)
+</span></span><span style=display:flex><span>download\_button <span style=color:#f92672>=</span> WebDriverWait(browser, <span style=color:#ae81ff>20</span>)<span style=color:#f92672>.</span>until(EC<span style=color:#f92672>.</span>element\_to\_be\_clickable((By<span style=color:#f92672>.</span>CSS\_SELECTOR, <span style=color:#e6db74>&#39;td.Item a&#39;</span>)))
+</span></span><span style=display:flex><span>download\_button<span style=color:#f92672>.</span>click()
+</span></span><span style=display:flex><span>time<span style=color:#f92672>.</span>sleep(<span style=color:#ae81ff>10</span>)<span style=color:#960050;background-color:#1e0010> </span>
+</span></span></code></pre></div><p>The Code above is just a snippet if someone needs to quickly download any file from web url using selenium.</p><p>Hope this helps.</p></div><div class=pagination><div class=pagination__title><span class=pagination__title-h>Read other posts</span><hr></div><div class=pagination__buttons><span class="button previous"><a href=https://varunpant.com/posts/how-to-play-apple-music-on-alexa-in-uk/><span class=button__icon>←</span>
 <span class=button__text>how to play apple music on alexa in uk</span></a></span>
 <span class="button next"><a href=https://varunpant.com/posts/web-crawling-or-scraping-using-scrapy-in-python/><span class=button__text>web crawling or scraping using scrapy in python</span>
-<span class=button__icon>→</span></a></span></div></div><div id=blog-comments><div id=disqus_thread></div><script type=application/javascript>var disqus_config=function(){};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return;}
-var d=document,s=d.createElement('script');s.async=true;s.src='//'+"varunpant"+'.disqus.com/embed.js';s.setAttribute('data-timestamp',+new Date());(d.head||d.body).appendChild(s);})();</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></div></div></div><footer class=footer><div class=footer__inner><a href=/ class=logo style=text-decoration:none><span class=logo__mark><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44"><path fill="none" d="M15 8l14.729 14.382L15 35.367"/></svg></span><span class=logo__text>Varun Pant</span>
-<span class=logo__cursor></span></a><div class=copyright><span>© 2020 Powered by <a href=https://gohugo.io target=_blank rel=noopener>Hugo</a></span>
-<span>Theme created by <a href=https://twitter.com/panr target=_blank rel=noopener>panr</a></span></div></div></footer><script src=https://varunpant.com/assets/main.js></script><script src=https://varunpant.com/assets/prism.js></script><section><div class=advert id=ta2><script type=text/javascript>google_ad_client="ca-pub-1110730152886910";google_ad_slot="1639236970";google_ad_width=728;google_ad_height=90;</script><script type=text/javascript src=//pagead2.googlesyndication.com/pagead/show_ads.js></script></div></section><script id=dsq-count-scr src=//varunpant.disqus.com/count.js async></script></div><script type=application/javascript>var doNotTrack=false;if(!doNotTrack){(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create','UA-16978408-1','auto');ga('send','pageview');}</script></body></html>
+<span class=button__icon>→</span></a></span></div></div><div id=blog-comments><div id=disqus_thread></div><script type=application/javascript>window.disqus_config=function(){},function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById("disqus_thread").innerHTML="Disqus comments not available by default when the website is previewed locally.";return}var t=document,e=t.createElement("script");e.async=!0,e.src="//varunpant.disqus.com/embed.js",e.setAttribute("data-timestamp",+new Date),(t.head||t.body).appendChild(e)}()</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></div></div></div><footer class=footer><div class=footer__inner><a href=/ class=logo style=text-decoration:none><span class=logo__mark><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44"><path fill="none" d="M15 8l14.729 14.382L15 35.367"/></svg></span><span class=logo__text>Varun Pant</span>
+<span class=logo__cursor></span></a><div class=copyright><span>© 2023 Powered by <a href=https://gohugo.io target=_blank rel=noopener>Hugo</a></span>
+<span>Theme created by <a href=https://twitter.com/panr target=_blank rel=noopener>panr</a></span></div></div></footer><script src=https://varunpant.com/assets/main.js></script>
+<script src=https://varunpant.com/assets/prism.js></script><section><div class=advert id=ta2><script type=text/javascript>google_ad_client="ca-pub-1110730152886910",google_ad_slot="1639236970",google_ad_width=728,google_ad_height=90</script><script type=text/javascript src=//pagead2.googlesyndication.com/pagead/show_ads.js></script></div></section><script id=dsq-count-scr src=//varunpant.disqus.com/count.js async></script></div><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(e,t,n,s,o,i,a){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,i=t.createElement(n),a=t.getElementsByTagName(n)[0],i.async=1,i.src=s,a.parentNode.insertBefore(i,a)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-16978408-1","auto"),ga("send","pageview"))</script></body></html>
