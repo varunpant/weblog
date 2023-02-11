@@ -4,18 +4,18 @@ date = "2019-01-25"
 author = " "
 +++
 
-#### Hi 
+Hi 
 
-
-My name is Varun, and I am the author of this weblog.
-
-I frequently write about interesting tech stuff that I encounter.
+My name is Varun, I occasionally write  about tech stuff that I find interesting.
 
 I can also be found at:
 
- [stack-overflow](https://stackoverflow.com/users/95967)
- [linkedin](https://www.linkedin.com/in/varunpant)
- [mail](mailto:varun@varunpant.com)
- [github](https://github.com/varunpant)
+[Stack-overflow](https://stackoverflow.com/users/95967)
 
- ![Varun Pant](/img/varunpant.jpeg "Varun")
+[Linkedin](https://www.linkedin.com/in/varunpant)
+
+[Email](mailto:varun@varunpant.com)
+
+[Github](https://github.com/varunpant)
+
+![Varun Pant](/img/varunpant.jpeg "Varun")

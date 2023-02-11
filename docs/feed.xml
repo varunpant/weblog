@@ -12,10 +12,13 @@ Select &amp;ldquo;Link New Service&amp;rdquo;
 Tap, Apple music Icon</description></item><item><title>download file using webdriver firefox and python selenium</title><link>https://varunpant.com/posts/download-file-using-webdriver-firefox-and-python-selenium/</link><pubDate>Sun, 24 Feb 2019 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/download-file-using-webdriver-firefox-and-python-selenium/</guid><description>Selenium is one of my favourite tool for automation.
 In this post, I will demonstrate some basic code to download a file from a website in a headless mode , and also provide a docker file to make things simpler.
 Python Code Here is some basic code which will make an attempt to download a **7zip exe. **
-from pyvirtualdisplay import Display from selenium import webdriver from selenium.webdriver.support.ui import WebDriverWait from selenium.</description></item><item><title>About</title><link>https://varunpant.com/about/</link><pubDate>Fri, 25 Jan 2019 00:00:00 +0000</pubDate><guid>https://varunpant.com/about/</guid><description>Hi My name is Varun, and I am the author of this weblog.
-I frequently write about interesting tech stuff that I encounter.
+from pyvirtualdisplay import Display from selenium import webdriver from selenium.webdriver.support.ui import WebDriverWait from selenium.</description></item><item><title>About</title><link>https://varunpant.com/about/</link><pubDate>Fri, 25 Jan 2019 00:00:00 +0000</pubDate><guid>https://varunpant.com/about/</guid><description>Hi
+My name is Varun, I occasionally write about tech stuff that I find interesting.
 I can also be found at:
-stack-overflow linkedin mail github</description></item><item><title>Showcase</title><link>https://varunpant.com/showcase/</link><pubDate>Fri, 18 Jan 2019 00:00:00 +0000</pubDate><guid>https://varunpant.com/showcase/</guid><description/></item><item><title>web crawling or scraping using scrapy in python</title><link>https://varunpant.com/posts/web-crawling-or-scraping-using-scrapy-in-python/</link><pubDate>Sun, 02 Dec 2018 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/web-crawling-or-scraping-using-scrapy-in-python/</guid><description>Scrapy is a very popular web scraping/crawling framework, I have been using it for quite some time now.
+Stack-overflow
+Linkedin
+Email
+Github</description></item><item><title>Showcase</title><link>https://varunpant.com/showcase/</link><pubDate>Fri, 18 Jan 2019 00:00:00 +0000</pubDate><guid>https://varunpant.com/showcase/</guid><description/></item><item><title>web crawling or scraping using scrapy in python</title><link>https://varunpant.com/posts/web-crawling-or-scraping-using-scrapy-in-python/</link><pubDate>Sun, 02 Dec 2018 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/web-crawling-or-scraping-using-scrapy-in-python/</guid><description>Scrapy is a very popular web scraping/crawling framework, I have been using it for quite some time now.
 In this post, I will demonstrate creating a very basic web crawler.
 Install Scrapy Installation is via pip pip install scrapy
 Minimalistic Code A very simple scraper is created like this
