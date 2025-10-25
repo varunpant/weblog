@@ -1,5 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>postgres on Varun Pant</title><link>https://varunpant.com/tags/postgres/</link><description>Recent content in postgres on Varun Pant</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 11 Mar 2013 00:00:00 +0000</lastBuildDate><atom:link href="https://varunpant.com/tags/postgres/feed.xml" rel="self" type="application/rss+xml"/><item><title>Importing Exporting CSV Files in PostgreSQL Databases via COPY</title><link>https://varunpant.com/posts/importing-exporting-csv-files-in-postgresql-databases-via-copy/</link><pubDate>Mon, 11 Mar 2013 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/importing-exporting-csv-files-in-postgresql-databases-via-copy/</guid><description>This is going to be a short article which will illustrate importing and exporting a table from or to a csv file using PostgreSQL COPY command.
-Importing a table from CSV Assuming you already have a table in place with the right columns, the command is as follows
-COPY FROM &amp;lsquo;/path/to/csv/SourceCSVFile.csv&amp;rsquo; DELIMITERS &amp;lsquo;,&amp;rsquo; CSV;
-Exporting a CSV from a table. COPY TO &amp;lsquo;/path/to/csv/TargetCSVFile&amp;rsquo; DELIMITERS &amp;lsquo;,&amp;rsquo; CSV;
-Its important to mention here that generally if your data is in unicode or need strict Encoding, then Always set client_encoding before running any of the above mentioned commands.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Postgres on Varun Pant</title><link>https://varunpant.com/tags/postgres/</link><description>Recent content in Postgres on Varun Pant</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 11 Mar 2013 00:00:00 +0000</lastBuildDate><atom:link href="https://varunpant.com/tags/postgres/feed.xml" rel="self" type="application/rss+xml"/><item><title>Importing Exporting CSV Files in PostgreSQL Databases via COPY</title><link>https://varunpant.com/posts/importing-exporting-csv-files-in-postgresql-databases-via-copy/</link><pubDate>Mon, 11 Mar 2013 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/importing-exporting-csv-files-in-postgresql-databases-via-copy/</guid><description>
+&lt;p&gt;This is going to be a short article which will illustrate importing and exporting a table from or to a csv file using PostgreSQL &lt;a href="http://www.postgresql.org/docs/9.1/static/sql-copy.html"&gt;COPY&lt;/a&gt; command.&lt;/p&gt;
+&lt;h4 id="importing-a-table-from-csv"&gt;
+Importing a table from CSV
+&lt;a href="#importing-a-table-from-csv" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
+&lt;/h4&gt;
+&lt;p&gt;Assuming you already have a table in place with the right columns, the command is as follows&lt;/p&gt;
+&lt;p&gt;COPY &lt;!-- raw HTML omitted --&gt; &lt;strong&gt;FROM&lt;/strong&gt; &amp;lsquo;/path/to/csv/SourceCSVFile.csv&amp;rsquo; DELIMITERS &amp;lsquo;&lt;strong&gt;,&lt;/strong&gt;&amp;rsquo; CSV;&lt;/p&gt;
+&lt;h4 id="exporting-a-csv-from-a-table"&gt;
+Exporting a CSV from a table.
+&lt;a href="#exporting-a-csv-from-a-table" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
+&lt;/h4&gt;
+&lt;p&gt;COPY &lt;!-- raw HTML omitted --&gt; &lt;strong&gt;TO&lt;/strong&gt; &amp;lsquo;/path/to/csv/TargetCSVFile&amp;rsquo; DELIMITERS &amp;lsquo;&lt;strong&gt;,&lt;/strong&gt;&amp;rsquo; CSV;&lt;/p&gt;</description></item></channel></rss>

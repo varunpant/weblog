@@ -1,11 +1,207 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>golang on Varun Pant</title><link>https://varunpant.com/tags/golang/</link><description>Recent content in golang on Varun Pant</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 07 Sep 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://varunpant.com/tags/golang/feed.xml" rel="self" type="application/rss+xml"/><item><title>Inverse weighted distance interpolation in golang</title><link>https://varunpant.com/posts/inverse-weighted-distance-interpolation-in-golang/</link><pubDate>Thu, 07 Sep 2017 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/inverse-weighted-distance-interpolation-in-golang/</guid><description>Inverse distance weighting (IDW) is a type of deterministic method for multivariate interpolation with a known scattered set of points. The assigned values to unknown points are calculated with a weighted average of the values available at the known points.
-This technique, explicitly makes the assumption that things that are close to one another are more alike than those that are farther apart. To predict a value for any unmeasured location, IDW uses the measured values surrounding the prediction location.</description></item><item><title>basic sorting algorithms implemented in golang</title><link>https://varunpant.com/posts/basic-sorting-algorithms-implemented-in-golang/</link><pubDate>Mon, 04 Sep 2017 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/basic-sorting-algorithms-implemented-in-golang/</guid><description>This post includes go-lang based implementation of some of the classic sorting algorithms.
-This article primarily, has been written, as an academic exercise, to not forget the basic principles of sorting.
-Bubble Sort wiki Bubble sort is perhaps the simplest of all sorting algorithms, the basic principle is to bubble up the largest (or the smallest) and then the second largest and then the third largest and so on. Each bubble takes the full sweep of the list, hence best-case, average-case as well as the worst-case performance are all O(n2)</description></item><item><title>reading and writing binary files in go lang</title><link>https://varunpant.com/posts/reading-and-writing-binary-files-in-go-lang/</link><pubDate>Tue, 29 Aug 2017 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/reading-and-writing-binary-files-in-go-lang/</guid><description>Reading and writing binary files can often be a fast and very efficient alternatives to csv. They obviously have their challenges, however in this post I intent to present a very basic example of saving models (struct) into binary file and later reading it.
-package main import ( &amp;#34;log&amp;#34; &amp;#34;os&amp;#34; &amp;#34;encoding/binary&amp;#34; &amp;#34;bytes&amp;#34; &amp;#34;fmt&amp;#34; &amp;#34;math/rand&amp;#34; &amp;#34;time&amp;#34; ) //this type represnts a record with three fields type payload struct { One float32 Two float64 Three uint32 } func main() { writeFile() readFile() } func readFile() { file, err := os.</description></item><item><title>Create linear color gradient in go</title><link>https://varunpant.com/posts/create-linear-color-gradient-in-go/</link><pubDate>Mon, 28 Aug 2017 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/create-linear-color-gradient-in-go/</guid><description>Go doesn&amp;rsquo;t have any builtin gradient functions to paint/fill the background of a raster, however it has all the required primitives one needs to create a very basic linear gradient.
-Here is a basic code which defines a 256 x 256 image, then calculates the value of each pixel in the raster based on a linear interpolation formula.
-import ( &amp;#34;image&amp;#34; &amp;#34;image/color&amp;#34; &amp;#34;image/png&amp;#34; &amp;#34;log&amp;#34; &amp;#34;os&amp;#34; &amp;#34;os/exec&amp;#34; ) var( colorB = [3]float64{248, 54, 0} colorA = [3]float64{254, 140, 0} ) var( width = 256 height = 256 max = float64(width) ) func linearGradient(x, y float64) (uint8, uint8, uint8) { d := x/max r := colorA[0] + d * (colorB[0] - colorA[0]) g := colorA[1] + d * (colorB[1] - colorA[1]) b := colorA[2] + d * (colorB[2] - colorA[2]) return uint8(r), uint8(g), uint8(b) } func main() { var w, h int = width, height dst := image.</description></item><item><title>How to read a csv file in go</title><link>https://varunpant.com/posts/how-to-read-a-csv-file-in-go/</link><pubDate>Tue, 30 Aug 2016 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/how-to-read-a-csv-file-in-go/</guid><description>One of the most common task for a programmer is either to read or write a csv file
-Read a csv file package main import ( &amp;#34;bufio&amp;#34; &amp;#34;encoding/csv&amp;#34; &amp;#34;os&amp;#34; &amp;#34;fmt&amp;#34; &amp;#34;io&amp;#34; ) func main() { // Load a csv file. f, \_ := os.Open(&amp;#34;/path/to/my/csv/file.csv&amp;#34;) // Create a new reader. r := csv.NewReader(bufio.NewReader(f)) //define seperator r.Comma = &amp;#39;,&amp;#39; for { record, err := r.Read() // Stop at EOF. if err == io.</description></item><item><title>Install all Go project dependencies in one command</title><link>https://varunpant.com/posts/install-all-go-project-dependencies-in-one-command/</link><pubDate>Tue, 25 Aug 2015 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/install-all-go-project-dependencies-in-one-command/</guid><description>So if you are looking to compile you go project on your server, you would probably need to worry about any third party dependencies.
-Here is quick recursive way to do that
-go get ./&amp;hellip;
-Hope this helps</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Golang on Varun Pant</title><link>https://varunpant.com/tags/golang/</link><description>Recent content in Golang on Varun Pant</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 07 Sep 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://varunpant.com/tags/golang/feed.xml" rel="self" type="application/rss+xml"/><item><title>Inverse weighted distance interpolation in golang</title><link>https://varunpant.com/posts/inverse-weighted-distance-interpolation-in-golang/</link><pubDate>Thu, 07 Sep 2017 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/inverse-weighted-distance-interpolation-in-golang/</guid><description>
+&lt;p&gt;&lt;strong&gt;Inverse distance weighting&lt;/strong&gt; (IDW) is a type of deterministic method for multivariate &lt;strong&gt;interpolation&lt;/strong&gt; with a known scattered set of points. The assigned values to unknown points are calculated with a &lt;strong&gt;weighted&lt;/strong&gt; average of the values available at the known points.&lt;/p&gt;
+&lt;p&gt;This technique, explicitly makes the assumption that things that are close to one another are more alike than those that are farther apart. To predict a value for any unmeasured location, IDW uses the measured values surrounding the prediction location. The measured values closest to the prediction location have more influence on the predicted value than those farther away. IDW assumes that each measured point has a local influence that diminishes with distance. It gives greater weights to points closest to the prediction location, and the weights diminish as a function of distance, hence the name inverse distance weighted.&lt;/p&gt;</description></item><item><title>basic sorting algorithms implemented in golang</title><link>https://varunpant.com/posts/basic-sorting-algorithms-implemented-in-golang/</link><pubDate>Mon, 04 Sep 2017 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/basic-sorting-algorithms-implemented-in-golang/</guid><description>
+&lt;p&gt;This post includes go-lang based implementation of some of the classic sorting algorithms.&lt;/p&gt;
+&lt;p&gt;This article primarily, has been written, as an academic exercise, to not forget the basic principles of sorting.&lt;/p&gt;
+&lt;h3 id="bubble-sort"&gt;
+Bubble Sort
+&lt;a href="#bubble-sort" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;&lt;a href="http://en.wikipedia.org/wiki/Bubble_sort"&gt;wiki&lt;/a&gt; &lt;img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;Bubble sort is perhaps the simplest of all sorting algorithms, the basic principle is to bubble up the largest (or the smallest) and then the second largest and then the third largest and so on. Each bubble takes the full sweep of the list, hence best-case, average-case as well as the worst-case performance are all O(n2)&lt;/p&gt;</description></item><item><title>reading and writing binary files in go lang</title><link>https://varunpant.com/posts/reading-and-writing-binary-files-in-go-lang/</link><pubDate>Tue, 29 Aug 2017 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/reading-and-writing-binary-files-in-go-lang/</guid><description>
+&lt;p&gt;Reading and writing binary files can often be a fast and very efficient alternatives to csv. They obviously have their challenges, however in this post I intent to present a very basic example of saving models (struct) into binary file and later reading it.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;package main
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;import&lt;/span&gt; (
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;log&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;os&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;encoding/binary&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;bytes&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;fmt&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;math/rand&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;time&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;//&lt;/span&gt;this type represnts a record &lt;span style="color:#66d9ef"&gt;with&lt;/span&gt; three fields
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;type payload struct {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; One float32
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Two float64
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Three uint32
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;func main() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; writeFile()
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; readFile()
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;func readFile() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; file, err &lt;span style="color:#f92672"&gt;:=&lt;/span&gt; os&lt;span style="color:#f92672"&gt;.&lt;/span&gt;Open(&lt;span style="color:#e6db74"&gt;&amp;#34;test.bin&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; defer file&lt;span style="color:#f92672"&gt;.&lt;/span&gt;Close()
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; err &lt;span style="color:#f92672"&gt;!=&lt;/span&gt; nil {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; log&lt;span style="color:#f92672"&gt;.&lt;/span&gt;Fatal(err)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; m &lt;span style="color:#f92672"&gt;:=&lt;/span&gt; payload{}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;for&lt;/span&gt; i &lt;span style="color:#f92672"&gt;:=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;; i &lt;span style="color:#f92672"&gt;&amp;lt;&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;10&lt;/span&gt;; i&lt;span style="color:#f92672"&gt;++&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; data &lt;span style="color:#f92672"&gt;:=&lt;/span&gt; readNextBytes(file, &lt;span style="color:#ae81ff"&gt;16&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; buffer &lt;span style="color:#f92672"&gt;:=&lt;/span&gt; bytes&lt;span style="color:#f92672"&gt;.&lt;/span&gt;NewBuffer(data)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; err &lt;span style="color:#f92672"&gt;=&lt;/span&gt; binary&lt;span style="color:#f92672"&gt;.&lt;/span&gt;Read(buffer, binary&lt;span style="color:#f92672"&gt;.&lt;/span&gt;BigEndian, &lt;span style="color:#f92672"&gt;&amp;amp;&lt;/span&gt;m)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; err &lt;span style="color:#f92672"&gt;!=&lt;/span&gt; nil {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; log&lt;span style="color:#f92672"&gt;.&lt;/span&gt;Fatal(&lt;span style="color:#e6db74"&gt;&amp;#34;binary.Read failed&amp;#34;&lt;/span&gt;, err)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; fmt&lt;span style="color:#f92672"&gt;.&lt;/span&gt;Println(m)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;func readNextBytes(file &lt;span style="color:#f92672"&gt;*&lt;/span&gt;os&lt;span style="color:#f92672"&gt;.&lt;/span&gt;File, number int) []byte {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; bytes &lt;span style="color:#f92672"&gt;:=&lt;/span&gt; make([]byte, number)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; \_, err &lt;span style="color:#f92672"&gt;:=&lt;/span&gt; file&lt;span style="color:#f92672"&gt;.&lt;/span&gt;Read(bytes)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; err &lt;span style="color:#f92672"&gt;!=&lt;/span&gt; nil {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; log&lt;span style="color:#f92672"&gt;.&lt;/span&gt;Fatal(err)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;return&lt;/span&gt; bytes
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;func writeFile() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; file, err &lt;span style="color:#f92672"&gt;:=&lt;/span&gt; os&lt;span style="color:#f92672"&gt;.&lt;/span&gt;Create(&lt;span style="color:#e6db74"&gt;&amp;#34;test.bin&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; defer file&lt;span style="color:#f92672"&gt;.&lt;/span&gt;Close()
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; err &lt;span style="color:#f92672"&gt;!=&lt;/span&gt; nil {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; log&lt;span style="color:#f92672"&gt;.&lt;/span&gt;Fatal(err)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; r &lt;span style="color:#f92672"&gt;:=&lt;/span&gt; rand&lt;span style="color:#f92672"&gt;.&lt;/span&gt;New(rand&lt;span style="color:#f92672"&gt;.&lt;/span&gt;NewSource(time&lt;span style="color:#f92672"&gt;.&lt;/span&gt;Now()&lt;span style="color:#f92672"&gt;.&lt;/span&gt;UnixNano()))
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;for&lt;/span&gt; i &lt;span style="color:#f92672"&gt;:=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;; i &lt;span style="color:#f92672"&gt;&amp;lt;&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;10&lt;/span&gt;; i&lt;span style="color:#f92672"&gt;++&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; s &lt;span style="color:#f92672"&gt;:=&lt;/span&gt; &lt;span style="color:#f92672"&gt;&amp;amp;&lt;/span&gt;payload{
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; r&lt;span style="color:#f92672"&gt;.&lt;/span&gt;Float32(),
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; r&lt;span style="color:#f92672"&gt;.&lt;/span&gt;Float64(),
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; r&lt;span style="color:#f92672"&gt;.&lt;/span&gt;Uint32(),
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; var bin\_buf bytes&lt;span style="color:#f92672"&gt;.&lt;/span&gt;Buffer
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; binary&lt;span style="color:#f92672"&gt;.&lt;/span&gt;Write(&lt;span style="color:#f92672"&gt;&amp;amp;&lt;/span&gt;bin\_buf, binary&lt;span style="color:#f92672"&gt;.&lt;/span&gt;BigEndian, s)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;//&lt;/span&gt;b &lt;span style="color:#f92672"&gt;:=&lt;/span&gt;bin\_buf&lt;span style="color:#f92672"&gt;.&lt;/span&gt;Bytes()
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;//&lt;/span&gt;l &lt;span style="color:#f92672"&gt;:=&lt;/span&gt; len(b)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;//&lt;/span&gt;fmt&lt;span style="color:#f92672"&gt;.&lt;/span&gt;Println(l)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; writeNextBytes(file, bin\_buf&lt;span style="color:#f92672"&gt;.&lt;/span&gt;Bytes())
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;func writeNextBytes(file &lt;span style="color:#f92672"&gt;*&lt;/span&gt;os&lt;span style="color:#f92672"&gt;.&lt;/span&gt;File, bytes []byte) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; \_, err &lt;span style="color:#f92672"&gt;:=&lt;/span&gt; file&lt;span style="color:#f92672"&gt;.&lt;/span&gt;Write(bytes)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; err &lt;span style="color:#f92672"&gt;!=&lt;/span&gt; nil {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; log&lt;span style="color:#f92672"&gt;.&lt;/span&gt;Fatal(err)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The code presented above will randomly populate 10 records of type payload and save it to a binary file, then it will read those 10 records as well.&lt;/p&gt;</description></item><item><title>Create linear color gradient in go</title><link>https://varunpant.com/posts/create-linear-color-gradient-in-go/</link><pubDate>Mon, 28 Aug 2017 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/create-linear-color-gradient-in-go/</guid><description>
+&lt;p&gt;Go doesn&amp;rsquo;t have any builtin gradient functions to paint/fill the background of a raster, however it has all the required primitives one needs to create a very basic linear gradient.&lt;/p&gt;
+&lt;p&gt;Here is a basic code which defines a 256 x 256 image, then calculates the value of each pixel in the raster based on a linear interpolation formula.&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code class="language-package" data-lang="package"&gt;
+import (
+&amp;#34;image&amp;#34;
+&amp;#34;image/color&amp;#34;
+&amp;#34;image/png&amp;#34;
+&amp;#34;log&amp;#34;
+&amp;#34;os&amp;#34;
+&amp;#34;os/exec&amp;#34;
+)
+var(
+colorB = [3]float64{248, 54, 0}
+colorA = [3]float64{254, 140, 0}
+)
+var(
+width = 256
+height = 256
+max = float64(width)
+)
+func linearGradient(x, y float64) (uint8, uint8, uint8) {
+d := x/max
+r := colorA[0] + d * (colorB[0] - colorA[0])
+g := colorA[1] + d * (colorB[1] - colorA[1])
+b := colorA[2] + d * (colorB[2] - colorA[2])
+return uint8(r), uint8(g), uint8(b)
+}
+func main() {
+var w, h int = width, height
+dst := image.NewRGBA(image.Rect(0, 0, w, h)) //*NRGBA (image.Image interface)
+for x := 0; x &amp;lt; w; x++ {
+for y := 0; y &amp;lt; h; y++ {
+r, g, b := linearGradient(float64(x), float64(y))
+c := color.RGBA{
+r,
+g,
+b,
+255,
+}
+dst.Set(x, y, c)
+}
+}
+img, \_ := os.Create(&amp;#34;new.png&amp;#34;)
+defer img.Close()
+png.Encode(img, dst) //Encode writes the Image m to w in PNG format.
+Show(img.Name())
+}
+// show a specified file by Preview.app for OS X(darwin)
+func Show(name string) {
+command := &amp;#34;open&amp;#34;
+arg1 := &amp;#34;-a&amp;#34;
+arg2 := &amp;#34;/Applications/Preview.app&amp;#34;
+cmd := exec.Command(command, arg1, arg2, name)
+err := cmd.Run()
+if err != nil {
+log.Fatal(err)
+}
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Here is how the generated image looks like&lt;/p&gt;</description></item><item><title>How to read a csv file in go</title><link>https://varunpant.com/posts/how-to-read-a-csv-file-in-go/</link><pubDate>Tue, 30 Aug 2016 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/how-to-read-a-csv-file-in-go/</guid><description>
+&lt;p&gt;One of the most common task for a programmer is either to read or write a csv file&lt;/p&gt;
+&lt;h3 id="read-a-csv-file"&gt;
+Read a csv file
+&lt;a href="#read-a-csv-file" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;package main
+import (
+&amp;#34;bufio&amp;#34;
+&amp;#34;encoding/csv&amp;#34;
+&amp;#34;os&amp;#34;
+&amp;#34;fmt&amp;#34;
+&amp;#34;io&amp;#34;
+)
+func main() {
+// Load a csv file.
+f, \_ := os.Open(&amp;#34;/path/to/my/csv/file.csv&amp;#34;)
+// Create a new reader.
+r := csv.NewReader(bufio.NewReader(f))
+//define seperator
+r.Comma = &amp;#39;,&amp;#39;
+for {
+record, err := r.Read()
+// Stop at EOF.
+if err == io.EOF {
+break
+}
+// Display record.
+fmt.Println(record)
+// ... Display record length.
+fmt.Println(len(record))
+// ... Display all individual elements of the slice.
+for value := range record {
+fmt.Printf(&amp;#34; %v\n&amp;#34;, record[value])
+}
+}
+}
+&lt;/code&gt;&lt;/pre&gt;</description></item><item><title>Install all Go project dependencies in one command</title><link>https://varunpant.com/posts/install-all-go-project-dependencies-in-one-command/</link><pubDate>Tue, 25 Aug 2015 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/install-all-go-project-dependencies-in-one-command/</guid><description>
+&lt;p&gt;So if you are looking to compile you go project on your server, you would probably need to worry about any third party dependencies.&lt;/p&gt;
+&lt;p&gt;Here is quick recursive way to do that&lt;/p&gt;
+&lt;p&gt;go get ./&amp;hellip;&lt;/p&gt;
+&lt;p&gt;Hope this helps&lt;/p&gt;</description></item></channel></rss>

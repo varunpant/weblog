@@ -1,4 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>unix on Varun Pant</title><link>https://varunpant.com/tags/unix/</link><description>Recent content in unix on Varun Pant</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 07 Apr 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://varunpant.com/tags/unix/feed.xml" rel="self" type="application/rss+xml"/><item><title>How to install Ubuntu bash on windows</title><link>https://varunpant.com/posts/how-to-install-ubuntu-bash-on-windows/</link><pubDate>Thu, 07 Apr 2016 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/how-to-install-ubuntu-bash-on-windows/</guid><description>Microsoft announced at Build 2016 , about the new feature to run native Bash and GNU/Linux command-line tools
-Gabriel Aul has just announced the release of the Windows 10 build #14316 to the Windows Insiders Fast-Ring
-This build contains the first public release of Bash on Ubuntu on Windows and the underlying Windows Subsystem for Linux.
-Turn on Developer Mode: Settings | Update &amp;amp; Security | For Developers | Check the Developer Mode radio button:</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Unix on Varun Pant</title><link>https://varunpant.com/tags/unix/</link><description>Recent content in Unix on Varun Pant</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 07 Apr 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://varunpant.com/tags/unix/feed.xml" rel="self" type="application/rss+xml"/><item><title>How to install Ubuntu bash on windows</title><link>https://varunpant.com/posts/how-to-install-ubuntu-bash-on-windows/</link><pubDate>Thu, 07 Apr 2016 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/how-to-install-ubuntu-bash-on-windows/</guid><description>
+&lt;p&gt;&lt;img src="http://www.varunpant.com/static/resources/uow/uow.jpg" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;Microsoft announced at Build 2016 , about the new feature to run native Bash and GNU/Linux command-line tools&lt;/p&gt;
+&lt;p&gt;Gabriel Aul has just &lt;a href="https://twitter.com/GabeAul/status/717759462258249728"&gt;announced the release&lt;/a&gt; of the Windows 10 build #14316 to the Windows Insiders Fast-Ring&lt;/p&gt;
+&lt;p&gt;This build contains the first public release of Bash on Ubuntu on Windows and the underlying Windows Subsystem for Linux.&lt;/p&gt;
+&lt;ol start="2"&gt;
+&lt;li&gt;Turn on Developer Mode: Settings | Update &amp;amp; Security | For Developers | Check the Developer Mode radio button:&lt;br&gt;
+&lt;img src="http://www.varunpant.com/static/resources/uow/screen1.png" alt=""&gt;&lt;/li&gt;
+&lt;li&gt;From the start menu, open “Turn Windows Features on or off”:&lt;br&gt;
+&lt;img src="http://www.varunpant.com/static/resources/uow/screen2.png" alt=""&gt;&lt;/li&gt;
+&lt;li&gt;Scroll down and check the “Windows Subsystem for Linux (Beta)” feature:&lt;br&gt;
+&lt;img src="http://www.varunpant.com/static/resources/uow/screen3.png" alt=""&gt;&lt;/li&gt;
+&lt;li&gt;Hit okay and reboot (required step)&lt;/li&gt;
+&lt;li&gt;Once rebooted, open a PowerShell/command prompt and run “Bash” and follow the simple prompts to accept Canonical’s license and kick-off the download of the Ubuntu image:&lt;br&gt;
+&lt;img src="http://www.varunpant.com/static/resources/uow/screen4.png" alt=""&gt;&lt;/li&gt;
+&lt;li&gt;After download has completed, you’ll be able to start “Bash on Ubuntu on Windows” from the Start menu:&lt;br&gt;
+&lt;img src="http://www.varunpant.com/static/resources/uow/screen5.png" alt=""&gt; &lt;img src="http://www.varunpant.com/static/resources/uow/screen6.png" alt=""&gt;&lt;/li&gt;
+&lt;/ol&gt;</description></item></channel></rss>

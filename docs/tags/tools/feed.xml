@@ -1,2 +1,31 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tools on Varun Pant</title><link>https://varunpant.com/tags/tools/</link><description>Recent content in tools on Varun Pant</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 07 Feb 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://varunpant.com/tags/tools/feed.xml" rel="self" type="application/rss+xml"/><item><title>ultimate developer and power users tool list for mac and linux</title><link>https://varunpant.com/posts/ultimate-developer-and-power-users-tool-list-for-mac-and-linux/</link><pubDate>Sat, 07 Feb 2015 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/ultimate-developer-and-power-users-tool-list-for-mac-and-linux/</guid><description>This is a collection of tools and utilities which I have found indispensable as an engineer. Each has a distinct purpose, and I probably touch each at least a few times a week. These tools save me time and I hope that you will find some of them useful as well.
-Productivity s-tui s-tui is a terminal UI for monitoring your computer. s-tui allows to monitor CPU temperature, frequency, power and utilization in a graphical way from the terminal.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tools on Varun Pant</title><link>https://varunpant.com/tags/tools/</link><description>Recent content in Tools on Varun Pant</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 07 Feb 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://varunpant.com/tags/tools/feed.xml" rel="self" type="application/rss+xml"/><item><title>ultimate developer and power users tool list for mac and linux</title><link>https://varunpant.com/posts/ultimate-developer-and-power-users-tool-list-for-mac-and-linux/</link><pubDate>Sat, 07 Feb 2015 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/ultimate-developer-and-power-users-tool-list-for-mac-and-linux/</guid><description>
+&lt;p&gt;This is a collection of tools and utilities which I have found indispensable as an engineer. Each has a distinct purpose, and I probably touch each at least a few times a week. These tools save me time and I hope that you will find some of them useful as well.&lt;/p&gt;
+&lt;h3 id="productivity"&gt;
+Productivity
+&lt;a href="#productivity" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://amanusk.github.io/s-tui/"&gt;s-tui&lt;/a&gt; s-tui is a terminal UI for monitoring your computer. s-tui allows to monitor CPU temperature, frequency, power and utilization in a graphical way from the terminal.&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://cockpit-project.org/running.html#ubuntu"&gt;Cockpit&lt;/a&gt; is a server manager that makes it easy to administer your GNU/Linux servers via a web browser.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="security"&gt;
+Security
+&lt;a href="#security" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.tinc-vpn.org/"&gt;https://www.tinc-vpn.org/&lt;/a&gt; Virtual Private Network (VPN) daemon that uses tunnelling and encryption to create a secure private network between hosts on the Internet.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="fun"&gt;
+Fun
+&lt;a href="#fun" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/abishekvashok/cmatrix"&gt;https://github.com/abishekvashok/cmatrix&lt;/a&gt; Matrix digital rain with CMatrix on a Linux or Unix terminal .&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="automation"&gt;
+Automation
+&lt;a href="#automation" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://members.funnelscripts.com/amazing-headline-scripts/"&gt;FunnelScripts&lt;/a&gt; Facebook Adverts.&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>

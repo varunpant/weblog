@@ -1,10 +1,15 @@
 baseurl = "https://varunpant.com/"
 languageCode = "en-us"
 theme = "hello-friend"
-paginate = 5
 publishDir = "docs"
-googleAnalytics = "UA-16978408-1"
 disqusShortname = "varunpant"
+
+[pagination]
+pagerSize = 5
+
+[services]
+[services.googleAnalytics]
+id = "UA-16978408-1"
 
 [params]
   # dir name of your blog content (default is `content/posts`)
