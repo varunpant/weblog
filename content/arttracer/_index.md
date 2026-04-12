@@ -4,8 +4,6 @@ date = "2025-04-12"
 author = "Varun Pant"
 +++
 
-# ArtTracer — Camera Overlay for Drawing & Tracing
-
 Turn your iPhone or iPad into a powerful tracing tool. ArtTracer overlays any image onto your live camera feed, letting you trace directly onto paper, canvas, wood, walls, or any surface.
 
 ## How It Works

@@ -4,8 +4,6 @@ date = "2025-04-12"
 author = "Varun Pant"
 +++
 
-# ArtTracer Privacy Policy
-
 *Last updated: April 12, 2025*
 
 ## Overview

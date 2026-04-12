@@ -4,8 +4,6 @@ date = "2025-04-12"
 author = "Varun Pant"
 +++
 
-# ArtTracer Support
-
 Need help with ArtTracer? Find answers below or get in touch.
 
 ## Frequently Asked Questions
