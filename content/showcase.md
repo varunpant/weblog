@@ -1,8 +1,8 @@
----
-title: "Showcase"
-date: "2019-01-18"
-author: " "
----
++++
+title = "Showcase"
+date = "2019-01-18"
+author = "Varun Pant"
++++
 
 ## ArtTracer
 
@@ -10,12 +10,8 @@ Camera overlay app for drawing and tracing. Overlay any image onto your live cam
 
 Available on the [App Store](https://apps.apple.com/app/arttracer) | [More Info](/arttracer) | [Support](/arttracer/support)
 
----
-
 ## RigVeda
 
 Explore the ancient hymns of the Rig Veda on your iPhone or iPad. Browse all 10 Mandals, 1,028 Suktas, and 10,552 Mantras with Sanskrit text and English translations. Bookmark your favourite verses and read offline.
 
 Available on the [App Store](https://apps.apple.com/us/app/rigveda/id1480430857)
-
----

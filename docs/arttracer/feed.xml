@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ArtTracer on Varun Pant</title><link>https://varunpant.com/arttracer/</link><description>Recent content in ArtTracer on Varun Pant</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>varun@varunpant.com (Varun Pant)</managingEditor><webMaster>varun@varunpant.com (Varun Pant)</webMaster><lastBuildDate>Sat, 12 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://varunpant.com/arttracer/feed.xml" rel="self" type="application/rss+xml"/><item><title>ArtTracer — Privacy Policy</title><link>https://varunpant.com/arttracer/privacy/</link><pubDate>Sat, 12 Apr 2025 00:00:00 +0000</pubDate><guid>https://varunpant.com/arttracer/privacy/</guid><description>
+&lt;p&gt;&lt;em&gt;Last updated: April 12, 2025&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id="overview"&gt;
+Overview
+&lt;a href="#overview" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;ArtTracer is designed with privacy as a core principle. Your data stays on your device.&lt;/p&gt;
+&lt;h2 id="data-collection"&gt;
+Data Collection
+&lt;a href="#data-collection" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;ArtTracer does not collect, store, or transmit any personal data.&lt;/strong&gt; There are no analytics, no tracking, no advertising SDKs, and no third-party services.&lt;/p&gt;
+&lt;h2 id="camera-access"&gt;
+Camera Access
+&lt;a href="#camera-access" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;ArtTracer requests camera access solely to display a live viewfinder for the tracing feature. The camera feed is displayed in real-time on your screen and is never recorded, stored, or transmitted.&lt;/p&gt;</description></item><item><title>ArtTracer — Support</title><link>https://varunpant.com/arttracer/support/</link><pubDate>Sat, 12 Apr 2025 00:00:00 +0000</pubDate><guid>https://varunpant.com/arttracer/support/</guid><description>
+&lt;p&gt;Need help with ArtTracer? Find answers below or get in touch.&lt;/p&gt;
+&lt;h2 id="frequently-asked-questions"&gt;
+Frequently Asked Questions
+&lt;a href="#frequently-asked-questions" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;h3 id="how-do-i-trace-an-image"&gt;
+How do I trace an image?
+&lt;a href="#how-do-i-trace-an-image" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Open ArtTracer and tap &lt;strong&gt;Photo Library&lt;/strong&gt; or &lt;strong&gt;Files&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Select the image you want to trace&lt;/li&gt;
+&lt;li&gt;Choose &lt;strong&gt;Normal&lt;/strong&gt; or &lt;strong&gt;AR-Assisted&lt;/strong&gt; tracing mode&lt;/li&gt;
+&lt;li&gt;Position your device above your tracing surface&lt;/li&gt;
+&lt;li&gt;Adjust the image opacity, scale, and position using gestures&lt;/li&gt;
+&lt;li&gt;Trace the image onto your surface&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="what-gestures-are-supported"&gt;
+What gestures are supported?
+&lt;a href="#what-gestures-are-supported" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Drag&lt;/strong&gt; — move the image&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Pinch&lt;/strong&gt; — scale the image up or down&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Two-finger rotate&lt;/strong&gt; — rotate the image&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Opacity slider&lt;/strong&gt; — adjust transparency&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="how-do-i-enable-camera-access"&gt;
+How do I enable camera access?
+&lt;a href="#how-do-i-enable-camera-access" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;ArtTracer requires camera access to display the live viewfinder. If you denied camera access:&lt;/p&gt;</description></item></channel></rss>

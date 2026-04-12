@@ -20,6 +20,8 @@ id = "UA-16978408-1"
   showMenuItems = 5
   # Show reading time in minutes for posts
   showReadingTime = true
+  authorName = "Varun Pant"
+  authorEmail = "varun@varunpant.com"
  
   
   

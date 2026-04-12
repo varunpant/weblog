@@ -1,4 +1,52 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Varun Pant</title><link>https://varunpant.com/</link><description>Recent content on Varun Pant</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 25 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://varunpant.com/feed.xml" rel="self" type="application/rss+xml"/><item><title>Cloud composer orchestration via cloud build</title><link>https://varunpant.com/posts/cloud-composer-orchestration-via-cloud-build/</link><pubDate>Mon, 25 May 2020 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/cloud-composer-orchestration-via-cloud-build/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Varun Pant</title><link>https://varunpant.com/</link><description>Recent content on Varun Pant</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>varun@varunpant.com (Varun Pant)</managingEditor><webMaster>varun@varunpant.com (Varun Pant)</webMaster><lastBuildDate>Sat, 12 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://varunpant.com/feed.xml" rel="self" type="application/rss+xml"/><item><title>ArtTracer — Privacy Policy</title><link>https://varunpant.com/arttracer/privacy/</link><pubDate>Sat, 12 Apr 2025 00:00:00 +0000</pubDate><guid>https://varunpant.com/arttracer/privacy/</guid><description>
+&lt;p&gt;&lt;em&gt;Last updated: April 12, 2025&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id="overview"&gt;
+Overview
+&lt;a href="#overview" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;ArtTracer is designed with privacy as a core principle. Your data stays on your device.&lt;/p&gt;
+&lt;h2 id="data-collection"&gt;
+Data Collection
+&lt;a href="#data-collection" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;ArtTracer does not collect, store, or transmit any personal data.&lt;/strong&gt; There are no analytics, no tracking, no advertising SDKs, and no third-party services.&lt;/p&gt;
+&lt;h2 id="camera-access"&gt;
+Camera Access
+&lt;a href="#camera-access" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;ArtTracer requests camera access solely to display a live viewfinder for the tracing feature. The camera feed is displayed in real-time on your screen and is never recorded, stored, or transmitted.&lt;/p&gt;</description></item><item><title>ArtTracer — Support</title><link>https://varunpant.com/arttracer/support/</link><pubDate>Sat, 12 Apr 2025 00:00:00 +0000</pubDate><guid>https://varunpant.com/arttracer/support/</guid><description>
+&lt;p&gt;Need help with ArtTracer? Find answers below or get in touch.&lt;/p&gt;
+&lt;h2 id="frequently-asked-questions"&gt;
+Frequently Asked Questions
+&lt;a href="#frequently-asked-questions" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;h3 id="how-do-i-trace-an-image"&gt;
+How do I trace an image?
+&lt;a href="#how-do-i-trace-an-image" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Open ArtTracer and tap &lt;strong&gt;Photo Library&lt;/strong&gt; or &lt;strong&gt;Files&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Select the image you want to trace&lt;/li&gt;
+&lt;li&gt;Choose &lt;strong&gt;Normal&lt;/strong&gt; or &lt;strong&gt;AR-Assisted&lt;/strong&gt; tracing mode&lt;/li&gt;
+&lt;li&gt;Position your device above your tracing surface&lt;/li&gt;
+&lt;li&gt;Adjust the image opacity, scale, and position using gestures&lt;/li&gt;
+&lt;li&gt;Trace the image onto your surface&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="what-gestures-are-supported"&gt;
+What gestures are supported?
+&lt;a href="#what-gestures-are-supported" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Drag&lt;/strong&gt; — move the image&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Pinch&lt;/strong&gt; — scale the image up or down&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Two-finger rotate&lt;/strong&gt; — rotate the image&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Opacity slider&lt;/strong&gt; — adjust transparency&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="how-do-i-enable-camera-access"&gt;
+How do I enable camera access?
+&lt;a href="#how-do-i-enable-camera-access" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;ArtTracer requires camera access to display the live viewfinder. If you denied camera access:&lt;/p&gt;</description></item><item><title>Cloud composer orchestration via cloud build</title><link>https://varunpant.com/posts/cloud-composer-orchestration-via-cloud-build/</link><pubDate>Mon, 25 May 2020 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/cloud-composer-orchestration-via-cloud-build/</guid><description>
 &lt;h3 id="cloud-composer-orchestration-via-cloud-build"&gt;
 Cloud composer orchestration via cloud build
 &lt;a href="#cloud-composer-orchestration-via-cloud-build" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
@@ -16,7 +64,7 @@ Timeseries financial forecasting
 Installation
 &lt;a href="#installation" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
 &lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;brew update
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;brew update
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;brew upgrade
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo mkdir -p /usr/local/Frameworks
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo chown -R &lt;span style="color:#66d9ef"&gt;$(&lt;/span&gt;whoami&lt;span style="color:#66d9ef"&gt;)&lt;/span&gt; /usr/local/*
@@ -27,11 +75,11 @@ Installation
 Aliasing
 &lt;a href="#aliasing" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
 &lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; echo &lt;span style="color:#e6db74"&gt;&amp;#34;alias python=/usr/local/bin/python3.7&amp;#34;&lt;/span&gt; &amp;gt;&amp;gt; ~/.zshrc
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; echo &lt;span style="color:#e6db74"&gt;&amp;#34;alias python=/usr/local/bin/python3.7&amp;#34;&lt;/span&gt; &amp;gt;&amp;gt; ~/.zshrc
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;or&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;echo &lt;span style="color:#e6db74"&gt;&amp;#34;alias python=/usr/local/bin/python3.7&amp;#34;&lt;/span&gt; &amp;gt;&amp;gt; ~/.bashrc
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;echo &lt;span style="color:#e6db74"&gt;&amp;#34;alias python=/usr/local/bin/python3.7&amp;#34;&lt;/span&gt; &amp;gt;&amp;gt; ~/.bashrc
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You could probably have just done this as well&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;alias python&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#39;python3&amp;#39;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;alias python&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#39;python3&amp;#39;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;alias pip&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#39;pip3&amp;#39;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I hope this is useful&lt;/p&gt;</description></item><item><title>how to play apple music on alexa in uk</title><link>https://varunpant.com/posts/how-to-play-apple-music-on-alexa-in-uk/</link><pubDate>Wed, 10 Apr 2019 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/how-to-play-apple-music-on-alexa-in-uk/</guid><description>
 &lt;p&gt;You can now use Alexa to play Apple Music on Amazon Echo speakers.&lt;/p&gt;
@@ -58,7 +106,7 @@ Python Code
 &lt;a href="#python-code" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;Here is some basic code which will make an attempt to download a **7zip exe. **&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;from&lt;/span&gt; pyvirtualdisplay &lt;span style="color:#f92672"&gt;import&lt;/span&gt; Display
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;from&lt;/span&gt; pyvirtualdisplay &lt;span style="color:#f92672"&gt;import&lt;/span&gt; Display
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;from&lt;/span&gt; selenium &lt;span style="color:#f92672"&gt;import&lt;/span&gt; webdriver
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;from&lt;/span&gt; selenium.webdriver.support.ui &lt;span style="color:#f92672"&gt;import&lt;/span&gt; WebDriverWait
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;from&lt;/span&gt; selenium.webdriver.support &lt;span style="color:#f92672"&gt;import&lt;/span&gt; expected\_conditions &lt;span style="color:#66d9ef"&gt;as&lt;/span&gt; EC
@@ -105,7 +153,18 @@ Python Code
 &lt;p&gt;&lt;a href="https://www.linkedin.com/in/varunpant"&gt;Linkedin&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="mailto:varun@varunpant.com"&gt;Email&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://github.com/varunpant"&gt;Github&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://varunpant.com/img/varunpant.jpeg" alt="Varun Pant" title="Varun"&gt;&lt;/p&gt;</description></item><item><title>Showcase</title><link>https://varunpant.com/showcase/</link><pubDate>Fri, 18 Jan 2019 00:00:00 +0000</pubDate><guid>https://varunpant.com/showcase/</guid><description/></item><item><title>web crawling or scraping using scrapy in python</title><link>https://varunpant.com/posts/web-crawling-or-scraping-using-scrapy-in-python/</link><pubDate>Sun, 02 Dec 2018 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/web-crawling-or-scraping-using-scrapy-in-python/</guid><description>
+&lt;p&gt;&lt;img src="https://varunpant.com/img/varunpant.jpeg" alt="Varun Pant" title="Varun"&gt;&lt;/p&gt;</description></item><item><title>Showcase</title><link>https://varunpant.com/showcase/</link><pubDate>Fri, 18 Jan 2019 00:00:00 +0000</pubDate><guid>https://varunpant.com/showcase/</guid><description>
+&lt;h2 id="arttracer"&gt;
+ArtTracer
+&lt;a href="#arttracer" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Camera overlay app for drawing and tracing. Overlay any image onto your live camera feed and trace directly onto paper, canvas, wood, or any surface. Supports AR-assisted tracing for larger surfaces.&lt;/p&gt;
+&lt;p&gt;Available on the &lt;a href="https://apps.apple.com/app/arttracer"&gt;App Store&lt;/a&gt; | &lt;a href="https://varunpant.com/arttracer/"&gt;More Info&lt;/a&gt; | &lt;a href="https://varunpant.com/arttracer/support/"&gt;Support&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="rigveda"&gt;
+RigVeda
+&lt;a href="#rigveda" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Explore the ancient hymns of the Rig Veda on your iPhone or iPad. Browse all 10 Mandals, 1,028 Suktas, and 10,552 Mantras with Sanskrit text and English translations. Bookmark your favourite verses and read offline.&lt;/p&gt;</description></item><item><title>web crawling or scraping using scrapy in python</title><link>https://varunpant.com/posts/web-crawling-or-scraping-using-scrapy-in-python/</link><pubDate>Sun, 02 Dec 2018 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/web-crawling-or-scraping-using-scrapy-in-python/</guid><description>
 &lt;p&gt;Scrapy is a very popular web scraping/crawling framework, I have been using it for quite some time now.&lt;/p&gt;
 &lt;p&gt;In this post, I will demonstrate creating a very basic web crawler.&lt;/p&gt;
 &lt;h3 id="install-scrapy"&gt;
@@ -140,7 +199,7 @@ Setting up GDAL
 httplib2
 &lt;a href="#httplib2" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
 &lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;import&lt;/span&gt; httplib2
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;import&lt;/span&gt; httplib2
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;link &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;https://example.com&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;h &lt;span style="color:#f92672"&gt;=&lt;/span&gt; httplib2&lt;span style="color:#f92672"&gt;.&lt;/span&gt;Http(&lt;span style="color:#e6db74"&gt;&amp;#34;.cache&amp;#34;&lt;/span&gt;)
@@ -149,7 +208,7 @@ httplib2
 another exmaple
 &lt;a href="#another-exmaple" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
 &lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;import&lt;/span&gt; httplib2
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;h &lt;span style="color:#f92672"&gt;=&lt;/span&gt; httplib2&lt;span style="color:#f92672"&gt;.&lt;/span&gt;Http(&lt;span style="color:#e6db74"&gt;&amp;#34;.cache&amp;#34;&lt;/span&gt;)
@@ -163,7 +222,7 @@ Urllib2
 &lt;a href="#urllib2" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;Here is a simmilar example using &lt;strong&gt;urlib2&lt;/strong&gt; for comparison and lines of code.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;import&lt;/span&gt; urllib2
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;gh_url &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#39;https://example.com&amp;#39;&lt;/span&gt;
@@ -205,7 +264,7 @@ Brute-force approach
 &lt;p&gt;Here I present a few approaches to deduce &amp;ldquo;minimum insertions&amp;rdquo; required to convert a string into a palindrome.&lt;/p&gt;
 &lt;p&gt;The basic brute force approach is quite simple, given a string with length L, start comparing, the first character from left and the last character while scanning inwards.&lt;/p&gt;
 &lt;p&gt;Here is a basic test for a palindrome.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-def" data-lang="def"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; L &lt;span style="color:#f92672"&gt;=&lt;/span&gt; len(s)
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-def" data-lang="def"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; L &lt;span style="color:#f92672"&gt;=&lt;/span&gt; len(s)
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; for i in range(L):
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; if s[i] !&lt;span style="color:#f92672"&gt;=&lt;/span&gt; s[L &lt;span style="color:#f92672"&gt;-&lt;/span&gt; i &lt;span style="color:#f92672"&gt;-&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;]:
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; return False,i,L&lt;span style="color:#f92672"&gt;-&lt;/span&gt;i &lt;span style="color:#f92672"&gt;-&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;
@@ -222,7 +281,7 @@ Bubble Sort
 &lt;p&gt;&lt;a href="http://en.wikipedia.org/wiki/Bubble_sort"&gt;wiki&lt;/a&gt; &lt;img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif" alt=""&gt;&lt;/p&gt;
 &lt;p&gt;Bubble sort is perhaps the simplest of all sorting algorithms, the basic principle is to bubble up the largest (or the smallest) and then the second largest and then the third largest and so on. Each bubble takes the full sweep of the list, hence best-case, average-case as well as the worst-case performance are all O(n2)&lt;/p&gt;</description></item><item><title>reading and writing binary files in go lang</title><link>https://varunpant.com/posts/reading-and-writing-binary-files-in-go-lang/</link><pubDate>Tue, 29 Aug 2017 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/reading-and-writing-binary-files-in-go-lang/</guid><description>
 &lt;p&gt;Reading and writing binary files can often be a fast and very efficient alternatives to csv. They obviously have their challenges, however in this post I intent to present a very basic example of saving models (struct) into binary file and later reading it.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;package main
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;package main
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;import&lt;/span&gt; (
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;log&amp;#34;&lt;/span&gt;
@@ -492,7 +551,7 @@ An array A that represents a heap is an object with two attributes:&lt;/p&gt;
 &lt;p&gt;It is a popular, but inefficient sorting algo, it has worst-case and average complexity both &lt;em&gt;&lt;a href="https://en.wikipedia.org/wiki/Big_o_notation" title="Big o notation"&gt;О&lt;/a&gt;&lt;/em&gt;(&lt;em&gt;n&lt;/em&gt;2), where &lt;em&gt;n&lt;/em&gt; is the number of items being sorted.&lt;/p&gt;
 &lt;p&gt;Here is an implementation in python&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://upload.wikimedia.org/wikipedia/commons/0/06/Bubble-sort.gif" alt=""&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-def" data-lang="def"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; count &lt;span style="color:#f92672"&gt;=&lt;/span&gt; len(B)
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-def" data-lang="def"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; count &lt;span style="color:#f92672"&gt;=&lt;/span&gt; len(B)
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; for i in xrange(count):
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; for j in xrange(count&lt;span style="color:#f92672"&gt;-&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;,i,&lt;span style="color:#f92672"&gt;-&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;):
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;#&lt;/span&gt;print &lt;span style="color:#e6db74"&gt;&amp;#34;compairing %i with %i&amp;#34;&lt;/span&gt;&lt;span style="color:#960050;background-color:#1e0010"&gt;%&lt;/span&gt;(B[j],B[j&lt;span style="color:#f92672"&gt;-&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;])
@@ -565,7 +624,7 @@ Merging Shape (*.shp) Files on Windows
 if (navigator.geolocation) {
 navigator.geolocation.getCurrentPosition(showPosition);&lt;/p&gt;</description></item><item><title>Classes and Inheritance in EcmaScript 6 (ES6 Harmony)</title><link>https://varunpant.com/posts/classes-and-inheritance-in-ecmascript-6-es6-harmony/</link><pubDate>Sun, 30 Nov 2014 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/classes-and-inheritance-in-ecmascript-6-es6-harmony/</guid><description>
 &lt;p&gt;So if you are a JavaScript geek and haven&amp;rsquo;t yet heard,(if every one is listening to ECMA announcements, who&amp;rsquo;s gonna drink beer :) ) ECMA 6 feature set has been drafted,its &lt;a href="http://wiki.ecmascript.org/doku.php?id=harmony:specification_drafts"&gt;feature set &lt;/a&gt; is frozen, it is mostly being refined now. You can already program in it and compile it to current JavaScript . The JavaScript frameworks AngularJS and Ember.js will be based on it (with ways to opt out). Again, via cross-compilation.&lt;/p&gt;</description></item><item><title>longest palindrome in a string</title><link>https://varunpant.com/posts/longest-palindrome-in-a-string/</link><pubDate>Wed, 15 Oct 2014 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/longest-palindrome-in-a-string/</guid><description>
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;def&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;isPailenDrome&lt;/span&gt;(s):
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;def&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;isPailenDrome&lt;/span&gt;(s):
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; len(s)&lt;span style="color:#f92672"&gt;==&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;:
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;return&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;False&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; L &lt;span style="color:#f92672"&gt;=&lt;/span&gt; len(s)
@@ -600,7 +659,7 @@ navigator.geolocation.getCurrentPosition(showPosition);&lt;/p&gt;</description><
 Solution one.
 &lt;a href="#solution-one" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
 &lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;def&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;printSpiralTL&lt;/span&gt;(m,x1,y1,x2,y2):
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;def&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;printSpiralTL&lt;/span&gt;(m,x1,y1,x2,y2):
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;for&lt;/span&gt; i &lt;span style="color:#f92672"&gt;in&lt;/span&gt; range(x1,x2):
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; print m[y1][i]
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;for&lt;/span&gt; j &lt;span style="color:#f92672"&gt;in&lt;/span&gt; range(y1&lt;span style="color:#f92672"&gt;+&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;,y2&lt;span style="color:#f92672"&gt;+&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;):
@@ -629,7 +688,7 @@ Solution one.
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; ]
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Output:&lt;/p&gt;</description></item><item><title>merge two sorted arrays in python</title><link>https://varunpant.com/posts/merge-two-sorted-arrays-in-python/</link><pubDate>Sat, 11 Oct 2014 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/merge-two-sorted-arrays-in-python/</guid><description>
 &lt;p&gt;Here is a quick code snippet to merge two sorted arrays in python&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-def" data-lang="def"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; merged &lt;span style="color:#f92672"&gt;=&lt;/span&gt; []
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-def" data-lang="def"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; merged &lt;span style="color:#f92672"&gt;=&lt;/span&gt; []
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; l &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; r &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; for i in range(len(a)&lt;span style="color:#f92672"&gt;+&lt;/span&gt;len(b) ):
@@ -652,13 +711,13 @@ Solution one.
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;print merge([3,5],[2,4])&lt;/p&gt;</description></item><item><title>Update the locate DB on OS X</title><link>https://varunpant.com/posts/update-the-locate-db-on-os-x/</link><pubDate>Wed, 10 Sep 2014 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/update-the-locate-db-on-os-x/</guid><description>
 &lt;p&gt;Apparently out OS X does not have an updatedb command like linux has, so I was stumped on how to update the locate database.&lt;/p&gt;
 &lt;p&gt;I have quickly added this command here, incase I need to use it again.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo /usr/libexec/locate.updatedb
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo /usr/libexec/locate.updatedb
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>How to print the Fibonacci Sequence in Python</title><link>https://varunpant.com/posts/how-to-print-the-fibonacci-sequence-in-python/</link><pubDate>Sat, 09 Aug 2014 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/how-to-print-the-fibonacci-sequence-in-python/</guid><description>
 &lt;p&gt;The Fibonacci numbers are the sequence of numbers &lt;img src="http://mathworld.wolfram.com/images/equations/FibonacciNumber/Inline1.gif" alt="{F_n}_(n=1)^infty"&gt; defined by the &lt;a href="http://mathworld.wolfram.com/LinearRecurrenceEquation.html"&gt;linear recurrence equation&lt;/a&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt; ![ F_n=F_(n-1)+F_(n-2) ](http://mathworld.wolfram.com/images/equations/FibonacciNumber/NumberedEquation1.gif) with ![F_1=F_2=1](http://mathworld.wolfram.com/images/equations/FibonacciNumber/Inline2.gif) and ![F_0=0](http://mathworld.wolfram.com/images/equations/FibonacciNumber/Inline3.gif)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;So in simple terms a method to compute fibonacci number for nth place looks like this&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-def" data-lang="def"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; if n &lt;span style="color:#f92672"&gt;==&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt; or n &lt;span style="color:#f92672"&gt;==&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;:
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-def" data-lang="def"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; if n &lt;span style="color:#f92672"&gt;==&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt; or n &lt;span style="color:#f92672"&gt;==&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;:
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; return n
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; else:
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; return fibonacci(n&lt;span style="color:#f92672"&gt;-&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;)&lt;span style="color:#f92672"&gt;+&lt;/span&gt;fibonacci(n&lt;span style="color:#f92672"&gt;-&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;2&lt;/span&gt;)
@@ -695,9 +754,9 @@ Install Node.js and npm with Homebrew
 &lt;/h3&gt;
 &lt;p&gt;First, install Homebrew by typing in the following command ruby -e &amp;ldquo;$(curl -fsSL &lt;a href="https://raw.github.com/Homebrew/homebrew/go/install%29%22"&gt;https://raw.github.com/Homebrew/homebrew/go/install)"&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Then, type in brew update to ensure your Homebrew is up to date.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;brew update
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;brew update
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Run&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;brew doctor
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;brew doctor
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;to make sure your system is all good.&lt;/p&gt;
 &lt;p&gt;Follow any other recommendations from brew doctor.&lt;/p&gt;</description></item><item><title>Normalizing Ranges of Numbers</title><link>https://varunpant.com/posts/normalizing-ranges-of-numbers/</link><pubDate>Wed, 09 Jul 2014 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/normalizing-ranges-of-numbers/</guid><description>
 &lt;p&gt;Range Normalization is a &lt;a href="http://www.heatonresearch.com/wiki/Normalization"&gt;normalization&lt;/a&gt; technique that allows you to map a number to a specific range.&lt;/p&gt;
@@ -737,7 +796,7 @@ Step 1
 &lt;p&gt;Read the introduction &lt;a href="http://mike.teczno.com/notes/tilestache.html"&gt;here&lt;/a&gt; to get started&lt;/p&gt;
 &lt;p&gt;Hope it helps.&lt;/p&gt;</description></item><item><title>how to make a web crawler in python</title><link>https://varunpant.com/posts/how-to-make-a-web-crawler-in-python/</link><pubDate>Sat, 01 Feb 2014 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/how-to-make-a-web-crawler-in-python/</guid><description>
 &lt;p&gt;Here is a very simple web crawler in python&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;import&lt;/span&gt; sys&lt;span style="color:#f92672"&gt;,&lt;/span&gt; thread&lt;span style="color:#f92672"&gt;,&lt;/span&gt; Queue&lt;span style="color:#f92672"&gt;,&lt;/span&gt; re&lt;span style="color:#f92672"&gt;,&lt;/span&gt; urllib&lt;span style="color:#f92672"&gt;,&lt;/span&gt; urlparse&lt;span style="color:#f92672"&gt;,&lt;/span&gt; time&lt;span style="color:#f92672"&gt;,&lt;/span&gt; os&lt;span style="color:#f92672"&gt;,&lt;/span&gt; sys
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;import&lt;/span&gt; sys&lt;span style="color:#f92672"&gt;,&lt;/span&gt; thread&lt;span style="color:#f92672"&gt;,&lt;/span&gt; Queue&lt;span style="color:#f92672"&gt;,&lt;/span&gt; re&lt;span style="color:#f92672"&gt;,&lt;/span&gt; urllib&lt;span style="color:#f92672"&gt;,&lt;/span&gt; urlparse&lt;span style="color:#f92672"&gt;,&lt;/span&gt; time&lt;span style="color:#f92672"&gt;,&lt;/span&gt; os&lt;span style="color:#f92672"&gt;,&lt;/span&gt; sys
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;dupcheck &lt;span style="color:#f92672"&gt;=&lt;/span&gt; set()
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;q &lt;span style="color:#f92672"&gt;=&lt;/span&gt; Queue&lt;span style="color:#f92672"&gt;.&lt;/span&gt;Queue(&lt;span style="color:#ae81ff"&gt;100&lt;/span&gt;)
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;q&lt;span style="color:#f92672"&gt;.&lt;/span&gt;put(&lt;span style="color:#e6db74"&gt;&amp;#34;http://www.varunpant.com&amp;#34;&lt;/span&gt;)
@@ -786,7 +845,7 @@ Writing Text with Raphael
 &lt;a href="#writing-text-with-raphael" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
 &lt;/h4&gt;
 &lt;p&gt;Some code first ;)&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-javascript" data-lang="javascript"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;var&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;canvas&lt;/span&gt; &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;Raphael&lt;/span&gt;(&lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;, &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;, &lt;span style="color:#ae81ff"&gt;250&lt;/span&gt;, &lt;span style="color:#ae81ff"&gt;250&lt;/span&gt; );
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-javascript" data-lang="javascript"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;var&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;canvas&lt;/span&gt; &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;Raphael&lt;/span&gt;(&lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;, &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;, &lt;span style="color:#ae81ff"&gt;250&lt;/span&gt;, &lt;span style="color:#ae81ff"&gt;250&lt;/span&gt; );
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;var&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;t1&lt;/span&gt; &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;canvas&lt;/span&gt;.&lt;span style="color:#a6e22e"&gt;text&lt;/span&gt;(&lt;span style="color:#ae81ff"&gt;50&lt;/span&gt;, &lt;span style="color:#ae81ff"&gt;50&lt;/span&gt;, &lt;span style="color:#f92672"&gt;*&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;Some text Goes here&amp;#34;&lt;/span&gt;&lt;span style="color:#f92672"&gt;*&lt;/span&gt;);
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
@@ -802,7 +861,7 @@ Flash Object
 &lt;a href="#flash-object" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;This is quick Snippet which demonstrate how to embed flash object in a web page.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-html" data-lang="html"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&amp;lt;&lt;span style="color:#f92672"&gt;object&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;type&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;application/x-shockwave-flash&amp;#34;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-html" data-lang="html"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&amp;lt;&lt;span style="color:#f92672"&gt;object&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;type&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;application/x-shockwave-flash&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;data&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;path-to-my-flash-file.swf&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;width&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;0&amp;#34;&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;height&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;0&amp;#34;&lt;/span&gt;&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;&lt;span style="color:#f92672"&gt;param&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;name&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;movie&amp;#34;&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;value&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;your-flash-file.swf&amp;#34;&lt;/span&gt; /&amp;gt;
@@ -813,7 +872,7 @@ Quicktime
 &lt;a href="#quicktime" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;This is quick Snippet which demonstrate how to embed quicktime object in a web page&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-html" data-lang="html"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&amp;lt;&lt;span style="color:#f92672"&gt;object&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;classid&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B&amp;#34;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-html" data-lang="html"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&amp;lt;&lt;span style="color:#f92672"&gt;object&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;classid&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;codebase&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;http://www.apple.com/qtactivex/qtplugin.cab&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;width&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;200&amp;#34;&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;height&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;16&amp;#34;&lt;/span&gt;&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&amp;lt;&lt;span style="color:#f92672"&gt;param&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;name&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;src&amp;#34;&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;value&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;pathToMyMovie.mov&amp;#34;&lt;/span&gt; /&amp;gt;
@@ -885,7 +944,7 @@ background-color:#b0e0e6;
 &lt;p&gt;HTTP Basic authentication implementation is one of the easiest ways to secure web pages because it doesn&amp;rsquo;t require cookies, session handling, or the development of login pages. Rather, HTTP Basic authentication uses static headers which means that no handshakes have to be done in anticipation,however the n the credentials are passed as &lt;a href="http://en.wikipedia.org/wiki/Plaintext"&gt;plain-text &lt;/a&gt;and could be intercepted.&lt;/p&gt;</description></item><item><title>Cross browser drop shadow with CSS3</title><link>https://varunpant.com/posts/cross-browser-drop-shadow-with-css3/</link><pubDate>Wed, 23 Jan 2013 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/cross-browser-drop-shadow-with-css3/</guid><description>
 &lt;p&gt;When &lt;strong&gt;css3&lt;/strong&gt; arrived, one of the goodies that I found was, the inclusion of &lt;strong&gt;Drop Shadow effect&lt;/strong&gt;, namely **Box Shadow **and &lt;strong&gt;Text Shadow&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;Here I present a cross browser utility css class which can be used for a drop shadow effect, without any image.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-css" data-lang="css"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#a6e22e"&gt;shadow&lt;/span&gt; {
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-css" data-lang="css"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#a6e22e"&gt;shadow&lt;/span&gt; {
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;/* For IE 8 */&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;-ms-&lt;/span&gt;&lt;span style="color:#66d9ef"&gt;filter&lt;/span&gt;: &lt;span style="color:#e6db74"&gt;&amp;#34;progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color=&amp;#39;#000000&amp;#39;)&amp;#34;&lt;/span&gt;;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;/* For IE 5.5 - 7 */&lt;/span&gt;
@@ -916,7 +975,7 @@ background-color:#b0e0e6;
 &lt;p&gt;&lt;strong&gt;Start Apache2&lt;/strong&gt; # sudo /etc/init.d/apache2 start&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Stop Apache2&lt;/strong&gt; # sudo /etc/init.d/apache2 stop&lt;/p&gt;</description></item><item><title>Factorial in python</title><link>https://varunpant.com/posts/factorial-in-python/</link><pubDate>Tue, 14 Aug 2012 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/factorial-in-python/</guid><description>
 &lt;p&gt;Mathematically, the formula for the factorial is as follows. If n is an integer greater than or equal to 1, then n ! = n ( n - 1)( n - 2)( n - 3) &amp;hellip; (3)(2)(1) If p = 0, then p ! = 1 by convention.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;def&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;factorial&lt;/span&gt;(n):
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;def&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;factorial&lt;/span&gt;(n):
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; n &lt;span style="color:#f92672"&gt;==&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;:
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;return&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;else&lt;/span&gt;:
@@ -969,7 +1028,7 @@ Install Python on Windows
 &lt;p&gt;This interface is sensitive to the push speed and also shows traces of resilience.&lt;/p&gt;
 &lt;p&gt;I have been experimenting with various techniques to bring out similar effect using JavaScript and HTML, I am not quite sure if this would be useful in its present form but with some modifications may be this sample could prove its worthiness somewhere.&lt;/p&gt;</description></item><item><title>Data URI and IE</title><link>https://varunpant.com/posts/data-uri-and-ie/</link><pubDate>Tue, 15 Jun 2010 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/data-uri-and-ie/</guid><description>
 &lt;p&gt;Few days ago I was experimenting with a nifty technique of embedding images in web pages by base64 encoding them first and then using a standard known as &lt;a href="http://en.wikipedia.org/wiki/Data_URI_scheme"&gt;Data URI Scheme&lt;/a&gt;, which basically defines a method of assigning a ‘src’ of an image tag as a base64 serialized string, like this:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-css" data-lang="css"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-css" data-lang="css"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;background-image&lt;/span&gt;&lt;span style="color:#f92672"&gt;:&lt;/span&gt; &lt;span style="color:#f92672"&gt;url&lt;/span&gt;&lt;span style="color:#f92672"&gt;(&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAUBAMAAACKWYuOAAAAMFBMVEX///92dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnYvD4PNAAAAD3RSTlMAACTkfhvbh3iEewTtxBIFliR3AAAAUklEQVQY02NgIBMwijgKCgrAef5fkHnz/y9E4kn+/4XEE6z/34jEE///A4knev7zAwQv7L8RQk40/7MiggeUQpjJff+zIpINykbIbhFSROIRDQAWUhW2oXLWAQAAAABJRU5ErkJggg==&amp;#34;&lt;/span&gt;&lt;span style="color:#f92672"&gt;);&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
