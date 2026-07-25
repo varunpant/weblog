@@ -133,6 +133,30 @@ Nav items live in `config.toml` under `[[languages.en.menu.main]]`: About, Feed
 (`/feed.xml`), Archives, Showcase. `showMenuItems = 5` controls how many render before the
 "Show more" trigger.
 
+## App sections and privacy policies
+
+Each app gets its own top-level section under `content/`, served from this blog:
+
+```
+content/<app>/_index.md      landing page   -> /<app>/
+content/<app>/privacy.md     app policy     -> /<app>/privacy/
+content/<app>/support.md     support/FAQ    -> /<app>/support/
+```
+
+A bespoke landing page uses `type = "<app>"` + `layout = "list"` in the front
+matter, which makes Hugo look in `layouts/<app>/` before `layouts/_default/`
+(see `layouts/arttracer/`). App-specific assets live in `static/<app>/`.
+
+**Two distinct kinds of privacy policy — do not merge them:**
+
+| Page | Covers |
+|---|---|
+| `content/privacy.md` → `/privacy` | This *website*: GA4, AdSense, Disqus, GitHub Pages hosting. Linked from the consent banner and the main menu. |
+| `content/<app>/privacy.md` → `/<app>/privacy` | That *app only*. Most apps collect nothing, so their policies differ sharply from the site's. |
+
+When adding an app, list it in `content/showcase.md` and add it to the app-policy
+list in `content/privacy.md`.
+
 ## Known build warnings (non-blocking, as of Hugo 0.164.0)
 
 The build succeeds but emits two recurring warnings. Neither is a regression — don't
