@@ -9,7 +9,9 @@ pagerSize = 5
 
 [services]
 [services.googleAnalytics]
-id = "UA-16978408-1"
+# GA4 property "varuns blog" (stream 15323880732). Hugo's internal template
+# emits gtag.js automatically for G- prefixed (GA4) IDs.
+id = "G-P8WGKXR03S"
 
 [params]
   # dir name of your blog content (default is `content/posts`)
