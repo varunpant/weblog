@@ -1,241 +1,42 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Javascript on Varun Pant</title>
-    
-    
-    
-    <link>http://localhost:1314/tags/javascript/</link>
-    <description>Recent content in Javascript on Varun Pant</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <managingEditor>varun@varunpant.com (Varun Pant)</managingEditor>
-    <webMaster>varun@varunpant.com (Varun Pant)</webMaster>
-    <lastBuildDate>Mon, 05 Feb 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://localhost:1314/tags/javascript/feed.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>how to print bar chart in chrome browser console</title>
-      <link>http://localhost:1314/posts/how-to-print-bar-chart-in-chrome-browser-console/</link>
-      <pubDate>Mon, 05 Feb 2018 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1314/posts/how-to-print-bar-chart-in-chrome-browser-console/</guid>
-      <description>
-        
-          
-          
-          
-        
-        
-        
-          &lt;p&gt;This post doesn&amp;rsquo;t really have anything valuable to contribute, just some cool console trick.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Javascript on Varun Pant</title><link>https://varunpant.com/tags/javascript/</link><description>Recent content in Javascript on Varun Pant</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>varun@varunpant.com (Varun Pant)</managingEditor><webMaster>varun@varunpant.com (Varun Pant)</webMaster><lastBuildDate>Mon, 05 Feb 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://varunpant.com/tags/javascript/feed.xml" rel="self" type="application/rss+xml"/><item><title>how to print bar chart in chrome browser console</title><link>https://varunpant.com/posts/how-to-print-bar-chart-in-chrome-browser-console/</link><pubDate>Mon, 05 Feb 2018 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/how-to-print-bar-chart-in-chrome-browser-console/</guid><description>
+&lt;p&gt;This post doesn&amp;rsquo;t really have anything valuable to contribute, just some cool console trick.&lt;/p&gt;
 &lt;p&gt;Have you ever wanted to plot out a chart, very quickly? Did you ever have an urge to visualise a bunch of numbers without having to use a charting api or copy pasting the data in a spreadsheet? If you did then you might even learn something today :)&lt;/p&gt;
-&lt;p&gt;Here is a simple, yet neat way to plot out a bunch of numbers in chrome console as a** horizontal bar chart.**&lt;/p&gt;
-          
-        
-        </description>
-    </item>
-    
-    <item>
-      <title>Creating Isochrones and Isodistances using Googles Direction Search API</title>
-      <link>http://localhost:1314/posts/creating-isochrones-and-isodistances-using-googles-direction-search-api/</link>
-      <pubDate>Mon, 29 Dec 2014 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1314/posts/creating-isochrones-and-isodistances-using-googles-direction-search-api/</guid>
-      <description>
-        
-          
-          
-          
-        
-        
-        
-          &lt;h3 id=&#34;introduction&#34;&gt;
-  Introduction
-  &lt;a href=&#34;#introduction&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;p&gt;Here is a simple, yet neat way to plot out a bunch of numbers in chrome console as a** horizontal bar chart.**&lt;/p&gt;</description></item><item><title>Creating Isochrones and Isodistances using Googles Direction Search API</title><link>https://varunpant.com/posts/creating-isochrones-and-isodistances-using-googles-direction-search-api/</link><pubDate>Mon, 29 Dec 2014 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/creating-isochrones-and-isodistances-using-googles-direction-search-api/</guid><description>
+&lt;h3 id="introduction"&gt;
+Introduction
+&lt;a href="#introduction" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
 &lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/varunpant/Google_Isochrone/master/ScreenShot.png&#34; alt=&#34;Isochrone&#34;&gt; &lt;a href=&#34;http://en.wikipedia.org/wiki/Isochrone_map&#34;&gt;Isochrones&lt;/a&gt; are curves of equal travel time from a certain point of origin, another way of saying this would be that an Isochrone is an isoline for travel time, if the weighting factor is changed from time to distance, then the resulting curve is called an Isodistance.&lt;/p&gt;
-&lt;p&gt;In this post I will present a rough way to create an Isochrone and an Isodistance using &lt;a href=&#34;https://developers.google.com/maps/documentation/directions/&#34;&gt;google&amp;rsquo;s directions API.&lt;/a&gt;&lt;/p&gt;
-          
-        
-        </description>
-    </item>
-    
-    <item>
-      <title>HTML Geolocation and Altitude</title>
-      <link>http://localhost:1314/posts/html-geolocation-and-altitude/</link>
-      <pubDate>Sun, 21 Dec 2014 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1314/posts/html-geolocation-and-altitude/</guid>
-      <description>
-        
-          
-          
-          
-        
-        
-        
-          &lt;p&gt;HTML5 Geolocation is a feature which allows the browser on a computer or a mobile phone, to acquire the position from the wifi, 2g/3g/4g network or GPS.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://raw.githubusercontent.com/varunpant/Google_Isochrone/master/ScreenShot.png" alt="Isochrone"&gt; &lt;a href="http://en.wikipedia.org/wiki/Isochrone_map"&gt;Isochrones&lt;/a&gt; are curves of equal travel time from a certain point of origin, another way of saying this would be that an Isochrone is an isoline for travel time, if the weighting factor is changed from time to distance, then the resulting curve is called an Isodistance.&lt;/p&gt;
+&lt;p&gt;In this post I will present a rough way to create an Isochrone and an Isodistance using &lt;a href="https://developers.google.com/maps/documentation/directions/"&gt;google&amp;rsquo;s directions API.&lt;/a&gt;&lt;/p&gt;</description></item><item><title>HTML Geolocation and Altitude</title><link>https://varunpant.com/posts/html-geolocation-and-altitude/</link><pubDate>Sun, 21 Dec 2014 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/html-geolocation-and-altitude/</guid><description>
+&lt;p&gt;HTML5 Geolocation is a feature which allows the browser on a computer or a mobile phone, to acquire the position from the wifi, 2g/3g/4g network or GPS.&lt;/p&gt;
 &lt;p&gt;The HTML Geolocation API is used to get the geographical position of a user. Since this can compromise user privacy, the position is not available unless the user approves it. The simplest way to use it is through navigator.geolocation object ```
 if (navigator.geolocation) {
-navigator.geolocation.getCurrentPosition(showPosition);&lt;/p&gt;
-          
-        
-        </description>
-    </item>
-    
-    <item>
-      <title>Classes and Inheritance in EcmaScript 6 (ES6 Harmony)</title>
-      <link>http://localhost:1314/posts/classes-and-inheritance-in-ecmascript-6-es6-harmony/</link>
-      <pubDate>Sun, 30 Nov 2014 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1314/posts/classes-and-inheritance-in-ecmascript-6-es6-harmony/</guid>
-      <description>
-        
-          
-          
-          
-        
-        
-        
-          &lt;p&gt;So if you are a JavaScript geek and haven&amp;rsquo;t yet heard,(if everyone is listening to ECMA announcements, who&amp;rsquo;s gonna drink beer :) ) ECMA 6 feature set has been drafted, its &lt;a href=&#34;http://wiki.ecmascript.org/doku.php?id=harmony:specification_drafts&#34;&gt;feature set &lt;/a&gt; is frozen, it is mostly being refined now. You can already program in it and compile it to current JavaScript. The JavaScript frameworks AngularJS and Ember.js will be based on it (with ways to opt out). Again, via cross-compilation.&lt;/p&gt;
-          
-        
-        </description>
-    </item>
-    
-    <item>
-      <title>Raphael-js-tutorial-part-II</title>
-      <link>http://localhost:1314/posts/raphael-js-tutorial-part-ii/</link>
-      <pubDate>Wed, 25 Dec 2013 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1314/posts/raphael-js-tutorial-part-ii/</guid>
-      <description>
-        
-          
-          
-          
-        
-        
-        
-          &lt;p&gt;This is the second part of the tutorial about getting started with &lt;a href=&#34;http://raphaeljs.com/&#34;&gt;Raphael.js&lt;/a&gt;. To see the first part go &lt;a href=&#34;http://localhost:1314/posts/raphael-js-tutorial-part-i/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;h4 id=&#34;writing-text-with-raphael&#34;&gt;
-  Writing Text with Raphael
-  &lt;a href=&#34;#writing-text-with-raphael&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+navigator.geolocation.getCurrentPosition(showPosition);&lt;/p&gt;</description></item><item><title>Classes and Inheritance in EcmaScript 6 (ES6 Harmony)</title><link>https://varunpant.com/posts/classes-and-inheritance-in-ecmascript-6-es6-harmony/</link><pubDate>Sun, 30 Nov 2014 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/classes-and-inheritance-in-ecmascript-6-es6-harmony/</guid><description>
+&lt;p&gt;So if you are a JavaScript geek and haven&amp;rsquo;t yet heard,(if everyone is listening to ECMA announcements, who&amp;rsquo;s gonna drink beer :) ) ECMA 6 feature set has been drafted, its &lt;a href="http://wiki.ecmascript.org/doku.php?id=harmony:specification_drafts"&gt;feature set &lt;/a&gt; is frozen, it is mostly being refined now. You can already program in it and compile it to current JavaScript. The JavaScript frameworks AngularJS and Ember.js will be based on it (with ways to opt out). Again, via cross-compilation.&lt;/p&gt;</description></item><item><title>Raphael-js-tutorial-part-II</title><link>https://varunpant.com/posts/raphael-js-tutorial-part-ii/</link><pubDate>Wed, 25 Dec 2013 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/raphael-js-tutorial-part-ii/</guid><description>
+&lt;p&gt;This is the second part of the tutorial about getting started with &lt;a href="http://raphaeljs.com/"&gt;Raphael.js&lt;/a&gt;. To see the first part go &lt;a href="https://varunpant.com/posts/raphael-js-tutorial-part-i/"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h4 id="writing-text-with-raphael"&gt;
+Writing Text with Raphael
+&lt;a href="#writing-text-with-raphael" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
 &lt;/h4&gt;
 &lt;p&gt;Some code first ;)&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;canvas&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Raphael&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;250&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;250&lt;/span&gt; );
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;t1&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;canvas&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;text&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;50&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;50&lt;/span&gt;, &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Some text Goes here&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;t2&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;canvas&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;text&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;60&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;90&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;First line \n Second Line \n Third line&amp;#34;&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;t3&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;canvas&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;text&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;214&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;140&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;1079&amp;#34;&lt;/span&gt;).&lt;span style=&#34;color:#a6e22e&#34;&gt;attr&lt;/span&gt;({&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;text-anchor&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;middle&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;font-size&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;16&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;font-family&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;arial&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;fill&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#fff&amp;#34;&lt;/span&gt;});
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;In the above examples canvas.text will create a simple text element at 50,50. Strangely VML /SVG do not have Line breaks therefore the programmer is responsible for creating new lines, in most cases appending** &amp;lsquo;\n&amp;rsquo;** does the trick.&lt;/p&gt;
-          
-        
-        </description>
-    </item>
-    
-    <item>
-      <title>Raphael JS Tutorial - Part I</title>
-      <link>http://localhost:1314/posts/raphael-js-tutorial-part-i/</link>
-      <pubDate>Sun, 10 Mar 2013 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1314/posts/raphael-js-tutorial-part-i/</guid>
-      <description>
-        
-          
-          
-          
-        
-        
-        
-          &lt;p&gt;&lt;a href=&#34;http://raphaeljs.com/&#34;&gt;Raphael.JS&lt;/a&gt; is a SVG/VML library which helps you to create quick vector shapes and images. Its very small and compact (only 86kb),easy to use, well documented and works in all browsers and yes even IE. Here is a list of all major browsers this library works on: &lt;a href=&#34;http://en.wikipedia.org/wiki/Chrome_browser&#34;&gt;Chrome&lt;/a&gt; 5.0+ &lt;a href=&#34;http://en.wikipedia.org/wiki/Firefox&#34;&gt;Firefox&lt;/a&gt; 3.0+, &lt;a href=&#34;http://en.wikipedia.org/wiki/Safari_%28web_browser%29&#34;&gt;Safari&lt;/a&gt; 3.0+, &lt;a href=&#34;http://en.wikipedia.org/wiki/Opera_%28web_browser%29&#34;&gt;Opera&lt;/a&gt; 9.5+ and &lt;a href=&#34;http://en.wikipedia.org/wiki/Internet_Explorer&#34;&gt;Internet Explorer&lt;/a&gt; 6.0+&lt;/p&gt;
-&lt;p&gt;,finally its distributed under &lt;a href=&#34;http://raphaeljs.com/license.html&#34;&gt;MIT license&lt;/a&gt;. In this tutorial ,I intend to introduce basics of this library and help you get started.&lt;/p&gt;
-          
-        
-        </description>
-    </item>
-    
-    <item>
-      <title>Avoid  console errors in browsers that lack a console</title>
-      <link>http://localhost:1314/posts/avoid-console-errors-in-browsers-that-lack-a-console/</link>
-      <pubDate>Wed, 30 Jan 2013 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1314/posts/avoid-console-errors-in-browsers-that-lack-a-console/</guid>
-      <description>
-        
-          
-          
-          
-        
-        
-        
-          &lt;p&gt;I love JavaScript and code a lot in it .Since I code, I also encounter problems and bugs from time to time and therefore need a Debugger and a debug mechanism to view whats going on.&lt;/p&gt;
-&lt;p&gt;In the good old days when I learned this language, I used JavaScript&amp;rsquo;s inbuilt alert mechanism to view the value of a variable or a property of an object. This was a terrible mechanism, calling alert was blocking, one had to press OK to continue and if you had to take a look inside an array then well it was emotionally an overwhelming task is all I would say here.&lt;/p&gt;
-          
-        
-        </description>
-    </item>
-    
-    <item>
-      <title>Web Sockets in HTML 5</title>
-      <link>http://localhost:1314/posts/web-sockets-in-html-5/</link>
-      <pubDate>Mon, 10 Jan 2011 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1314/posts/web-sockets-in-html-5/</guid>
-      <description>
-        
-          
-          
-          
-        
-        
-        
-          &lt;p&gt;HTML5 &lt;a href=&#34;http://en.wikipedia.org/wiki/WebSockets&#34;&gt;WebSockets&lt;/a&gt;, defines a full-duplex communication channel that operates through a single socket over the web. &lt;strong&gt;WebSocket&lt;/strong&gt; is not just another incremental enhancement to conventional HTTP communications, it represents a large advance, especially for real-time, &lt;a href=&#34;http://en.wikipedia.org/wiki/Event-driven_programming&#34;&gt;event driven&lt;/a&gt; web applications.&lt;/p&gt;
-&lt;p&gt;Normally when a browser visits a web page, an HTTP request is sent to the web server that hosts that page. The web server acknowledges this request and sends back the response. In many cases—for example, for stock prices, news reports, ticket sales, traffic patterns, medical device readings, and so on—the response could be stale by the time the browser renders the page.&lt;/p&gt;
-          
-        
-        </description>
-    </item>
-    
-    <item>
-      <title>Image Carousel</title>
-      <link>http://localhost:1314/posts/image-carousel/</link>
-      <pubDate>Tue, 29 Jun 2010 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1314/posts/image-carousel/</guid>
-      <description>
-        
-          
-          
-          
-        
-        
-        
-          &lt;p&gt;Here is another of many JavaScript based image carousels, I had seen many similar to these made in SilverLight and Flash, I came across a wonderful &lt;a href=&#34;http://www.shinedraw.com/animation-effect/flash-vs-silverlight-image-carousel/&#34;&gt;carousel&lt;/a&gt; made in SilverLight some time back which was very fluid in behavior and could easily be customized and configured to take various shape and form.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;http://localhost:1314/resources/carousel.png&#34;&gt;&lt;img src=&#34;http://localhost:1314/resources/carousel_thumb.png&#34; alt=&#34;carousel&#34; title=&#34;carousel&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;I have managed to port it to JavaScript, it works best on chrome or FF, hope this would be fun to play with.&lt;/p&gt;
-          
-        
-        </description>
-    </item>
-    
-    <item>
-      <title>I-Phone Scroll</title>
-      <link>http://localhost:1314/posts/i-phone-scroll/</link>
-      <pubDate>Fri, 18 Jun 2010 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1314/posts/i-phone-scroll/</guid>
-      <description>
-        
-          
-          
-          
-        
-        
-        
-          &lt;p&gt;One of the amazing features of i-phone user interface is smooth panning/scrolling animation.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-javascript" data-lang="javascript"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;var&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;canvas&lt;/span&gt; &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;Raphael&lt;/span&gt;(&lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;, &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;, &lt;span style="color:#ae81ff"&gt;250&lt;/span&gt;, &lt;span style="color:#ae81ff"&gt;250&lt;/span&gt; );
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;var&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;t1&lt;/span&gt; &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;canvas&lt;/span&gt;.&lt;span style="color:#a6e22e"&gt;text&lt;/span&gt;(&lt;span style="color:#ae81ff"&gt;50&lt;/span&gt;, &lt;span style="color:#ae81ff"&gt;50&lt;/span&gt;, &lt;span style="color:#f92672"&gt;*&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;Some text Goes here&amp;#34;&lt;/span&gt;&lt;span style="color:#f92672"&gt;*&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;var&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;t2&lt;/span&gt; &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;canvas&lt;/span&gt;.&lt;span style="color:#a6e22e"&gt;text&lt;/span&gt;(&lt;span style="color:#ae81ff"&gt;60&lt;/span&gt;,&lt;span style="color:#ae81ff"&gt;90&lt;/span&gt;,&lt;span style="color:#e6db74"&gt;&amp;#34;First line \n Second Line \n Third line&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;var&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;t3&lt;/span&gt; &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;canvas&lt;/span&gt;.&lt;span style="color:#a6e22e"&gt;text&lt;/span&gt;(&lt;span style="color:#ae81ff"&gt;214&lt;/span&gt;, &lt;span style="color:#ae81ff"&gt;140&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#34;1079&amp;#34;&lt;/span&gt;).&lt;span style="color:#a6e22e"&gt;attr&lt;/span&gt;({&lt;span style="color:#e6db74"&gt;&amp;#34;text-anchor&amp;#34;&lt;/span&gt;&lt;span style="color:#f92672"&gt;:&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;middle&amp;#34;&lt;/span&gt;,&lt;span style="color:#e6db74"&gt;&amp;#39;font-size&amp;#39;&lt;/span&gt;&lt;span style="color:#f92672"&gt;:&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;16&lt;/span&gt;,&lt;span style="color:#e6db74"&gt;&amp;#34;font-family&amp;#34;&lt;/span&gt;&lt;span style="color:#f92672"&gt;:&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;arial&amp;#34;&lt;/span&gt;,&lt;span style="color:#e6db74"&gt;&amp;#34;fill&amp;#34;&lt;/span&gt;&lt;span style="color:#f92672"&gt;:&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;#fff&amp;#34;&lt;/span&gt;});
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;In the above examples canvas.text will create a simple text element at 50,50. Strangely VML /SVG do not have Line breaks therefore the programmer is responsible for creating new lines, in most cases appending** &amp;lsquo;\n&amp;rsquo;** does the trick.&lt;/p&gt;</description></item><item><title>Raphael JS Tutorial - Part I</title><link>https://varunpant.com/posts/raphael-js-tutorial-part-i/</link><pubDate>Sun, 10 Mar 2013 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/raphael-js-tutorial-part-i/</guid><description>
+&lt;p&gt;&lt;a href="http://raphaeljs.com/"&gt;Raphael.JS&lt;/a&gt; is a SVG/VML library which helps you to create quick vector shapes and images. Its very small and compact (only 86kb),easy to use, well documented and works in all browsers and yes even IE. Here is a list of all major browsers this library works on: &lt;a href="http://en.wikipedia.org/wiki/Chrome_browser"&gt;Chrome&lt;/a&gt; 5.0+ &lt;a href="http://en.wikipedia.org/wiki/Firefox"&gt;Firefox&lt;/a&gt; 3.0+, &lt;a href="http://en.wikipedia.org/wiki/Safari_%28web_browser%29"&gt;Safari&lt;/a&gt; 3.0+, &lt;a href="http://en.wikipedia.org/wiki/Opera_%28web_browser%29"&gt;Opera&lt;/a&gt; 9.5+ and &lt;a href="http://en.wikipedia.org/wiki/Internet_Explorer"&gt;Internet Explorer&lt;/a&gt; 6.0+&lt;/p&gt;
+&lt;p&gt;,finally its distributed under &lt;a href="http://raphaeljs.com/license.html"&gt;MIT license&lt;/a&gt;. In this tutorial ,I intend to introduce basics of this library and help you get started.&lt;/p&gt;</description></item><item><title>Avoid console errors in browsers that lack a console</title><link>https://varunpant.com/posts/avoid-console-errors-in-browsers-that-lack-a-console/</link><pubDate>Wed, 30 Jan 2013 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/avoid-console-errors-in-browsers-that-lack-a-console/</guid><description>
+&lt;p&gt;I love JavaScript and code a lot in it .Since I code, I also encounter problems and bugs from time to time and therefore need a Debugger and a debug mechanism to view whats going on.&lt;/p&gt;
+&lt;p&gt;In the good old days when I learned this language, I used JavaScript&amp;rsquo;s inbuilt alert mechanism to view the value of a variable or a property of an object. This was a terrible mechanism, calling alert was blocking, one had to press OK to continue and if you had to take a look inside an array then well it was emotionally an overwhelming task is all I would say here.&lt;/p&gt;</description></item><item><title>Web Sockets in HTML 5</title><link>https://varunpant.com/posts/web-sockets-in-html-5/</link><pubDate>Mon, 10 Jan 2011 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/web-sockets-in-html-5/</guid><description>
+&lt;p&gt;HTML5 &lt;a href="http://en.wikipedia.org/wiki/WebSockets"&gt;WebSockets&lt;/a&gt;, defines a full-duplex communication channel that operates through a single socket over the web. &lt;strong&gt;WebSocket&lt;/strong&gt; is not just another incremental enhancement to conventional HTTP communications, it represents a large advance, especially for real-time, &lt;a href="http://en.wikipedia.org/wiki/Event-driven_programming"&gt;event driven&lt;/a&gt; web applications.&lt;/p&gt;
+&lt;p&gt;Normally when a browser visits a web page, an HTTP request is sent to the web server that hosts that page. The web server acknowledges this request and sends back the response. In many cases—for example, for stock prices, news reports, ticket sales, traffic patterns, medical device readings, and so on—the response could be stale by the time the browser renders the page.&lt;/p&gt;</description></item><item><title>Image Carousel</title><link>https://varunpant.com/posts/image-carousel/</link><pubDate>Tue, 29 Jun 2010 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/image-carousel/</guid><description>
+&lt;p&gt;Here is another of many JavaScript based image carousels, I had seen many similar to these made in SilverLight and Flash, I came across a wonderful &lt;a href="http://www.shinedraw.com/animation-effect/flash-vs-silverlight-image-carousel/"&gt;carousel&lt;/a&gt; made in SilverLight some time back which was very fluid in behavior and could easily be customized and configured to take various shape and form.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://varunpant.com/resources/carousel.png"&gt;&lt;img src="https://varunpant.com/resources/carousel_thumb.png" alt="carousel" title="carousel"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I have managed to port it to JavaScript, it works best on chrome or FF, hope this would be fun to play with.&lt;/p&gt;</description></item><item><title>I-Phone Scroll</title><link>https://varunpant.com/posts/i-phone-scroll/</link><pubDate>Fri, 18 Jun 2010 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/i-phone-scroll/</guid><description>
+&lt;p&gt;One of the amazing features of i-phone user interface is smooth panning/scrolling animation.&lt;/p&gt;
 &lt;p&gt;I-phone “List Scrolling” perhaps gives a very funky and usable List –View to its users and allows them to scroll up and down the interface without any need of a scroll bar.&lt;/p&gt;
 &lt;p&gt;This interface is sensitive to the push speed and also shows traces of resilience.&lt;/p&gt;
-&lt;p&gt;I have been experimenting with various techniques to bring out similar effect using JavaScript and HTML, I am not quite sure if this would be useful in its present form but with some modifications maybe this sample could prove its worthiness somewhere.&lt;/p&gt;
-          
-        
-        </description>
-    </item>
-    
-  </channel>
-</rss>
+&lt;p&gt;I have been experimenting with various techniques to bring out similar effect using JavaScript and HTML, I am not quite sure if this would be useful in its present form but with some modifications maybe this sample could prove its worthiness somewhere.&lt;/p&gt;</description></item></channel></rss>

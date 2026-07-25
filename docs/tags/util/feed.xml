@@ -1,70 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Util on Varun Pant</title>
-    
-    
-    
-    <link>http://localhost:1314/tags/util/</link>
-    <description>Recent content in Util on Varun Pant</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <managingEditor>varun@varunpant.com (Varun Pant)</managingEditor>
-    <webMaster>varun@varunpant.com (Varun Pant)</webMaster>
-    <lastBuildDate>Wed, 23 Jan 2013 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://localhost:1314/tags/util/feed.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Cross browser drop shadow with CSS3</title>
-      <link>http://localhost:1314/posts/cross-browser-drop-shadow-with-css3/</link>
-      <pubDate>Wed, 23 Jan 2013 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1314/posts/cross-browser-drop-shadow-with-css3/</guid>
-      <description>
-        
-          
-          
-          
-        
-        
-        
-          &lt;p&gt;When &lt;strong&gt;css3&lt;/strong&gt; arrived, one of the goodies that I found was, the inclusion of &lt;strong&gt;Drop Shadow effect&lt;/strong&gt;, namely **Box Shadow **and &lt;strong&gt;Text Shadow&lt;/strong&gt;.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Util on Varun Pant</title><link>https://varunpant.com/tags/util/</link><description>Recent content in Util on Varun Pant</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>varun@varunpant.com (Varun Pant)</managingEditor><webMaster>varun@varunpant.com (Varun Pant)</webMaster><lastBuildDate>Wed, 23 Jan 2013 00:00:00 +0000</lastBuildDate><atom:link href="https://varunpant.com/tags/util/feed.xml" rel="self" type="application/rss+xml"/><item><title>Cross browser drop shadow with CSS3</title><link>https://varunpant.com/posts/cross-browser-drop-shadow-with-css3/</link><pubDate>Wed, 23 Jan 2013 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/cross-browser-drop-shadow-with-css3/</guid><description>
+&lt;p&gt;When &lt;strong&gt;css3&lt;/strong&gt; arrived, one of the goodies that I found was, the inclusion of &lt;strong&gt;Drop Shadow effect&lt;/strong&gt;, namely **Box Shadow **and &lt;strong&gt;Text Shadow&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;Here I present a cross browser utility css class which can be used for a drop shadow effect, without any image.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;shadow&lt;/span&gt; {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#75715e&#34;&gt;/* For IE 8 */&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   &lt;span style=&#34;color:#66d9ef&#34;&gt;-ms-&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;filter&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color=&amp;#39;#000000&amp;#39;)&amp;#34;&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   &lt;span style=&#34;color:#75715e&#34;&gt;/* For IE 5.5 - 7 */&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   &lt;span style=&#34;color:#66d9ef&#34;&gt;filter&lt;/span&gt;: progid&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;DXImageTransform&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;Microsoft&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;Shadow&lt;/span&gt;(Strength&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;, Direction&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;135&lt;/span&gt;, Color&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;#000000&amp;#39;&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   &lt;span style=&#34;color:#66d9ef&#34;&gt;-moz-&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;box-shadow&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;px&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;px&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;px&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;#000&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   &lt;span style=&#34;color:#66d9ef&#34;&gt;-webkit-&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;box-shadow&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;px&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;px&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;px&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;#000&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   &lt;span style=&#34;color:#66d9ef&#34;&gt;box-shadow&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;px&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;px&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;px&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;#000&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For cross browser &lt;strong&gt;text shadow&lt;/strong&gt; effect ,I found a nice article &lt;a href=&#34;http://www.workingwith.me.uk/examples/css-drop-shadows.html#final_example&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-          
-        
-        </description>
-    </item>
-    
-    <item>
-      <title>Cross browser CSS3 border-radius (rounded corners)</title>
-      <link>http://localhost:1314/posts/cross-browser-css3-border-radius-rounded-corners/</link>
-      <pubDate>Tue, 22 Jan 2013 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1314/posts/cross-browser-css3-border-radius-rounded-corners/</guid>
-      <description>
-        
-          
-          
-          
-        
-        
-        
-          &lt;p&gt;When I started programming and had to begin designing my first user interface in HTML, I was always puzzled as to why all visual elements in HTML were rectangular. I soon learned that in those days if one would want a circle to be drawn on a page, then the only way possible was using an image, the same was true for drawing elements with rounded corners.&lt;/p&gt;
-&lt;p&gt;Thankfully HTML5/CSS3 guys were listening and the latest css3 standard supports defining the corner radius of a circle, this can be used to make an element look like a circle too if you want.&lt;/p&gt;
-          
-        
-        </description>
-    </item>
-    
-  </channel>
-</rss>
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-css" data-lang="css"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#a6e22e"&gt;shadow&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;/* For IE 8 */&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;-ms-&lt;/span&gt;&lt;span style="color:#66d9ef"&gt;filter&lt;/span&gt;: &lt;span style="color:#e6db74"&gt;&amp;#34;progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color=&amp;#39;#000000&amp;#39;)&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;/* For IE 5.5 - 7 */&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;filter&lt;/span&gt;: progid&lt;span style="color:#f92672"&gt;:&lt;/span&gt;DXImageTransform&lt;span style="color:#f92672"&gt;.&lt;/span&gt;Microsoft&lt;span style="color:#f92672"&gt;.&lt;/span&gt;&lt;span style="color:#a6e22e"&gt;Shadow&lt;/span&gt;(Strength&lt;span style="color:#960050;background-color:#1e0010"&gt;=&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;4&lt;/span&gt;, Direction&lt;span style="color:#960050;background-color:#1e0010"&gt;=&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;135&lt;/span&gt;, Color&lt;span style="color:#960050;background-color:#1e0010"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#39;#000000&amp;#39;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;-moz-&lt;/span&gt;&lt;span style="color:#66d9ef"&gt;box-shadow&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;3&lt;/span&gt;&lt;span style="color:#66d9ef"&gt;px&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;3&lt;/span&gt;&lt;span style="color:#66d9ef"&gt;px&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;4&lt;/span&gt;&lt;span style="color:#66d9ef"&gt;px&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;#000&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;-webkit-&lt;/span&gt;&lt;span style="color:#66d9ef"&gt;box-shadow&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;3&lt;/span&gt;&lt;span style="color:#66d9ef"&gt;px&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;3&lt;/span&gt;&lt;span style="color:#66d9ef"&gt;px&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;4&lt;/span&gt;&lt;span style="color:#66d9ef"&gt;px&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;#000&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;box-shadow&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;3&lt;/span&gt;&lt;span style="color:#66d9ef"&gt;px&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;3&lt;/span&gt;&lt;span style="color:#66d9ef"&gt;px&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;4&lt;/span&gt;&lt;span style="color:#66d9ef"&gt;px&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;#000&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For cross browser &lt;strong&gt;text shadow&lt;/strong&gt; effect ,I found a nice article &lt;a href="http://www.workingwith.me.uk/examples/css-drop-shadows.html#final_example"&gt;here&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>Cross browser CSS3 border-radius (rounded corners)</title><link>https://varunpant.com/posts/cross-browser-css3-border-radius-rounded-corners/</link><pubDate>Tue, 22 Jan 2013 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/cross-browser-css3-border-radius-rounded-corners/</guid><description>
+&lt;p&gt;When I started programming and had to begin designing my first user interface in HTML, I was always puzzled as to why all visual elements in HTML were rectangular. I soon learned that in those days if one would want a circle to be drawn on a page, then the only way possible was using an image, the same was true for drawing elements with rounded corners.&lt;/p&gt;
+&lt;p&gt;Thankfully HTML5/CSS3 guys were listening and the latest css3 standard supports defining the corner radius of a circle, this can be used to make an element look like a circle too if you want.&lt;/p&gt;</description></item></channel></rss>

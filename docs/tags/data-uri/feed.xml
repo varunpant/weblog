@@ -1,44 +1,7 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Data Uri on Varun Pant</title>
-    
-    
-    
-    <link>http://localhost:1314/tags/data-uri/</link>
-    <description>Recent content in Data Uri on Varun Pant</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <managingEditor>varun@varunpant.com (Varun Pant)</managingEditor>
-    <webMaster>varun@varunpant.com (Varun Pant)</webMaster>
-    <lastBuildDate>Tue, 15 Jun 2010 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://localhost:1314/tags/data-uri/feed.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Data URI and IE</title>
-      <link>http://localhost:1314/posts/data-uri-and-ie/</link>
-      <pubDate>Tue, 15 Jun 2010 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1314/posts/data-uri-and-ie/</guid>
-      <description>
-        
-          
-          
-          
-        
-        
-        
-          &lt;p&gt;A few days ago I was experimenting with a nifty technique of embedding images in web pages by base64 encoding them first and then using a standard known as &lt;a href=&#34;http://en.wikipedia.org/wiki/Data_URI_scheme&#34;&gt;Data URI Scheme&lt;/a&gt;, which basically defines a method of assigning a ‘src’ of an image tag as a base64 serialized string, like this:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;background-image&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;url&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAUBAMAAACKWYuOAAAAMFBMVEX///92dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnYvD4PNAAAAD3RSTlMAACTkfhvbh3iEewTtxBIFliR3AAAAUklEQVQY02NgIBMwijgKCgrAef5fkHnz/y9E4kn+/4XEE6z/34jEE///A4knev7zAwQv7L8RQk40/7MiggeUQpjJff+zIpINykbIbhFSROIRDQAWUhW2oXLWAQAAAABJRU5ErkJggg==&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Although this technique could save some server round trips, however Microsoft ver. (IE &amp;lt; 8). does not support this scheme even though its a &lt;a href=&#34;http://tools.ietf.org/html/rfc2397&#34;&gt;standard&lt;/a&gt;, which then makes this technique unfavorable to use as its not cross browser.&lt;/p&gt;
-          
-        
-        </description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Data Uri on Varun Pant</title><link>https://varunpant.com/tags/data-uri/</link><description>Recent content in Data Uri on Varun Pant</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>varun@varunpant.com (Varun Pant)</managingEditor><webMaster>varun@varunpant.com (Varun Pant)</webMaster><lastBuildDate>Tue, 15 Jun 2010 00:00:00 +0000</lastBuildDate><atom:link href="https://varunpant.com/tags/data-uri/feed.xml" rel="self" type="application/rss+xml"/><item><title>Data URI and IE</title><link>https://varunpant.com/posts/data-uri-and-ie/</link><pubDate>Tue, 15 Jun 2010 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/data-uri-and-ie/</guid><description>
+&lt;p&gt;A few days ago I was experimenting with a nifty technique of embedding images in web pages by base64 encoding them first and then using a standard known as &lt;a href="http://en.wikipedia.org/wiki/Data_URI_scheme"&gt;Data URI Scheme&lt;/a&gt;, which basically defines a method of assigning a ‘src’ of an image tag as a base64 serialized string, like this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-css" data-lang="css"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;background-image&lt;/span&gt;&lt;span style="color:#f92672"&gt;:&lt;/span&gt; &lt;span style="color:#f92672"&gt;url&lt;/span&gt;&lt;span style="color:#f92672"&gt;(&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAUBAMAAACKWYuOAAAAMFBMVEX///92dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnYvD4PNAAAAD3RSTlMAACTkfhvbh3iEewTtxBIFliR3AAAAUklEQVQY02NgIBMwijgKCgrAef5fkHnz/y9E4kn+/4XEE6z/34jEE///A4knev7zAwQv7L8RQk40/7MiggeUQpjJff+zIpINykbIbhFSROIRDQAWUhW2oXLWAQAAAABJRU5ErkJggg==&amp;#34;&lt;/span&gt;&lt;span style="color:#f92672"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Although this technique could save some server round trips, however Microsoft ver. (IE &amp;lt; 8). does not support this scheme even though its a &lt;a href="http://tools.ietf.org/html/rfc2397"&gt;standard&lt;/a&gt;, which then makes this technique unfavorable to use as its not cross browser.&lt;/p&gt;</description></item></channel></rss>

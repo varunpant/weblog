@@ -1,111 +1,17 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Google on Varun Pant</title>
-    
-    
-    
-    <link>http://localhost:1314/tags/google/</link>
-    <description>Recent content in Google on Varun Pant</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <managingEditor>varun@varunpant.com (Varun Pant)</managingEditor>
-    <webMaster>varun@varunpant.com (Varun Pant)</webMaster>
-    <lastBuildDate>Fri, 03 Aug 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://localhost:1314/tags/google/feed.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>integration testing with apache beam using pubsub and bigtable emulators and direct runner</title>
-      <link>http://localhost:1314/posts/integration-testing-with-apache-beam-using-pubsub-and-bigtable-emulators-and-direct-runner/</link>
-      <pubDate>Fri, 03 Aug 2018 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1314/posts/integration-testing-with-apache-beam-using-pubsub-and-bigtable-emulators-and-direct-runner/</guid>
-      <description>
-        
-          
-          
-          
-        
-        
-        
-          &lt;h3 id=&#34;summary&#34;&gt;
-  Summary
-  &lt;a href=&#34;#summary&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Google on Varun Pant</title><link>https://varunpant.com/tags/google/</link><description>Recent content in Google on Varun Pant</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>varun@varunpant.com (Varun Pant)</managingEditor><webMaster>varun@varunpant.com (Varun Pant)</webMaster><lastBuildDate>Fri, 03 Aug 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://varunpant.com/tags/google/feed.xml" rel="self" type="application/rss+xml"/><item><title>integration testing with apache beam using pubsub and bigtable emulators and direct runner</title><link>https://varunpant.com/posts/integration-testing-with-apache-beam-using-pubsub-and-bigtable-emulators-and-direct-runner/</link><pubDate>Fri, 03 Aug 2018 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/integration-testing-with-apache-beam-using-pubsub-and-bigtable-emulators-and-direct-runner/</guid><description>
+&lt;h3 id="summary"&gt;
+Summary
+&lt;a href="#summary" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;Recently I have been looking into ways to test my &lt;strong&gt;Apache Beam&lt;/strong&gt; pipelines at work. Most common use cases of Beam generally involve either batch reading data from GCS and writing to analytical platforms such as Big Query or stream reading data from Pubsub and writing to perhaps Bigtable.&lt;/p&gt;
-&lt;p&gt;A pipeline consists of transforms and its generally easy to test them in isolation as an independent unit test per stage, however I am personally a big fan of &amp;ldquo;end-to-end&amp;rdquo; testing or “Integration testing” and this is where things can sometimes get tricky.&lt;/p&gt;
-          
-        
-        </description>
-    </item>
-    
-    <item>
-      <title>How to integrate Google container engine with Stackdriver with kubernaties</title>
-      <link>http://localhost:1314/posts/how-to-integrate-google-container-engine-with-stackdriver-with-kubernaties/</link>
-      <pubDate>Thu, 04 Aug 2016 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1314/posts/how-to-integrate-google-container-engine-with-stackdriver-with-kubernaties/</guid>
-      <description>
-        
-          
-          
-          
-        
-        
-        
-          &lt;p&gt;Most folks have been using &lt;a href=&#34;http://grafana.org/&#34;&gt;Grafana&lt;/a&gt; or something &lt;a href=&#34;http://kubernetes.io/docs/user-guide/monitoring/&#34;&gt;similar&lt;/a&gt; to monitor &lt;a href=&#34;http://kubernetes.io/&#34;&gt;Kubernetes&lt;/a&gt; cluster.&lt;/p&gt;
-&lt;p&gt;If you are using &lt;a href=&#34;https://cloud.google.com/container-engine/&#34;&gt;Google cloud container engine&lt;/a&gt;, then the standard unified place to monitor all your application and services is &lt;a href=&#34;https://cloud.google.com/monitoring/&#34;&gt;Stackdriver&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;According to Google&amp;rsquo;s documentation, when you create a new container cluster using GUI or gcloud, &lt;a href=&#34;https://app.google.stackdriver.com/&#34;&gt;Stackdriver&lt;/a&gt; is automatically configured with a sink, however It did not work out of the box for me hence this post :)&lt;/p&gt;
-&lt;p&gt;Well, the easiest way to check if &lt;a href=&#34;https://app.google.stackdriver.com/&#34;&gt;Stackdriver&lt;/a&gt; is configured is to issue a command&lt;/p&gt;
-          
-        
-        </description>
-    </item>
-    
-    <item>
-      <title>Serving raster layers on Google Cloud Platform</title>
-      <link>http://localhost:1314/posts/serving-raster-layers-on-google-cloud-platform/</link>
-      <pubDate>Mon, 21 Sep 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1314/posts/serving-raster-layers-on-google-cloud-platform/</guid>
-      <description>
-        
-          
-          
-          
-        
-        
-        
-          &lt;p&gt;In this blog post, I will write about using &lt;a href=&#34;https://cloud.google.com/storage/&#34;&gt;Google cloud storage&lt;/a&gt; as a Raster Tile Server for static imagery.&lt;/p&gt;
-&lt;p&gt;In the GIS domain, various techniques are used to add custom raster overlay on top of a base maps, or to even use custom imagery, as a base map itself.&lt;/p&gt;
-&lt;p&gt;This approach is also useful if you have a large quantity of satellite or aerial imagery, that you need to serve at scale onto a Google map or any other GIS tool.&lt;/p&gt;
-          
-        
-        </description>
-    </item>
-    
-    <item>
-      <title>Creating Isochrones and Isodistances using Googles Direction Search API</title>
-      <link>http://localhost:1314/posts/creating-isochrones-and-isodistances-using-googles-direction-search-api/</link>
-      <pubDate>Mon, 29 Dec 2014 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1314/posts/creating-isochrones-and-isodistances-using-googles-direction-search-api/</guid>
-      <description>
-        
-          
-          
-          
-        
-        
-        
-          &lt;h3 id=&#34;introduction&#34;&gt;
-  Introduction
-  &lt;a href=&#34;#introduction&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;p&gt;A pipeline consists of transforms and its generally easy to test them in isolation as an independent unit test per stage, however I am personally a big fan of &amp;ldquo;end-to-end&amp;rdquo; testing or “Integration testing” and this is where things can sometimes get tricky.&lt;/p&gt;</description></item><item><title>How to integrate Google container engine with Stackdriver with kubernaties</title><link>https://varunpant.com/posts/how-to-integrate-google-container-engine-with-stackdriver-with-kubernaties/</link><pubDate>Thu, 04 Aug 2016 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/how-to-integrate-google-container-engine-with-stackdriver-with-kubernaties/</guid><description>
+&lt;p&gt;Most folks have been using &lt;a href="http://grafana.org/"&gt;Grafana&lt;/a&gt; or something &lt;a href="http://kubernetes.io/docs/user-guide/monitoring/"&gt;similar&lt;/a&gt; to monitor &lt;a href="http://kubernetes.io/"&gt;Kubernetes&lt;/a&gt; cluster.&lt;/p&gt;
+&lt;p&gt;If you are using &lt;a href="https://cloud.google.com/container-engine/"&gt;Google cloud container engine&lt;/a&gt;, then the standard unified place to monitor all your application and services is &lt;a href="https://cloud.google.com/monitoring/"&gt;Stackdriver&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;According to Google&amp;rsquo;s documentation, when you create a new container cluster using GUI or gcloud, &lt;a href="https://app.google.stackdriver.com/"&gt;Stackdriver&lt;/a&gt; is automatically configured with a sink, however It did not work out of the box for me hence this post :)&lt;/p&gt;
+&lt;p&gt;Well, the easiest way to check if &lt;a href="https://app.google.stackdriver.com/"&gt;Stackdriver&lt;/a&gt; is configured is to issue a command&lt;/p&gt;</description></item><item><title>Creating Isochrones and Isodistances using Googles Direction Search API</title><link>https://varunpant.com/posts/creating-isochrones-and-isodistances-using-googles-direction-search-api/</link><pubDate>Mon, 29 Dec 2014 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/creating-isochrones-and-isodistances-using-googles-direction-search-api/</guid><description>
+&lt;h3 id="introduction"&gt;
+Introduction
+&lt;a href="#introduction" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
 &lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/varunpant/Google_Isochrone/master/ScreenShot.png&#34; alt=&#34;Isochrone&#34;&gt; &lt;a href=&#34;http://en.wikipedia.org/wiki/Isochrone_map&#34;&gt;Isochrones&lt;/a&gt; are curves of equal travel time from a certain point of origin, another way of saying this would be that an Isochrone is an isoline for travel time, if the weighting factor is changed from time to distance, then the resulting curve is called an Isodistance.&lt;/p&gt;
-&lt;p&gt;In this post I will present a rough way to create an Isochrone and an Isodistance using &lt;a href=&#34;https://developers.google.com/maps/documentation/directions/&#34;&gt;google&amp;rsquo;s directions API.&lt;/a&gt;&lt;/p&gt;
-          
-        
-        </description>
-    </item>
-    
-  </channel>
-</rss>
+&lt;p&gt;&lt;img src="https://raw.githubusercontent.com/varunpant/Google_Isochrone/master/ScreenShot.png" alt="Isochrone"&gt; &lt;a href="http://en.wikipedia.org/wiki/Isochrone_map"&gt;Isochrones&lt;/a&gt; are curves of equal travel time from a certain point of origin, another way of saying this would be that an Isochrone is an isoline for travel time, if the weighting factor is changed from time to distance, then the resulting curve is called an Isodistance.&lt;/p&gt;
+&lt;p&gt;In this post I will present a rough way to create an Isochrone and an Isodistance using &lt;a href="https://developers.google.com/maps/documentation/directions/"&gt;google&amp;rsquo;s directions API.&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>

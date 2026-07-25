@@ -1,84 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Redis on Varun Pant</title>
-    
-    
-    
-    <link>http://localhost:1314/tags/redis/</link>
-    <description>Recent content in Redis on Varun Pant</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <managingEditor>varun@varunpant.com (Varun Pant)</managingEditor>
-    <webMaster>varun@varunpant.com (Varun Pant)</webMaster>
-    <lastBuildDate>Sun, 20 Jan 2013 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://localhost:1314/tags/redis/feed.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Installing Redis on Ubuntu</title>
-      <link>http://localhost:1314/posts/installing-redis-on-ubuntu/</link>
-      <pubDate>Sun, 20 Jan 2013 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1314/posts/installing-redis-on-ubuntu/</guid>
-      <description>
-        
-          
-          
-          
-        
-        
-        
-          &lt;p&gt;&lt;a href=&#34;http://redis.io/&#34;&gt;Redis&lt;/a&gt; is an open source, advanced key-value store. Installing it on Linux debian platforms is pretty easy.&lt;/p&gt;
-&lt;p&gt;There are two ways of getting this done, one is perhaps an easy and less verbose method and it involves using an alternative repository &lt;a href=&#34;http://www.dotdeb.org/&#34;&gt;Dotdeb.&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;A while ago I had posted a &lt;a href=&#34;http://localhost:1314/posts/how-to-set-up-redis-in-ubuntu-linux/&#34;&gt;tutorial&lt;/a&gt; about installing redis from the &lt;a href=&#34;http://redis.googlecode.com/files/redis-2.2.4.tar.gz&#34;&gt;googlecode&lt;/a&gt; repo, but things have changed since then and here I post a fairly recent way of installing it.&lt;/p&gt;
-          
-        
-        </description>
-    </item>
-    
-    <item>
-      <title>Auto Complete with Redis (Python)</title>
-      <link>http://localhost:1314/posts/auto-complete-with-redis-python/</link>
-      <pubDate>Sun, 06 May 2012 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1314/posts/auto-complete-with-redis-python/</guid>
-      <description>
-        
-          
-          
-          
-        
-        
-        
-          &lt;p&gt;This is a quick port of &lt;a href=&#34;http://antirez.com/post/autocomplete-with-redis.html&#34;&gt;auto complete&lt;/a&gt; implementation in ruby using &lt;a href=&#34;http://redis.io/&#34;&gt;Redis&lt;/a&gt; by &lt;a href=&#34;http://invece.org/&#34;&gt;antirez&lt;/a&gt;.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Redis on Varun Pant</title><link>https://varunpant.com/tags/redis/</link><description>Recent content in Redis on Varun Pant</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>varun@varunpant.com (Varun Pant)</managingEditor><webMaster>varun@varunpant.com (Varun Pant)</webMaster><lastBuildDate>Sun, 20 Jan 2013 00:00:00 +0000</lastBuildDate><atom:link href="https://varunpant.com/tags/redis/feed.xml" rel="self" type="application/rss+xml"/><item><title>Installing Redis on Ubuntu</title><link>https://varunpant.com/posts/installing-redis-on-ubuntu/</link><pubDate>Sun, 20 Jan 2013 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/installing-redis-on-ubuntu/</guid><description>
+&lt;p&gt;&lt;a href="http://redis.io/"&gt;Redis&lt;/a&gt; is an open source, advanced key-value store. Installing it on Linux debian platforms is pretty easy.&lt;/p&gt;
+&lt;p&gt;There are two ways of getting this done, one is perhaps an easy and less verbose method and it involves using an alternative repository &lt;a href="http://www.dotdeb.org/"&gt;Dotdeb.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;A while ago I had posted a &lt;a href="https://varunpant.com/posts/how-to-set-up-redis-in-ubuntu-linux/"&gt;tutorial&lt;/a&gt; about installing redis from the &lt;a href="http://redis.googlecode.com/files/redis-2.2.4.tar.gz"&gt;googlecode&lt;/a&gt; repo, but things have changed since then and here I post a fairly recent way of installing it.&lt;/p&gt;</description></item><item><title>Auto Complete with Redis (Python)</title><link>https://varunpant.com/posts/auto-complete-with-redis-python/</link><pubDate>Sun, 06 May 2012 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/auto-complete-with-redis-python/</guid><description>
+&lt;p&gt;This is a quick port of &lt;a href="http://antirez.com/post/autocomplete-with-redis.html"&gt;auto complete&lt;/a&gt; implementation in ruby using &lt;a href="http://redis.io/"&gt;Redis&lt;/a&gt; by &lt;a href="http://invece.org/"&gt;antirez&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;I like python and had little time to burn today, so here goes:&lt;/p&gt;
-&lt;p&gt;The file used for input is &lt;a href=&#34;http://antirez.com/misc/female-names.txt&#34;&gt;female-names.txt&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Hope it helps :)&lt;/p&gt;
-          
-        
-        </description>
-    </item>
-    
-    <item>
-      <title>How to set up Redis in Ubuntu Linux</title>
-      <link>http://localhost:1314/posts/how-to-set-up-redis-in-ubuntu-linux/</link>
-      <pubDate>Sat, 14 Apr 2012 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1314/posts/how-to-set-up-redis-in-ubuntu-linux/</guid>
-      <description>
-        
-          
-          
-          
-        
-        
-        
-          &lt;p&gt;&lt;a href=&#34;http://redis.io/&#34;&gt;Redis&lt;/a&gt; is an open source, advanced key-value store, and is quickly picking up momentum in real-time software development, it is now a well known and trusted product and can be used in various problem scenarios as a No SQL implementation.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;http://redis.io/&#34;&gt;Redis&lt;/a&gt; is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.&lt;/p&gt;
-&lt;p&gt;Here is a quick guide to install &lt;a href=&#34;http://redis.io/&#34;&gt;Redis&lt;/a&gt; in Ubuntu 10.04, and it should be similar for higher versions and similar deb environment.&lt;/p&gt;
-          
-        
-        </description>
-    </item>
-    
-  </channel>
-</rss>
+&lt;p&gt;The file used for input is &lt;a href="http://antirez.com/misc/female-names.txt"&gt;female-names.txt&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Hope it helps :)&lt;/p&gt;</description></item><item><title>How to set up Redis in Ubuntu Linux</title><link>https://varunpant.com/posts/how-to-set-up-redis-in-ubuntu-linux/</link><pubDate>Sat, 14 Apr 2012 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/how-to-set-up-redis-in-ubuntu-linux/</guid><description>
+&lt;p&gt;&lt;a href="http://redis.io/"&gt;Redis&lt;/a&gt; is an open source, advanced key-value store, and is quickly picking up momentum in real-time software development, it is now a well known and trusted product and can be used in various problem scenarios as a No SQL implementation.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://redis.io/"&gt;Redis&lt;/a&gt; is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.&lt;/p&gt;
+&lt;p&gt;Here is a quick guide to install &lt;a href="http://redis.io/"&gt;Redis&lt;/a&gt; in Ubuntu 10.04, and it should be similar for higher versions and similar deb environment.&lt;/p&gt;</description></item></channel></rss>

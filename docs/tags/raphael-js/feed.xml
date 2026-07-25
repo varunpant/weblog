@@ -1,72 +1,17 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Raphael Js on Varun Pant</title>
-    
-    
-    
-    <link>http://localhost:1314/tags/raphael-js/</link>
-    <description>Recent content in Raphael Js on Varun Pant</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <managingEditor>varun@varunpant.com (Varun Pant)</managingEditor>
-    <webMaster>varun@varunpant.com (Varun Pant)</webMaster>
-    <lastBuildDate>Wed, 25 Dec 2013 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://localhost:1314/tags/raphael-js/feed.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Raphael-js-tutorial-part-II</title>
-      <link>http://localhost:1314/posts/raphael-js-tutorial-part-ii/</link>
-      <pubDate>Wed, 25 Dec 2013 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1314/posts/raphael-js-tutorial-part-ii/</guid>
-      <description>
-        
-          
-          
-          
-        
-        
-        
-          &lt;p&gt;This is the second part of the tutorial about getting started with &lt;a href=&#34;http://raphaeljs.com/&#34;&gt;Raphael.js&lt;/a&gt;. To see the first part go &lt;a href=&#34;http://localhost:1314/posts/raphael-js-tutorial-part-i/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;h4 id=&#34;writing-text-with-raphael&#34;&gt;
-  Writing Text with Raphael
-  &lt;a href=&#34;#writing-text-with-raphael&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Raphael Js on Varun Pant</title><link>https://varunpant.com/tags/raphael-js/</link><description>Recent content in Raphael Js on Varun Pant</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>varun@varunpant.com (Varun Pant)</managingEditor><webMaster>varun@varunpant.com (Varun Pant)</webMaster><lastBuildDate>Wed, 25 Dec 2013 00:00:00 +0000</lastBuildDate><atom:link href="https://varunpant.com/tags/raphael-js/feed.xml" rel="self" type="application/rss+xml"/><item><title>Raphael-js-tutorial-part-II</title><link>https://varunpant.com/posts/raphael-js-tutorial-part-ii/</link><pubDate>Wed, 25 Dec 2013 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/raphael-js-tutorial-part-ii/</guid><description>
+&lt;p&gt;This is the second part of the tutorial about getting started with &lt;a href="http://raphaeljs.com/"&gt;Raphael.js&lt;/a&gt;. To see the first part go &lt;a href="https://varunpant.com/posts/raphael-js-tutorial-part-i/"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h4 id="writing-text-with-raphael"&gt;
+Writing Text with Raphael
+&lt;a href="#writing-text-with-raphael" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
 &lt;/h4&gt;
 &lt;p&gt;Some code first ;)&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;canvas&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Raphael&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;250&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;250&lt;/span&gt; );
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;t1&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;canvas&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;text&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;50&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;50&lt;/span&gt;, &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Some text Goes here&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;t2&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;canvas&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;text&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;60&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;90&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;First line \n Second Line \n Third line&amp;#34;&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;t3&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;canvas&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;text&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;214&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;140&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;1079&amp;#34;&lt;/span&gt;).&lt;span style=&#34;color:#a6e22e&#34;&gt;attr&lt;/span&gt;({&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;text-anchor&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;middle&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;font-size&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;16&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;font-family&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;arial&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;fill&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#fff&amp;#34;&lt;/span&gt;});
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;In the above examples canvas.text will create a simple text element at 50,50. Strangely VML /SVG do not have Line breaks therefore the programmer is responsible for creating new lines, in most cases appending** &amp;lsquo;\n&amp;rsquo;** does the trick.&lt;/p&gt;
-          
-        
-        </description>
-    </item>
-    
-    <item>
-      <title>Raphael JS Tutorial - Part I</title>
-      <link>http://localhost:1314/posts/raphael-js-tutorial-part-i/</link>
-      <pubDate>Sun, 10 Mar 2013 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1314/posts/raphael-js-tutorial-part-i/</guid>
-      <description>
-        
-          
-          
-          
-        
-        
-        
-          &lt;p&gt;&lt;a href=&#34;http://raphaeljs.com/&#34;&gt;Raphael.JS&lt;/a&gt; is a SVG/VML library which helps you to create quick vector shapes and images. Its very small and compact (only 86kb),easy to use, well documented and works in all browsers and yes even IE. Here is a list of all major browsers this library works on: &lt;a href=&#34;http://en.wikipedia.org/wiki/Chrome_browser&#34;&gt;Chrome&lt;/a&gt; 5.0+ &lt;a href=&#34;http://en.wikipedia.org/wiki/Firefox&#34;&gt;Firefox&lt;/a&gt; 3.0+, &lt;a href=&#34;http://en.wikipedia.org/wiki/Safari_%28web_browser%29&#34;&gt;Safari&lt;/a&gt; 3.0+, &lt;a href=&#34;http://en.wikipedia.org/wiki/Opera_%28web_browser%29&#34;&gt;Opera&lt;/a&gt; 9.5+ and &lt;a href=&#34;http://en.wikipedia.org/wiki/Internet_Explorer&#34;&gt;Internet Explorer&lt;/a&gt; 6.0+&lt;/p&gt;
-&lt;p&gt;,finally its distributed under &lt;a href=&#34;http://raphaeljs.com/license.html&#34;&gt;MIT license&lt;/a&gt;. In this tutorial ,I intend to introduce basics of this library and help you get started.&lt;/p&gt;
-          
-        
-        </description>
-    </item>
-    
-  </channel>
-</rss>
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-javascript" data-lang="javascript"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;var&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;canvas&lt;/span&gt; &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;Raphael&lt;/span&gt;(&lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;, &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;, &lt;span style="color:#ae81ff"&gt;250&lt;/span&gt;, &lt;span style="color:#ae81ff"&gt;250&lt;/span&gt; );
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;var&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;t1&lt;/span&gt; &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;canvas&lt;/span&gt;.&lt;span style="color:#a6e22e"&gt;text&lt;/span&gt;(&lt;span style="color:#ae81ff"&gt;50&lt;/span&gt;, &lt;span style="color:#ae81ff"&gt;50&lt;/span&gt;, &lt;span style="color:#f92672"&gt;*&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;Some text Goes here&amp;#34;&lt;/span&gt;&lt;span style="color:#f92672"&gt;*&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;var&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;t2&lt;/span&gt; &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;canvas&lt;/span&gt;.&lt;span style="color:#a6e22e"&gt;text&lt;/span&gt;(&lt;span style="color:#ae81ff"&gt;60&lt;/span&gt;,&lt;span style="color:#ae81ff"&gt;90&lt;/span&gt;,&lt;span style="color:#e6db74"&gt;&amp;#34;First line \n Second Line \n Third line&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;var&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;t3&lt;/span&gt; &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;canvas&lt;/span&gt;.&lt;span style="color:#a6e22e"&gt;text&lt;/span&gt;(&lt;span style="color:#ae81ff"&gt;214&lt;/span&gt;, &lt;span style="color:#ae81ff"&gt;140&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#34;1079&amp;#34;&lt;/span&gt;).&lt;span style="color:#a6e22e"&gt;attr&lt;/span&gt;({&lt;span style="color:#e6db74"&gt;&amp;#34;text-anchor&amp;#34;&lt;/span&gt;&lt;span style="color:#f92672"&gt;:&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;middle&amp;#34;&lt;/span&gt;,&lt;span style="color:#e6db74"&gt;&amp;#39;font-size&amp;#39;&lt;/span&gt;&lt;span style="color:#f92672"&gt;:&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;16&lt;/span&gt;,&lt;span style="color:#e6db74"&gt;&amp;#34;font-family&amp;#34;&lt;/span&gt;&lt;span style="color:#f92672"&gt;:&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;arial&amp;#34;&lt;/span&gt;,&lt;span style="color:#e6db74"&gt;&amp;#34;fill&amp;#34;&lt;/span&gt;&lt;span style="color:#f92672"&gt;:&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;#fff&amp;#34;&lt;/span&gt;});
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;In the above examples canvas.text will create a simple text element at 50,50. Strangely VML /SVG do not have Line breaks therefore the programmer is responsible for creating new lines, in most cases appending** &amp;lsquo;\n&amp;rsquo;** does the trick.&lt;/p&gt;</description></item><item><title>Raphael JS Tutorial - Part I</title><link>https://varunpant.com/posts/raphael-js-tutorial-part-i/</link><pubDate>Sun, 10 Mar 2013 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/raphael-js-tutorial-part-i/</guid><description>
+&lt;p&gt;&lt;a href="http://raphaeljs.com/"&gt;Raphael.JS&lt;/a&gt; is a SVG/VML library which helps you to create quick vector shapes and images. Its very small and compact (only 86kb),easy to use, well documented and works in all browsers and yes even IE. Here is a list of all major browsers this library works on: &lt;a href="http://en.wikipedia.org/wiki/Chrome_browser"&gt;Chrome&lt;/a&gt; 5.0+ &lt;a href="http://en.wikipedia.org/wiki/Firefox"&gt;Firefox&lt;/a&gt; 3.0+, &lt;a href="http://en.wikipedia.org/wiki/Safari_%28web_browser%29"&gt;Safari&lt;/a&gt; 3.0+, &lt;a href="http://en.wikipedia.org/wiki/Opera_%28web_browser%29"&gt;Opera&lt;/a&gt; 9.5+ and &lt;a href="http://en.wikipedia.org/wiki/Internet_Explorer"&gt;Internet Explorer&lt;/a&gt; 6.0+&lt;/p&gt;
+&lt;p&gt;,finally its distributed under &lt;a href="http://raphaeljs.com/license.html"&gt;MIT license&lt;/a&gt;. In this tutorial ,I intend to introduce basics of this library and help you get started.&lt;/p&gt;</description></item></channel></rss>

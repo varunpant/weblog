@@ -1,44 +1,7 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Testing on Varun Pant</title>
-    
-    
-    
-    <link>http://localhost:1314/tags/testing/</link>
-    <description>Recent content in Testing on Varun Pant</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <managingEditor>varun@varunpant.com (Varun Pant)</managingEditor>
-    <webMaster>varun@varunpant.com (Varun Pant)</webMaster>
-    <lastBuildDate>Fri, 03 Aug 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://localhost:1314/tags/testing/feed.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>integration testing with apache beam using pubsub and bigtable emulators and direct runner</title>
-      <link>http://localhost:1314/posts/integration-testing-with-apache-beam-using-pubsub-and-bigtable-emulators-and-direct-runner/</link>
-      <pubDate>Fri, 03 Aug 2018 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1314/posts/integration-testing-with-apache-beam-using-pubsub-and-bigtable-emulators-and-direct-runner/</guid>
-      <description>
-        
-          
-          
-          
-        
-        
-        
-          &lt;h3 id=&#34;summary&#34;&gt;
-  Summary
-  &lt;a href=&#34;#summary&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Testing on Varun Pant</title><link>https://varunpant.com/tags/testing/</link><description>Recent content in Testing on Varun Pant</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>varun@varunpant.com (Varun Pant)</managingEditor><webMaster>varun@varunpant.com (Varun Pant)</webMaster><lastBuildDate>Fri, 03 Aug 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://varunpant.com/tags/testing/feed.xml" rel="self" type="application/rss+xml"/><item><title>integration testing with apache beam using pubsub and bigtable emulators and direct runner</title><link>https://varunpant.com/posts/integration-testing-with-apache-beam-using-pubsub-and-bigtable-emulators-and-direct-runner/</link><pubDate>Fri, 03 Aug 2018 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/integration-testing-with-apache-beam-using-pubsub-and-bigtable-emulators-and-direct-runner/</guid><description>
+&lt;h3 id="summary"&gt;
+Summary
+&lt;a href="#summary" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;Recently I have been looking into ways to test my &lt;strong&gt;Apache Beam&lt;/strong&gt; pipelines at work. Most common use cases of Beam generally involve either batch reading data from GCS and writing to analytical platforms such as Big Query or stream reading data from Pubsub and writing to perhaps Bigtable.&lt;/p&gt;
-&lt;p&gt;A pipeline consists of transforms and its generally easy to test them in isolation as an independent unit test per stage, however I am personally a big fan of &amp;ldquo;end-to-end&amp;rdquo; testing or “Integration testing” and this is where things can sometimes get tricky.&lt;/p&gt;
-          
-        
-        </description>
-    </item>
-    
-  </channel>
-</rss>
+&lt;p&gt;A pipeline consists of transforms and its generally easy to test them in isolation as an independent unit test per stage, however I am personally a big fan of &amp;ldquo;end-to-end&amp;rdquo; testing or “Integration testing” and this is where things can sometimes get tricky.&lt;/p&gt;</description></item></channel></rss>

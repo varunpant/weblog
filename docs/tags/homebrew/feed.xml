@@ -1,44 +1,7 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Homebrew on Varun Pant</title>
-    
-    
-    
-    <link>http://localhost:1314/tags/homebrew/</link>
-    <description>Recent content in Homebrew on Varun Pant</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <managingEditor>varun@varunpant.com (Varun Pant)</managingEditor>
-    <webMaster>varun@varunpant.com (Varun Pant)</webMaster>
-    <lastBuildDate>Tue, 13 Feb 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://localhost:1314/tags/homebrew/feed.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>gdal 2 on mac with homebrew</title>
-      <link>http://localhost:1314/posts/gdal-2-on-mac-with-homebrew/</link>
-      <pubDate>Tue, 13 Feb 2018 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1314/posts/gdal-2-on-mac-with-homebrew/</guid>
-      <description>
-        
-          
-          
-          
-        
-        
-        
-          &lt;p&gt;GDAL is one of the most frequently used utilities in my toolkit. I am writing this post to make it easier for others to install it from scratch on their macs.&lt;/p&gt;
-&lt;h3 id=&#34;setting-up-gdal&#34;&gt;
-  Setting up GDAL
-  &lt;a href=&#34;#setting-up-gdal&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Homebrew on Varun Pant</title><link>https://varunpant.com/tags/homebrew/</link><description>Recent content in Homebrew on Varun Pant</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>varun@varunpant.com (Varun Pant)</managingEditor><webMaster>varun@varunpant.com (Varun Pant)</webMaster><lastBuildDate>Tue, 13 Feb 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://varunpant.com/tags/homebrew/feed.xml" rel="self" type="application/rss+xml"/><item><title>gdal 2 on mac with homebrew</title><link>https://varunpant.com/posts/gdal-2-on-mac-with-homebrew/</link><pubDate>Tue, 13 Feb 2018 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/gdal-2-on-mac-with-homebrew/</guid><description>
+&lt;p&gt;GDAL is one of the most frequently used utilities in my toolkit. I am writing this post to make it easier for others to install it from scratch on their macs.&lt;/p&gt;
+&lt;h3 id="setting-up-gdal"&gt;
+Setting up GDAL
+&lt;a href="#setting-up-gdal" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
 &lt;/h3&gt;
-&lt;p&gt;The traditional way has always been to visit the dear old &lt;a href=&#34;http://www.kyngchaos.com/software/frameworks&#34;&gt;kyngchaos.com&lt;/a&gt;, and install “GDAL Complete” Framework via deb installer. Do make sure that GDAL Framework is in your path otherwise something like this always helps&lt;/p&gt;
-          
-        
-        </description>
-    </item>
-    
-  </channel>
-</rss>
+&lt;p&gt;The traditional way has always been to visit the dear old &lt;a href="http://www.kyngchaos.com/software/frameworks"&gt;kyngchaos.com&lt;/a&gt;, and install “GDAL Complete” Framework via deb installer. Do make sure that GDAL Framework is in your path otherwise something like this always helps&lt;/p&gt;</description></item></channel></rss>
