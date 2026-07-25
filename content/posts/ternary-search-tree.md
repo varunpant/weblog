@@ -32,7 +32,7 @@ In [computer science](http://en.wikipedia.org/wiki/Computer_science), a **ternar
 ```
  The interface above defines the API for the data structure. Lets take a deeper look.
 
-   void Add(string key, T value) Add a key value pair in the tree.   bool Contains(string key) Check whether a key is in tree.   IEnumerable<string> <string> Keys  Return all keys in the tree.   int Length Returns the length of the tree.   IEnumerable<T> NearSearch(string query, int distance) Returns all values for keys in the dictionary that are within a given Hamming distance of a query.   IEnumerable<string> PrefixMatch(string prefix) Returns all keys starting with a given prefix.   IEnumerable<T> Search(string prefix) Searches all values of keys starting with given prefix.   T  this[string key] Gets the node value with the specified key   IEnumerable<string> WildcardMatch(string pat) Returns all keys matching given wilcard pattern.    
+   void Add(string key, T value) Add a key value pair in the tree.   bool Contains(string key) Check whether a key is in tree.   IEnumerable<string> <string> Keys  Return all keys in the tree.   int Length Returns the length of the tree.   IEnumerable<T> NearSearch(string query, int distance) Returns all values for keys in the dictionary that are within a given Hamming distance of a query.   IEnumerable<string> PrefixMatch(string prefix) Returns all keys starting with a given prefix.   IEnumerable<T> Search(string prefix) Searches all values of keys starting with given prefix.   T  this[string key] Gets the node value with the specified key   IEnumerable<string> WildcardMatch(string pat) Returns all keys matching given wildcard pattern.    
 
  ### The Trie Node
 
@@ -55,7 +55,7 @@ In [computer science](http://en.wikipedia.org/wiki/Computer_science), a **ternar
             internal T value;
         }
 ```
- The Class is mostly self explanatory, but the key points to note is that it contains three internal node(sub-tries) unlike a traditional trie node. 
+ The Class is mostly self explanatory, but the key points to note are that it contains three internal nodes (sub-tries) unlike a traditional trie node. 
 
  Adding node in the data structure
 

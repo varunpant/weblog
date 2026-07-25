@@ -17,7 +17,7 @@ There are many use cases in GIS world, where the information has to be aggregate
 
  You can read a good tutorial from [mapbox](https://www.mapbox.com/) using [Qgis](http://www.qgis.org/en/site/) with a [mmqgis](http://michaelminn.com/linux/mmqgis/) plugin [here](https://www.mapbox.com/blog/binning-alternative-point-maps/).
 
- While MMQGIS is a good enough for most use cases, I was looking for a way to create fishnets or grids by giving the bbox of the region and width/height in meters, which would then make it easy to script the process for any dynamic use.
+ While MMQGIS is good enough for most use cases, I was looking for a way to create fishnets or grids by giving the bbox of the region and width/height in meters, which would then make it easy to script the process for any dynamic use.
 
  Luckily there is a "recipe" available which takes input in <EPSG:3857> projections and hence takes the width/height of grid cell in meter, [here](https://pcjericks.github.io/py-gdalogr-cookbook/vector_layers.html#create).
 
@@ -115,7 +115,7 @@ if \_\_name\_\_ == "\_\_main\_\_":
 
  ![](/media/image_1504214621671481454352189.png)
 
-  Python scripts are generally usable in most use cases, how ever incase one needs a Postgis alternative, i.e a function which runs in Postgis database and creates a fishnet in a table, then It might be useful to use a query which I found [here](http://gis.stackexchange.com/questions/16374/how-to-create-a-regular-polygon-grid-in-postgis).
+  Python scripts are generally usable in most use cases, however, in case one needs a Postgis alternative, i.e a function which runs in Postgis database and creates a fishnet in a table, then it might be useful to use a query which I found [here](http://gis.stackexchange.com/questions/16374/how-to-create-a-regular-polygon-grid-in-postgis).
 
  ```sql
  CREATE OR REPLACE FUNCTION public.makegrid\_2d (

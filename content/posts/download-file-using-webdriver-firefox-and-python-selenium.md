@@ -8,9 +8,9 @@ description = ""
 tags = ["docker","python"]
 +++
 
-Selenium is one of my favourite tool for automation.
+Selenium is one of my favourite tools for automation.
 
-In this post, I will demonstrate some basic code to download a file from a website in a headless mode , and also provide a docker file to make things simpler.
+In this post, I will demonstrate some basic code to download a file from a website in a headless mode, and also provide a docker file to make things simpler.
 
 ### Python Code
 
@@ -61,10 +61,10 @@ print("******************************** FINITO ********************************"
   
 
 
-The code is fairly simple , we need
+The code is fairly simple, we need
 
 
-1. pyvirtualdisplay, to support the webdriver .
+1. pyvirtualdisplay, to support the webdriver.
 2. FirefoxProfile, to auto accept the firefox download model screen.
 3. The code sets /srv/download as the download location, more details in Makefile shown in the end of this post.
 4. Finally, we set 'application/x-msdownload,application/octet-stream' as our allowed file mime type.
@@ -139,7 +139,7 @@ docker rm img
 ```
 ### Makefile
 
-Here is the make file which will makes things easier.
+Here is the make file which will make things easier.
 
 ```bash
 img_name := docker-selenium
@@ -165,7 +165,7 @@ build:
 
 ```
   
-### Chorme in UI Mode
+### Chrome in UI Mode
 
 ```python
 from selenium import webdriver

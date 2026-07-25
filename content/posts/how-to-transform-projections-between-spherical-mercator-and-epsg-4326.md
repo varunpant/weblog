@@ -12,7 +12,7 @@ tags = ["gis","python","osgeo","gdal"]
 
  One common identifier is “<EPSG:4326>”, which describes maps where latitude and longitude are treated as X/Y values. 
 
- Spherical Mercator has an official designation of <EPSG:3857.> However, before this was established, a large amount of software used the identifier <EPSG:900913.> This is an unofficial code, but is still the commonly usedin many GIS systems.
+ Spherical Mercator has an official designation of <EPSG:3857.> However, before this was established, a large amount of software used the identifier <EPSG:900913.> This is an unofficial code, but is still the commonly used in many GIS systems.
 
   Any time you see the string “<EPSG:4326>”, you can assume it describes latitude/longitude coordinates.
 
@@ -48,7 +48,7 @@ tags = ["gis","python","osgeo","gdal"]
     
  
 
-  Basically you can use coordTransform to transform any geometry (point,polygon,line e.t.c) between any osr supported projections.
+  Basically you can use coordTransform to transform any geometry (point, polygon, line etc.) between any osr supported projections.
 
  Hope this helps
 

@@ -10,11 +10,11 @@ tags = ["python","gdal","osgeo","geotiff"]
 
 ![](/media/image_377996742841482328085822.png)
 
- Recently, I have been working on algorithms which needs elevation data as well as Land Cover data, with world coverage. Google has an excellent elevation API however free usage comes with a limit. 
+ Recently, I have been working on algorithms which need elevation data as well as Land Cover data, with world coverage. Google has an excellent elevation API however free usage comes with a limit. 
 
- While searching, I came across a dataset in [geotiff](https://en.wikipedia.org/wiki/GeoTIFF) format for [landcover](http://landcover.usgs.gov/global_climatology.php) as well as a [processed version](http://www.cgiar-csi.org/data/srtm-90m-digital-elevation-database-v4-1) of [world elevation](https://drive.google.com/drive/folders/0B_J08t5spvd8VWJPbTB3anNHamc). Elevation data comes in various resolution (250m,500m,1km), landcover is 500m .
+ While searching, I came across a dataset in [geotiff](https://en.wikipedia.org/wiki/GeoTIFF) format for [landcover](http://landcover.usgs.gov/global_climatology.php) as well as a [processed version](http://www.cgiar-csi.org/data/srtm-90m-digital-elevation-database-v4-1) of [world elevation](https://drive.google.com/drive/folders/0B_J08t5spvd8VWJPbTB3anNHamc). Elevation data comes in various resolutions (250m, 500m, 1km), landcover is 500m.
 
- So how do we read it ? In python its quite easy to use[ osgo/gdal](https://pypi.python.org/pypi/GDAL/) library and read all bands. Geotiff is a rster file and values can be packed in every band (which is basically a 2d array).
+ So how do we read it? In python its quite easy to use[ osgo/gdal](https://pypi.python.org/pypi/GDAL/) library and read all bands. Geotiff is a raster file and values can be packed in every band (which is basically a 2d array).
 
  ```python
  landUsageLookup = [
@@ -50,7 +50,7 @@ def getLandUsage(latitude, longitude):
 
 
 ```
- The code sample above takes in Lat/Lng in wgs84 and convert them into 2d index.
+ The code sample above takes in Lat/Lng in wgs84 and converts them into a 2d index.
 
  Hope this helps :)
 

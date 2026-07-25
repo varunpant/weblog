@@ -10,13 +10,13 @@ tags = ["javascript","programming","web"]
 
 I love JavaScript and code a lot in it .Since I code, I also encounter problems and bugs from time to time and therefore need a Debugger and a debug mechanism to view whats going on.
 
- In good old days when I learned this language, I used JavaScript's inbuilt alert mechanism to view the value of a variable or a property of an object. This was a terrible mechanism, calling alert was blocking, one had to press OK to continue and if you had to take a look inside an array then well it was emotionally an overwhelming task is all I would say here.
+ In the good old days when I learned this language, I used JavaScript's inbuilt alert mechanism to view the value of a variable or a property of an object. This was a terrible mechanism, calling alert was blocking, one had to press OK to continue and if you had to take a look inside an array then well it was emotionally an overwhelming task is all I would say here.
 
- There were of course workarounds and techniques(like printing in a text area) but I guess people soon realized the need of console like mechanism which is present in other languages.
+ There were of course workarounds and techniques(like printing in a text area) but I guess people soon realized the need for a console-like mechanism which is present in other languages.
 
- I had my first encounter with console in FF and right there I had a Nerdgasm. It was nice , easy to use and simply put beautiful, and then chrome came in and did it even better. Today id you print an xml object then good capable consoles will actually pretty print the markup and objects will be printed in a tree structure thus a JavaScript programmer can breathe easy, well almost.... we still have IE to haunt us for ever.
+ I had my first encounter with console in FF and right there I had a Nerdgasm. It was nice, easy to use and simply put beautiful, and then chrome came in and did it even better. Today if you print an xml object then good capable consoles will actually pretty print the markup and objects will be printed in a tree structure thus a JavaScript programmer can breathe easy, well almost.... we still have IE to haunt us for ever.
 
- IE will as always screw with your happiness and will find a way to make you do something extra and different . To enable console in IE, Click the "Script" tab, then click "Console" on the right, however your JavaScript will throw error if you simply use console.log without enabling it, which we can safely assume our users will not.
+ IE will as always screw with your happiness and will find a way to make you do something extra and different. To enable console in IE, Click the "Script" tab, then click "Console" on the right, however your JavaScript will throw an error if you simply use console.log without enabling it, which we can safely assume our users will not.
 
  Here is a workaround
 

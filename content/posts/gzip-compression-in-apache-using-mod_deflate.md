@@ -8,11 +8,11 @@ description = ""
 tags = ["how to","web","utility"]
 +++
 
-[HTTP Compression](http://en.wikipedia.org/wiki/HTTP_compression) is a very simple and effective way to save bandwidth and improve web applications performance over network.
+[HTTP Compression](http://en.wikipedia.org/wiki/HTTP_compression) is a very simple and effective way to save bandwidth and improve web application performance over the network.
 
- Output compression is basically a process of compressing web servers response by using a loss-less compression algorithm called [gzip](http://en.wikipedia.org/wiki/Deflate). 
+ Output compression is basically a process of compressing web server responses by using a loss-less compression algorithm called [gzip](http://en.wikipedia.org/wiki/Deflate). 
 
- This technique is fairly modern and almost all modern browsers honor it, however if a page is requested from a browser which does not send a header Accept-Encoding: gzip,deflate then the response comes back uncompressed.
+ This technique is fairly modern and almost all modern browsers honor it, however if a page is requested from a browser which does not send a header Accept-Encoding: gzip, deflate then the response comes back uncompressed.
 
  In Apache under Ubuntu OS this is fairly simple.
 
@@ -39,7 +39,7 @@ SetOutputFilter DEFLATE
 ```
  **Restart apache to anable the changes** sudo apachectl graceful 
 
-  There is another powerfull apache module called mod\_gzip which can precompress output as well. 
+  There is another powerful apache module called mod\_gzip which can precompress output as well. 
 
  Hope this helps.
 

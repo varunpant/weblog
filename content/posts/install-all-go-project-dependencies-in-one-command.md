@@ -8,9 +8,9 @@ description = ""
 tags = ["golang"]
 +++
 
-So if you are looking to compile you go project on your server, you would probably need to worry about any third party dependencies.
+So if you are looking to compile your go project on your server, you would probably need to worry about any third party dependencies.
 
- Here is quick recursive way to do that
+ Here is a quick recursive way to do that
 
  go get ./...
 

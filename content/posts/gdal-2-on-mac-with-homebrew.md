@@ -8,11 +8,11 @@ description = ""
 tags = ["gdal","homebrew","mac","gis"]
 +++
 
-GDAL is one of the most frequently used utility in my toolkit. I am writing this post to make it easier for others to install it from scratch on their macs. 
+GDAL is one of the most frequently used utilities in my toolkit. I am writing this post to make it easier for others to install it from scratch on their macs. 
 
  ### Setting up GDAL
 
- The traditional way has always been to visit the dear old [kyngchaos.com](http://www.kyngchaos.com/software/frameworks), and install “GDAL Complete” Framework vi deb installer. Do make sure that GDAL Framework is in your path otherwise something like this always helps
+ The traditional way has always been to visit the dear old [kyngchaos.com](http://www.kyngchaos.com/software/frameworks), and install “GDAL Complete” Framework via deb installer. Do make sure that GDAL Framework is in your path otherwise something like this always helps
 
   echo 'export PATH=/Library/Frameworks/GDAL.framework/Programs:$PATH' >> ~/.bash\_profile  source ~/.bash\_profile  
 
@@ -25,7 +25,7 @@ GDAL is one of the most frequently used utility in my toolkit. I am writing this
  **Update** 
 
  
->  **gdal2** is now a proper formulae brew install gdal2 should work.  If you have already installed GDAL via gdal formula brew install gdal, then you need to do the following to upgrade.
+>  **gdal2** is now a proper formula brew install gdal2 should work.  If you have already installed GDAL via gdal formula brew install gdal, then you need to do the following to upgrade.
 
   
 

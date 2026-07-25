@@ -28,9 +28,9 @@ This is going to be a short article which will illustrate importing and exportin
 
  or set client\_encoding to **'latin1'**
 
- Another thing to guard against is nulls, while exporting , if some fields are null then PostgreSQL will add **'/N'** to represent a null field, this is fine but may cause issues if you are trying to import that data in say SQL server.
+ Another thing to guard against is nulls, while exporting, if some fields are null then PostgreSQL will add **'/N'** to represent a null field, this is fine but may cause issues if you are trying to import that data in say SQL server.
 
- A quick fix is modify the export command by specifying what would you prefer as a null placeholder in exported CSV
+ A quick fix is to modify the export command by specifying what you would prefer as a null placeholder in exported CSV
 
  COPY <SourceTableName> TO '/path/to/csv/TargetCSVFile' DELIMITERS ',' **NULL as E''**;
 

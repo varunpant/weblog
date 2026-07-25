@@ -10,17 +10,17 @@ tags = ["python","utility","how to","web.py"]
 
 Here I demonstrate the process of [Basic Authentication](http://en.wikipedia.org/wiki/Basic_access_authentication) in [web.py](http://webpy.org/) python web framework. 
 
- There is a proof of concept article [provided](http://webpy.org/cookbook/userauthbasic) in the main site,however I just thought doing the same via an attribute might be a cleaner solution.
+ There is a proof of concept article [provided](http://webpy.org/cookbook/userauthbasic) in the main site, however I just thought doing the same via an attribute might be a cleaner solution.
 
- HTTP Basic authentication implementation is one of the easiest ways to secure web pages because it doesn't require cookies, session handling, or the development of login pages. Rather, HTTP Basic authentication uses static headers which means that no handshakes have to be done in anticipation,however the n the credentials are passed as [plain-text ](http://en.wikipedia.org/wiki/Plaintext)and could be intercepted. 
+ HTTP Basic authentication implementation is one of the easiest ways to secure web pages because it doesn't require cookies, session handling, or the development of login pages. Rather, HTTP Basic authentication uses static headers which means that no handshakes have to be done in anticipation, however the credentials are passed as [plain-text ](http://en.wikipedia.org/wiki/Plaintext)and could be intercepted. 
 
  The header looks something like this 
 
  WWW-Authenticate: Basic realm="*insert realm*" To construct the header
 
- Username and password are concatenated into a string "username:password" and this sting is encoded using [Base64](http://en.wikipedia.org/wiki/Base64) and then a constant string is prepended with a space **Authorization: Basic **. So the final value looks like Authorization: Basic dXNlcm5tYWU6cGFzc3dvcmQ= 
+ Username and password are concatenated into a string "username:password" and this string is encoded using [Base64](http://en.wikipedia.org/wiki/Base64) and then a constant string is prepended with a space **Authorization: Basic **. So the final value looks like Authorization: Basic dXNlcm5tYWU6cGFzc3dvcmQ= 
 
- To decode the string on server side, the reverse of above mentioned process is performed.
+ To decode the string on the server side, the reverse of above mentioned process is performed.
 
  ```
 ###############################################################################

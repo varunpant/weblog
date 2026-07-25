@@ -10,7 +10,7 @@ tags = ["programming","python","utility","web","how to"]
 
  [Web.py](http://webpy.org/) has been one of my favorite web frameworks as its pretty easy to get cracking on it.
 
- It's super quick to install and one can come up with a prototype and rapid web services in matter of minutes.
+ It's super quick to install and one can come up with a prototype and rapid web services in a matter of minutes.
 
  Install on windows
 ------------------
@@ -22,7 +22,7 @@ tags = ["programming","python","utility","web","how to"]
  
 >  easy\_install web.py 
 > 
->   and that’s it, you are all set , to test if things work properly, create a test.py file and paste this code from [Web.py](http://webpy.org/) web site
+>   and that’s it, you are all set, to test if things work properly, create a test.py file and paste this code from [Web.py](http://webpy.org/) web site
 
  ```python
   import web
@@ -44,9 +44,9 @@ tags = ["programming","python","utility","web","how to"]
 ```
  run the code by typing python test.py 3333, then open the web browser and go to
 
-  <http://localhost:3333/Einstein>, on the browser you should see Hello,Einstein.
+  <http://localhost:3333/Einstein>, on the browser you should see Hello, Einstein.
 
- Hope this helps .
+ Hope this helps.
 
 
 

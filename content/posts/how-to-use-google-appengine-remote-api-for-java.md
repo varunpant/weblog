@@ -35,9 +35,9 @@ tags = ["appengine"]
 
 
 ```
- Class com.google.apphosting.utils.remoteapi.RemoteApiServlet is already bundled with the GAE SDK so thats all which needs to be done to get it up and running, also the security is already handled and only the user with admin privilege can access this handler .
+ Class com.google.apphosting.utils.remoteapi.RemoteApiServlet is already bundled with the GAE SDK so that’s all that needs to be done to get it up and running, also the security is already handled and only the user with admin privilege can access this handler.
 
- For you client Java Program (which is not you regular app engine project), you would need to include these two dependencies in your pom.xml
+ For your client Java Program (which is not your regular app engine project), you would need to include these two dependencies in your pom.xml
 
  ```<dependency>
 <groupId>com.google.appengine.tools</groupId>
@@ -88,9 +88,9 @@ e.setProperty("prop2","blah blah ?");
 e.setProperty("prop3","blah blah blah ??");
 
 ```
- Basically , as it should'd have been clear by now,after the step involving installation of Remote API, all datastore operations occur in the remote server.
+ Basically, as should have been clear by now, after the step involving installation of Remote API, all datastore operations occur in the remote server.
 
- Finally , while performing operations on remote server via remote api, always prefer to do operations on batch, read more [here ](https://cloud.google.com/appengine/docs/java/datastore/entities#Java_Batch_operations) about Java DataStore API Batch Operations.
+ Finally, while performing operations on remote server via remote api, always prefer to do operations in batch, read more [here ](https://cloud.google.com/appengine/docs/java/datastore/entities#Java_Batch_operations) about Java DataStore API Batch Operations.
 
  Hope this helps.
 

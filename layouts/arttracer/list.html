@@ -1,0 +1,131 @@
+{{ define "main" }}
+{{ $m := "arttracer/media/" }}
+{{ $appstore := .Params.appstore }}
+{{ $apple := `<svg viewBox="0 0 384 512"><path d="M318.7 268c-.2-37 16.6-65 50.6-85.6-19-27.2-47.7-42.2-85.6-45.2-36-2.8-75.4 21-89.8 21-15.2 0-50-20-77.4-19.4C69 139.9 24 168 3.4 212.5c-42 72.9-10.7 180.7 30 240 20 29 43.7 61.5 74.9 60.3 30.1-1.2 41.5-19.4 77.9-19.4 36.1 0 46.6 19.4 78.3 18.8 32.4-.5 52.9-29.4 72.7-58.5 15.3-22.5 21.6-34.1 33.4-59.6-87.9-33.4-83.4-98.9-82.8-125.9zM259.8 89.6c17.9-21.7 30.5-51.9 27.1-82.6-25.9 1-57.3 17.3-75.9 39-16.7 19.2-31.4 49.9-27.4 79.3 28.9 2.2 58.3-14.7 76.2-35.7z"/></svg>` | safeHTML }}
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="{{ (print $m "icon.svg") | relURL }}" alt="Art Tracer icon">Art Tracer</a>
+    <div class="navlinks">
+      <a href="#overview">Overview</a>
+      <a href="#modes">Two modes</a>
+      <a href="#ipad">iPad</a>
+      <a href="#uses">Use cases</a>
+      <a href="#gallery">Gallery</a>
+    </div>
+    <a class="dl" href="{{ $appstore }}">Download</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="eyebrow">Art Tracer</div>
+    <h1>{{ .Params.tagline_html | default .Params.tagline | safeHTML }}</h1>
+    <p class="sub">{{ .Params.subtitle }}</p>
+    <div class="cta">
+      <a class="appstore" href="{{ $appstore }}">{{ $apple }}<span><small>Download on the</small><b>App Store</b></span></a>
+      <a class="textlink" href="#overview">See how it works&nbsp;↓</a>
+    </div>
+  </div>
+  <div class="hero-stage">
+    <div class="glow"></div>
+    <div class="phone">
+      <div class="notch"></div>
+      <div class="screen">
+        <video src="{{ (print $m "iphone_preview.mp4") | relURL }}" autoplay muted loop playsinline poster="{{ (print $m "poster_iphone.jpg") | relURL }}"></video>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="band-dark" id="overview">
+  <div class="wrap center">
+    <div class="kicker" style="color:var(--yellow)">The simplest way to trace</div>
+    <h2>{{ .Params.overview_title | default "No projector. No printing." | safeHTML }}</h2>
+    <div class="props">
+      {{ range .Params.steps }}
+      <div class="prop"><div class="n">{{ .n }}</div><h3>{{ .title }}</h3><p>{{ .body }}</p></div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<section id="modes">
+  <div class="wrap center">
+    <div class="kicker">Two ways to trace</div>
+    <h2>Two modes. Both remarkable.</h2>
+    <p class="lede">Float your reference over the camera, or lock it into the real world with AR. Whatever you're making, there's a mode for it.</p>
+  </div>
+  {{ range $i, $mode := .Params.modes }}
+  <div class="wrap" style="margin-top:{{ cond (eq $i 0) "80px" "110px" }}">
+    <div class="feature{{ if $mode.rev }} rev{{ end }}">
+      <div class="copy">
+        <h2>{{ $mode.title | safeHTML }}</h2>
+        <p>{{ $mode.body }}</p>
+      </div>
+      <div class="media"><div class="card-tilt"><img src="{{ (print $m $mode.img) | relURL }}" alt="{{ $mode.alt }}" loading="lazy"></div></div>
+    </div>
+  </div>
+  {{ end }}
+</section>
+
+<section class="band-dark" id="ipad" style="background:#111113">
+  <div class="wrap center">
+    <div class="kicker" style="color:var(--yellow)">Made for iPhone &amp; iPad</div>
+    <h2>A bigger canvas,<br>on iPad.</h2>
+    <p class="lede" style="color:#a1a1a6">iPad gives you a larger working view and the same precise controls. Adaptive layouts keep everything looking right on every screen size.</p>
+    <div class="ipad-wrap">
+      <div class="pad">
+        <div class="screen">
+          <video src="{{ (print $m "ipad_preview.mp4") | relURL }}" autoplay muted loop playsinline poster="{{ (print $m "poster_ipad.jpg") | relURL }}"></video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="uses">
+  <div class="wrap center">
+    <div class="kicker">One tool, endless projects</div>
+    <h2>Built for every kind of maker.</h2>
+    <div class="uses">
+      {{ range .Params.uses }}
+      <div class="use"><div class="emoji">{{ .emoji }}</div><span>{{ .label }}</span></div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<section class="band-dark" id="gallery" style="background:#0f0f11;padding-bottom:120px">
+  <div class="wrap center" style="padding-bottom:10px">
+    <div class="kicker" style="color:var(--yellow)">A closer look</div>
+    <h2>See it in action.</h2>
+  </div>
+  <div class="gallery">
+    {{ range .Params.gallery }}
+    <div class="shot"><img src="{{ (print $m .src) | relURL }}" alt="{{ .alt }}" loading="lazy"></div>
+    {{ end }}
+  </div>
+</section>
+
+<section class="finalcta">
+  <div class="wrap">
+    <h2>Start tracing today.</h2>
+    <p class="lede">Free to download. No projector, no printing — just your device and your imagination.</p>
+    <a class="appstore" href="{{ $appstore }}">{{ $apple }}<span><small>Download on the</small><b>App Store</b></span></a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="brand" style="font-size:14px"><img src="{{ (print $m "icon.svg") | relURL }}" style="width:22px;height:22px;border-radius:6px" alt="">Art Tracer</div>
+    <div class="flinks">
+      <a href="{{ "arttracer/support/" | relURL }}">Support &amp; FAQ</a>
+      <a href="{{ "arttracer/privacy/" | relURL }}">Privacy Policy</a>
+      <a href="{{ $appstore }}">App Store</a>
+      <a href="{{ "/" | relURL }}">varunpant.com</a>
+    </div>
+    <div>© {{ now.Year }} {{ .Params.author | default "Varun Pant" }}</div>
+  </div>
+</footer>
+{{ end }}

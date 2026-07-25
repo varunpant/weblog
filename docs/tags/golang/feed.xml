@@ -9,7 +9,7 @@ Bubble Sort
 &lt;/h3&gt;
 &lt;p&gt;&lt;a href="http://en.wikipedia.org/wiki/Bubble_sort"&gt;wiki&lt;/a&gt; &lt;img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif" alt=""&gt;&lt;/p&gt;
 &lt;p&gt;Bubble sort is perhaps the simplest of all sorting algorithms, the basic principle is to bubble up the largest (or the smallest) and then the second largest and then the third largest and so on. Each bubble takes the full sweep of the list, hence best-case, average-case as well as the worst-case performance are all O(n2)&lt;/p&gt;</description></item><item><title>reading and writing binary files in go lang</title><link>https://varunpant.com/posts/reading-and-writing-binary-files-in-go-lang/</link><pubDate>Tue, 29 Aug 2017 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/reading-and-writing-binary-files-in-go-lang/</guid><description>
-&lt;p&gt;Reading and writing binary files can often be a fast and very efficient alternatives to csv. They obviously have their challenges, however in this post I intent to present a very basic example of saving models (struct) into binary file and later reading it.&lt;/p&gt;
+&lt;p&gt;Reading and writing binary files can often be fast and very efficient alternatives to csv. They obviously have their challenges, however in this post I intend to present a very basic example of saving models (struct) into binary file and later reading it.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;package main
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;import&lt;/span&gt; (
@@ -201,7 +201,7 @@ fmt.Printf(&amp;#34; %v\n&amp;#34;, record[value])
 }
 }
 &lt;/code&gt;&lt;/pre&gt;</description></item><item><title>Install all Go project dependencies in one command</title><link>https://varunpant.com/posts/install-all-go-project-dependencies-in-one-command/</link><pubDate>Tue, 25 Aug 2015 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/install-all-go-project-dependencies-in-one-command/</guid><description>
-&lt;p&gt;So if you are looking to compile you go project on your server, you would probably need to worry about any third party dependencies.&lt;/p&gt;
-&lt;p&gt;Here is quick recursive way to do that&lt;/p&gt;
+&lt;p&gt;So if you are looking to compile your go project on your server, you would probably need to worry about any third party dependencies.&lt;/p&gt;
+&lt;p&gt;Here is a quick recursive way to do that&lt;/p&gt;
 &lt;p&gt;go get ./&amp;hellip;&lt;/p&gt;
 &lt;p&gt;Hope this helps&lt;/p&gt;</description></item></channel></rss>

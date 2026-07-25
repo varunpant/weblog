@@ -5,7 +5,7 @@ Productivity
 &lt;a href="#productivity" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
 &lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://amanusk.github.io/s-tui/"&gt;s-tui&lt;/a&gt; s-tui is a terminal UI for monitoring your computer. s-tui allows to monitor CPU temperature, frequency, power and utilization in a graphical way from the terminal.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://amanusk.github.io/s-tui/"&gt;s-tui&lt;/a&gt; s-tui is a terminal UI for monitoring your computer. s-tui allows you to monitor CPU temperature, frequency, power and utilization in a graphical way from the terminal.&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://cockpit-project.org/running.html#ubuntu"&gt;Cockpit&lt;/a&gt; is a server manager that makes it easy to administer your GNU/Linux servers via a web browser.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id="security"&gt;
@@ -20,7 +20,7 @@ Fun
 &lt;a href="#fun" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
 &lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://github.com/abishekvashok/cmatrix"&gt;https://github.com/abishekvashok/cmatrix&lt;/a&gt; Matrix digital rain with CMatrix on a Linux or Unix terminal .&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/abishekvashok/cmatrix"&gt;https://github.com/abishekvashok/cmatrix&lt;/a&gt; Matrix digital rain with CMatrix on a Linux or Unix terminal.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id="automation"&gt;
 Automation

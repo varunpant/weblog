@@ -8,7 +8,7 @@ description = ""
 tags = ["python","algorithms"]
 +++
 
- Mathematically, the formula for the factorial is as follows. If n is an integer greater than or equal to 1, then n ! = n ( n - 1)( n - 2)( n - 3) ... (3)(2)(1) If p = 0, then p ! = 1 by convention. 
+ Mathematically, the formula for the factorial is as follows. If n is an integer greater than or equal to 1, then n! = n ( n - 1)( n - 2)( n - 3) ... (3)(2)(1) If p = 0, then p! = 1 by convention. 
 
  ```python
 def factorial(n):

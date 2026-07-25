@@ -8,7 +8,7 @@ description = ""
 tags = ["golang"]
 +++
 
-Reading and writing binary files can often be a fast and very efficient alternatives to csv. They obviously have their challenges, however in this post I intent to present a very basic example of saving models (struct) into binary file and later reading it.
+Reading and writing binary files can often be fast and very efficient alternatives to csv. They obviously have their challenges, however in this post I intend to present a very basic example of saving models (struct) into binary file and later reading it.
 
   
 
@@ -115,9 +115,9 @@ func writeNextBytes(file *os.File, bytes []byte) {
 
  ### Performance
 
- To see how long it takes to create and then read 10000000 records try changeing the 10 to 10000000 and then building an executable by running go build filename.go, once built execute by typing time ./filename
+ To see how long it takes to create and then read 10000000 records try changing the 10 to 10000000 and then building an executable by running go build filename.go, once built execute by typing time ./filename
 
- on my macbook pro it took  0m35.433s to generate and then read all records (without priniting them on shell) 
+ on my macbook pro it took  0m35.433s to generate and then read all records (without printing them on shell) 
 
 ```real    0m35.433s
 user    0m16.713s

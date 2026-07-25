@@ -6,7 +6,7 @@
 Flash Object
 &lt;a href="#flash-object" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
 &lt;/h3&gt;
-&lt;p&gt;This is quick Snippet which demonstrate how to embed flash object in a web page.&lt;/p&gt;
+&lt;p&gt;This is a quick snippet which demonstrates how to embed a flash object in a web page.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-html" data-lang="html"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&amp;lt;&lt;span style="color:#f92672"&gt;object&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;type&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;application/x-shockwave-flash&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;data&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;path-to-my-flash-file.swf&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;width&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;0&amp;#34;&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;height&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;0&amp;#34;&lt;/span&gt;&amp;gt;
@@ -17,7 +17,7 @@ Flash Object
 Quicktime
 &lt;a href="#quicktime" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
 &lt;/h3&gt;
-&lt;p&gt;This is quick Snippet which demonstrate how to embed quicktime object in a web page&lt;/p&gt;
+&lt;p&gt;This is a quick snippet which demonstrates how to embed a quicktime object in a web page&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-html" data-lang="html"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&amp;lt;&lt;span style="color:#f92672"&gt;object&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;classid&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;codebase&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;http://www.apple.com/qtactivex/qtplugin.cab&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;width&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;200&amp;#34;&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;height&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;16&amp;#34;&lt;/span&gt;&amp;gt;
@@ -36,4 +36,4 @@ Quicktime
 Windows Media
 &lt;a href="#windows-media" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
 &lt;/h3&gt;
-&lt;p&gt;This is quick Snippet which demonstrate how to embed Windows Media object in a web page.&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;This is a quick snippet which demonstrates how to embed a Windows Media object in a web page.&lt;/p&gt;</description></item></channel></rss>

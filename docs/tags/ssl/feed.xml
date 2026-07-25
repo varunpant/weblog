@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ssl on Varun Pant</title><link>https://varunpant.com/tags/ssl/</link><description>Recent content in Ssl on Varun Pant</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>varun@varunpant.com (Varun Pant)</managingEditor><webMaster>varun@varunpant.com (Varun Pant)</webMaster><lastBuildDate>Fri, 02 Feb 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://varunpant.com/tags/ssl/feed.xml" rel="self" type="application/rss+xml"/><item><title>how to make https requests with python httplib2 ssl</title><link>https://varunpant.com/posts/how-to-make-https-requests-with-python-httplib2-ssl/</link><pubDate>Fri, 02 Feb 2018 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/how-to-make-https-requests-with-python-httplib2-ssl/</guid><description>
-&lt;p&gt;Here are few snippets to make &lt;strong&gt;secure&lt;/strong&gt; &lt;strong&gt;http&lt;/strong&gt; requests using various python libraries.&lt;/p&gt;
+&lt;p&gt;Here are a few snippets to make &lt;strong&gt;secure&lt;/strong&gt; &lt;strong&gt;http&lt;/strong&gt; requests using various python libraries.&lt;/p&gt;
 &lt;h3 id="httplib2"&gt;
 httplib2
 &lt;a href="#httplib2" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
@@ -9,9 +9,9 @@ httplib2
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;link &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;https://example.com&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;h &lt;span style="color:#f92672"&gt;=&lt;/span&gt; httplib2&lt;span style="color:#f92672"&gt;.&lt;/span&gt;Http(&lt;span style="color:#e6db74"&gt;&amp;#34;.cache&amp;#34;&lt;/span&gt;)
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;r, content &lt;span style="color:#f92672"&gt;=&lt;/span&gt; h&lt;span style="color:#f92672"&gt;.&lt;/span&gt;request(link, &lt;span style="color:#e6db74"&gt;&amp;#34;GET&amp;#34;&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="another-exmaple"&gt;
-another exmaple
-&lt;a href="#another-exmaple" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="another-example"&gt;
+another example
+&lt;a href="#another-example" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
 &lt;/h3&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;import&lt;/span&gt; httplib2
@@ -26,7 +26,7 @@ another exmaple
 Urllib2
 &lt;a href="#urllib2" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
 &lt;/h3&gt;
-&lt;p&gt;Here is a simmilar example using &lt;strong&gt;urlib2&lt;/strong&gt; for comparison and lines of code.&lt;/p&gt;
+&lt;p&gt;Here is a similar example using &lt;strong&gt;urllib2&lt;/strong&gt; for comparison and lines of code.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;import&lt;/span&gt; urllib2
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;

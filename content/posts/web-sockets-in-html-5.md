@@ -14,19 +14,19 @@ tags = ["programming","websockets","httppush",".net","javascript"]
 
   Current attempts to provide real-time web applications largely revolve around polling and other server-side push technologies, the most notable of which is "[Comet](http://en.wikipedia.org/wiki/Comet_(programming))", which delays the completion of an HTTP response to deliver messages to the client. 
 
-  There are many open source implementation of Http Push, one of my personal favorite is [APE](http://www.ape-project.org/) i.e. Ajax Push Engine. 
+  There are many open source implementations of Http Push, one of my personal favourites is [APE](http://www.ape-project.org/) i.e. Ajax Push Engine. 
 
  
->   **Update**: Microsoft has added a small demo of HTML5 support , it comes as an extension to WCF (Windows communication foundation) .The links can be found [here](http://connect.microsoft.com/VisualStudio/feedback/details/520742/use-of-html-5-web-sockets-for-wcf-duplex-services-and-silverlight), [here](http://html5labs.interoperabilitybridges.com/media/1165/readme.htm) and [here](http://msdn.microsoft.com/en-us/magazine/ee309879.aspx). 
+>   **Update**: Microsoft has added a small demo of HTML5 support, it comes as an extension to WCF (Windows communication foundation) .The links can be found [here](http://connect.microsoft.com/VisualStudio/feedback/details/520742/use-of-html-5-web-sockets-for-wcf-duplex-services-and-silverlight), [here](http://html5labs.interoperabilitybridges.com/media/1165/readme.htm) and [here](http://msdn.microsoft.com/en-us/magazine/ee309879.aspx). 
 > 
 >    There is still no news of Microsoft adding this feature in IE 9, at the time of writing this post, only Firefox 4, Chrome 4, Safari 5 and Opera 11 and above have support for this feature. 
 
  
 >   **Update**: Due to security flaw Firefox and Opera have disabled their support for Web Sockets, more info can be found [here](http://www.webmonkey.com/2010/12/security-flaws-force-firefox-opera-to-turn-off-websockets/). 
 > 
->    For those interested here is the [draft](http://tools.ietf.org/html/draft-ietf-hybi-thewebsocketprotocol-03) , official [website](http://websocket.org/), the [API](http://dev.w3.org/html5/websockets/) and a nice [tutorial](http://net.tutsplus.com/tutorials/javascript-ajax/start-using-html5-websockets-today/). 
+>    For those interested here is the [draft](http://tools.ietf.org/html/draft-ietf-hybi-thewebsocketprotocol-03), official [website](http://websocket.org/), the [API](http://dev.w3.org/html5/websockets/) and a nice [tutorial](http://net.tutsplus.com/tutorials/javascript-ajax/start-using-html5-websockets-today/). 
 
-  To establish a WebSocket connection, the client and server upgrade from the HTTP protocol to the WebSocket protocol during their initial handshake, as shown in below, note that this connection description represents draft 76 of the protocol, the connection handshake may change during future specification revisions. 
+  To establish a WebSocket connection, the client and server upgrade from the HTTP protocol to the WebSocket protocol during their initial handshake, as shown below, note that this connection description represents draft 76 of the protocol, the connection handshake may change during future specification revisions. 
 
  
 >   **From client to server:   
@@ -50,7 +50,7 @@ tags = ["programming","websockets","httppush",".net","javascript"]
 >  WebSocket-Protocol: sample   
 >  [16-byte hash response] 
 > 
->    I was trying to find an alternative which is comfortable enough to be used in my pet projects in Microsoft Tech stack, at the time of writing I couldn’t any so I here it is my very own HTTP Web Socket server written in .Net via C#, this implementation does not use WCF and is basically written using HTTP Async Sockets, the client API is pretty straight forward 
+>    I was trying to find an alternative which is comfortable enough to be used in my pet projects in Microsoft Tech stack, at the time of writing I couldn’t find any, so here it is: my very own HTTP Web Socket server written in .Net via C#, this implementation does not use WCF and is basically written using HTTP Async Sockets, the client API is pretty straightforward 
 
  ```
 var url = "ws://localhost:999&rdquo"

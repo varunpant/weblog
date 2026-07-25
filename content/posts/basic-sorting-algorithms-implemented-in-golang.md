@@ -41,7 +41,7 @@ func BubbleSort( items []int) {
 
   [wiki](https://en.wikipedia.org/wiki/Insertion_sort) ![](https://upload.wikimedia.org/wikipedia/commons/0/0f/Insertion-sort-example-300px.gif) 
 
-  Insertion sort takes each element through the list and inserts it at the right place. At each iteration, insertion sort removes one element from the input data, finds the location it belongs within the sorted list, and inserts it there. It repeats until no input elements remain. Worst-case and average-case performance is O(n2), however the best case is O(n).
+  Insertion sort takes each element from the list and inserts it at the right place. At each iteration, insertion sort removes one element from the input data, finds the location it belongs within the sorted list, and inserts it there. It repeats until no input elements remain. Worst-case and average-case performance is O(n2), however the best case is O(n).
 
   
 
@@ -68,7 +68,7 @@ func InsertionSort(items []int) {
 
   [wiki](https://en.wikipedia.org/wiki/Merge_sort) ![](https://upload.wikimedia.org/wikipedia/commons/c/cc/Merge-sort-example-300px.gif) 
 
-  Mergesort operates by diving the list into two sublist recursively till each sublist contains only one element, it then merges the adjacent list back while sorting each element in the merged list. Best-case, average-case as well as the worst-case eprformance are all O(nlogn) 
+  Mergesort operates by dividing the list into two sublists recursively till each sublist contains only one element, it then merges the adjacent list back while sorting each element in the merged list. Best-case, average-case as well as the worst-case performance are all O(nlogn) 
 
   
 
@@ -130,7 +130,7 @@ func MergeSort(items []int) {
 
  ![](https://upload.wikimedia.org/wikipedia/commons/6/6a/Sorting_quicksort_anim.gif)
 
-  Quick sort works by first selecting a pivot element from the list. It then creates two lists, one containing elements less than the pivot and the other containing elements higher than the pivot. It then sorts the two lists and join them with the pivot in between. Just like the Merge sort, when the lists are subdivided to lists of size 1, they are considered as already sorted. Best-case and avergae-case is O(n log n) however the worstcase(very rare) is O(n2) 
+  Quick sort works by first selecting a pivot element from the list. It then creates two lists, one containing elements less than the pivot and the other containing elements higher than the pivot. It then sorts the two lists and joins them with the pivot in between. Just like the Merge sort, when the lists are subdivided to lists of size 1, they are considered as already sorted. Best-case and average-case is O(n log n) however the worst case (very rare) is O(n2) 
 
   
 
@@ -174,7 +174,7 @@ func MergeSort(items []int) {
 
  ![](https://upload.wikimedia.org/wikipedia/commons/1/1b/Sorting_heapsort_anim.gif) 
 
-  Heapsort can be thought of as an improved selection sort: like that algorithm, it divides its input into a sorted and an unsorted region, and it iteratively shrinks the unsorted region by extracting the largest element and moving that to the sorted region. The improvement consists of the use of a heap data structure rather than a linear-time search to find the maximum,best-case, average-case as well as the worst-caseeprformance are all O(nlogn) 
+  Heapsort can be thought of as an improved selection sort: like that algorithm, it divides its input into a sorted and an unsorted region, and it iteratively shrinks the unsorted region by extracting the largest element and moving that to the sorted region. The improvement consists of the use of a heap data structure rather than a linear-time search to find the maximum, best-case, average-case as well as the worst-case performance are all O(nlogn) 
 
   
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Docker on Varun Pant</title><link>https://varunpant.com/tags/docker/</link><description>Recent content in Docker on Varun Pant</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>varun@varunpant.com (Varun Pant)</managingEditor><webMaster>varun@varunpant.com (Varun Pant)</webMaster><lastBuildDate>Sun, 24 Feb 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://varunpant.com/tags/docker/feed.xml" rel="self" type="application/rss+xml"/><item><title>download file using webdriver firefox and python selenium</title><link>https://varunpant.com/posts/download-file-using-webdriver-firefox-and-python-selenium/</link><pubDate>Sun, 24 Feb 2019 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/download-file-using-webdriver-firefox-and-python-selenium/</guid><description>
-&lt;p&gt;Selenium is one of my favourite tool for automation.&lt;/p&gt;
-&lt;p&gt;In this post, I will demonstrate some basic code to download a file from a website in a headless mode , and also provide a docker file to make things simpler.&lt;/p&gt;
+&lt;p&gt;Selenium is one of my favourite tools for automation.&lt;/p&gt;
+&lt;p&gt;In this post, I will demonstrate some basic code to download a file from a website in a headless mode, and also provide a docker file to make things simpler.&lt;/p&gt;
 &lt;h3 id="python-code"&gt;
 Python Code
 &lt;a href="#python-code" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
@@ -45,4 +45,4 @@ Python Code
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;print(&lt;span style="color:#e6db74"&gt;&amp;#34;******************************** FINITO ********************************&amp;#34;&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The code is fairly simple , we need&lt;/p&gt;</description></item></channel></rss>
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The code is fairly simple, we need&lt;/p&gt;</description></item></channel></rss>

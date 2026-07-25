@@ -36,7 +36,7 @@ Css has a very useful property called Opacity, which basically is a measure of t
 }
 
 ```
- I hope you find this use full 
+ I hope you find this useful 
 
 
 

@@ -13,7 +13,7 @@ This is a collection of tools and utilities which I have found indispensable as 
  ### Productivity
 
  
- * [s-tui](https://amanusk.github.io/s-tui/) s-tui is a terminal UI for monitoring your computer. s-tui allows to monitor CPU temperature, frequency, power and utilization in a graphical way from the terminal.
+ * [s-tui](https://amanusk.github.io/s-tui/) s-tui is a terminal UI for monitoring your computer. s-tui allows you to monitor CPU temperature, frequency, power and utilization in a graphical way from the terminal.
  * [Cockpit](http://cockpit-project.org/running.html#ubuntu) is a server manager that makes it easy to administer your GNU/Linux servers via a web browser.   
  
  
@@ -25,7 +25,7 @@ This is a collection of tools and utilities which I have found indispensable as 
  ### Fun
 
  
- * <https://github.com/abishekvashok/cmatrix> Matrix digital rain with CMatrix on a Linux or Unix terminal . 
+ * <https://github.com/abishekvashok/cmatrix> Matrix digital rain with CMatrix on a Linux or Unix terminal. 
  
  ###  Automation
 

@@ -8,10 +8,10 @@ description = ""
 tags = ["utility","how to"]
 +++
 
- I have been using Linux environment a lot lately, particularly for hosting my web experiments and other application. One of the biggest and most searched question for newbies have been 
+ I have been using Linux environment a lot lately, particularly for hosting my web experiments and other application. One of the biggest and most searched questions for newbies has been 
 > How do I restart Apache 2 Web Server under Debian / Ubuntu Linux or UNIX operating systems? 
 
- In this post I simply attempt to lay this down for my and their benifit.
+ In this post I simply attempt to lay this down for my benefit and theirs.
 
   **Start Apache2** # sudo /etc/init.d/apache2 start 
 
@@ -21,7 +21,7 @@ tags = ["utility","how to"]
 
   **Graceful** # sudo /etc/init.d/apache2 graceful or # sudo /etc/init.d/apache2 reload 
 
- There are other less verbose ways as well. If using apache2ctl (If its not on your path generally apche2ctl can be found here /usr/sbin/apache2ctl
+ There are other less verbose ways as well. If using apache2ctl (If its not on your path generally apache2ctl can be found here /usr/sbin/apache2ctl
 
   **Restart Apache2 gracefully** sudo apache2ctl graceful **Stop Apache2 gracefully** sudo apache2ctl graceful-stop 
 

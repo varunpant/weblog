@@ -25,26 +25,26 @@ ogr2ogr -f “esri shapefile” -update -append merged.shp %f -nln Merged )
 ```
 ### Merging Shape (*.shp) Files on OSX or Linux
 
- In Linux like environment it's even easier than one would imagine. Infact I am quite sure it should be a one liner for windows enviroment as well, will have to try one day :)
+ In Linux like environment it's even easier than one would imagine. In fact I am quite sure it should be a one liner for windows environment as well, will have to try one day :)
 
  ```for f in *.shp; do ogr2ogr -update -append merged.shp $f -f "ESRI Shapefile"; done;
 
 ```
 ### Merging Shape (*.shp) Files using QGIS
 
- Quite frankley I found this method to be the most slow of all, however this has GUI and should be fine for moderate size files.
+ Quite frankly I found this method to be the most slow of all, however this has GUI and should be fine for moderate size files.
 
  Open Qgis and click **Vector** on menu bar, then click on **Data Management Tools** and finally on **Merge shapefiles to one**
 
  ![](http://www.varunpant.com/static/resources/QgisMerge.png)
 
- This will open a dialog, which will ask for the input source folder and the destination file name , and thats it, click **OK**to begin the process.
+ This will open a dialog, which will ask for the input source folder and the destination file name, and thats it, click **OK**to begin the process.
 
  ![](http://www.varunpant.com/static/resources/qgismergeD.png)
 
  ### Creating Index using shapeindex
 
-  After merging shapefiles , its most likely that one would like to create a spatial index. Here is how to do it. Migrate to the folder and execute shapeindex myShapeFileName.shp 
+  After merging shapefiles, its most likely that one would like to create a spatial index. Here is how to do it. Migrate to the folder and execute shapeindex myShapeFileName.shp 
 
  ### Copying Ordinance Survey Vector Map shape files into singular folders
 

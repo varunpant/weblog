@@ -8,11 +8,11 @@ description = ""
 tags = ["general"]
 +++
 
-After long period of wait, here it is my very first and personal Blogging Space.
+After a long period of wait, here it is my very first and personal Blogging Space.
 
- I have been hoping to go online for about an year now, but then there always were events happening around to prevent this immense desire of mine.
+ I have been hoping to go online for about a year now, but then there always were events happening around to prevent this immense desire of mine.
 
- I intend to blog about .net in general , JavaScript, Silverlight, Animation and maybe some other cool stuff .
+ I intend to blog about .net in general, JavaScript, Silverlight, Animation and maybe some other cool stuff.
 
  Hope to update this space again.
 

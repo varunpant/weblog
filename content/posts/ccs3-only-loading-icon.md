@@ -1,6 +1,6 @@
 
 +++
-title = "CCS3 only Loading Icon"
+title = "CSS3 only Loading Icon"
 date = "2014-07-13"
 author = " "
 cover = ""
@@ -10,7 +10,7 @@ tags = ["css","html5","web"]
 
 I generally have been using loading gifs in my work most of the time to inform the user that the resources are being fetched asynchronously from the server.
 
-  [Ajaxload](http://www.ajaxload.info/) website is perhaps one of the most used site to download a suitable gif.
+  [Ajaxload](http://www.ajaxload.info/) website is perhaps one of the most used sites to download a suitable gif.
 
  In this post I will demonstrate a css3 only way to create a nice loading simulation 
 
@@ -94,11 +94,11 @@ html {
 
  ### Explanation
 
- Basically to form the outer circle we simply use a div and make it circular by applying **border-radius **property to **50%**  border-radius: 50%;
+ Basically, to form the outer circle we simply use a div and make it circular by applying **border-radius **property to **50%**  border-radius: 50%;
 
- Needle div is styled to have the same background as the wrap, then the width is made 50% and height is 5 px so it looks like a line. Later the a transform origin is applied to make it look like a clock needle and position it adjacent to the circle centre.
+ Needle div is styled to have the same background as the wrap, then the width is made 50% and height is 5 px so it looks like a line. Later a transform origin is applied to make it look like a clock needle and position it adjacent to the circle centre.
 
-  Css line  animation: needleAnimation 3s linear 0s infinite; makes it rotate for infinite time.(it takes 3s for the animation to finish and repeat it self) 
+  Css line  animation: needleAnimation 3s linear 0s infinite; makes it rotate for infinite time.(it takes 3s for the animation to finish and repeat itself) 
 
  Hope you find this useful.
 
@@ -110,7 +110,7 @@ html {
 
  ### Edit
 
- I also found another traditonal icon done in css3 [here](http://codepen.io/emgerold/pen/EwCxi) 
+ I also found another traditional icon done in css3 [here](http://codepen.io/emgerold/pen/EwCxi) 
 
  See the Pen [Clean simple Ajax Spinner](http://codepen.io/emgerold/pen/EwCxi/) by emgerold ([@emgerold](http://codepen.io/emgerold)) on [CodePen](http://codepen.io).
 

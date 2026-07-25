@@ -8,7 +8,7 @@ description = ""
 tags = ["ssl","python","httplib"]
 +++
 
-Here are few snippets to make **secure** **http** requests using various python libraries.
+Here are a few snippets to make **secure** **http** requests using various python libraries.
 
  ### httplib2
 
@@ -20,7 +20,7 @@ h = httplib2.Http(".cache")
 r, content = h.request(link, "GET")
 
 ```
- ### another exmaple
+ ### another example
 
  ```python
 
@@ -36,7 +36,7 @@ print r['content-type']
 ```
  ### Urllib2
 
- Here is a simmilar example using **urlib2** for comparison and lines of code.
+ Here is a similar example using **urllib2** for comparison and lines of code.
 
  ```python
 

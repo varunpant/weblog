@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.Lang | default "en" }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ .Title }} — {{ .Params.tagline }}</title>
+  <meta name="description" content="{{ (.Params.description | default .Summary) | plainify }}">
+  {{ with .Params.keywords }}<meta name="keywords" content="{{ delimit . ", " }}">{{ end }}
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="{{ .Permalink }}">
+  <link rel="shortcut icon" href="{{ "img/favicon.png" | absURL }}">
+  <link rel="apple-touch-icon" href="{{ "arttracer/media/icon.svg" | absURL }}">
+
+  {{ $ogimg := "" }}{{ with .Params.images }}{{ $ogimg = index . 0 | absURL }}{{ end }}
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ site.Title }}">
+  <meta property="og:title" content="{{ .Title }} — {{ .Params.tagline }}">
+  <meta property="og:description" content="{{ .Params.description }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+  {{ with $ogimg }}<meta property="og:image" content="{{ . }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">{{ end }}
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ .Title }} — {{ .Params.tagline }}">
+  <meta name="twitter:description" content="{{ .Params.description }}">
+  {{ with $ogimg }}<meta name="twitter:image" content="{{ . }}">{{ end }}
+
+  <link rel="stylesheet" href="{{ "arttracer/style.css" | relURL }}">
+
+  {{ $ld := dict
+      "@context" "https://schema.org"
+      "@type" "SoftwareApplication"
+      "name" .Title
+      "operatingSystem" "iOS, iPadOS"
+      "applicationCategory" "GraphicsApplication"
+      "description" (.Params.description | default .Summary | plainify)
+      "url" .Permalink
+      "downloadUrl" .Params.appstore
+      "offers" (dict "@type" "Offer" "price" "0" "priceCurrency" "USD")
+      "author" (dict "@type" "Person" "name" (.Params.author | default "Varun Pant"))
+  }}
+  {{ with $ogimg }}{{ $ld = merge $ld (dict "image" .) }}{{ end }}
+  {{ printf "<script type=\"application/ld+json\">%s</script>" ($ld | jsonify) | safeHTML }}
+</head>
+<body class="at-body">
+  {{ block "main" . }}{{ end }}
+  {{ if site.Config.Services.GoogleAnalytics.ID }}{{ template "_internal/google_analytics.html" . }}{{ end }}
+</body>
+</html>

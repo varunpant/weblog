@@ -94,7 +94,7 @@ func Show(name string) {
 
  ![](/media/linear-gradient-vertical.png)
 
- or swap colors arrays to get a differrent affect. ### Circular Gradient
+ or swap colors arrays to get a different affect. ### Circular Gradient
 
  To get something like a circular gradient replace linearGradient function with circularRadient
 

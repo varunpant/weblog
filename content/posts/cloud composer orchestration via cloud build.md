@@ -13,16 +13,16 @@ tags = ["gcp", "python"]
 
 Google cloud composer is a managed [apache airflow](https://airflow.apache.org/) service that helps create, schedule, monitor and manage workflows.Cloud Composer automation helps you create Airflow environments quickly and use Airflow-native tools, such as the powerful Airflow web interface and command line tools, so you can focus on your workflows and not your infrastructure.
 
-In this article I will descibe how an engineering team can manage, develop and publish [DAGS](https://airflow.apache.org/docs/stable/concepts.html) after running a full CI/CD build pipeline using google cloud build .
+In this article I will describe how an engineering team can manage, develop and publish [DAGS](https://airflow.apache.org/docs/stable/concepts.html) after running a full CI/CD build pipeline using google cloud build.
 
 Lets imagine a typical engineering scenario:
 
 1. Engineers break down a big process into series of small logical components or tasks.
 2. Each  task is programmed as an operator in the dag.
-3. Enginerring team  tests the dag locally and then copy it to composer (airflow) DAG folder.
+3. Engineering team  tests the dag locally and then copies it to composer (airflow) DAG folder.
 4. Composer validates the dag and eventually it is ready to be run.
 
-This generic process can suffer from various issues when multiple engineers are working continuesly speint after sprint, such as :
+This generic process can suffer from various issues when multiple engineers are working continuously sprint after sprint, such as:
 
 1. Deployment issues:
 
@@ -30,30 +30,30 @@ This generic process can suffer from various issues when multiple engineers are 
 
 2. Dependency Errors.
 
-   e.g. Enviroment Variables /connections required for DAG to run is not available in production
+   e.g. Environment Variables /connections required for DAG to run are not available in production
 
 3. Processes errors.
 
-   e.g Logical or programical errors in dag.
+   e.g Logical or programmatic errors in dag.
 
 4. Lack of testing and automation.
 
 
 
-Dags are code, hence must be treated as such, which means :
+Dags are code, hence must be treated as such, which means:
 
 1. They should  be backed in repository such as GitHub.
-2. Every PR should trigger automated tests before PR is reviewd by engineers.
+2. Every PR should trigger automated tests before PR is reviewed by engineers.
 
-2. Every merge/push to **test**, **uat** and **prod** branch must run a full suit of unit tests.
+2. Every merge/push to **test**, **uat** and **prod** branch must run a full suite of unit tests.
 
-3. After successfull test, the dags must be automatically deployed to cloud composer.
+3. After successful test, the dags must be automatically deployed to cloud composer.
 
 
 
 ### Google cloud composer folder structure
 
-Cloud compose uses google cloud storage as its source and looks somethign like this
+Cloud compose uses google cloud storage as its source and looks something like this
 
 <img src="/img/image-20200513184510696.png" alt="image-20200513184510696" style="zoom:50%;" />
 
@@ -63,9 +63,9 @@ Airflow configuration must go in terraform if used.
 
 ### Developing a CI/CD Practice for Google Cloud Composer using Cloud Build
 
-The idea here is to use github to back all the dags, use cloud build and preapre a docker image with airflow installed so that  tests can be run in docker cotainers.
+The idea here is to use github to back all the dags, use cloud build and prepare a docker image with airflow installed so that  tests can be run in docker containers.
 
-The Benifits of this process are as follows
+The Benefits of this process are as follows
 
 1. Faster development cycles of Airflow DAGs
 
@@ -145,7 +145,7 @@ steps:
 images: ['gcr.io/$PROJECT_ID/airflow-dags-builder:latest']
 ```
 
-The steps describe above are straight forward :
+The steps described above are straightforward:
 
 1. Pull or build airflow docker image using the described docker file.
 2. run validation tests (in python inside the tests folder)

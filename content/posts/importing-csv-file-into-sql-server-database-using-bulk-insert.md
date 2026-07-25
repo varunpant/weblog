@@ -8,15 +8,15 @@ description = ""
 tags = ["sqlserver","database","general"]
 +++
 
- Importing data into a database from a delimited file is perhaps one of the most common tasks that one might have to perform. SQL server gives us an import utility which supports various data sources and has an intutive interface as well,however there is another way which can be utilized to quickly get the job done, its called [BULK INSERT](http://msdn.microsoft.com/en-us/library/aa225968(v=sql.80).aspx) 
+ Importing data into a database from a delimited file is perhaps one of the most common tasks that one might have to perform. SQL server gives us an import utility which supports various data sources and has an intuitive interface as well, however there is another way which can be utilized to quickly get the job done, its called [BULK INSERT](http://msdn.microsoft.com/en-us/library/aa225968(v=sql.80).aspx) 
 
-  BULK INSERT is a SQL command which can be typed in management console,takes various parameters to control the import and is very simple to use. 
+  BULK INSERT is a SQL command which can be typed in management console, takes various parameters to control the import and is very simple to use. 
 
   A typical use would look like this: ```
 GO
 BULK INSERT  from 'C:\sourceFile.csv' WITH ( FIELDTERMINATOR =',', ROWTERMINATOR ='\n' ) 
 ```
- and that's it, the command will automatically read csv file, try to do any default type conversion(determined by the TargetTables colum types) and will fail if there are any errors. 
+ and that's it, the command will automatically read csv file, try to do any default type conversion(determined by the TargetTable's column types) and will fail if there are any errors. 
 
   There are many other properties which can be set to make import easy ti handle, the ones I typically use are ```
 GO

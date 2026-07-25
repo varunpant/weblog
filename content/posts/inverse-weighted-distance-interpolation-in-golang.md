@@ -213,7 +213,7 @@ func main() {
 
 
 ```
-  The results looks like this
+  The results look like this
 
   
 

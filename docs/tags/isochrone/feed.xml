@@ -3,5 +3,5 @@
 Introduction
 &lt;a href="#introduction" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
 &lt;/h3&gt;
-&lt;p&gt;&lt;img src="https://raw.githubusercontent.com/varunpant/Google_Isochrone/master/ScreenShot.png" alt="Isochrone"&gt; &lt;a href="http://en.wikipedia.org/wiki/Isochrone_map"&gt;Isochrones&lt;/a&gt; are curves of equal travel time from a certain point of origin, another way of saying this would be that an Isochrone is an isoline for travel time, if the weighting factor is changed form time to distance, then the resulting curve us called an Isodistance.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://raw.githubusercontent.com/varunpant/Google_Isochrone/master/ScreenShot.png" alt="Isochrone"&gt; &lt;a href="http://en.wikipedia.org/wiki/Isochrone_map"&gt;Isochrones&lt;/a&gt; are curves of equal travel time from a certain point of origin, another way of saying this would be that an Isochrone is an isoline for travel time, if the weighting factor is changed from time to distance, then the resulting curve is called an Isodistance.&lt;/p&gt;
 &lt;p&gt;In this post I will present a rough way to create an Isochrone and an Isodistance using &lt;a href="https://developers.google.com/maps/documentation/directions/"&gt;google&amp;rsquo;s directions API.&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>

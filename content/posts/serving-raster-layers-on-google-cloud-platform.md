@@ -16,9 +16,9 @@ In this blog post, I will write about using [Google cloud storage](https://cloud
 
  There are various clients out there for web as well as android or IOS, which provide an ability to add overlays while pointing to an external service for the image source.
 
- [Google Cloud Storage](https://cloud.google.com/storage/) serves as a perfect online, static imagery severing service.
+ [Google Cloud Storage](https://cloud.google.com/storage/) serves as a perfect online, static imagery serving service.
 
- The general idea is to save map tiles, which are usually 256 x 256 sized images in the cloud and then point the client to the base url .
+ The general idea is to save map tiles, which are usually 256 x 256 sized images in the cloud and then point the client to the base url.
 
  Map tiles
 ---------
@@ -42,9 +42,9 @@ In this blog post, I will write about using [Google cloud storage](https://cloud
  Generating Map Tiles
 --------------------
 
- There are various open source tools , which can directly generate map tiles from a vector or raster data source. There is a great example [here](http://blog.cartodb.com/tiles-on-gcs/) from CartoDB, which shows how to generate raster tiles from geotiff or shape files (Any OGC data Source supported by GDAL tools)
+ There are various open source tools, which can directly generate map tiles from a vector or raster data source. There is a great example [here](http://blog.cartodb.com/tiles-on-gcs/) from CartoDB, which shows how to generate raster tiles from geotiff or shape files (Any OGC data Source supported by GDAL tools)
 
- In this article , I will present an alternative way to do so, by using a python library called [Tilestache](http://tilestache.org/) .
+ In this article, I will present an alternative way to do so, by using a python library called [Tilestache](http://tilestache.org/).
 
  Tilestache is a map tiles server which seamlessly integrates with Google maps tiling scheme. It also provides a [seeding script](https://github.com/TileStache/TileStache/blob/master/scripts/tilestache-seed.py) which can generate tiles on the disk and has plugins to directly add those tiles in the google cloud. 
 
@@ -132,11 +132,11 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
  Here is a [gist](https://gist.github.com/varunpant/aad7e87ea1c8af8a673a) with complete html mark-up.
 
- As stated above, tilestache also allows to just create static images on the disk instead of serving them, which is very usefull if one wants to serve these tiles fronted by a proxy or load it to cloud like Google or amazon data storage.
+ As stated above, tilestache also allows you to just create static images on the disk instead of serving them, which is very useful if one wants to serve these tiles fronted by a proxy or load it to cloud like Google or amazon data storage.
 
  The Command to do so is tilestache-seed.py –**c** <config name>.cfg –**l** <layername> –**b** <bounding box> **-e** png <list of zoom levels to render>
 
- In my case,I will use the bounding box of my shapefile and the command goes like this tilestache-seed.py -c ne.cfg -l NE -b 18.9161900000001420 -171.7911106028911700 71.3577635769417500 -66.9646599999999810 -e png 1 2 3 4 5 6 7 8 
+ In my case, I will use the bounding box of my shapefile and the command goes like this tilestache-seed.py -c ne.cfg -l NE -b 18.9161900000001420 -171.7911106028911700 71.3577635769417500 -66.9646599999999810 -e png 1 2 3 4 5 6 7 8 
 
  This is how the folders are created in my **cache directory**, which is configured in the **ne.cfg** shown above.
 
@@ -165,7 +165,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
  The easiest way to upload folders and tiles here is to click upload folder button and point to the folders on the disk. This is by far the easiest method, however in our case we have only generated tiles for first 8 zoom levels, so they are not much in number and using a web UI upload mechanism will work.
 
- If we choose to generate large number of tiles and cover more than few countries we are possibly looking at millions to tiles specially around the street level (zoom 19 to 22), to cover such a scenario, I will recommend using another option in tilestache ,which directly allows saving the tiles in Google cloud storage. Tilestache, has a [plugin](http://tilestache.org/doc/TileStache.Goodies.Caches.GoogleCloud.html) which can be used instead of a disk based cache. here is how to configure it
+ If we choose to generate large number of tiles and cover more than few countries we are possibly looking at millions of tiles, especially around the street level (zoom 19 to 22), to cover such a scenario, I will recommend using another option in tilestache ,which directly allows saving the tiles in Google cloud storage. Tilestache, has a [plugin](http://tilestache.org/doc/TileStache.Goodies.Caches.GoogleCloud.html) which can be used instead of a disk based cache. here is how to configure it
 
  ```javascript
  {
@@ -188,7 +188,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
   }
 }
 ```
- You will notice that to work with this plugin,one needs to have **access token** and** client secret**. This can be easily generated using the [developer console](https://console.developers.google.com/). 
+ You will notice that to work with this plugin, one needs to have **access token** and** client secret**. This can be easily generated using the [developer console](https://console.developers.google.com/). 
 
  To setup, follow these steps
 
@@ -207,7 +207,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
  In our case we can access the tiles like this.
 
- [http://storage.googleapis.com/states-demo/NE/8/68/103.png](http://storage.googleapis.com/states-demo/NE/8/68/103.png "http://storage.googleapis.com/states-demo/NE/8/68/103.png") , in the Html code given above, one can easily change the url from img.src = "http://localhost:8080/NE/" + zoom + "/" + coord.x + "/" + coord.y + ".png"; to img.src = "
+ [http://storage.googleapis.com/states-demo/NE/8/68/103.png](http://storage.googleapis.com/states-demo/NE/8/68/103.png "http://storage.googleapis.com/states-demo/NE/8/68/103.png"), in the Html code given above, one can easily change the url from img.src = "http://localhost:8080/NE/" + zoom + "/" + coord.x + "/" + coord.y + ".png"; to img.src = "
 
  ```javascript
  [http://storage.googleapis.com/states-demo](http://storage.googleapis.com/states-demo/NE/)/NE/

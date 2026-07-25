@@ -3,4 +3,4 @@
 Introduction
 &lt;a href="#introduction" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
 &lt;/h3&gt;
-&lt;p&gt;In this post I will demonstrate how to add custom TileStache map tiles on google maps, using google maps JavaScript API V3. TileStache has emerged as one of the easiest way to render your own map .There are many examples out there on creating basic tiles and then adding them on top of Leaftlet or Openlayers. In this post I will add them as an overlay on Google Maps.&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;In this post I will demonstrate how to add custom TileStache map tiles on google maps, using google maps JavaScript API V3. TileStache has emerged as one of the easiest ways to render your own map .There are many examples out there on creating basic tiles and then adding them on top of Leaflet or Openlayers. In this post I will add them as an overlay on Google Maps.&lt;/p&gt;</description></item></channel></rss>

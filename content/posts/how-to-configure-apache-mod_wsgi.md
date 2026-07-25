@@ -8,7 +8,7 @@ description = ""
 tags = ["general","python"]
 +++
 
-I am a big fan and user of python. one of the most popular ways to create quick web app in python is via using mod wsgi.
+I am a big fan and user of python. One of the most popular ways to create a quick web app in python is via using mod wsgi.
 
  The aim of mod\_wsgi is to implement a simple to use [Apache](http://httpd.apache.org/) module which can host any [Python](http://www.python.org/) application which supports the Python [WSGI](http://www.wsgi.org/) interface. 
 

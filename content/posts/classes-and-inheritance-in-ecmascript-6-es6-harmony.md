@@ -8,13 +8,13 @@ description = ""
 tags = ["javascript"]
 +++
 
- So if you are a JavaScript geek and haven't yet heard,(if every one is listening to ECMA announcements, who's gonna drink beer :) ) ECMA 6 feature set has been drafted,its [feature set ](http://wiki.ecmascript.org/doku.php?id=harmony:specification_drafts) is frozen, it is mostly being refined now. You can already program in it and compile it to current JavaScript . The JavaScript frameworks AngularJS and Ember.js will be based on it (with ways to opt out). Again, via cross-compilation.
+ So if you are a JavaScript geek and haven't yet heard,(if everyone is listening to ECMA announcements, who's gonna drink beer :) ) ECMA 6 feature set has been drafted, its [feature set ](http://wiki.ecmascript.org/doku.php?id=harmony:specification_drafts) is frozen, it is mostly being refined now. You can already program in it and compile it to current JavaScript. The JavaScript frameworks AngularJS and Ember.js will be based on it (with ways to opt out). Again, via cross-compilation.
 
   As you may already know JavaScript is being used both client side i.e. in the browser and also on server side eg:Node.js. To check which features are currently supported in your browser visit [here ](http://kangax.github.io/compat-table/es6/) 
 
-  For me , the most exciting feature has been Classes. We all know that JavaScript needs this soo badly, even though JavaScript, has always been referred to as an OOP language, and arguments have been made by many that as long as you can implement a class like encapsulation and inheritance like functionality, the language must be regarded as an OOP language(I know, there is much more to this as well), now I being, a humble developer, in most cases just agreed to all that mumbo-jumbo, but there has always been a secret fire burning all along. The desire to actually have a **Class** keyword and **extend** keyword, so that my brain finds symmetry in the world
+  For me, the most exciting feature has been Classes. We all know that JavaScript needs this so badly, even though JavaScript, has always been referred to as an OOP language, and arguments have been made by many that as long as you can implement a class like encapsulation and inheritance like functionality, the language must be regarded as an OOP language(I know, there is much more to this as well), now I being, a humble developer, in most cases just agreed to all that mumbo-jumbo, but there has always been a secret fire burning all along. The desire to actually have a **Class** keyword and **extend** keyword, so that my brain finds symmetry in the world
 
-  Well somebody must have been listening up there, I mean in the ECMA world, and eventually these babies are here, hence this amazing posts to share the joy :). 
+  Well somebody must have been listening up there, I mean in the ECMA world, and eventually these babies are here, hence this amazing post to share the joy :). 
 
  So before these keywords were present, a class like construct was generally created like the snippet below ### Class
 

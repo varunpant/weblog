@@ -26,7 +26,7 @@ tags = ["python","algorithm"]
 ```
  The above code returns **True** if the string is a palindrome or returns **False** with **mismatching** indices.
 
-  result,left,right = ispalindrome("aba") will return True,0,0 while result,left,right = ispalindrome("abc") will return False,0,2 indicating the characters at 0th position, **a**, does not match with character at 2nd position, **c** 
+  result, left, right = ispalindrome("aba") will return True,0,0 while result, left, right = ispalindrome("abc") will return False,0,2 indicating the characters at 0th position, **a**, does not match with character at 2nd position, **c** 
 
   Once the indices are found a basic recursive solution can be written to **reflect** the missing strings from the mismatching indices. 
 
@@ -80,7 +80,7 @@ print to\_Palendrome\_rigth\_reflect("abc")#abcba
         print "MIN-RIGHT",delta\_r
 
 ```
- Its important to consider that above mentioned techniques ignores **deletion** or **susbtitution**.
+ Its important to consider that above mentioned techniques ignore **deletion** or **substitution**.
 
  ### Another approach which only calculates count, while considering all possible operations.
 
@@ -117,7 +117,7 @@ print to\_Palendrome\_rigth\_reflect("abc")#abcba
     return table[0][n-1]
 
 ```
- This, by far is the fastest of all methods, but only works for string which are not already a**palindrome** , the trick is to have a n x n  matrices and then fill in a particual order from left to right, increasing the gaps per row as shown below, for string **abcde** 
+ This, by far is the fastest of all methods, but only works for string which are not already a **palindrome**, the trick is to have an n x n matrix and then fill in a particular order from left to right, increasing the gaps per row as shown below, for string **abcde** 
 
   
 

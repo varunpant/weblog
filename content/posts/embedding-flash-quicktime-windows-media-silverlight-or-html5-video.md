@@ -10,7 +10,7 @@ tags = ["snippet","utility"]
 
 ### Flash Object
 
- This is quick Snippet which demonstrate how to embed flash object in a web page.
+ This is a quick snippet which demonstrates how to embed a flash object in a web page.
 
  ```html
  <object type="application/x-shockwave-flash"
@@ -22,7 +22,7 @@ tags = ["snippet","utility"]
 ```
  ### Quicktime
 
- This is quick Snippet which demonstrate how to embed quicktime object in a web page
+ This is a quick snippet which demonstrates how to embed a quicktime object in a web page
 
  ```html
  <object classid="clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B"
@@ -42,7 +42,7 @@ tags = ["snippet","utility"]
 ```
  ### Windows Media
 
- This is quick Snippet which demonstrate how to embed Windows Media object in a web page.
+ This is a quick snippet which demonstrates how to embed a Windows Media object in a web page.
 
  ```html
  <object type="video/x-ms-wmv"
@@ -56,7 +56,7 @@ tags = ["snippet","utility"]
 ```
  ### Silver Light
 
- This is quick Snippet which demonstrate how to embed Silverlight object in a web page.
+ This is a quick snippet which demonstrates how to embed a Silverlight object in a web page.
 
  ```html
  <object width="300" height="300"
@@ -74,7 +74,7 @@ tags = ["snippet","utility"]
 Your browser does not support the video tag.
 </video>
 ```
-  #### Supported Videoformats
+  #### Supported Video Formats
 
    Browser MP4 WebM Ogg   Internet Explorer YES NO NO   Chrome YES YES YES   Firefox YES YES YES   Safari YES NO NO   Opera NO YES YES  
 

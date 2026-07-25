@@ -10,13 +10,13 @@ tags = ["elasticsearch","geo_point","geo_distance","search","web"]
 
 In this post I will demonstrate using [ElasticSearch](http://www.elasticsearch.org/) to spatially query records and filter them by attributes.
 
- [ElasticSearch](http://www.elasticsearch.org/) is built on top of [Lucence](http://lucene.apache.org/) which in version 4.0 supports Spatial query features, for those interested here is an [example](http://svn.apache.org/viewvc/lucene/dev/branches/branch_4x/lucene/spatial/src/test/org/apache/lucene/spatial/SpatialExample.java?view=markup) and [link](http://lucene.apache.org/core/4_0_0/spatial/index.html) to javadocs.
+ [ElasticSearch](http://www.elasticsearch.org/) is built on top of [Lucene](http://lucene.apache.org/) which in version 4.0 supports Spatial query features, for those interested here is an [example](http://svn.apache.org/viewvc/lucene/dev/branches/branch_4x/lucene/spatial/src/test/org/apache/lucene/spatial/SpatialExample.java?view=markup) and [link](http://lucene.apache.org/core/4_0_0/spatial/index.html) to javadocs.
 
  You will need to install [ElasticSearch](http://www.elasticsearch.org/), read about installing it [here](http://www.elasticsearch.org/guide/en/elasticsearch/guide/current/_installing_elasticsearch.html), also install [marvel](http://www.elasticsearch.org/guide/en/marvel/current/) plugin for configuration and testing.
 
- For this demonstration I have used data from [Geofabrik](http://download.geofabrik.de/). I have used **point.shp** file from [Great Britan](http://download.geofabrik.de/europe/great-britain.html) but you can use data from any other country as well.
+ For this demonstration I have used data from [Geofabrik](http://download.geofabrik.de/). I have used **point.shp** file from [Great Britain](http://download.geofabrik.de/europe/great-britain.html) but you can use data from any other country as well.
 
- To extract the data,I wrote a quick python script using [pyshp](https://code.google.com/p/pyshp/) library
+ To extract the data, I wrote a quick python script using [pyshp](https://code.google.com/p/pyshp/) library
 
  One can easily install it by typing sudo easy\_install pyshp in shell
 

@@ -13,7 +13,7 @@ tags = ["general", "python"]
 
 # 	Timeseries financial forecasting
 
-Recently , I have been looking into various ways to forecast a time series dataset. This is an old pursuit in the field of statistics and there are many well known ways to achieve this.
+Recently, I have been looking into various ways to forecast a time series dataset. This is an old pursuit in the field of statistics and there are many well known ways to achieve this.
 
 In this post I will demonstrate a very basic (**Naive**) approach of forecasting a quarterly dataset of sales figure, by using previous 4 years (16 quarters) and forecasting/predicting the next 1 year of sales aggregate.
 
@@ -40,13 +40,13 @@ df = pd.DataFrame(
 
 ### Moving and Centred average
 
-Moving averages is a technique used to smoothen the data out , this is a very simple way to do seasonal adjustment. In pandas,  we will use **rolling** function with the **window** size of **4**. The seasonal cycle in this case is known to last 4 quarters.
+Moving averages is a technique used to smooth the data out, this is a very simple way to do seasonal adjustment. In pandas,  we will use **rolling** function with the **window** size of **4**. The seasonal cycle in this case is known to last 4 quarters.
 
 ```python
 df["MA"] = df.SALES.rolling(window=4).mean().shift(-1)
 ```
 
-Since our window size (**4**)is even, we will need to centre the data as well.
+Since our window size (**4**) is even, we will need to centre the data as well.
 
 ```python
 df["CA"] = df.MA.rolling(window=2).mean().shift(-1)
@@ -78,7 +78,7 @@ df["StItD"] = df["StIt"].apply(lambda x:StItDescription(x))
 
 <img src="/img/image-20200105203318518.png" alt="image-20200105203318518" style="zoom:50%;" />
 
-So take a moment to understand what these values really indicate. The number **1.095890**  indicate that in year 1, quarter 4  the **seasonal** and **irregular** components were **13% above** (*yellow line in figure below*) the smoothened baseline, or year 3 quarter 3 the **seasonal** and **irregular** components were **11%(rounded) above** baseline.
+So take a moment to understand what these values really indicate. The number **1.095890** indicates that in year 1, quarter 4  the **seasonal** and **irregular** components were **13% above** (*yellow line in figure below*) the smoothened baseline, or year 3 quarter 3 the **seasonal** and **irregular** components were **11%(rounded) above** baseline.
 
 ![image-20200105210230472](/img/image-20200105210230472.png)
 
@@ -104,7 +104,7 @@ df = df.join(averages.rename("St"),on="QUARTER")
 
 ### DeSeasonalize
 
-Next, we use the **yearly averages (St)** and divid**e Yt (sales)** to get deseasonalise values. This column has no seasonality or irregularity components now.
+Next, we use the **yearly averages (St)** and divid**e Yt (sales)** to get deseasonalised values. This column has no seasonality or irregularity components now.
 
 ```python
 df["DeSeasonalize"] = df.SALES/df.St
@@ -112,7 +112,7 @@ df["DeSeasonalize"] = df.SALES/df.St
 
 ### Linear regression and Trend Prediction (Tt)
 
-Next we use , good old, linear regression to do some actual trend prediction for trend values, note how the independent variable (**X**) is simply a count (1,2,3.......16) and the dependent variable (**Y**) is the deseasonalised variable.
+Next we use, good old, linear regression to do some actual trend prediction for trend values, note how the independent variable (**X**) is simply a count (1,2,3.......16) and the dependent variable (**Y**) is the deseasonalised variable.
 
 ```python
 linear_regressor = LinearRegression()
@@ -123,7 +123,7 @@ linear_regressor.fit(X, Y)
 
 ```
 
-The coffecients returned in this case are
+The coefficients returned in this case are
 
 ```bash
 coef_ = 0.14713872
@@ -140,9 +140,9 @@ df["Trend(Tt)"] = linear_regressor.predict(X)
 
 ### Forecasting
 
-We are using a classical multiplicative model to forecast, which basically says :
+We are using a classical multiplicative model to forecast, which basically says:
 
-Forecasted value as a given time **Y(t)** is a product of **seasonal component S(t)** times **irregular component I(t)** times **trend component (Tt)**.
+Forecasted value at a given time **Y(t)** is a product of **seasonal component S(t)** times **irregular component I(t)** times **trend component (Tt)**.
 $$
 Y_t = S_t *I_t*T_t
 $$
@@ -167,7 +167,7 @@ Here is a view of what has been achieved so far, **Sales** column is actuals and
 
 ### Forecasting Future
 
-Now that all the hard work has been done, predicting future is relatively straightforward. We are going to aim for next 1 year i.e. next 4 quarters as going any further won't be appropriate.
+Now that all the hard work has been done, predicting the future is relatively straightforward. We are going to aim for next 1 year i.e. next 4 quarters as going any further won't be appropriate.
 
 ```python
 #Create next 4 quarters for year 5.

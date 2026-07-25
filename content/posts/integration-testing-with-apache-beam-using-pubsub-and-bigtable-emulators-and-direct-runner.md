@@ -10,9 +10,9 @@ tags = ["dataflow","apache-beam","java","google","bigdata","testing"]
 
 ### Summary
 
- Recently I have been looking into ways to test my **Apache Beam** pipelines at work. Most common use cases of Beam generally involves either batch reading data from GCS and writing to analytical platforms such as Big Query or stream reading data from Pubsub and writing to perhaps Bigtable.
+ Recently I have been looking into ways to test my **Apache Beam** pipelines at work. Most common use cases of Beam generally involve either batch reading data from GCS and writing to analytical platforms such as Big Query or stream reading data from Pubsub and writing to perhaps Bigtable.
 
- A pipelines consists of transforms and its generally easy to test them in isolation as a independent unit test per stage, however I am personally a big fan of "end-to-end" testing or “Integration testing” and this is where things can sometimes get tricky.
+ A pipeline consists of transforms and its generally easy to test them in isolation as an independent unit test per stage, however I am personally a big fan of "end-to-end" testing or “Integration testing” and this is where things can sometimes get tricky.
 
   Apache beam has various [runners](https://beam.apache.org/documentation/runners/capability-matrix/), the" one of interest" for testing purposes is the [Direct runner](https://beam.apache.org/documentation/runners/direct/). 
 
@@ -28,7 +28,7 @@ tags = ["dataflow","apache-beam","java","google","bigdata","testing"]
 >   It’s also important to realise the memory considerations as mentioned below.
 
  
->  Local execution is limited by the memory available in your local environment. It is highly recommended that you run your pipeline with data sets small enough to fit in local memory. You can create a small in-memory data set using a Create transform, or you can use a Read transform to work with small local or remote files.   I am going to show an example where I have written a basic integration test which listens for some payload from pubsub emulator, transforms the data to Mutation and then writes it to BigTable emulator, there are no aggregations performed hence every thing works in global window and triggering of a write is immediate. This example can also serve as a good way to front your data warehouse with apache beam for dynamically scalable writing,i.e as the pubsub message load would increase, beam would add more workers and as the load would decrease beam would reduce the workers. 
+>  Local execution is limited by the memory available in your local environment. It is highly recommended that you run your pipeline with data sets small enough to fit in local memory. You can create a small in-memory data set using a Create transform, or you can use a Read transform to work with small local or remote files.   I am going to show an example where I have written a basic integration test which listens for some payload from pubsub emulator, transforms the data to Mutation and then writes it to BigTable emulator, there are no aggregations performed hence everything works in global window and triggering of a write is immediate. This example can also serve as a good way to front your data warehouse with apache beam for dynamically scalable writing, i.e as the pubsub message load would increase, beam would add more workers and as the load would decrease beam would reduce the workers. 
 
  #### SetUp PubSub Emulator
 
@@ -123,7 +123,7 @@ gcloud beta emulators bigtable start
     }
 
 ```
- Insure that the project and instance id for bigtable matches those in the cofiguration file ~/.cbtrc for bigtable, you can check this by typing in cbt in the console.
+ Ensure that the project and instance id for bigtable matches those in the configuration file ~/.cbtrc for bigtable, you can check this by typing in cbt in the console.
 
  ``` EventListenerOptions options = PipelineOptionsFactory.fromArgs(args).withValidation()
                 .as(EventListenerOptions.class);
@@ -141,11 +141,11 @@ gcloud beta emulators bigtable start
 
 
 ```
- The intreseting bits are as follows
+ The interesting bits are as follows
 
  ### Override PubsubOptions url in Beam
 
- This was easy, just make sure your options extend org.apache.beam.sdk.io.gcp.pubsub.PubsubOptions. This includes a method called options.setPubsubRootUrl, whcih then can be pointed to emulator. 
+ This was easy, just make sure your options extend org.apache.beam.sdk.io.gcp.pubsub.PubsubOptions. This includes a method called options.setPubsubRootUrl, which then can be pointed to emulator. 
 
  ### Point beam to BigTable Emulator.
 

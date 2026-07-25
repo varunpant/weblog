@@ -18,18 +18,18 @@ tags = ["general","python","programming","utility","how to","web"]
 
   After it's done downloading, double click to run the installer, and select default options (unless you have other custom needs of course ). 
 
-  Once done lets quickly setup a **PYTHON\_HOME** environment variable which points to the python directory which contains python exe, in my case its c:/Python27, to set up environment variable right click "My Computer select properties Advanced Tab Environment Variables Button , add new environment variable and call it “PYTHON\_HOME” and set path to whatever is in your case, to make sure every thing is proper ,open NEW dos prompt and type echo %PYTHON\_HOME% and you should see the path you have entered. 
+  Once done lets quickly setup a **PYTHON\_HOME** environment variable which points to the python directory which contains python exe, in my case its c:/Python27, to set up environment variable right click "My Computer select properties Advanced Tab Environment Variables Button, add new environment variable and call it “PYTHON\_HOME” and set path to whatever is in your case, to make sure everything is proper ,open NEW dos prompt and type echo %PYTHON\_HOME% and you should see the path you have entered. 
 
-  Next open you environment variables GUI again as instructed above and this time locate your path variable, once found append %PTHON\_HOME% at the end by separating it with a semicolon. To check everything is setup properly open NEW command line and enterecho %PATH%, and you should see your entry at the end of the string. 
+  Next open you environment variables GUI again as instructed above and this time locate your path variable, once found append %PYTHON\_HOME% at the end by separating it with a semicolon. To check everything is setup properly open NEW command line and enter echo %PATH%, and you should see your entry at the end of the string. 
 
  Setup Easy\_Install
 -------------------
 
   First we'll need to download [setuptools](http://pypi.python.org/pypi/setuptools).Download the exe and run it. 
 
-  The directory that contains easy\_install is by defaultc:\<pythonfolder>\Scripts 
+  The directory that contains easy\_install is by default c:\<pythonfolder>\Scripts 
 
-  All you need to do now is append %PYTHON\_HOME%\Scripts , separated by a semicolon ; at the end of path variable in your environment settings as instructed above, as usual enterecho %PATH% to confirm change, then open command promt and type easy\_install and you should see a warning (its ok we havent passed in a package name or url ) 
+  All you need to do now is append %PYTHON\_HOME%\Scripts, separated by a semicolon; at the end of path variable in your environment settings as instructed above, as usual enter echo %PATH% to confirm change, then open command prompt and type easy\_install and you should see a warning (its ok we haven't passed in a package name or url ) 
 
  
 >   error: No urls, filenames, or requirements specified (see --help)   

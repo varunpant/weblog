@@ -73,7 +73,7 @@ fab(35)
 fab2(35)
 
 ```
- Few days ago I found another interesting way to code this using enumerate and yield in python
+ A few days ago I found another interesting way to code this using enumerate and yield in python
 
  ```def fib():
     a, b = 0, 1
@@ -106,5 +106,5 @@ fab2(35)
  10:  55
 
 ```
-[ Here](https://learnodo-newtonic.com/fibonacci-facts) are some interesting facts about the Leonardo Fibonacii.
+[ Here](https://learnodo-newtonic.com/fibonacci-facts) are some interesting facts about Leonardo Fibonacci.
 

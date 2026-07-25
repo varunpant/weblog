@@ -22,7 +22,7 @@ This is quick tutorial about installing [Tilestache](http://tilestache.org/) lib
 
  Finally type in sudo easy\_install tilestache
 
- Thats it all done, you might see some warnings but thats fine ignore them .
+ That’s it, all done. You might see some warnings, but that’s fine — ignore them.
 
  Read the introduction [here](http://mike.teczno.com/notes/tilestache.html) to get started
 

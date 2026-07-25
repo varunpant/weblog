@@ -46,7 +46,7 @@ sudo npm install -g grunt-cli
 
 Add the path from the grunt installer to your bash profile by typing in export PATH=/usr/local/lib/node_modules/grunt/bin:$PATH
 
-Made the profile an executable source ~/.bash_profile
+Make the profile executable source ~/.bash_profile
 
 this should do the trick
 

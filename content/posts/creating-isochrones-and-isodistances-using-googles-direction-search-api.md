@@ -10,13 +10,13 @@ tags = ["isochrone","javascript","google"]
 
 ### Introduction
 
-  ![Isochrone](https://raw.githubusercontent.com/varunpant/Google_Isochrone/master/ScreenShot.png) [Isochrones](http://en.wikipedia.org/wiki/Isochrone_map) are curves of equal travel time from a certain point of origin, another way of saying this would be that an Isochrone is an isoline for travel time, if the weighting factor is changed form time to distance, then the resulting curve us called an Isodistance. 
+  ![Isochrone](https://raw.githubusercontent.com/varunpant/Google_Isochrone/master/ScreenShot.png) [Isochrones](http://en.wikipedia.org/wiki/Isochrone_map) are curves of equal travel time from a certain point of origin, another way of saying this would be that an Isochrone is an isoline for travel time, if the weighting factor is changed from time to distance, then the resulting curve is called an Isodistance. 
 
   In this post I will present a rough way to create an Isochrone and an Isodistance using [google's directions API.](https://developers.google.com/maps/documentation/directions/) 
 
  ### Algorithm
 
- The actual algorithm to calculate Isocrone or Isodistance is perhpas a bit complicated than the simplistic approach being described here, if you are intrested in having a deeper look then I would recommend visiting this [ link ](http://en.wikipedia.org/wiki/Isochrone_map) by OpenStreetMap folks. Here is a [link](https://github.com/varunpant/Google_Isochrone) to my version on github. Open Isochrone.html to take a look at the functionality or visit this hosted [link](http://www.varunpant.com/static/resources/google/Isochrone/isochrone.html). 
+ The actual algorithm to calculate Isochrone or Isodistance is perhaps a bit more complicated than the simplistic approach being described here, if you are interested in having a deeper look then I would recommend visiting this [ link ](http://en.wikipedia.org/wiki/Isochrone_map) by OpenStreetMap folks. Here is a [link](https://github.com/varunpant/Google_Isochrone) to my version on github. Open Isochrone.html to take a look at the functionality or visit this hosted [link](http://www.varunpant.com/static/resources/google/Isochrone/isochrone.html). 
 
  ###  Details
 

@@ -10,13 +10,13 @@ tags = ["python","utility","web"]
 
 Generally, when I am in a middle of prototyping a concept or in a need of quickly executing Ajax requests or using browser features which would need the page to be hosted on a web server, I use Python's [SimpleHTTPServer](http://docs.python.org/2/library/simplehttpserver.html) module.
 
- Python's SimpleHTTPServer is a great way of serve the contents of the current directory,all one needs to do is change directory and execute a command which will expose all contents as if they were hosted in a web page. 
+ Python's SimpleHTTPServer is a great way to serve the contents of the current directory, all one needs to do is change directory and execute a command which will expose all contents as if they were hosted in a web page. 
 
  ```python
  cd myfolder
  python -m SimpleHTTPServer  
 ```
- you don't need a line of code or a even a python file anywhere inside the directory for this to work, the module works all on its own and just needs a **port number**. 
+ you don't need a line of code or even a python file anywhere inside the directory for this to work, the module works all on its own and just needs a **port number**. 
 
  If there is a file called index.html inside the root, then its served when the user types localhost:port. 
 

@@ -10,7 +10,7 @@ tags = ["tilestache"]
 
 ### Introduction
 
-  In this post I will demonstrate how to add custom TileStache map tiles on google maps, using google maps JavaScript API V3. TileStache has emerged as one of the easiest way to render your own map .There are many examples out there on creating basic tiles and then adding them on top of Leaftlet or Openlayers. In this post I will add them as an overlay on Google Maps. 
+  In this post I will demonstrate how to add custom TileStache map tiles on google maps, using google maps JavaScript API V3. TileStache has emerged as one of the easiest ways to render your own map .There are many examples out there on creating basic tiles and then adding them on top of Leaflet or Openlayers. In this post I will add them as an overlay on Google Maps. 
 
  ### Overlays
 
@@ -18,7 +18,7 @@ tags = ["tilestache"]
 
  ### TileMill and TileStache
 
-  Ok, so now lets quickly create a map server side. In my Map I have a Uk District polygon layer which have been computed to get a count score with UK Crime DataSet November 2014, I simply used Point inside a polygon feature in Qgis to get a score. Then I styled the data using Carto Css in TileMill to a get a Heat Map Like effect. ![](http://www.varunpant.com/static/resources/tilestachedemo/image00.png) 
+  Ok, so now lets quickly create a map server side. In my Map I have a Uk District polygon layer which has been computed to get a count score with UK Crime DataSet November 2014, I simply used Point inside a polygon feature in Qgis to get a score. Then I styled the data using Carto Css in TileMill to a get a Heat Map Like effect. ![](http://www.varunpant.com/static/resources/tilestachedemo/image00.png) 
 
  Here is the Carto Css if you are wondering.
 
@@ -101,7 +101,7 @@ tags = ["tilestache"]
 ```
  
 
-  Finally start the server . TileStache-master/scripts/tilestache-server.py -c /path/to/my/configuration/tiles.cfg 
+  Finally start the server. TileStache-master/scripts/tilestache-server.py -c /path/to/my/configuration/tiles.cfg 
 
   ### Creating a Custom Overlay for Google Maps
 
@@ -131,7 +131,7 @@ map = new google.maps.Map(document.getElementById('map-canvas'),
 
   ![](http://www.varunpant.com/static/resources/tilestachedemo/image01.png) 
 
-  I have added a working sample [here ](http://www.varunpant.com/static/resources/tilestachedemo/distribution.zip), incase you wanna check out the full source code. Hope this helps. 
+  I have added a working sample [here ](http://www.varunpant.com/static/resources/tilestachedemo/distribution.zip), in case you wanna check out the full source code. Hope this helps. 
 
  
 

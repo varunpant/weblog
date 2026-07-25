@@ -10,7 +10,7 @@ tags = ["unix","windows"]
 
 ![](http://www.varunpant.com/static/resources/uow/uow.jpg)
 
- Microsoft announced at Build 2016 , about the new feature to run native Bash and GNU/Linux command-line tools
+ Microsoft announced at Build 2016, about the new feature to run native Bash and GNU/Linux command-line tools
 
  Gabriel Aul has just [announced the release](https://twitter.com/GabeAul/status/717759462258249728) of the Windows 10 build #14316 to the Windows Insiders Fast-Ring
 

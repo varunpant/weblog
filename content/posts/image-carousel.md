@@ -8,7 +8,7 @@ description = ""
 tags = ["programming","fun","utility","javascript","carousel","fluid","css"]
 +++
 
-Here is another of many JavaScript based Image Carousel, I had seen many similar to these made in SilverLight and Flash, I came across a wonderful [carousel](http://www.shinedraw.com/animation-effect/flash-vs-silverlight-image-carousel/) made in SilverLight sometimes back which was very fluid in behavior and could easily be customized and configured to take various shape and form.
+Here is another of many JavaScript based image carousels, I had seen many similar to these made in SilverLight and Flash, I came across a wonderful [carousel](http://www.shinedraw.com/animation-effect/flash-vs-silverlight-image-carousel/) made in SilverLight some time back which was very fluid in behavior and could easily be customized and configured to take various shape and form.
 
  [![carousel](http://www.varunpant.com/static/resources/carousel_thumb.png "carousel")](http://www.varunpant.com/static/resources/carousel.png)
 
