@@ -64,3 +64,15 @@ text-transform: uppercase;
     .consent__actions{ width: 100%; }
     .consent__btn{ flex: 1; }
 }
+
+/* "Cookie settings" in the footer — styled as a link, not a button. */
+.consent-reopen{
+    background: none;
+    border: 0;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.consent-reopen:hover{ opacity: .75; }

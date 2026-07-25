@@ -1,148 +1,586 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>How To on Varun Pant</title><link>https://varunpant.com/tags/how-to/</link><description>Recent content in How To on Varun Pant</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>varun@varunpant.com (Varun Pant)</managingEditor><webMaster>varun@varunpant.com (Varun Pant)</webMaster><lastBuildDate>Thu, 01 Sep 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://varunpant.com/tags/how-to/feed.xml" rel="self" type="application/rss+xml"/><item><title>How to Query a Shape file for Point inside a polygon using ogr python</title><link>https://varunpant.com/posts/how-to-query-a-shape-file-for-point-inside-a-polygon-using-ogr-python/</link><pubDate>Thu, 01 Sep 2016 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/how-to-query-a-shape-file-for-point-inside-a-polygon-using-ogr-python/</guid><description>
-&lt;p&gt;Recently I was trying to build a quick geo lookup service in python, which could be used like an &amp;ldquo;info tool&amp;rdquo; in QGIS. This task is trivial in almost all geospatial databases, however I wasn&amp;rsquo;t able to find much online around querying a shape file.&lt;/p&gt;
-&lt;p&gt;In this post I will demonstrate a simple python code to query a shape file which contains world countries. The file can be downloaded from &lt;a href="https://github.com/RandomEtc/shapefile-js/tree/master/thematicmapping"&gt;here&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>How to install and configure grunt on mac Osx</title><link>https://varunpant.com/posts/how-to-install-and-configure-grunt-on-mac-osx/</link><pubDate>Sat, 12 Jul 2014 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/how-to-install-and-configure-grunt-on-mac-osx/</guid><description>
-&lt;p&gt;This post is intended to assist folks who are trying to install and work with grunt on mac osx&lt;/p&gt;
-&lt;h3 id="install-nodejs-and-npm-with-homebrew"&gt;
-Install Node.js and npm with Homebrew
-&lt;a href="#install-nodejs-and-npm-with-homebrew" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>How To on Varun Pant</title>
+    
+    
+    
+    <link>http://localhost:1314/tags/how-to/</link>
+    <description>Recent content in How To on Varun Pant</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>varun@varunpant.com (Varun Pant)</managingEditor>
+    <webMaster>varun@varunpant.com (Varun Pant)</webMaster>
+    <lastBuildDate>Thu, 01 Sep 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://localhost:1314/tags/how-to/feed.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to Query a Shape file for Point inside a polygon using ogr python</title>
+      <link>http://localhost:1314/posts/how-to-query-a-shape-file-for-point-inside-a-polygon-using-ogr-python/</link>
+      <pubDate>Thu, 01 Sep 2016 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1314/posts/how-to-query-a-shape-file-for-point-inside-a-polygon-using-ogr-python/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          &lt;p&gt;Recently I was trying to build a quick geo lookup service in python, which could be used like an &amp;ldquo;info tool&amp;rdquo; in QGIS. This task is trivial in almost all geospatial databases, however I wasn&amp;rsquo;t able to find much online around querying a shape file.&lt;/p&gt;
+&lt;p&gt;In this post I will demonstrate a simple python code to query a shape file which contains world countries. The file can be downloaded from &lt;a href=&#34;https://github.com/RandomEtc/shapefile-js/tree/master/thematicmapping&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>How to install and configure grunt on mac Osx</title>
+      <link>http://localhost:1314/posts/how-to-install-and-configure-grunt-on-mac-osx/</link>
+      <pubDate>Sat, 12 Jul 2014 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1314/posts/how-to-install-and-configure-grunt-on-mac-osx/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          &lt;p&gt;This post is intended to assist folks who are trying to install and work with grunt on mac osx&lt;/p&gt;
+&lt;h3 id=&#34;install-nodejs-and-npm-with-homebrew&#34;&gt;
+  Install Node.js and npm with Homebrew
+  &lt;a href=&#34;#install-nodejs-and-npm-with-homebrew&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
 &lt;/h3&gt;
-&lt;p&gt;First, install Homebrew by typing in the following command ruby -e &amp;ldquo;$(curl -fsSL &lt;a href="https://raw.github.com/Homebrew/homebrew/go/install%29%22"&gt;https://raw.github.com/Homebrew/homebrew/go/install)"&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;First, install Homebrew by typing in the following command ruby -e &amp;ldquo;$(curl -fsSL &lt;a href=&#34;https://raw.github.com/Homebrew/homebrew/go/install%29%22&#34;&gt;https://raw.github.com/Homebrew/homebrew/go/install)&#34;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Then, type in brew update to ensure your Homebrew is up to date.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;brew update
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;brew update
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Run&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;brew doctor
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;brew doctor 
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;to make sure your system is all good.&lt;/p&gt;
-&lt;p&gt;Follow any other recommendations from brew doctor.&lt;/p&gt;</description></item><item><title>Normalizing Ranges of Numbers</title><link>https://varunpant.com/posts/normalizing-ranges-of-numbers/</link><pubDate>Wed, 09 Jul 2014 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/normalizing-ranges-of-numbers/</guid><description>
-&lt;p&gt;Range Normalization is a &lt;a href="http://www.heatonresearch.com/wiki/Normalization"&gt;normalization&lt;/a&gt; technique that allows you to map a number to a specific range.&lt;/p&gt;
+&lt;p&gt;Follow any other recommendations from brew doctor.&lt;/p&gt;
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>Normalizing Ranges of Numbers</title>
+      <link>http://localhost:1314/posts/normalizing-ranges-of-numbers/</link>
+      <pubDate>Wed, 09 Jul 2014 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1314/posts/normalizing-ranges-of-numbers/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          &lt;p&gt;Range Normalization is a &lt;a href=&#34;http://www.heatonresearch.com/wiki/Normalization&#34;&gt;normalization&lt;/a&gt; technique that allows you to map a number to a specific range.&lt;/p&gt;
 &lt;p&gt;Lets say that we have a data set where the values are in a range of 1 to 10, however we wish to normalise it to a range between 0 and 5&lt;/p&gt;
 &lt;p&gt;Mathematically speaking the equation comes down to&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://varunpant.com/resources/eq1_2.png"&gt;&lt;img src="https://varunpant.com/resources/eq1_thumb.png" alt="eq1" title="eq1"&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://varunpant.com/resources/eq2_2.png"&gt;&lt;img src="https://varunpant.com/resources/eq2_thumb.png" alt="eq2" title="eq2"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://localhost:1314/resources/eq1_2.png&#34;&gt;&lt;img src=&#34;http://localhost:1314/resources/eq1_thumb.png&#34; alt=&#34;eq1&#34; title=&#34;eq1&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://localhost:1314/resources/eq2_2.png&#34;&gt;&lt;img src=&#34;http://localhost:1314/resources/eq2_thumb.png&#34; alt=&#34;eq2&#34; title=&#34;eq2&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;translated to Python&lt;/p&gt;
-&lt;pre tabindex="0"&gt;&lt;code class="language-from" data-lang="from"&gt;class Normaliser:
-def \_\_init\_\_(self,dH,dL,nH,nL):
-self.dH = dH
-self.dL = dL
-self.nH = nH
-self.nL = nL
-def normalize(self,x):
-return ((x - self.dL) / (self.dH - self.dL)) * (self.nH - self.nL) + self.nL
-def denormalize(self,x):
-return ((self.dL - self.dH) * x - self.nH * self.dL + self.dH * self.nL) / (self.nL - self.nH)
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-from&#34; data-lang=&#34;from&#34;&gt;class Normaliser:
+
+   def \_\_init\_\_(self,dH,dL,nH,nL):
+       self.dH = dH
+       self.dL = dL
+       self.nH = nH
+       self.nL = nL
+
+   def normalize(self,x):
+       return ((x - self.dL) / (self.dH - self.dL))  * (self.nH - self.nL) + self.nL
+
+   def denormalize(self,x):
+       return ((self.dL - self.dH) * x - self.nH * self.dL + self.dH * self.nL) / (self.nL - self.nH)
+
 if \_\_name\_\_ == &amp;#34;\_\_main\_\_&amp;#34;:
-norm = Normaliser(10,1,5,0);
-for a in range(1,11):
-x = norm.normalize(a);
-y = norm.denormalize(x);
-print str(a) + &amp;#34; : &amp;#34; + str(x) + &amp;#34; : &amp;#34; + str(y)
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The results&lt;/p&gt;</description></item><item><title>Raphael-js-tutorial-part-II</title><link>https://varunpant.com/posts/raphael-js-tutorial-part-ii/</link><pubDate>Wed, 25 Dec 2013 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/raphael-js-tutorial-part-ii/</guid><description>
-&lt;p&gt;This is the second part of the tutorial about getting started with &lt;a href="http://raphaeljs.com/"&gt;Raphael.js&lt;/a&gt;. To see the first part go &lt;a href="https://varunpant.com/posts/raphael-js-tutorial-part-i/"&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;h4 id="writing-text-with-raphael"&gt;
-Writing Text with Raphael
-&lt;a href="#writing-text-with-raphael" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
+   norm = Normaliser(10,1,5,0);
+
+   for a in range(1,11):
+       x = norm.normalize(a);
+       y = norm.denormalize(x);
+       print str(a) + &amp;#34; : &amp;#34; + str(x) + &amp;#34; : &amp;#34; + str(y)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The results&lt;/p&gt;
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>Raphael-js-tutorial-part-II</title>
+      <link>http://localhost:1314/posts/raphael-js-tutorial-part-ii/</link>
+      <pubDate>Wed, 25 Dec 2013 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1314/posts/raphael-js-tutorial-part-ii/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          &lt;p&gt;This is the second part of the tutorial about getting started with &lt;a href=&#34;http://raphaeljs.com/&#34;&gt;Raphael.js&lt;/a&gt;. To see the first part go &lt;a href=&#34;http://localhost:1314/posts/raphael-js-tutorial-part-i/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h4 id=&#34;writing-text-with-raphael&#34;&gt;
+  Writing Text with Raphael
+  &lt;a href=&#34;#writing-text-with-raphael&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
 &lt;/h4&gt;
 &lt;p&gt;Some code first ;)&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-javascript" data-lang="javascript"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;var&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;canvas&lt;/span&gt; &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;Raphael&lt;/span&gt;(&lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;, &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;, &lt;span style="color:#ae81ff"&gt;250&lt;/span&gt;, &lt;span style="color:#ae81ff"&gt;250&lt;/span&gt; );
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;var&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;t1&lt;/span&gt; &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;canvas&lt;/span&gt;.&lt;span style="color:#a6e22e"&gt;text&lt;/span&gt;(&lt;span style="color:#ae81ff"&gt;50&lt;/span&gt;, &lt;span style="color:#ae81ff"&gt;50&lt;/span&gt;, &lt;span style="color:#f92672"&gt;*&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;Some text Goes here&amp;#34;&lt;/span&gt;&lt;span style="color:#f92672"&gt;*&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;var&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;t2&lt;/span&gt; &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;canvas&lt;/span&gt;.&lt;span style="color:#a6e22e"&gt;text&lt;/span&gt;(&lt;span style="color:#ae81ff"&gt;60&lt;/span&gt;,&lt;span style="color:#ae81ff"&gt;90&lt;/span&gt;,&lt;span style="color:#e6db74"&gt;&amp;#34;First line \n Second Line \n Third line&amp;#34;&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;var&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;t3&lt;/span&gt; &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;canvas&lt;/span&gt;.&lt;span style="color:#a6e22e"&gt;text&lt;/span&gt;(&lt;span style="color:#ae81ff"&gt;214&lt;/span&gt;, &lt;span style="color:#ae81ff"&gt;140&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#34;1079&amp;#34;&lt;/span&gt;).&lt;span style="color:#a6e22e"&gt;attr&lt;/span&gt;({&lt;span style="color:#e6db74"&gt;&amp;#34;text-anchor&amp;#34;&lt;/span&gt;&lt;span style="color:#f92672"&gt;:&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;middle&amp;#34;&lt;/span&gt;,&lt;span style="color:#e6db74"&gt;&amp;#39;font-size&amp;#39;&lt;/span&gt;&lt;span style="color:#f92672"&gt;:&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;16&lt;/span&gt;,&lt;span style="color:#e6db74"&gt;&amp;#34;font-family&amp;#34;&lt;/span&gt;&lt;span style="color:#f92672"&gt;:&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;arial&amp;#34;&lt;/span&gt;,&lt;span style="color:#e6db74"&gt;&amp;#34;fill&amp;#34;&lt;/span&gt;&lt;span style="color:#f92672"&gt;:&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;#fff&amp;#34;&lt;/span&gt;});
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;In the above examples canvas.text will create a simple text element at 50,50. Strangely VML /SVG do not have Line breaks therefore the programmer is responsible for creating new lines, in most cases appending** &amp;lsquo;\n&amp;rsquo;** does the trick.&lt;/p&gt;</description></item><item><title>Mod Proxy equivalent in IIS using ARR and URL Rewrite Module</title><link>https://varunpant.com/posts/mod-proxy-equivalent-in-iis-using-arr-and-url-rewrite-module/</link><pubDate>Sun, 25 Aug 2013 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/mod-proxy-equivalent-in-iis-using-arr-and-url-rewrite-module/</guid><description>
-&lt;p&gt;IIS7 is quite modular, it is &lt;a href="http://blogs.iis.net/bills/archive/2008/06/02/how-iis-ships-software.aspx"&gt;shipped&lt;/a&gt; with lots of goodies as separate modules and together it is now one of the most powerful and flexible web servers.&lt;/p&gt;
-&lt;p&gt;In this post I intend to cover how we can easily configure &lt;a href="http://www.iis.net/downloads/microsoft/application-request-routing"&gt;ARR&lt;/a&gt; and &lt;a href="http://www.microsoft.com/en-gb/download/details.aspx?id=7435"&gt;URL Rewrite Module&lt;/a&gt; to get a similar functionality as of &lt;a href="http://httpd.apache.org/docs/2.2/mod/mod_proxy.html"&gt;Mod Proxy&lt;/a&gt; in Apache.&lt;/p&gt;
-&lt;p&gt;Here I will demonstrate configuration of a reverse proxy which according to the &lt;a href="http://en.wikipedia.org/wiki/Reverse_proxy"&gt;definition&lt;/a&gt; is&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;canvas&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Raphael&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;250&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;250&lt;/span&gt; );
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;t1&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;canvas&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;text&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;50&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;50&lt;/span&gt;, &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Some text Goes here&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;t2&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;canvas&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;text&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;60&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;90&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;First line \n Second Line \n Third line&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;t3&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;canvas&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;text&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;214&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;140&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;1079&amp;#34;&lt;/span&gt;).&lt;span style=&#34;color:#a6e22e&#34;&gt;attr&lt;/span&gt;({&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;text-anchor&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;middle&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;font-size&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;16&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;font-family&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;arial&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;fill&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#fff&amp;#34;&lt;/span&gt;});
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;In the above examples canvas.text will create a simple text element at 50,50. Strangely VML /SVG do not have Line breaks therefore the programmer is responsible for creating new lines, in most cases appending** &amp;lsquo;\n&amp;rsquo;** does the trick.&lt;/p&gt;
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>Mod Proxy equivalent in IIS using ARR and URL Rewrite Module</title>
+      <link>http://localhost:1314/posts/mod-proxy-equivalent-in-iis-using-arr-and-url-rewrite-module/</link>
+      <pubDate>Sun, 25 Aug 2013 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1314/posts/mod-proxy-equivalent-in-iis-using-arr-and-url-rewrite-module/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          &lt;p&gt;IIS7 is quite modular, it is &lt;a href=&#34;http://blogs.iis.net/bills/archive/2008/06/02/how-iis-ships-software.aspx&#34;&gt;shipped&lt;/a&gt; with lots of goodies as separate modules and together it is now one of the most powerful and flexible web servers.&lt;/p&gt;
+&lt;p&gt;In this post I intend to cover how we can easily configure &lt;a href=&#34;http://www.iis.net/downloads/microsoft/application-request-routing&#34;&gt;ARR&lt;/a&gt; and &lt;a href=&#34;http://www.microsoft.com/en-gb/download/details.aspx?id=7435&#34;&gt;URL Rewrite Module&lt;/a&gt; to get a similar functionality as of &lt;a href=&#34;http://httpd.apache.org/docs/2.2/mod/mod_proxy.html&#34;&gt;Mod Proxy&lt;/a&gt; in Apache.&lt;/p&gt;
+&lt;p&gt;Here I will demonstrate configuration of a reverse proxy which according to the &lt;a href=&#34;http://en.wikipedia.org/wiki/Reverse_proxy&#34;&gt;definition&lt;/a&gt; is&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Reverse proxy&lt;/strong&gt; is a type of &lt;a href="http://en.wikipedia.org/wiki/Proxy_server"&gt;proxy server&lt;/a&gt; that retrieves resources on behalf of a &lt;a href="http://en.wikipedia.org/wiki/Client_%28computing%29"&gt;client&lt;/a&gt; from one or more &lt;a href="http://en.wikipedia.org/wiki/Server_%28computing%29"&gt;servers&lt;/a&gt;. A general use case to configure such proxies could be to handle cross domain Ajax requests, so basically if I would like to call a service hosted as &lt;a href="http://anotherdomain.com/service"&gt;http://anotherdomain.com/service&lt;/a&gt; from &lt;a href="http://localdomain/service"&gt;http://localdomain/service&lt;/a&gt; I would need to configure a proxy which will request resources from anotherdomain.com/service on behalf of localdomain ### Configuration&lt;/p&gt;</description></item><item><title>Signing android release apk from the command line (via ant)</title><link>https://varunpant.com/posts/signing-android-release-apk-from-the-command-line-via-ant/</link><pubDate>Sun, 25 Aug 2013 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/signing-android-release-apk-from-the-command-line-via-ant/</guid><description>
-&lt;p&gt;This post is probably out too late ,as almost all IDEs these days (which support android development) ,probably have an Integrated &lt;strong&gt;release signing&lt;/strong&gt; or &lt;strong&gt;debug signing&lt;/strong&gt; utility/wizard built in, but if somebody is using an old IDE or perhaps want to integrate release in a CI (continuous integration) environment, this tutorial might come in handy.&lt;/p&gt;
-&lt;p&gt;Basically one has to sign an apk either with a debug key (which is generally present in your .android folder) or create a fresh application-specific keystore, to know more go &lt;a href="http://developer.android.com/tools/publishing/app-signing.html"&gt;here&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Importing Exporting CSV Files in PostgreSQL Databases via COPY</title><link>https://varunpant.com/posts/importing-exporting-csv-files-in-postgresql-databases-via-copy/</link><pubDate>Mon, 11 Mar 2013 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/importing-exporting-csv-files-in-postgresql-databases-via-copy/</guid><description>
-&lt;p&gt;This is going to be a short article which will illustrate importing and exporting a table from or to a csv file using PostgreSQL &lt;a href="http://www.postgresql.org/docs/9.1/static/sql-copy.html"&gt;COPY&lt;/a&gt; command.&lt;/p&gt;
-&lt;h4 id="importing-a-table-from-csv"&gt;
-Importing a table from CSV
-&lt;a href="#importing-a-table-from-csv" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
+&lt;p&gt;&lt;strong&gt;Reverse proxy&lt;/strong&gt; is a type of &lt;a href=&#34;http://en.wikipedia.org/wiki/Proxy_server&#34;&gt;proxy server&lt;/a&gt; that retrieves resources on behalf of a &lt;a href=&#34;http://en.wikipedia.org/wiki/Client_%28computing%29&#34;&gt;client&lt;/a&gt; from one or more &lt;a href=&#34;http://en.wikipedia.org/wiki/Server_%28computing%29&#34;&gt;servers&lt;/a&gt;.  A general use case to configure such proxies could be to handle cross domain Ajax requests, so basically if I would like to call a service hosted as &lt;a href=&#34;http://anotherdomain.com/service&#34;&gt;http://anotherdomain.com/service&lt;/a&gt; from &lt;a href=&#34;http://localdomain/service&#34;&gt;http://localdomain/service&lt;/a&gt; I would need to configure a proxy which will request resources from anotherdomain.com/service on behalf of localdomain ### Configuration&lt;/p&gt;
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>Signing android release apk from the command line (via ant)</title>
+      <link>http://localhost:1314/posts/signing-android-release-apk-from-the-command-line-via-ant/</link>
+      <pubDate>Sun, 25 Aug 2013 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1314/posts/signing-android-release-apk-from-the-command-line-via-ant/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          &lt;p&gt;This post is probably out too late ,as almost all IDEs these days (which support android development) ,probably have an Integrated &lt;strong&gt;release signing&lt;/strong&gt; or &lt;strong&gt;debug signing&lt;/strong&gt; utility/wizard built in, but if somebody is using an old IDE or perhaps want to integrate release in a CI (continuous integration) environment, this tutorial might come in handy.&lt;/p&gt;
+&lt;p&gt;Basically one has to sign an apk either with a debug key (which is generally present in your .android folder) or create a fresh application-specific keystore, to know more go &lt;a href=&#34;http://developer.android.com/tools/publishing/app-signing.html&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>Importing Exporting CSV Files in PostgreSQL Databases via COPY</title>
+      <link>http://localhost:1314/posts/importing-exporting-csv-files-in-postgresql-databases-via-copy/</link>
+      <pubDate>Mon, 11 Mar 2013 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1314/posts/importing-exporting-csv-files-in-postgresql-databases-via-copy/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          &lt;p&gt;This is going to be a short article which will illustrate importing and exporting a table from or to a csv file using PostgreSQL &lt;a href=&#34;http://www.postgresql.org/docs/9.1/static/sql-copy.html&#34;&gt;COPY&lt;/a&gt; command.&lt;/p&gt;
+&lt;h4 id=&#34;importing-a-table-from-csv&#34;&gt;
+  Importing a table from CSV
+  &lt;a href=&#34;#importing-a-table-from-csv&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
 &lt;/h4&gt;
 &lt;p&gt;Assuming you already have a table in place with the right columns, the command is as follows&lt;/p&gt;
 &lt;p&gt;COPY &lt;code&gt;&amp;lt;TargetTableName&amp;gt;&lt;/code&gt; &lt;strong&gt;FROM&lt;/strong&gt; &amp;lsquo;/path/to/csv/SourceCSVFile.csv&amp;rsquo; DELIMITERS &amp;lsquo;&lt;strong&gt;,&lt;/strong&gt;&amp;rsquo; CSV;&lt;/p&gt;
-&lt;h4 id="exporting-a-csv-from-a-table"&gt;
-Exporting a CSV from a table.
-&lt;a href="#exporting-a-csv-from-a-table" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
+&lt;h4 id=&#34;exporting-a-csv-from-a-table&#34;&gt;
+  Exporting a CSV from a table.
+  &lt;a href=&#34;#exporting-a-csv-from-a-table&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
 &lt;/h4&gt;
-&lt;p&gt;COPY &lt;code&gt;&amp;lt;SourceTableName&amp;gt;&lt;/code&gt; &lt;strong&gt;TO&lt;/strong&gt; &amp;lsquo;/path/to/csv/TargetCSVFile&amp;rsquo; DELIMITERS &amp;lsquo;&lt;strong&gt;,&lt;/strong&gt;&amp;rsquo; CSV;&lt;/p&gt;</description></item><item><title>Raphael JS Tutorial - Part I</title><link>https://varunpant.com/posts/raphael-js-tutorial-part-i/</link><pubDate>Sun, 10 Mar 2013 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/raphael-js-tutorial-part-i/</guid><description>
-&lt;p&gt;&lt;a href="http://raphaeljs.com/"&gt;Raphael.JS&lt;/a&gt; is a SVG/VML library which helps you to create quick vector shapes and images. Its very small and compact (only 86kb),easy to use, well documented and works in all browsers and yes even IE. Here is a list of all major browsers this library works on: &lt;a href="http://en.wikipedia.org/wiki/Chrome_browser"&gt;Chrome&lt;/a&gt; 5.0+ &lt;a href="http://en.wikipedia.org/wiki/Firefox"&gt;Firefox&lt;/a&gt; 3.0+, &lt;a href="http://en.wikipedia.org/wiki/Safari_%28web_browser%29"&gt;Safari&lt;/a&gt; 3.0+, &lt;a href="http://en.wikipedia.org/wiki/Opera_%28web_browser%29"&gt;Opera&lt;/a&gt; 9.5+ and &lt;a href="http://en.wikipedia.org/wiki/Internet_Explorer"&gt;Internet Explorer&lt;/a&gt; 6.0+&lt;/p&gt;
-&lt;p&gt;,finally its distributed under &lt;a href="http://raphaeljs.com/license.html"&gt;MIT license&lt;/a&gt;. In this tutorial ,I intend to introduce basics of this library and help you get started.&lt;/p&gt;</description></item><item><title>Install Apache Cassandra</title><link>https://varunpant.com/posts/install-apache-cassandra/</link><pubDate>Sun, 27 Jan 2013 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/install-apache-cassandra/</guid><description>
-&lt;p&gt;&lt;a href="http://cassandra.apache.org"&gt;Cassandra&lt;/a&gt; is an Open Source Distributed Data Persistence system which is designed for storing and managing large amounts of data across servers.&lt;/p&gt;
-&lt;p&gt;To quote elevator pitch by &lt;em&gt;Eben Hewitt&lt;/em&gt;&lt;/p&gt;</description></item><item><title>Position div in the center of the page using css</title><link>https://varunpant.com/posts/position-div-in-the-center-of-the-page-using-css/</link><pubDate>Sun, 27 Jan 2013 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/position-div-in-the-center-of-the-page-using-css/</guid><description>
-&lt;p&gt;When I first started web programming, creating a center aligned div was one of the most common tasks that I saw myself doing.&lt;/p&gt;
+&lt;p&gt;COPY &lt;code&gt;&amp;lt;SourceTableName&amp;gt;&lt;/code&gt; &lt;strong&gt;TO&lt;/strong&gt; &amp;lsquo;/path/to/csv/TargetCSVFile&amp;rsquo; DELIMITERS &amp;lsquo;&lt;strong&gt;,&lt;/strong&gt;&amp;rsquo; CSV;&lt;/p&gt;
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>Raphael JS Tutorial - Part I</title>
+      <link>http://localhost:1314/posts/raphael-js-tutorial-part-i/</link>
+      <pubDate>Sun, 10 Mar 2013 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1314/posts/raphael-js-tutorial-part-i/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          &lt;p&gt;&lt;a href=&#34;http://raphaeljs.com/&#34;&gt;Raphael.JS&lt;/a&gt; is a SVG/VML library which helps you to create quick vector shapes and images. Its very small and compact (only 86kb),easy to use, well documented and works in all browsers and yes even IE. Here is a list of all major browsers this library works on: &lt;a href=&#34;http://en.wikipedia.org/wiki/Chrome_browser&#34;&gt;Chrome&lt;/a&gt; 5.0+ &lt;a href=&#34;http://en.wikipedia.org/wiki/Firefox&#34;&gt;Firefox&lt;/a&gt; 3.0+, &lt;a href=&#34;http://en.wikipedia.org/wiki/Safari_%28web_browser%29&#34;&gt;Safari&lt;/a&gt; 3.0+, &lt;a href=&#34;http://en.wikipedia.org/wiki/Opera_%28web_browser%29&#34;&gt;Opera&lt;/a&gt; 9.5+ and &lt;a href=&#34;http://en.wikipedia.org/wiki/Internet_Explorer&#34;&gt;Internet Explorer&lt;/a&gt; 6.0+&lt;/p&gt;
+&lt;p&gt;,finally its distributed under &lt;a href=&#34;http://raphaeljs.com/license.html&#34;&gt;MIT license&lt;/a&gt;. In this tutorial ,I intend to introduce basics of this library and help you get started.&lt;/p&gt;
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>Install Apache Cassandra</title>
+      <link>http://localhost:1314/posts/install-apache-cassandra/</link>
+      <pubDate>Sun, 27 Jan 2013 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1314/posts/install-apache-cassandra/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          &lt;p&gt;&lt;a href=&#34;http://cassandra.apache.org&#34;&gt;Cassandra&lt;/a&gt; is an Open Source Distributed Data Persistence system which is designed for storing and managing large amounts of data across servers.&lt;/p&gt;
+&lt;p&gt;To quote elevator pitch by &lt;em&gt;Eben Hewitt&lt;/em&gt;&lt;/p&gt;
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>Position div in the center of the page using css</title>
+      <link>http://localhost:1314/posts/position-div-in-the-center-of-the-page-using-css/</link>
+      <pubDate>Sun, 27 Jan 2013 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1314/posts/position-div-in-the-center-of-the-page-using-css/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          &lt;p&gt;When I first started web programming, creating a center aligned div was one of the most common tasks that I saw myself doing.&lt;/p&gt;
 &lt;p&gt;Since a div is a block element, i.e. it takes up the full width available, and has a line break before and after it, it can easily be centered using relative styling&lt;/p&gt;
-&lt;pre tabindex="0"&gt;&lt;code class="language-.center" data-lang=".center"&gt;{
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-.center&#34; data-lang=&#34;.center&#34;&gt;{
 margin-left:auto;
 margin-right:auto;
 width:70%;
 background-color:#b0e0e6;
 }
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;However lately I have preferred using absolute positioning technique over relative, this works for all browsers and is best for login screens or alert messages over a translucent shim.&lt;/p&gt;</description></item><item><title>A guide to hosting in Red Hats OpenShift PaaS</title><link>https://varunpant.com/posts/a-guide-to-hosting-in-red-hats-openshift-paas/</link><pubDate>Fri, 25 Jan 2013 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/a-guide-to-hosting-in-red-hats-openshift-paas/</guid><description>
-&lt;p&gt;In this post, I am going to write about &lt;a href="https://openshift.redhat.com/app/"&gt;OpenShift&lt;/a&gt;, which is Red Hat&amp;rsquo;s free, auto-scaling Platform as a Service (&lt;a href="http://en.wikipedia.org/wiki/Platform_as_a_service"&gt;PaaS&lt;/a&gt;) for applications.&lt;/p&gt;
-&lt;p&gt;OpenShift to me is very similar to &lt;a href="https://developers.google.com/appengine/"&gt;Google&amp;rsquo;s app engine&lt;/a&gt; in some ways, but openshift&amp;rsquo;s offerings are quite diverse, for instance support for ruby, php, Perl, node.js, etc..&lt;/p&gt;
-&lt;p&gt;Openshift is not like a traditional VPS hosting, although once registered with them, the user does get shell access, but its quite limited, instead OpenShift has a concept of gears and cartridges.&lt;/p&gt;</description></item><item><title>Basic authentication in web.py via attribute</title><link>https://varunpant.com/posts/basic-authentication-in-web-py-via-attribute/</link><pubDate>Wed, 23 Jan 2013 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/basic-authentication-in-web-py-via-attribute/</guid><description>
-&lt;p&gt;Here I demonstrate the process of &lt;a href="http://en.wikipedia.org/wiki/Basic_access_authentication"&gt;Basic Authentication&lt;/a&gt; in &lt;a href="http://webpy.org/"&gt;web.py&lt;/a&gt; python web framework.&lt;/p&gt;
-&lt;p&gt;There is a proof of concept article &lt;a href="http://webpy.org/cookbook/userauthbasic"&gt;provided&lt;/a&gt; in the main site, however I just thought doing the same via an attribute might be a cleaner solution.&lt;/p&gt;
-&lt;p&gt;HTTP Basic authentication implementation is one of the easiest ways to secure web pages because it doesn&amp;rsquo;t require cookies, session handling, or the development of login pages. Rather, HTTP Basic authentication uses static headers which means that no handshakes have to be done in anticipation, however the credentials are passed as &lt;a href="http://en.wikipedia.org/wiki/Plaintext"&gt;plain-text &lt;/a&gt;and could be intercepted.&lt;/p&gt;</description></item><item><title>Cross browser drop shadow with CSS3</title><link>https://varunpant.com/posts/cross-browser-drop-shadow-with-css3/</link><pubDate>Wed, 23 Jan 2013 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/cross-browser-drop-shadow-with-css3/</guid><description>
-&lt;p&gt;When &lt;strong&gt;css3&lt;/strong&gt; arrived, one of the goodies that I found was, the inclusion of &lt;strong&gt;Drop Shadow effect&lt;/strong&gt;, namely **Box Shadow **and &lt;strong&gt;Text Shadow&lt;/strong&gt;.&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;However lately I have preferred using absolute positioning technique over relative, this works for all browsers and is best for login screens or alert messages over a translucent shim.&lt;/p&gt;
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>A guide to hosting in Red Hats OpenShift PaaS</title>
+      <link>http://localhost:1314/posts/a-guide-to-hosting-in-red-hats-openshift-paas/</link>
+      <pubDate>Fri, 25 Jan 2013 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1314/posts/a-guide-to-hosting-in-red-hats-openshift-paas/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          &lt;p&gt;In this post, I am going to write about &lt;a href=&#34;https://openshift.redhat.com/app/&#34;&gt;OpenShift&lt;/a&gt;, which is Red Hat&amp;rsquo;s free, auto-scaling Platform as a Service (&lt;a href=&#34;http://en.wikipedia.org/wiki/Platform_as_a_service&#34;&gt;PaaS&lt;/a&gt;) for applications.&lt;/p&gt;
+&lt;p&gt;OpenShift to me is very similar to &lt;a href=&#34;https://developers.google.com/appengine/&#34;&gt;Google&amp;rsquo;s app engine&lt;/a&gt; in some ways, but openshift&amp;rsquo;s offerings are quite diverse, for instance support for ruby, php, Perl, node.js, etc..&lt;/p&gt;
+&lt;p&gt;Openshift is not like a traditional VPS hosting, although once registered with them, the user does get shell access, but its quite limited, instead OpenShift has a concept of gears and cartridges.&lt;/p&gt;
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>Basic authentication in web.py via attribute</title>
+      <link>http://localhost:1314/posts/basic-authentication-in-web-py-via-attribute/</link>
+      <pubDate>Wed, 23 Jan 2013 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1314/posts/basic-authentication-in-web-py-via-attribute/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          &lt;p&gt;Here I demonstrate the process of &lt;a href=&#34;http://en.wikipedia.org/wiki/Basic_access_authentication&#34;&gt;Basic Authentication&lt;/a&gt; in &lt;a href=&#34;http://webpy.org/&#34;&gt;web.py&lt;/a&gt; python web framework.&lt;/p&gt;
+&lt;p&gt;There is a proof of concept article &lt;a href=&#34;http://webpy.org/cookbook/userauthbasic&#34;&gt;provided&lt;/a&gt; in the main site, however I just thought doing the same via an attribute might be a cleaner solution.&lt;/p&gt;
+&lt;p&gt;HTTP Basic authentication implementation is one of the easiest ways to secure web pages because it doesn&amp;rsquo;t require cookies, session handling, or the development of login pages. Rather, HTTP Basic authentication uses static headers which means that no handshakes have to be done in anticipation, however the credentials are passed as &lt;a href=&#34;http://en.wikipedia.org/wiki/Plaintext&#34;&gt;plain-text &lt;/a&gt;and could be intercepted.&lt;/p&gt;
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>Cross browser drop shadow with CSS3</title>
+      <link>http://localhost:1314/posts/cross-browser-drop-shadow-with-css3/</link>
+      <pubDate>Wed, 23 Jan 2013 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1314/posts/cross-browser-drop-shadow-with-css3/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          &lt;p&gt;When &lt;strong&gt;css3&lt;/strong&gt; arrived, one of the goodies that I found was, the inclusion of &lt;strong&gt;Drop Shadow effect&lt;/strong&gt;, namely **Box Shadow **and &lt;strong&gt;Text Shadow&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;Here I present a cross browser utility css class which can be used for a drop shadow effect, without any image.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-css" data-lang="css"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#a6e22e"&gt;shadow&lt;/span&gt; {
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;/* For IE 8 */&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;-ms-&lt;/span&gt;&lt;span style="color:#66d9ef"&gt;filter&lt;/span&gt;: &lt;span style="color:#e6db74"&gt;&amp;#34;progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color=&amp;#39;#000000&amp;#39;)&amp;#34;&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;/* For IE 5.5 - 7 */&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;filter&lt;/span&gt;: progid&lt;span style="color:#f92672"&gt;:&lt;/span&gt;DXImageTransform&lt;span style="color:#f92672"&gt;.&lt;/span&gt;Microsoft&lt;span style="color:#f92672"&gt;.&lt;/span&gt;&lt;span style="color:#a6e22e"&gt;Shadow&lt;/span&gt;(Strength&lt;span style="color:#960050;background-color:#1e0010"&gt;=&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;4&lt;/span&gt;, Direction&lt;span style="color:#960050;background-color:#1e0010"&gt;=&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;135&lt;/span&gt;, Color&lt;span style="color:#960050;background-color:#1e0010"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#39;#000000&amp;#39;&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;-moz-&lt;/span&gt;&lt;span style="color:#66d9ef"&gt;box-shadow&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;3&lt;/span&gt;&lt;span style="color:#66d9ef"&gt;px&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;3&lt;/span&gt;&lt;span style="color:#66d9ef"&gt;px&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;4&lt;/span&gt;&lt;span style="color:#66d9ef"&gt;px&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;#000&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;-webkit-&lt;/span&gt;&lt;span style="color:#66d9ef"&gt;box-shadow&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;3&lt;/span&gt;&lt;span style="color:#66d9ef"&gt;px&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;3&lt;/span&gt;&lt;span style="color:#66d9ef"&gt;px&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;4&lt;/span&gt;&lt;span style="color:#66d9ef"&gt;px&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;#000&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;box-shadow&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;3&lt;/span&gt;&lt;span style="color:#66d9ef"&gt;px&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;3&lt;/span&gt;&lt;span style="color:#66d9ef"&gt;px&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;4&lt;/span&gt;&lt;span style="color:#66d9ef"&gt;px&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;#000&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For cross browser &lt;strong&gt;text shadow&lt;/strong&gt; effect ,I found a nice article &lt;a href="http://www.workingwith.me.uk/examples/css-drop-shadows.html#final_example"&gt;here&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>Cross browser CSS3 border-radius (rounded corners)</title><link>https://varunpant.com/posts/cross-browser-css3-border-radius-rounded-corners/</link><pubDate>Tue, 22 Jan 2013 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/cross-browser-css3-border-radius-rounded-corners/</guid><description>
-&lt;p&gt;When I started programming and had to begin designing my first user interface in HTML, I was always puzzled as to why all visual elements in HTML were rectangular. I soon learned that in those days if one would want a circle to be drawn on a page, then the only way possible was using an image, the same was true for drawing elements with rounded corners.&lt;/p&gt;
-&lt;p&gt;Thankfully HTML5/CSS3 guys were listening and the latest css3 standard supports defining the corner radius of a circle, this can be used to make an element look like a circle too if you want.&lt;/p&gt;</description></item><item><title>Cross Browser Opacity or Transparency</title><link>https://varunpant.com/posts/cross-browser-opacity-or-transparency/</link><pubDate>Tue, 22 Jan 2013 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/cross-browser-opacity-or-transparency/</guid><description>
-&lt;p&gt;Css has a very useful property called Opacity, which basically is a measure of transparency of an element.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;shadow&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#75715e&#34;&gt;/* For IE 8 */&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   &lt;span style=&#34;color:#66d9ef&#34;&gt;-ms-&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;filter&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color=&amp;#39;#000000&amp;#39;)&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   &lt;span style=&#34;color:#75715e&#34;&gt;/* For IE 5.5 - 7 */&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   &lt;span style=&#34;color:#66d9ef&#34;&gt;filter&lt;/span&gt;: progid&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;DXImageTransform&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;Microsoft&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;Shadow&lt;/span&gt;(Strength&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;, Direction&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;135&lt;/span&gt;, Color&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;#000000&amp;#39;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   &lt;span style=&#34;color:#66d9ef&#34;&gt;-moz-&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;box-shadow&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;px&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;px&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;px&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;#000&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   &lt;span style=&#34;color:#66d9ef&#34;&gt;-webkit-&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;box-shadow&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;px&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;px&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;px&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;#000&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   &lt;span style=&#34;color:#66d9ef&#34;&gt;box-shadow&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;px&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;px&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;px&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;#000&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For cross browser &lt;strong&gt;text shadow&lt;/strong&gt; effect ,I found a nice article &lt;a href=&#34;http://www.workingwith.me.uk/examples/css-drop-shadows.html#final_example&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>Cross browser CSS3 border-radius (rounded corners)</title>
+      <link>http://localhost:1314/posts/cross-browser-css3-border-radius-rounded-corners/</link>
+      <pubDate>Tue, 22 Jan 2013 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1314/posts/cross-browser-css3-border-radius-rounded-corners/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          &lt;p&gt;When I started programming and had to begin designing my first user interface in HTML, I was always puzzled as to why all visual elements in HTML were rectangular. I soon learned that in those days if one would want a circle to be drawn on a page, then the only way possible was using an image, the same was true for drawing elements with rounded corners.&lt;/p&gt;
+&lt;p&gt;Thankfully HTML5/CSS3 guys were listening and the latest css3 standard supports defining the corner radius of a circle, this can be used to make an element look like a circle too if you want.&lt;/p&gt;
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>Cross Browser Opacity or Transparency</title>
+      <link>http://localhost:1314/posts/cross-browser-opacity-or-transparency/</link>
+      <pubDate>Tue, 22 Jan 2013 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1314/posts/cross-browser-opacity-or-transparency/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          &lt;p&gt;Css has a very useful property called Opacity, which basically is a measure of transparency of an element.&lt;/p&gt;
 &lt;p&gt;All modern browsers &lt;em&gt;Yes yes even &lt;strong&gt;IE&lt;/strong&gt;&lt;/em&gt; has support for it.&lt;/p&gt;
 &lt;p&gt;In most browsers the value is between &lt;strong&gt;0&lt;/strong&gt; &lt;em&gt;minimum [transparent] i.e not visible&lt;/em&gt; to &lt;strong&gt;1&lt;/strong&gt; &lt;em&gt;maximum [opaque] i.e. completely visible&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;In &lt;strong&gt;IE&lt;/strong&gt; the value is between 0 and 100 &lt;em&gt;,don&amp;rsquo;t ask why they just like to make us unhappy.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Here I present a helper css class which will work in all browsers.&lt;/p&gt;</description></item><item><title>Installing Redis on Ubuntu</title><link>https://varunpant.com/posts/installing-redis-on-ubuntu/</link><pubDate>Sun, 20 Jan 2013 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/installing-redis-on-ubuntu/</guid><description>
-&lt;p&gt;&lt;a href="http://redis.io/"&gt;Redis&lt;/a&gt; is an open source, advanced key-value store. Installing it on Linux debian platforms is pretty easy.&lt;/p&gt;
-&lt;p&gt;There are two ways of getting this done, one is perhaps an easy and less verbose method and it involves using an alternative repository &lt;a href="http://www.dotdeb.org/"&gt;Dotdeb.&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;A while ago I had posted a &lt;a href="https://varunpant.com/posts/how-to-set-up-redis-in-ubuntu-linux/"&gt;tutorial&lt;/a&gt; about installing redis from the &lt;a href="http://redis.googlecode.com/files/redis-2.2.4.tar.gz"&gt;googlecode&lt;/a&gt; repo, but things have changed since then and here I post a fairly recent way of installing it.&lt;/p&gt;</description></item><item><title>gzip compression in apache using mod_deflate</title><link>https://varunpant.com/posts/gzip-compression-in-apache-using-mod_deflate/</link><pubDate>Sat, 19 Jan 2013 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/gzip-compression-in-apache-using-mod_deflate/</guid><description>
-&lt;p&gt;&lt;a href="http://en.wikipedia.org/wiki/HTTP_compression"&gt;HTTP Compression&lt;/a&gt; is a very simple and effective way to save bandwidth and improve web application performance over the network.&lt;/p&gt;
-&lt;p&gt;Output compression is basically a process of compressing web server responses by using a loss-less compression algorithm called &lt;a href="http://en.wikipedia.org/wiki/Deflate"&gt;gzip&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;This technique is fairly modern and almost all modern browsers honor it, however if a page is requested from a browser which does not send a header Accept-Encoding: gzip, deflate then the response comes back uncompressed.&lt;/p&gt;</description></item><item><title>Start Stop Restart Apache 2 Web Server</title><link>https://varunpant.com/posts/start-stop-restart-apache-2-web-server/</link><pubDate>Sat, 19 Jan 2013 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/start-stop-restart-apache-2-web-server/</guid><description>
-&lt;p&gt;I have been using Linux environment a lot lately, particularly for hosting my web experiments and other application. One of the biggest and most searched questions for newbies has been&lt;/p&gt;
+&lt;p&gt;Here I present a helper css class which will work in all browsers.&lt;/p&gt;
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>Installing Redis on Ubuntu</title>
+      <link>http://localhost:1314/posts/installing-redis-on-ubuntu/</link>
+      <pubDate>Sun, 20 Jan 2013 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1314/posts/installing-redis-on-ubuntu/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          &lt;p&gt;&lt;a href=&#34;http://redis.io/&#34;&gt;Redis&lt;/a&gt; is an open source, advanced key-value store. Installing it on Linux debian platforms is pretty easy.&lt;/p&gt;
+&lt;p&gt;There are two ways of getting this done, one is perhaps an easy and less verbose method and it involves using an alternative repository &lt;a href=&#34;http://www.dotdeb.org/&#34;&gt;Dotdeb.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;A while ago I had posted a &lt;a href=&#34;http://localhost:1314/posts/how-to-set-up-redis-in-ubuntu-linux/&#34;&gt;tutorial&lt;/a&gt; about installing redis from the &lt;a href=&#34;http://redis.googlecode.com/files/redis-2.2.4.tar.gz&#34;&gt;googlecode&lt;/a&gt; repo, but things have changed since then and here I post a fairly recent way of installing it.&lt;/p&gt;
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>gzip compression in apache using mod_deflate</title>
+      <link>http://localhost:1314/posts/gzip-compression-in-apache-using-mod_deflate/</link>
+      <pubDate>Sat, 19 Jan 2013 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1314/posts/gzip-compression-in-apache-using-mod_deflate/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          &lt;p&gt;&lt;a href=&#34;http://en.wikipedia.org/wiki/HTTP_compression&#34;&gt;HTTP Compression&lt;/a&gt; is a very simple and effective way to save bandwidth and improve web application performance over the network.&lt;/p&gt;
+&lt;p&gt;Output compression is basically a process of compressing web server responses by using a loss-less compression algorithm called &lt;a href=&#34;http://en.wikipedia.org/wiki/Deflate&#34;&gt;gzip&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This technique is fairly modern and almost all modern browsers honor it, however if a page is requested from a browser which does not send a header Accept-Encoding: gzip, deflate then the response comes back uncompressed.&lt;/p&gt;
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>Start Stop Restart Apache 2 Web Server</title>
+      <link>http://localhost:1314/posts/start-stop-restart-apache-2-web-server/</link>
+      <pubDate>Sat, 19 Jan 2013 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1314/posts/start-stop-restart-apache-2-web-server/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          &lt;p&gt;I have been using Linux environment a lot lately, particularly for hosting my web experiments and other application. One of the biggest and most searched questions for newbies has been&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;How do I restart Apache 2 Web Server under Debian / Ubuntu Linux or UNIX operating systems?&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;In this post I simply attempt to lay this down for my benefit and theirs.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Start Apache2&lt;/strong&gt; # sudo /etc/init.d/apache2 start&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Stop Apache2&lt;/strong&gt; # sudo /etc/init.d/apache2 stop&lt;/p&gt;</description></item><item><title>Auto Complete with Redis (Python)</title><link>https://varunpant.com/posts/auto-complete-with-redis-python/</link><pubDate>Sun, 06 May 2012 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/auto-complete-with-redis-python/</guid><description>
-&lt;p&gt;This is a quick port of &lt;a href="http://antirez.com/post/autocomplete-with-redis.html"&gt;auto complete&lt;/a&gt; implementation in ruby using &lt;a href="http://redis.io/"&gt;Redis&lt;/a&gt; by &lt;a href="http://invece.org/"&gt;antirez&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Stop Apache2&lt;/strong&gt; # sudo /etc/init.d/apache2 stop&lt;/p&gt;
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>Auto Complete with Redis (Python)</title>
+      <link>http://localhost:1314/posts/auto-complete-with-redis-python/</link>
+      <pubDate>Sun, 06 May 2012 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1314/posts/auto-complete-with-redis-python/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          &lt;p&gt;This is a quick port of &lt;a href=&#34;http://antirez.com/post/autocomplete-with-redis.html&#34;&gt;auto complete&lt;/a&gt; implementation in ruby using &lt;a href=&#34;http://redis.io/&#34;&gt;Redis&lt;/a&gt; by &lt;a href=&#34;http://invece.org/&#34;&gt;antirez&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;I like python and had little time to burn today, so here goes:&lt;/p&gt;
-&lt;p&gt;The file used for input is &lt;a href="http://antirez.com/misc/female-names.txt"&gt;female-names.txt&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Hope it helps :)&lt;/p&gt;</description></item><item><title>How To Install and use Python Web.py framework on Windows</title><link>https://varunpant.com/posts/how-to-install-and-use-python-webpy-framework-on-windows/</link><pubDate>Sun, 06 May 2012 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/how-to-install-and-use-python-webpy-framework-on-windows/</guid><description>
-&lt;p&gt;&lt;a href="http://webpy.org/"&gt;Web.py&lt;/a&gt; has been one of my favorite web frameworks as its pretty easy to get cracking on it.&lt;/p&gt;
+&lt;p&gt;The file used for input is &lt;a href=&#34;http://antirez.com/misc/female-names.txt&#34;&gt;female-names.txt&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Hope it helps :)&lt;/p&gt;
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>How To Install and use Python Web.py framework on Windows</title>
+      <link>http://localhost:1314/posts/how-to-install-and-use-python-webpy-framework-on-windows/</link>
+      <pubDate>Sun, 06 May 2012 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1314/posts/how-to-install-and-use-python-webpy-framework-on-windows/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          &lt;p&gt;&lt;a href=&#34;http://webpy.org/&#34;&gt;Web.py&lt;/a&gt; has been one of my favorite web frameworks as its pretty easy to get cracking on it.&lt;/p&gt;
 &lt;p&gt;It&amp;rsquo;s super quick to install and one can come up with a prototype and rapid web services in a matter of minutes.&lt;/p&gt;
-&lt;h2 id="install-on-windows"&gt;
-Install on windows
-&lt;a href="#install-on-windows" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
+&lt;h2 id=&#34;install-on-windows&#34;&gt;
+  Install on windows
+  &lt;a href=&#34;#install-on-windows&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
 &lt;/h2&gt;
-&lt;p&gt;If you haven&amp;rsquo;t configured easy_install on windows, then read &lt;a href="https://varunpant.com/posts/how-to-setup-easy_install-on-windows/"&gt; this &lt;/a&gt; article.&lt;/p&gt;
-&lt;p&gt;Once easy_install has been configured believe it or not, all you have to do is open a command prompt and type&lt;/p&gt;</description></item><item><title>How to setup easy_install on Windows</title><link>https://varunpant.com/posts/how-to-setup-easy_install-on-windows/</link><pubDate>Sun, 06 May 2012 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/how-to-setup-easy_install-on-windows/</guid><description>
-&lt;p&gt;If one has been using python, then installing various libraries and modules is basically a breeze using easy_install utility, however for folks using windows, easy_install utility has to be setup properly before using it.&lt;/p&gt;
+&lt;p&gt;If you haven&amp;rsquo;t configured easy_install on windows, then read &lt;a href=&#34;http://localhost:1314/posts/how-to-setup-easy_install-on-windows/&#34;&gt; this &lt;/a&gt; article.&lt;/p&gt;
+&lt;p&gt;Once easy_install has been configured believe it or not, all you have to do is open a command prompt and type&lt;/p&gt;
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>How to setup easy_install on Windows</title>
+      <link>http://localhost:1314/posts/how-to-setup-easy_install-on-windows/</link>
+      <pubDate>Sun, 06 May 2012 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1314/posts/how-to-setup-easy_install-on-windows/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          &lt;p&gt;If one has been using python, then installing various libraries and modules is basically a breeze using easy_install utility, however for folks using windows, easy_install utility has to be setup properly before using it.&lt;/p&gt;
 &lt;p&gt;First lets make sure that python is properly installed and PYTHON_HOME environment variable is configured:&lt;/p&gt;
-&lt;h4 id="install-python-on-windows"&gt;
-Install Python on Windows
-&lt;a href="#install-python-on-windows" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
+&lt;h4 id=&#34;install-python-on-windows&#34;&gt;
+  Install Python on Windows
+  &lt;a href=&#34;#install-python-on-windows&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
 &lt;/h4&gt;
-&lt;p&gt;If not already installed download python installer from &lt;a href="http://python.org/download/"&gt;here.&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;After it&amp;rsquo;s done downloading, double click to run the installer, and select default options (unless you have other custom needs of course ).&lt;/p&gt;</description></item><item><title>Find Longitude and Latitude in Google Maps</title><link>https://varunpant.com/posts/find-longitude-and-latitude-in-google-maps/</link><pubDate>Sun, 15 Apr 2012 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/find-longitude-and-latitude-in-google-maps/</guid><description>
-&lt;p&gt;This post is basically a way of quick appreciation to the &lt;strong&gt;Google maps Team&lt;/strong&gt;, they are obviously a bunch of caring, loving people ,who make useful (although &lt;strong&gt;surreptitious&lt;/strong&gt;) tools for the betterment of Geek Kind.&lt;/p&gt;
-&lt;p&gt;So as most of you may have accidentally clicked a mysterious looking link at the bottom of your Google maps page ( on the left hand panel)&lt;a href="https://varunpant.com/resources/google_latlon_tool1_4.png"&gt;&lt;img src="https://varunpant.com/resources/google_latlon_tool1_thumb_1.png" alt="google_latlon_tool1"&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;This awesome looking link opens up a popup which lets you choose wonderful goodies which makes your Google maps page more useful than it already is:&lt;/p&gt;</description></item><item><title>How to set up Redis in Ubuntu Linux</title><link>https://varunpant.com/posts/how-to-set-up-redis-in-ubuntu-linux/</link><pubDate>Sat, 14 Apr 2012 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/how-to-set-up-redis-in-ubuntu-linux/</guid><description>
-&lt;p&gt;&lt;a href="http://redis.io/"&gt;Redis&lt;/a&gt; is an open source, advanced key-value store, and is quickly picking up momentum in real-time software development, it is now a well known and trusted product and can be used in various problem scenarios as a No SQL implementation.&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://redis.io/"&gt;Redis&lt;/a&gt; is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.&lt;/p&gt;
-&lt;p&gt;Here is a quick guide to install &lt;a href="http://redis.io/"&gt;Redis&lt;/a&gt; in Ubuntu 10.04, and it should be similar for higher versions and similar deb environment.&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;If not already installed download python installer from &lt;a href=&#34;http://python.org/download/&#34;&gt;here.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;After it&amp;rsquo;s done downloading, double click to run the installer, and select default options (unless you have other custom needs of course ).&lt;/p&gt;
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>Find Longitude and Latitude in Google Maps</title>
+      <link>http://localhost:1314/posts/find-longitude-and-latitude-in-google-maps/</link>
+      <pubDate>Sun, 15 Apr 2012 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1314/posts/find-longitude-and-latitude-in-google-maps/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          &lt;p&gt;This post is basically a way of quick appreciation to the &lt;strong&gt;Google maps Team&lt;/strong&gt;, they are obviously a bunch of caring, loving people ,who make useful (although &lt;strong&gt;surreptitious&lt;/strong&gt;) tools for the betterment of Geek Kind.&lt;/p&gt;
+&lt;p&gt;So as most of you may have accidentally clicked a mysterious looking link at the bottom of your Google maps page ( on the left hand panel)&lt;a href=&#34;http://localhost:1314/resources/google_latlon_tool1_4.png&#34;&gt;&lt;img src=&#34;http://localhost:1314/resources/google_latlon_tool1_thumb_1.png&#34; alt=&#34;google_latlon_tool1&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This awesome looking link opens up a popup which lets you choose wonderful goodies which makes your Google maps page more useful than it already is:&lt;/p&gt;
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>How to set up Redis in Ubuntu Linux</title>
+      <link>http://localhost:1314/posts/how-to-set-up-redis-in-ubuntu-linux/</link>
+      <pubDate>Sat, 14 Apr 2012 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1314/posts/how-to-set-up-redis-in-ubuntu-linux/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          &lt;p&gt;&lt;a href=&#34;http://redis.io/&#34;&gt;Redis&lt;/a&gt; is an open source, advanced key-value store, and is quickly picking up momentum in real-time software development, it is now a well known and trusted product and can be used in various problem scenarios as a No SQL implementation.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://redis.io/&#34;&gt;Redis&lt;/a&gt; is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.&lt;/p&gt;
+&lt;p&gt;Here is a quick guide to install &lt;a href=&#34;http://redis.io/&#34;&gt;Redis&lt;/a&gt; in Ubuntu 10.04, and it should be similar for higher versions and similar deb environment.&lt;/p&gt;
+          
+        
+        </description>
+    </item>
+    
+  </channel>
+</rss>

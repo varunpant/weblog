@@ -37,6 +37,14 @@
     // Only surface the bar when no choice has been recorded yet.
     if (!read()) el.hidden = false;
 
+    // "Cookie settings" in the footer re-opens the bar so a choice can be changed.
+    document.addEventListener("click", function (e) {
+      if (!e.target.closest("[data-consent-reopen]")) return;
+      e.preventDefault();
+      el.hidden = false;
+      el.scrollIntoView({ block: "nearest" });
+    });
+
     el.addEventListener("click", function (e) {
       var btn = e.target.closest("[data-consent]");
       if (!btn) return;

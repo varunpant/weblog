@@ -1,43 +1,114 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Utility on Varun Pant</title><link>https://varunpant.com/tags/utility/</link><description>Recent content in Utility on Varun Pant</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>varun@varunpant.com (Varun Pant)</managingEditor><webMaster>varun@varunpant.com (Varun Pant)</webMaster><lastBuildDate>Sat, 12 Jul 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://varunpant.com/tags/utility/feed.xml" rel="self" type="application/rss+xml"/><item><title>How to install and configure grunt on mac Osx</title><link>https://varunpant.com/posts/how-to-install-and-configure-grunt-on-mac-osx/</link><pubDate>Sat, 12 Jul 2014 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/how-to-install-and-configure-grunt-on-mac-osx/</guid><description>
-&lt;p&gt;This post is intended to assist folks who are trying to install and work with grunt on mac osx&lt;/p&gt;
-&lt;h3 id="install-nodejs-and-npm-with-homebrew"&gt;
-Install Node.js and npm with Homebrew
-&lt;a href="#install-nodejs-and-npm-with-homebrew" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Utility on Varun Pant</title>
+    
+    
+    
+    <link>http://localhost:1314/tags/utility/</link>
+    <description>Recent content in Utility on Varun Pant</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>varun@varunpant.com (Varun Pant)</managingEditor>
+    <webMaster>varun@varunpant.com (Varun Pant)</webMaster>
+    <lastBuildDate>Sat, 12 Jul 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://localhost:1314/tags/utility/feed.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to install and configure grunt on mac Osx</title>
+      <link>http://localhost:1314/posts/how-to-install-and-configure-grunt-on-mac-osx/</link>
+      <pubDate>Sat, 12 Jul 2014 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1314/posts/how-to-install-and-configure-grunt-on-mac-osx/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          &lt;p&gt;This post is intended to assist folks who are trying to install and work with grunt on mac osx&lt;/p&gt;
+&lt;h3 id=&#34;install-nodejs-and-npm-with-homebrew&#34;&gt;
+  Install Node.js and npm with Homebrew
+  &lt;a href=&#34;#install-nodejs-and-npm-with-homebrew&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
 &lt;/h3&gt;
-&lt;p&gt;First, install Homebrew by typing in the following command ruby -e &amp;ldquo;$(curl -fsSL &lt;a href="https://raw.github.com/Homebrew/homebrew/go/install%29%22"&gt;https://raw.github.com/Homebrew/homebrew/go/install)"&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;First, install Homebrew by typing in the following command ruby -e &amp;ldquo;$(curl -fsSL &lt;a href=&#34;https://raw.github.com/Homebrew/homebrew/go/install%29%22&#34;&gt;https://raw.github.com/Homebrew/homebrew/go/install)&#34;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Then, type in brew update to ensure your Homebrew is up to date.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;brew update
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;brew update
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Run&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;brew doctor
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;brew doctor 
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;to make sure your system is all good.&lt;/p&gt;
-&lt;p&gt;Follow any other recommendations from brew doctor.&lt;/p&gt;</description></item><item><title>Normalizing Ranges of Numbers</title><link>https://varunpant.com/posts/normalizing-ranges-of-numbers/</link><pubDate>Wed, 09 Jul 2014 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/normalizing-ranges-of-numbers/</guid><description>
-&lt;p&gt;Range Normalization is a &lt;a href="http://www.heatonresearch.com/wiki/Normalization"&gt;normalization&lt;/a&gt; technique that allows you to map a number to a specific range.&lt;/p&gt;
+&lt;p&gt;Follow any other recommendations from brew doctor.&lt;/p&gt;
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>Normalizing Ranges of Numbers</title>
+      <link>http://localhost:1314/posts/normalizing-ranges-of-numbers/</link>
+      <pubDate>Wed, 09 Jul 2014 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1314/posts/normalizing-ranges-of-numbers/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          &lt;p&gt;Range Normalization is a &lt;a href=&#34;http://www.heatonresearch.com/wiki/Normalization&#34;&gt;normalization&lt;/a&gt; technique that allows you to map a number to a specific range.&lt;/p&gt;
 &lt;p&gt;Lets say that we have a data set where the values are in a range of 1 to 10, however we wish to normalise it to a range between 0 and 5&lt;/p&gt;
 &lt;p&gt;Mathematically speaking the equation comes down to&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://varunpant.com/resources/eq1_2.png"&gt;&lt;img src="https://varunpant.com/resources/eq1_thumb.png" alt="eq1" title="eq1"&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://varunpant.com/resources/eq2_2.png"&gt;&lt;img src="https://varunpant.com/resources/eq2_thumb.png" alt="eq2" title="eq2"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://localhost:1314/resources/eq1_2.png&#34;&gt;&lt;img src=&#34;http://localhost:1314/resources/eq1_thumb.png&#34; alt=&#34;eq1&#34; title=&#34;eq1&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://localhost:1314/resources/eq2_2.png&#34;&gt;&lt;img src=&#34;http://localhost:1314/resources/eq2_thumb.png&#34; alt=&#34;eq2&#34; title=&#34;eq2&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;translated to Python&lt;/p&gt;
-&lt;pre tabindex="0"&gt;&lt;code class="language-from" data-lang="from"&gt;class Normaliser:
-def \_\_init\_\_(self,dH,dL,nH,nL):
-self.dH = dH
-self.dL = dL
-self.nH = nH
-self.nL = nL
-def normalize(self,x):
-return ((x - self.dL) / (self.dH - self.dL)) * (self.nH - self.nL) + self.nL
-def denormalize(self,x):
-return ((self.dL - self.dH) * x - self.nH * self.dL + self.dH * self.nL) / (self.nL - self.nH)
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-from&#34; data-lang=&#34;from&#34;&gt;class Normaliser:
+
+   def \_\_init\_\_(self,dH,dL,nH,nL):
+       self.dH = dH
+       self.dL = dL
+       self.nH = nH
+       self.nL = nL
+
+   def normalize(self,x):
+       return ((x - self.dL) / (self.dH - self.dL))  * (self.nH - self.nL) + self.nL
+
+   def denormalize(self,x):
+       return ((self.dL - self.dH) * x - self.nH * self.dL + self.dH * self.nL) / (self.nL - self.nH)
+
 if \_\_name\_\_ == &amp;#34;\_\_main\_\_&amp;#34;:
-norm = Normaliser(10,1,5,0);
-for a in range(1,11):
-x = norm.normalize(a);
-y = norm.denormalize(x);
-print str(a) + &amp;#34; : &amp;#34; + str(x) + &amp;#34; : &amp;#34; + str(y)
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The results&lt;/p&gt;</description></item><item><title>Install tile-stache on OsX Mavericks</title><link>https://varunpant.com/posts/install-tile-stache-on-osx-mavericks/</link><pubDate>Tue, 08 Jul 2014 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/install-tile-stache-on-osx-mavericks/</guid><description>
-&lt;p&gt;This is quick tutorial about installing &lt;a href="http://tilestache.org/"&gt;Tilestache&lt;/a&gt; library in OSX Mavericks.&lt;/p&gt;
-&lt;h3 id="step-1"&gt;
-Step 1
-&lt;a href="#step-1" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
+   norm = Normaliser(10,1,5,0);
+
+   for a in range(1,11):
+       x = norm.normalize(a);
+       y = norm.denormalize(x);
+       print str(a) + &amp;#34; : &amp;#34; + str(x) + &amp;#34; : &amp;#34; + str(y)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The results&lt;/p&gt;
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>Install tile-stache on OsX Mavericks</title>
+      <link>http://localhost:1314/posts/install-tile-stache-on-osx-mavericks/</link>
+      <pubDate>Tue, 08 Jul 2014 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1314/posts/install-tile-stache-on-osx-mavericks/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          &lt;p&gt;This is quick tutorial about installing &lt;a href=&#34;http://tilestache.org/&#34;&gt;Tilestache&lt;/a&gt; library in OSX Mavericks.&lt;/p&gt;
+&lt;h3 id=&#34;step-1&#34;&gt;
+  Step 1
+  &lt;a href=&#34;#step-1&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;Make sure Developer tools are installed xcode-select &amp;ndash;install&lt;/p&gt;
 &lt;p&gt;Then add these flags to tell xcode to use python like rest of the world does&lt;/p&gt;
@@ -45,134 +116,465 @@ Step 1
 &lt;p&gt;export CPPFLAGS=-Qunused-arguments&lt;/p&gt;
 &lt;p&gt;Finally type in sudo easy_install tilestache&lt;/p&gt;
 &lt;p&gt;That’s it, all done. You might see some warnings, but that’s fine — ignore them.&lt;/p&gt;
-&lt;p&gt;Read the introduction &lt;a href="http://mike.teczno.com/notes/tilestache.html"&gt;here&lt;/a&gt; to get started&lt;/p&gt;</description></item><item><title>Gheat Java – Heat maps</title><link>https://varunpant.com/posts/gheat-java-heat-maps/</link><pubDate>Fri, 24 Jan 2014 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/gheat-java-heat-maps/</guid><description>
-&lt;p&gt;&lt;a href="https://varunpant.com/resources/heat_map_2.jpg"&gt;&lt;img src="https://varunpant.com/resources/heat_map_thumb.jpg" alt="heat_map" title="heat_map"&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;A &lt;strong&gt;heat map&lt;/strong&gt; is a graphical representation of data where the individual values contained in a &lt;a href="http://en.wikipedia.org/wiki/Matrix_%28mathematics%29"&gt;matrix&lt;/a&gt; are represented as colors.&lt;/p&gt;
-&lt;p&gt;This article will attempt to explain the process of creating and using &lt;a href="https://github.com/varunpant/GHEAT-JAVA"&gt;GHEAT-JAVA&lt;/a&gt;, which is a port of famous aspen based &lt;a href="https://code.google.com/p/gheat/"&gt;gheat&lt;/a&gt; and took great inspiration from &lt;a href="http://www.codeproject.com/Articles/88956/GHeat-NET"&gt;Gheat.net&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Read the introduction &lt;a href=&#34;http://mike.teczno.com/notes/tilestache.html&#34;&gt;here&lt;/a&gt; to get started&lt;/p&gt;
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>Gheat Java – Heat maps</title>
+      <link>http://localhost:1314/posts/gheat-java-heat-maps/</link>
+      <pubDate>Fri, 24 Jan 2014 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1314/posts/gheat-java-heat-maps/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          &lt;p&gt;&lt;a href=&#34;http://localhost:1314/resources/heat_map_2.jpg&#34;&gt;&lt;img src=&#34;http://localhost:1314/resources/heat_map_thumb.jpg&#34; alt=&#34;heat_map&#34; title=&#34;heat_map&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;A &lt;strong&gt;heat map&lt;/strong&gt; is a graphical representation of data where the individual values contained in a &lt;a href=&#34;http://en.wikipedia.org/wiki/Matrix_%28mathematics%29&#34;&gt;matrix&lt;/a&gt; are represented as colors.&lt;/p&gt;
+&lt;p&gt;This article will attempt to explain the process of creating and using &lt;a href=&#34;https://github.com/varunpant/GHEAT-JAVA&#34;&gt;GHEAT-JAVA&lt;/a&gt;, which is a port of famous aspen based &lt;a href=&#34;https://code.google.com/p/gheat/&#34;&gt;gheat&lt;/a&gt; and took great inspiration from &lt;a href=&#34;http://www.codeproject.com/Articles/88956/GHeat-NET&#34;&gt;Gheat.net&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Writing a service which would serve heat map tiles is a bit tricky, there are three major components involved&lt;/p&gt;
-&lt;ol start="2"&gt;
+&lt;ol start=&#34;2&#34;&gt;
 &lt;li&gt;The client part i.e. some kind of mapping library which has a concept of layer, I chose Google maps.&lt;/li&gt;
 &lt;li&gt;The data source part, i.e. a spatially aware database or an in memory data structure, I have used postgres ,an in memory quad tree and a flat file as data sources.&lt;/li&gt;
 &lt;li&gt;The renderer part or basically the code which accepts requests, parses tile bounds, fetches data and then renders gradients on the tile and later colorizes them.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id="the-tiling-layer-client-part"&gt;
-The Tiling layer (Client part)
-&lt;a href="#the-tiling-layer-client-part" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
+&lt;h3 id=&#34;the-tiling-layer-client-part&#34;&gt;
+  The Tiling layer (Client part)
+  &lt;a href=&#34;#the-tiling-layer-client-part&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
 &lt;/h3&gt;
-&lt;p&gt;Google maps allows developers to add a custom layer, the code looks like this&lt;/p&gt;</description></item><item><title>Embedding Flash,Quicktime,Windows Media,Silverlight or HTML5 Video</title><link>https://varunpant.com/posts/embedding-flash-quicktime-windows-media-silverlight-or-html5-video/</link><pubDate>Tue, 01 Oct 2013 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/embedding-flash-quicktime-windows-media-silverlight-or-html5-video/</guid><description>
-&lt;h3 id="flash-object"&gt;
-Flash Object
-&lt;a href="#flash-object" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
+&lt;p&gt;Google maps allows developers to add a custom layer, the code looks like this&lt;/p&gt;
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>Embedding Flash,Quicktime,Windows Media,Silverlight or HTML5 Video</title>
+      <link>http://localhost:1314/posts/embedding-flash-quicktime-windows-media-silverlight-or-html5-video/</link>
+      <pubDate>Tue, 01 Oct 2013 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1314/posts/embedding-flash-quicktime-windows-media-silverlight-or-html5-video/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          &lt;h3 id=&#34;flash-object&#34;&gt;
+  Flash Object
+  &lt;a href=&#34;#flash-object&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;This is a quick snippet which demonstrates how to embed a flash object in a web page.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-html" data-lang="html"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&amp;lt;&lt;span style="color:#f92672"&gt;object&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;type&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;application/x-shockwave-flash&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;data&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;path-to-my-flash-file.swf&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;width&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;0&amp;#34;&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;height&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;0&amp;#34;&lt;/span&gt;&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;&lt;span style="color:#f92672"&gt;param&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;name&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;movie&amp;#34;&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;value&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;your-flash-file.swf&amp;#34;&lt;/span&gt; /&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;&lt;span style="color:#f92672"&gt;param&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;name&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;quality&amp;#34;&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;value&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;high&amp;#34;&lt;/span&gt;/&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&amp;lt;/&lt;span style="color:#f92672"&gt;object&lt;/span&gt;&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="quicktime"&gt;
-Quicktime
-&lt;a href="#quicktime" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;object&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;type&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;application/x-shockwave-flash&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;data&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;path-to-my-flash-file.swf&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;width&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;0&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;height&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;0&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;param&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;movie&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;value&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;your-flash-file.swf&amp;#34;&lt;/span&gt; /&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;param&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;quality&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;value&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;high&amp;#34;&lt;/span&gt;/&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;object&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;quicktime&#34;&gt;
+  Quicktime
+  &lt;a href=&#34;#quicktime&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;This is a quick snippet which demonstrates how to embed a quicktime object in a web page&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-html" data-lang="html"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&amp;lt;&lt;span style="color:#f92672"&gt;object&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;classid&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;codebase&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;http://www.apple.com/qtactivex/qtplugin.cab&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;width&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;200&amp;#34;&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;height&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;16&amp;#34;&lt;/span&gt;&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&amp;lt;&lt;span style="color:#f92672"&gt;param&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;name&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;src&amp;#34;&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;value&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;pathToMyMovie.mov&amp;#34;&lt;/span&gt; /&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&amp;lt;&lt;span style="color:#f92672"&gt;param&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;name&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;autoplay&amp;#34;&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;value&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;true&amp;#34;&lt;/span&gt; /&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&amp;lt;&lt;span style="color:#f92672"&gt;param&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;name&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;pluginspage&amp;#34;&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;value&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;http://www.apple.com/quicktime/download/&amp;#34;&lt;/span&gt; /&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&amp;lt;&lt;span style="color:#f92672"&gt;param&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;name&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;controller&amp;#34;&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;value&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;true&amp;#34;&lt;/span&gt; /&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&amp;lt;!--[if !IE]&amp;gt; &amp;lt;--&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;&lt;span style="color:#f92672"&gt;object&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;data&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;movie.mov&amp;#34;&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;width&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;200&amp;#34;&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;height&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;16&amp;#34;&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;type&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;video/quicktime&amp;#34;&lt;/span&gt;&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;&lt;span style="color:#f92672"&gt;param&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;name&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;pluginurl&amp;#34;&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;value&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;http://www.apple.com/quicktime/download/&amp;#34;&lt;/span&gt; /&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;&lt;span style="color:#f92672"&gt;param&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;name&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;controller&amp;#34;&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;value&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;true&amp;#34;&lt;/span&gt; /&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;/&lt;span style="color:#f92672"&gt;object&lt;/span&gt;&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&amp;lt;!--&amp;gt; &amp;lt;![endif]--&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&amp;lt;/&lt;span style="color:#f92672"&gt;object&lt;/span&gt;&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="windows-media"&gt;
-Windows Media
-&lt;a href="#windows-media" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;object&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;classid&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#a6e22e&#34;&gt;codebase&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;http://www.apple.com/qtactivex/qtplugin.cab&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#a6e22e&#34;&gt;width&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;200&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;height&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;16&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;param&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;src&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;value&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;pathToMyMovie.mov&amp;#34;&lt;/span&gt; /&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;param&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;autoplay&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;value&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;true&amp;#34;&lt;/span&gt; /&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;param&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;pluginspage&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;value&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;http://www.apple.com/quicktime/download/&amp;#34;&lt;/span&gt; /&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;param&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;controller&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;value&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;true&amp;#34;&lt;/span&gt; /&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!--[if !IE]&amp;gt; &amp;lt;--&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;object&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;data&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;movie.mov&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;width&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;200&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;height&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;16&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;type&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;video/quicktime&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;param&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;pluginurl&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;value&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;http://www.apple.com/quicktime/download/&amp;#34;&lt;/span&gt; /&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;param&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;controller&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;value&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;true&amp;#34;&lt;/span&gt; /&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;object&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!--&amp;gt; &amp;lt;![endif]--&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;object&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;windows-media&#34;&gt;
+  Windows Media
+  &lt;a href=&#34;#windows-media&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
 &lt;/h3&gt;
-&lt;p&gt;This is a quick snippet which demonstrates how to embed a Windows Media object in a web page.&lt;/p&gt;</description></item><item><title>Mod Proxy equivalent in IIS using ARR and URL Rewrite Module</title><link>https://varunpant.com/posts/mod-proxy-equivalent-in-iis-using-arr-and-url-rewrite-module/</link><pubDate>Sun, 25 Aug 2013 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/mod-proxy-equivalent-in-iis-using-arr-and-url-rewrite-module/</guid><description>
-&lt;p&gt;IIS7 is quite modular, it is &lt;a href="http://blogs.iis.net/bills/archive/2008/06/02/how-iis-ships-software.aspx"&gt;shipped&lt;/a&gt; with lots of goodies as separate modules and together it is now one of the most powerful and flexible web servers.&lt;/p&gt;
-&lt;p&gt;In this post I intend to cover how we can easily configure &lt;a href="http://www.iis.net/downloads/microsoft/application-request-routing"&gt;ARR&lt;/a&gt; and &lt;a href="http://www.microsoft.com/en-gb/download/details.aspx?id=7435"&gt;URL Rewrite Module&lt;/a&gt; to get a similar functionality as of &lt;a href="http://httpd.apache.org/docs/2.2/mod/mod_proxy.html"&gt;Mod Proxy&lt;/a&gt; in Apache.&lt;/p&gt;
-&lt;p&gt;Here I will demonstrate configuration of a reverse proxy which according to the &lt;a href="http://en.wikipedia.org/wiki/Reverse_proxy"&gt;definition&lt;/a&gt; is&lt;/p&gt;
+&lt;p&gt;This is a quick snippet which demonstrates how to embed a Windows Media object in a web page.&lt;/p&gt;
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>Mod Proxy equivalent in IIS using ARR and URL Rewrite Module</title>
+      <link>http://localhost:1314/posts/mod-proxy-equivalent-in-iis-using-arr-and-url-rewrite-module/</link>
+      <pubDate>Sun, 25 Aug 2013 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1314/posts/mod-proxy-equivalent-in-iis-using-arr-and-url-rewrite-module/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          &lt;p&gt;IIS7 is quite modular, it is &lt;a href=&#34;http://blogs.iis.net/bills/archive/2008/06/02/how-iis-ships-software.aspx&#34;&gt;shipped&lt;/a&gt; with lots of goodies as separate modules and together it is now one of the most powerful and flexible web servers.&lt;/p&gt;
+&lt;p&gt;In this post I intend to cover how we can easily configure &lt;a href=&#34;http://www.iis.net/downloads/microsoft/application-request-routing&#34;&gt;ARR&lt;/a&gt; and &lt;a href=&#34;http://www.microsoft.com/en-gb/download/details.aspx?id=7435&#34;&gt;URL Rewrite Module&lt;/a&gt; to get a similar functionality as of &lt;a href=&#34;http://httpd.apache.org/docs/2.2/mod/mod_proxy.html&#34;&gt;Mod Proxy&lt;/a&gt; in Apache.&lt;/p&gt;
+&lt;p&gt;Here I will demonstrate configuration of a reverse proxy which according to the &lt;a href=&#34;http://en.wikipedia.org/wiki/Reverse_proxy&#34;&gt;definition&lt;/a&gt; is&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Reverse proxy&lt;/strong&gt; is a type of &lt;a href="http://en.wikipedia.org/wiki/Proxy_server"&gt;proxy server&lt;/a&gt; that retrieves resources on behalf of a &lt;a href="http://en.wikipedia.org/wiki/Client_%28computing%29"&gt;client&lt;/a&gt; from one or more &lt;a href="http://en.wikipedia.org/wiki/Server_%28computing%29"&gt;servers&lt;/a&gt;. A general use case to configure such proxies could be to handle cross domain Ajax requests, so basically if I would like to call a service hosted as &lt;a href="http://anotherdomain.com/service"&gt;http://anotherdomain.com/service&lt;/a&gt; from &lt;a href="http://localdomain/service"&gt;http://localdomain/service&lt;/a&gt; I would need to configure a proxy which will request resources from anotherdomain.com/service on behalf of localdomain ### Configuration&lt;/p&gt;</description></item><item><title>Signing android release apk from the command line (via ant)</title><link>https://varunpant.com/posts/signing-android-release-apk-from-the-command-line-via-ant/</link><pubDate>Sun, 25 Aug 2013 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/signing-android-release-apk-from-the-command-line-via-ant/</guid><description>
-&lt;p&gt;This post is probably out too late ,as almost all IDEs these days (which support android development) ,probably have an Integrated &lt;strong&gt;release signing&lt;/strong&gt; or &lt;strong&gt;debug signing&lt;/strong&gt; utility/wizard built in, but if somebody is using an old IDE or perhaps want to integrate release in a CI (continuous integration) environment, this tutorial might come in handy.&lt;/p&gt;
-&lt;p&gt;Basically one has to sign an apk either with a debug key (which is generally present in your .android folder) or create a fresh application-specific keystore, to know more go &lt;a href="http://developer.android.com/tools/publishing/app-signing.html"&gt;here&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Importing Exporting CSV Files in PostgreSQL Databases via COPY</title><link>https://varunpant.com/posts/importing-exporting-csv-files-in-postgresql-databases-via-copy/</link><pubDate>Mon, 11 Mar 2013 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/importing-exporting-csv-files-in-postgresql-databases-via-copy/</guid><description>
-&lt;p&gt;This is going to be a short article which will illustrate importing and exporting a table from or to a csv file using PostgreSQL &lt;a href="http://www.postgresql.org/docs/9.1/static/sql-copy.html"&gt;COPY&lt;/a&gt; command.&lt;/p&gt;
-&lt;h4 id="importing-a-table-from-csv"&gt;
-Importing a table from CSV
-&lt;a href="#importing-a-table-from-csv" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
+&lt;p&gt;&lt;strong&gt;Reverse proxy&lt;/strong&gt; is a type of &lt;a href=&#34;http://en.wikipedia.org/wiki/Proxy_server&#34;&gt;proxy server&lt;/a&gt; that retrieves resources on behalf of a &lt;a href=&#34;http://en.wikipedia.org/wiki/Client_%28computing%29&#34;&gt;client&lt;/a&gt; from one or more &lt;a href=&#34;http://en.wikipedia.org/wiki/Server_%28computing%29&#34;&gt;servers&lt;/a&gt;.  A general use case to configure such proxies could be to handle cross domain Ajax requests, so basically if I would like to call a service hosted as &lt;a href=&#34;http://anotherdomain.com/service&#34;&gt;http://anotherdomain.com/service&lt;/a&gt; from &lt;a href=&#34;http://localdomain/service&#34;&gt;http://localdomain/service&lt;/a&gt; I would need to configure a proxy which will request resources from anotherdomain.com/service on behalf of localdomain ### Configuration&lt;/p&gt;
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>Signing android release apk from the command line (via ant)</title>
+      <link>http://localhost:1314/posts/signing-android-release-apk-from-the-command-line-via-ant/</link>
+      <pubDate>Sun, 25 Aug 2013 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1314/posts/signing-android-release-apk-from-the-command-line-via-ant/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          &lt;p&gt;This post is probably out too late ,as almost all IDEs these days (which support android development) ,probably have an Integrated &lt;strong&gt;release signing&lt;/strong&gt; or &lt;strong&gt;debug signing&lt;/strong&gt; utility/wizard built in, but if somebody is using an old IDE or perhaps want to integrate release in a CI (continuous integration) environment, this tutorial might come in handy.&lt;/p&gt;
+&lt;p&gt;Basically one has to sign an apk either with a debug key (which is generally present in your .android folder) or create a fresh application-specific keystore, to know more go &lt;a href=&#34;http://developer.android.com/tools/publishing/app-signing.html&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>Importing Exporting CSV Files in PostgreSQL Databases via COPY</title>
+      <link>http://localhost:1314/posts/importing-exporting-csv-files-in-postgresql-databases-via-copy/</link>
+      <pubDate>Mon, 11 Mar 2013 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1314/posts/importing-exporting-csv-files-in-postgresql-databases-via-copy/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          &lt;p&gt;This is going to be a short article which will illustrate importing and exporting a table from or to a csv file using PostgreSQL &lt;a href=&#34;http://www.postgresql.org/docs/9.1/static/sql-copy.html&#34;&gt;COPY&lt;/a&gt; command.&lt;/p&gt;
+&lt;h4 id=&#34;importing-a-table-from-csv&#34;&gt;
+  Importing a table from CSV
+  &lt;a href=&#34;#importing-a-table-from-csv&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
 &lt;/h4&gt;
 &lt;p&gt;Assuming you already have a table in place with the right columns, the command is as follows&lt;/p&gt;
 &lt;p&gt;COPY &lt;code&gt;&amp;lt;TargetTableName&amp;gt;&lt;/code&gt; &lt;strong&gt;FROM&lt;/strong&gt; &amp;lsquo;/path/to/csv/SourceCSVFile.csv&amp;rsquo; DELIMITERS &amp;lsquo;&lt;strong&gt;,&lt;/strong&gt;&amp;rsquo; CSV;&lt;/p&gt;
-&lt;h4 id="exporting-a-csv-from-a-table"&gt;
-Exporting a CSV from a table.
-&lt;a href="#exporting-a-csv-from-a-table" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
+&lt;h4 id=&#34;exporting-a-csv-from-a-table&#34;&gt;
+  Exporting a CSV from a table.
+  &lt;a href=&#34;#exporting-a-csv-from-a-table&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
 &lt;/h4&gt;
-&lt;p&gt;COPY &lt;code&gt;&amp;lt;SourceTableName&amp;gt;&lt;/code&gt; &lt;strong&gt;TO&lt;/strong&gt; &amp;lsquo;/path/to/csv/TargetCSVFile&amp;rsquo; DELIMITERS &amp;lsquo;&lt;strong&gt;,&lt;/strong&gt;&amp;rsquo; CSV;&lt;/p&gt;</description></item><item><title>Serve the contents of any directory with Python's SimpleHTTPServer</title><link>https://varunpant.com/posts/serve-the-contents-of-any-directory-with-python-s-simplehttpserver/</link><pubDate>Fri, 08 Feb 2013 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/serve-the-contents-of-any-directory-with-python-s-simplehttpserver/</guid><description>
-&lt;p&gt;Generally, when I am in a middle of prototyping a concept or in a need of quickly executing Ajax requests or using browser features which would need the page to be hosted on a web server, I use Python&amp;rsquo;s &lt;a href="http://docs.python.org/2/library/simplehttpserver.html"&gt;SimpleHTTPServer&lt;/a&gt; module.&lt;/p&gt;
-&lt;p&gt;Python&amp;rsquo;s SimpleHTTPServer is a great way to serve the contents of the current directory, all one needs to do is change directory and execute a command which will expose all contents as if they were hosted in a web page.&lt;/p&gt;</description></item><item><title>Position div in the center of the page using css</title><link>https://varunpant.com/posts/position-div-in-the-center-of-the-page-using-css/</link><pubDate>Sun, 27 Jan 2013 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/position-div-in-the-center-of-the-page-using-css/</guid><description>
-&lt;p&gt;When I first started web programming, creating a center aligned div was one of the most common tasks that I saw myself doing.&lt;/p&gt;
+&lt;p&gt;COPY &lt;code&gt;&amp;lt;SourceTableName&amp;gt;&lt;/code&gt; &lt;strong&gt;TO&lt;/strong&gt; &amp;lsquo;/path/to/csv/TargetCSVFile&amp;rsquo; DELIMITERS &amp;lsquo;&lt;strong&gt;,&lt;/strong&gt;&amp;rsquo; CSV;&lt;/p&gt;
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>Serve the contents of any directory with Python&#39;s SimpleHTTPServer</title>
+      <link>http://localhost:1314/posts/serve-the-contents-of-any-directory-with-python-s-simplehttpserver/</link>
+      <pubDate>Fri, 08 Feb 2013 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1314/posts/serve-the-contents-of-any-directory-with-python-s-simplehttpserver/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          &lt;p&gt;Generally, when I am in a middle of prototyping a concept or in a need of quickly executing Ajax requests or using browser features which would need the page to be hosted on a web server, I use Python&amp;rsquo;s &lt;a href=&#34;http://docs.python.org/2/library/simplehttpserver.html&#34;&gt;SimpleHTTPServer&lt;/a&gt; module.&lt;/p&gt;
+&lt;p&gt;Python&amp;rsquo;s SimpleHTTPServer is a great way to serve the contents of the current directory, all one needs to do is change directory and execute a command which will expose all contents as if they were hosted in a web page.&lt;/p&gt;
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>Position div in the center of the page using css</title>
+      <link>http://localhost:1314/posts/position-div-in-the-center-of-the-page-using-css/</link>
+      <pubDate>Sun, 27 Jan 2013 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1314/posts/position-div-in-the-center-of-the-page-using-css/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          &lt;p&gt;When I first started web programming, creating a center aligned div was one of the most common tasks that I saw myself doing.&lt;/p&gt;
 &lt;p&gt;Since a div is a block element, i.e. it takes up the full width available, and has a line break before and after it, it can easily be centered using relative styling&lt;/p&gt;
-&lt;pre tabindex="0"&gt;&lt;code class="language-.center" data-lang=".center"&gt;{
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-.center&#34; data-lang=&#34;.center&#34;&gt;{
 margin-left:auto;
 margin-right:auto;
 width:70%;
 background-color:#b0e0e6;
 }
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;However lately I have preferred using absolute positioning technique over relative, this works for all browsers and is best for login screens or alert messages over a translucent shim.&lt;/p&gt;</description></item><item><title>Basic authentication in web.py via attribute</title><link>https://varunpant.com/posts/basic-authentication-in-web-py-via-attribute/</link><pubDate>Wed, 23 Jan 2013 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/basic-authentication-in-web-py-via-attribute/</guid><description>
-&lt;p&gt;Here I demonstrate the process of &lt;a href="http://en.wikipedia.org/wiki/Basic_access_authentication"&gt;Basic Authentication&lt;/a&gt; in &lt;a href="http://webpy.org/"&gt;web.py&lt;/a&gt; python web framework.&lt;/p&gt;
-&lt;p&gt;There is a proof of concept article &lt;a href="http://webpy.org/cookbook/userauthbasic"&gt;provided&lt;/a&gt; in the main site, however I just thought doing the same via an attribute might be a cleaner solution.&lt;/p&gt;
-&lt;p&gt;HTTP Basic authentication implementation is one of the easiest ways to secure web pages because it doesn&amp;rsquo;t require cookies, session handling, or the development of login pages. Rather, HTTP Basic authentication uses static headers which means that no handshakes have to be done in anticipation, however the credentials are passed as &lt;a href="http://en.wikipedia.org/wiki/Plaintext"&gt;plain-text &lt;/a&gt;and could be intercepted.&lt;/p&gt;</description></item><item><title>Installing Redis on Ubuntu</title><link>https://varunpant.com/posts/installing-redis-on-ubuntu/</link><pubDate>Sun, 20 Jan 2013 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/installing-redis-on-ubuntu/</guid><description>
-&lt;p&gt;&lt;a href="http://redis.io/"&gt;Redis&lt;/a&gt; is an open source, advanced key-value store. Installing it on Linux debian platforms is pretty easy.&lt;/p&gt;
-&lt;p&gt;There are two ways of getting this done, one is perhaps an easy and less verbose method and it involves using an alternative repository &lt;a href="http://www.dotdeb.org/"&gt;Dotdeb.&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;A while ago I had posted a &lt;a href="https://varunpant.com/posts/how-to-set-up-redis-in-ubuntu-linux/"&gt;tutorial&lt;/a&gt; about installing redis from the &lt;a href="http://redis.googlecode.com/files/redis-2.2.4.tar.gz"&gt;googlecode&lt;/a&gt; repo, but things have changed since then and here I post a fairly recent way of installing it.&lt;/p&gt;</description></item><item><title>gzip compression in apache using mod_deflate</title><link>https://varunpant.com/posts/gzip-compression-in-apache-using-mod_deflate/</link><pubDate>Sat, 19 Jan 2013 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/gzip-compression-in-apache-using-mod_deflate/</guid><description>
-&lt;p&gt;&lt;a href="http://en.wikipedia.org/wiki/HTTP_compression"&gt;HTTP Compression&lt;/a&gt; is a very simple and effective way to save bandwidth and improve web application performance over the network.&lt;/p&gt;
-&lt;p&gt;Output compression is basically a process of compressing web server responses by using a loss-less compression algorithm called &lt;a href="http://en.wikipedia.org/wiki/Deflate"&gt;gzip&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;This technique is fairly modern and almost all modern browsers honor it, however if a page is requested from a browser which does not send a header Accept-Encoding: gzip, deflate then the response comes back uncompressed.&lt;/p&gt;</description></item><item><title>Start Stop Restart Apache 2 Web Server</title><link>https://varunpant.com/posts/start-stop-restart-apache-2-web-server/</link><pubDate>Sat, 19 Jan 2013 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/start-stop-restart-apache-2-web-server/</guid><description>
-&lt;p&gt;I have been using Linux environment a lot lately, particularly for hosting my web experiments and other application. One of the biggest and most searched questions for newbies has been&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;However lately I have preferred using absolute positioning technique over relative, this works for all browsers and is best for login screens or alert messages over a translucent shim.&lt;/p&gt;
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>Basic authentication in web.py via attribute</title>
+      <link>http://localhost:1314/posts/basic-authentication-in-web-py-via-attribute/</link>
+      <pubDate>Wed, 23 Jan 2013 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1314/posts/basic-authentication-in-web-py-via-attribute/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          &lt;p&gt;Here I demonstrate the process of &lt;a href=&#34;http://en.wikipedia.org/wiki/Basic_access_authentication&#34;&gt;Basic Authentication&lt;/a&gt; in &lt;a href=&#34;http://webpy.org/&#34;&gt;web.py&lt;/a&gt; python web framework.&lt;/p&gt;
+&lt;p&gt;There is a proof of concept article &lt;a href=&#34;http://webpy.org/cookbook/userauthbasic&#34;&gt;provided&lt;/a&gt; in the main site, however I just thought doing the same via an attribute might be a cleaner solution.&lt;/p&gt;
+&lt;p&gt;HTTP Basic authentication implementation is one of the easiest ways to secure web pages because it doesn&amp;rsquo;t require cookies, session handling, or the development of login pages. Rather, HTTP Basic authentication uses static headers which means that no handshakes have to be done in anticipation, however the credentials are passed as &lt;a href=&#34;http://en.wikipedia.org/wiki/Plaintext&#34;&gt;plain-text &lt;/a&gt;and could be intercepted.&lt;/p&gt;
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>Installing Redis on Ubuntu</title>
+      <link>http://localhost:1314/posts/installing-redis-on-ubuntu/</link>
+      <pubDate>Sun, 20 Jan 2013 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1314/posts/installing-redis-on-ubuntu/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          &lt;p&gt;&lt;a href=&#34;http://redis.io/&#34;&gt;Redis&lt;/a&gt; is an open source, advanced key-value store. Installing it on Linux debian platforms is pretty easy.&lt;/p&gt;
+&lt;p&gt;There are two ways of getting this done, one is perhaps an easy and less verbose method and it involves using an alternative repository &lt;a href=&#34;http://www.dotdeb.org/&#34;&gt;Dotdeb.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;A while ago I had posted a &lt;a href=&#34;http://localhost:1314/posts/how-to-set-up-redis-in-ubuntu-linux/&#34;&gt;tutorial&lt;/a&gt; about installing redis from the &lt;a href=&#34;http://redis.googlecode.com/files/redis-2.2.4.tar.gz&#34;&gt;googlecode&lt;/a&gt; repo, but things have changed since then and here I post a fairly recent way of installing it.&lt;/p&gt;
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>gzip compression in apache using mod_deflate</title>
+      <link>http://localhost:1314/posts/gzip-compression-in-apache-using-mod_deflate/</link>
+      <pubDate>Sat, 19 Jan 2013 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1314/posts/gzip-compression-in-apache-using-mod_deflate/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          &lt;p&gt;&lt;a href=&#34;http://en.wikipedia.org/wiki/HTTP_compression&#34;&gt;HTTP Compression&lt;/a&gt; is a very simple and effective way to save bandwidth and improve web application performance over the network.&lt;/p&gt;
+&lt;p&gt;Output compression is basically a process of compressing web server responses by using a loss-less compression algorithm called &lt;a href=&#34;http://en.wikipedia.org/wiki/Deflate&#34;&gt;gzip&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This technique is fairly modern and almost all modern browsers honor it, however if a page is requested from a browser which does not send a header Accept-Encoding: gzip, deflate then the response comes back uncompressed.&lt;/p&gt;
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>Start Stop Restart Apache 2 Web Server</title>
+      <link>http://localhost:1314/posts/start-stop-restart-apache-2-web-server/</link>
+      <pubDate>Sat, 19 Jan 2013 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1314/posts/start-stop-restart-apache-2-web-server/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          &lt;p&gt;I have been using Linux environment a lot lately, particularly for hosting my web experiments and other application. One of the biggest and most searched questions for newbies has been&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;How do I restart Apache 2 Web Server under Debian / Ubuntu Linux or UNIX operating systems?&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;In this post I simply attempt to lay this down for my benefit and theirs.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Start Apache2&lt;/strong&gt; # sudo /etc/init.d/apache2 start&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Stop Apache2&lt;/strong&gt; # sudo /etc/init.d/apache2 stop&lt;/p&gt;</description></item><item><title>Auto Complete with Redis (Python)</title><link>https://varunpant.com/posts/auto-complete-with-redis-python/</link><pubDate>Sun, 06 May 2012 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/auto-complete-with-redis-python/</guid><description>
-&lt;p&gt;This is a quick port of &lt;a href="http://antirez.com/post/autocomplete-with-redis.html"&gt;auto complete&lt;/a&gt; implementation in ruby using &lt;a href="http://redis.io/"&gt;Redis&lt;/a&gt; by &lt;a href="http://invece.org/"&gt;antirez&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Stop Apache2&lt;/strong&gt; # sudo /etc/init.d/apache2 stop&lt;/p&gt;
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>Auto Complete with Redis (Python)</title>
+      <link>http://localhost:1314/posts/auto-complete-with-redis-python/</link>
+      <pubDate>Sun, 06 May 2012 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1314/posts/auto-complete-with-redis-python/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          &lt;p&gt;This is a quick port of &lt;a href=&#34;http://antirez.com/post/autocomplete-with-redis.html&#34;&gt;auto complete&lt;/a&gt; implementation in ruby using &lt;a href=&#34;http://redis.io/&#34;&gt;Redis&lt;/a&gt; by &lt;a href=&#34;http://invece.org/&#34;&gt;antirez&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;I like python and had little time to burn today, so here goes:&lt;/p&gt;
-&lt;p&gt;The file used for input is &lt;a href="http://antirez.com/misc/female-names.txt"&gt;female-names.txt&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Hope it helps :)&lt;/p&gt;</description></item><item><title>How To Install and use Python Web.py framework on Windows</title><link>https://varunpant.com/posts/how-to-install-and-use-python-webpy-framework-on-windows/</link><pubDate>Sun, 06 May 2012 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/how-to-install-and-use-python-webpy-framework-on-windows/</guid><description>
-&lt;p&gt;&lt;a href="http://webpy.org/"&gt;Web.py&lt;/a&gt; has been one of my favorite web frameworks as its pretty easy to get cracking on it.&lt;/p&gt;
+&lt;p&gt;The file used for input is &lt;a href=&#34;http://antirez.com/misc/female-names.txt&#34;&gt;female-names.txt&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Hope it helps :)&lt;/p&gt;
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>How To Install and use Python Web.py framework on Windows</title>
+      <link>http://localhost:1314/posts/how-to-install-and-use-python-webpy-framework-on-windows/</link>
+      <pubDate>Sun, 06 May 2012 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1314/posts/how-to-install-and-use-python-webpy-framework-on-windows/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          &lt;p&gt;&lt;a href=&#34;http://webpy.org/&#34;&gt;Web.py&lt;/a&gt; has been one of my favorite web frameworks as its pretty easy to get cracking on it.&lt;/p&gt;
 &lt;p&gt;It&amp;rsquo;s super quick to install and one can come up with a prototype and rapid web services in a matter of minutes.&lt;/p&gt;
-&lt;h2 id="install-on-windows"&gt;
-Install on windows
-&lt;a href="#install-on-windows" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
+&lt;h2 id=&#34;install-on-windows&#34;&gt;
+  Install on windows
+  &lt;a href=&#34;#install-on-windows&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
 &lt;/h2&gt;
-&lt;p&gt;If you haven&amp;rsquo;t configured easy_install on windows, then read &lt;a href="https://varunpant.com/posts/how-to-setup-easy_install-on-windows/"&gt; this &lt;/a&gt; article.&lt;/p&gt;
-&lt;p&gt;Once easy_install has been configured believe it or not, all you have to do is open a command prompt and type&lt;/p&gt;</description></item><item><title>How to setup easy_install on Windows</title><link>https://varunpant.com/posts/how-to-setup-easy_install-on-windows/</link><pubDate>Sun, 06 May 2012 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/how-to-setup-easy_install-on-windows/</guid><description>
-&lt;p&gt;If one has been using python, then installing various libraries and modules is basically a breeze using easy_install utility, however for folks using windows, easy_install utility has to be setup properly before using it.&lt;/p&gt;
+&lt;p&gt;If you haven&amp;rsquo;t configured easy_install on windows, then read &lt;a href=&#34;http://localhost:1314/posts/how-to-setup-easy_install-on-windows/&#34;&gt; this &lt;/a&gt; article.&lt;/p&gt;
+&lt;p&gt;Once easy_install has been configured believe it or not, all you have to do is open a command prompt and type&lt;/p&gt;
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>How to setup easy_install on Windows</title>
+      <link>http://localhost:1314/posts/how-to-setup-easy_install-on-windows/</link>
+      <pubDate>Sun, 06 May 2012 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1314/posts/how-to-setup-easy_install-on-windows/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          &lt;p&gt;If one has been using python, then installing various libraries and modules is basically a breeze using easy_install utility, however for folks using windows, easy_install utility has to be setup properly before using it.&lt;/p&gt;
 &lt;p&gt;First lets make sure that python is properly installed and PYTHON_HOME environment variable is configured:&lt;/p&gt;
-&lt;h4 id="install-python-on-windows"&gt;
-Install Python on Windows
-&lt;a href="#install-python-on-windows" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
+&lt;h4 id=&#34;install-python-on-windows&#34;&gt;
+  Install Python on Windows
+  &lt;a href=&#34;#install-python-on-windows&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
 &lt;/h4&gt;
-&lt;p&gt;If not already installed download python installer from &lt;a href="http://python.org/download/"&gt;here.&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;After it&amp;rsquo;s done downloading, double click to run the installer, and select default options (unless you have other custom needs of course ).&lt;/p&gt;</description></item><item><title>Find Longitude and Latitude in Google Maps</title><link>https://varunpant.com/posts/find-longitude-and-latitude-in-google-maps/</link><pubDate>Sun, 15 Apr 2012 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/find-longitude-and-latitude-in-google-maps/</guid><description>
-&lt;p&gt;This post is basically a way of quick appreciation to the &lt;strong&gt;Google maps Team&lt;/strong&gt;, they are obviously a bunch of caring, loving people ,who make useful (although &lt;strong&gt;surreptitious&lt;/strong&gt;) tools for the betterment of Geek Kind.&lt;/p&gt;
-&lt;p&gt;So as most of you may have accidentally clicked a mysterious looking link at the bottom of your Google maps page ( on the left hand panel)&lt;a href="https://varunpant.com/resources/google_latlon_tool1_4.png"&gt;&lt;img src="https://varunpant.com/resources/google_latlon_tool1_thumb_1.png" alt="google_latlon_tool1"&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;This awesome looking link opens up a popup which lets you choose wonderful goodies which makes your Google maps page more useful than it already is:&lt;/p&gt;</description></item><item><title>How to set up Redis in Ubuntu Linux</title><link>https://varunpant.com/posts/how-to-set-up-redis-in-ubuntu-linux/</link><pubDate>Sat, 14 Apr 2012 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/how-to-set-up-redis-in-ubuntu-linux/</guid><description>
-&lt;p&gt;&lt;a href="http://redis.io/"&gt;Redis&lt;/a&gt; is an open source, advanced key-value store, and is quickly picking up momentum in real-time software development, it is now a well known and trusted product and can be used in various problem scenarios as a No SQL implementation.&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://redis.io/"&gt;Redis&lt;/a&gt; is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.&lt;/p&gt;
-&lt;p&gt;Here is a quick guide to install &lt;a href="http://redis.io/"&gt;Redis&lt;/a&gt; in Ubuntu 10.04, and it should be similar for higher versions and similar deb environment.&lt;/p&gt;</description></item><item><title>Image Carousel</title><link>https://varunpant.com/posts/image-carousel/</link><pubDate>Tue, 29 Jun 2010 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/image-carousel/</guid><description>
-&lt;p&gt;Here is another of many JavaScript based image carousels, I had seen many similar to these made in SilverLight and Flash, I came across a wonderful &lt;a href="http://www.shinedraw.com/animation-effect/flash-vs-silverlight-image-carousel/"&gt;carousel&lt;/a&gt; made in SilverLight some time back which was very fluid in behavior and could easily be customized and configured to take various shape and form.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://varunpant.com/resources/carousel.png"&gt;&lt;img src="https://varunpant.com/resources/carousel_thumb.png" alt="carousel" title="carousel"&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;I have managed to port it to JavaScript, it works best on chrome or FF, hope this would be fun to play with.&lt;/p&gt;</description></item><item><title>Data URI and IE</title><link>https://varunpant.com/posts/data-uri-and-ie/</link><pubDate>Tue, 15 Jun 2010 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/data-uri-and-ie/</guid><description>
-&lt;p&gt;A few days ago I was experimenting with a nifty technique of embedding images in web pages by base64 encoding them first and then using a standard known as &lt;a href="http://en.wikipedia.org/wiki/Data_URI_scheme"&gt;Data URI Scheme&lt;/a&gt;, which basically defines a method of assigning a ‘src’ of an image tag as a base64 serialized string, like this:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-css" data-lang="css"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;background-image&lt;/span&gt;&lt;span style="color:#f92672"&gt;:&lt;/span&gt; &lt;span style="color:#f92672"&gt;url&lt;/span&gt;&lt;span style="color:#f92672"&gt;(&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAUBAMAAACKWYuOAAAAMFBMVEX///92dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnYvD4PNAAAAD3RSTlMAACTkfhvbh3iEewTtxBIFliR3AAAAUklEQVQY02NgIBMwijgKCgrAef5fkHnz/y9E4kn+/4XEE6z/34jEE///A4knev7zAwQv7L8RQk40/7MiggeUQpjJff+zIpINykbIbhFSROIRDQAWUhW2oXLWAQAAAABJRU5ErkJggg==&amp;#34;&lt;/span&gt;&lt;span style="color:#f92672"&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Although this technique could save some server round trips, however Microsoft ver. (IE &amp;lt; 8). does not support this scheme even though its a &lt;a href="http://tools.ietf.org/html/rfc2397"&gt;standard&lt;/a&gt;, which then makes this technique unfavorable to use as its not cross browser.&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;If not already installed download python installer from &lt;a href=&#34;http://python.org/download/&#34;&gt;here.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;After it&amp;rsquo;s done downloading, double click to run the installer, and select default options (unless you have other custom needs of course ).&lt;/p&gt;
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>Find Longitude and Latitude in Google Maps</title>
+      <link>http://localhost:1314/posts/find-longitude-and-latitude-in-google-maps/</link>
+      <pubDate>Sun, 15 Apr 2012 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1314/posts/find-longitude-and-latitude-in-google-maps/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          &lt;p&gt;This post is basically a way of quick appreciation to the &lt;strong&gt;Google maps Team&lt;/strong&gt;, they are obviously a bunch of caring, loving people ,who make useful (although &lt;strong&gt;surreptitious&lt;/strong&gt;) tools for the betterment of Geek Kind.&lt;/p&gt;
+&lt;p&gt;So as most of you may have accidentally clicked a mysterious looking link at the bottom of your Google maps page ( on the left hand panel)&lt;a href=&#34;http://localhost:1314/resources/google_latlon_tool1_4.png&#34;&gt;&lt;img src=&#34;http://localhost:1314/resources/google_latlon_tool1_thumb_1.png&#34; alt=&#34;google_latlon_tool1&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This awesome looking link opens up a popup which lets you choose wonderful goodies which makes your Google maps page more useful than it already is:&lt;/p&gt;
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>How to set up Redis in Ubuntu Linux</title>
+      <link>http://localhost:1314/posts/how-to-set-up-redis-in-ubuntu-linux/</link>
+      <pubDate>Sat, 14 Apr 2012 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1314/posts/how-to-set-up-redis-in-ubuntu-linux/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          &lt;p&gt;&lt;a href=&#34;http://redis.io/&#34;&gt;Redis&lt;/a&gt; is an open source, advanced key-value store, and is quickly picking up momentum in real-time software development, it is now a well known and trusted product and can be used in various problem scenarios as a No SQL implementation.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://redis.io/&#34;&gt;Redis&lt;/a&gt; is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.&lt;/p&gt;
+&lt;p&gt;Here is a quick guide to install &lt;a href=&#34;http://redis.io/&#34;&gt;Redis&lt;/a&gt; in Ubuntu 10.04, and it should be similar for higher versions and similar deb environment.&lt;/p&gt;
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>Image Carousel</title>
+      <link>http://localhost:1314/posts/image-carousel/</link>
+      <pubDate>Tue, 29 Jun 2010 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1314/posts/image-carousel/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          &lt;p&gt;Here is another of many JavaScript based image carousels, I had seen many similar to these made in SilverLight and Flash, I came across a wonderful &lt;a href=&#34;http://www.shinedraw.com/animation-effect/flash-vs-silverlight-image-carousel/&#34;&gt;carousel&lt;/a&gt; made in SilverLight some time back which was very fluid in behavior and could easily be customized and configured to take various shape and form.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://localhost:1314/resources/carousel.png&#34;&gt;&lt;img src=&#34;http://localhost:1314/resources/carousel_thumb.png&#34; alt=&#34;carousel&#34; title=&#34;carousel&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I have managed to port it to JavaScript, it works best on chrome or FF, hope this would be fun to play with.&lt;/p&gt;
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>Data URI and IE</title>
+      <link>http://localhost:1314/posts/data-uri-and-ie/</link>
+      <pubDate>Tue, 15 Jun 2010 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1314/posts/data-uri-and-ie/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          &lt;p&gt;A few days ago I was experimenting with a nifty technique of embedding images in web pages by base64 encoding them first and then using a standard known as &lt;a href=&#34;http://en.wikipedia.org/wiki/Data_URI_scheme&#34;&gt;Data URI Scheme&lt;/a&gt;, which basically defines a method of assigning a ‘src’ of an image tag as a base64 serialized string, like this:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;background-image&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;url&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAUBAMAAACKWYuOAAAAMFBMVEX///92dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnYvD4PNAAAAD3RSTlMAACTkfhvbh3iEewTtxBIFliR3AAAAUklEQVQY02NgIBMwijgKCgrAef5fkHnz/y9E4kn+/4XEE6z/34jEE///A4knev7zAwQv7L8RQk40/7MiggeUQpjJff+zIpINykbIbhFSROIRDQAWUhW2oXLWAQAAAABJRU5ErkJggg==&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Although this technique could save some server round trips, however Microsoft ver. (IE &amp;lt; 8). does not support this scheme even though its a &lt;a href=&#34;http://tools.ietf.org/html/rfc2397&#34;&gt;standard&lt;/a&gt;, which then makes this technique unfavorable to use as its not cross browser.&lt;/p&gt;
+          
+        
+        </description>
+    </item>
+    
+  </channel>
+</rss>
