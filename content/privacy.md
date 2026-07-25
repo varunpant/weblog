@@ -7,14 +7,13 @@ url = "/privacy"
 
 *Last updated: July 25, 2026*
 
-This policy covers **this website** — varunpant.com — including the blog and its
-pages.
+This policy covers **this website only** — the blog at varunpant.com.
 
-It does **not** cover the apps listed on the [Showcase](/showcase) page. Each app
-is a separate product with its own privacy policy, because most apps collect
-nothing at all while this website does use analytics and advertising:
-
-- [ArtTracer](/arttracer/privacy)
+It does **not** cover any app. Apps are separate products, distributed through
+app stores, and each has its own privacy policy that stands entirely on its own.
+Nothing in this website policy applies to them, and nothing in an app's policy
+applies to this website. App pages hosted here carry no analytics, no ads and no
+cookies of any kind.
 
 ## Summary
 

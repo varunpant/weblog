@@ -46,6 +46,6 @@
 </head>
 <body class="at-body">
   {{ block "main" . }}{{ end }}
-  {{ if site.Config.Services.GoogleAnalytics.ID }}{{ template "_internal/google_analytics.html" . }}{{ end }}
+  {{/* App pages carry no analytics — see params.appSections in config.toml. */}}
 </body>
 </html>

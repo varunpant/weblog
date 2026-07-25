@@ -22,6 +22,12 @@ pagerSize = 5
 id = "G-P8WGKXR03S"
 
 [params]
+  # App sections are standalone product pages served from this blog. They get
+  # NO analytics, NO ads, NO consent banner and NO Disqus, so an app's privacy
+  # policy is never contradicted by the blog's own tracking. Add each new app's
+  # section name here.
+  appSections = ["arttracer"]
+
   # dir name of your blog content (default is `content/posts`)
   contentTypeName = "posts"
   # "light" or "dark"

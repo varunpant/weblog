@@ -1,0 +1,4 @@
+{{- /* Returns true for pages inside an app section (see params.appSections).
+       App pages are standalone product/legal documents and must not carry the
+       blog's analytics, ads, consent banner or comments. */ -}}
+{{- return (in (site.Params.appSections | default slice) .Section) -}}

@@ -1,3 +1,4 @@
+{{ if not (partial "is-app-page.html" .) }}
 <div class="advert" id="ta2">
   <ins class="adsbygoogle"
     style="display:block"
@@ -11,3 +12,4 @@
 </div>
 <script id="dsq-count-scr" src="https://varunpant.disqus.com/count.js" async></script>
 {{ partial "consent-banner.html" . }}
+{{ end }}
