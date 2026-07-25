@@ -20,7 +20,7 @@ tags = ["isochrone","javascript","google"]
 
  ###  Details
 
-  Since we do not have direct access to road network (to crawl minimum spanning tree), we fist start the process by drawing a circle of x meters for Isodistance or make a fair assumption for Isochrones. Following code describes the process. ```
+  Since we do not have direct access to road network (to crawl minimum spanning tree), we first start the process by drawing a circle of x meters for Isodistance or make a fair assumption for Isochrones. Following code describes the process. ```
 function getCirclePoints(center, radius) {
 
 	var circlePoints = [];
@@ -78,7 +78,7 @@ function getCirclePoints(center, radius) {
 
  ### Steps
 
-  For each of the requested responses, code traverse through the steps in the legs, then depending on the weighing factor we compute the desired distance or time as shown below ```
+  For each of the requested responses, code traverses through the steps in the legs, then depending on the weighting factor we compute the desired distance or time as shown below ```
 for (var n = 0; n < steps.length; n++) {
 
 		if(ISOCHRONE)

@@ -120,7 +120,7 @@ tags = ["tilestache"]
   };
 
 ```javascript
- and then we simply add this overlay to map to overlayMapTypes . ```
+ and then we simply add this overlay to map to overlayMapTypes. ```
 map = new google.maps.Map(document.getElementById('map-canvas'),
       mapOptions);
     map.overlayMapTypes.insertAt(

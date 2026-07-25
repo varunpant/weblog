@@ -50,7 +50,7 @@ class Employee {
 ```
  ### Inheritance
 
-  In current JavaScript, Inheritance is prototypical, which to laymen is a keyword and also lets you override the constructer. Inheritance can be defined like this ChildClassName.prototype = new ParentClass(); To Illustrate, consider this example ```
+  In current JavaScript, Inheritance is prototypical, which to laymen is a keyword and also lets you override the constructor. Inheritance can be defined like this ChildClassName.prototype = new ParentClass(); To Illustrate, consider this example ```
 
 function Janitor(name) {
  this.name = name;

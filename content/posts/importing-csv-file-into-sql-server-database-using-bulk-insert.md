@@ -18,11 +18,11 @@ BULK INSERT  from 'C:\sourceFile.csv' WITH ( FIELDTERMINATOR =',', ROWTERMINATOR
 ```
  and that's it, the command will automatically read csv file, try to do any default type conversion(determined by the TargetTable's column types) and will fail if there are any errors. 
 
-  There are many other properties which can be set to make import easy ti handle, the ones I typically use are ```
+  There are many other properties which can be set to make import easy to handle, the ones I typically use are ```
 GO
 BULK INSERT  from 'C:\sourceFile.csv' WITH ( FIELDTERMINATOR =',', ROWTERMINATOR ='\n', CODEPAGE='RAW',--Helps in Determining the source/destination Encoding (UTF8 etc) MaxErrors = 999999-- This will allow 999999 errors to be ignored before the whole import fails. This is a workaround as its not possible to tell the importer to ignore errors completely. ) 
 ```
- Here is a full syntax and supported properties, for their explanation, please visit < href="http://msdn.microsoft.com/en-us/library/aa225968(v=sql.80).aspx" >this 
+ Here is a full syntax and supported properties, for their explanation, please visit [this MSDN reference](http://msdn.microsoft.com/en-us/library/aa225968(v=sql.80).aspx). 
 
 
 

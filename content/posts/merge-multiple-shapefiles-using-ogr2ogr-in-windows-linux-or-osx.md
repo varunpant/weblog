@@ -48,7 +48,7 @@ ogr2ogr -f “esri shapefile” -update -append merged.shp %f -nln Merged )
 
  ### Copying Ordinance Survey Vector Map shape files into singular folders
 
- Incase you are looking at a help full script to copy all similar named shape files from grid folders into dedicated layer named folders using python then I have a goodie for you ```
+ In case you are looking at a helpful script to copy all similar named shape files from grid folders into dedicated layer named folders using python then I have a goodie for you ```
 import fnmatch
 import os
 import shutil

@@ -10,7 +10,7 @@ tags = ["html5","maps","javascript"]
 
 HTML5 Geolocation is a feature which allows the browser on a computer or a mobile phone, to acquire the position from the wifi, 2g/3g/4g network or GPS.
 
- The HTML Geolocation API is used to get the geographical position of a user. Since this can compromise user privacy, the position is not available unless the user approves it. The simplest way to use it through navigator.geolocation object ```
+ The HTML Geolocation API is used to get the geographical position of a user. Since this can compromise user privacy, the position is not available unless the user approves it. The simplest way to use it is through navigator.geolocation object ```
 if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition);
 
@@ -58,7 +58,7 @@ function showError(error) {
 ```
  
 
-  Generally one would constantly need to acquire the current position of the device, for such a usecase there is another built in method called watchPosition The sinature will remind you of setTimeout and clearTimeout built in methods. ```
+  Generally one would constantly need to acquire the current position of the device, for such a use case there is another built-in method called watchPosition The signature will remind you of setTimeout and clearTimeout built in methods. ```
 		//This will start calling showPosition in a timedout manner where variable wpid acts as a reference.
 		var wpid=navigator.geolocation.watchPosition(showPosition, geo\_error, {enableHighAccuracy:true, maximumAge:30000, timeout:27000});
 
