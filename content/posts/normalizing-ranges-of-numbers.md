@@ -16,9 +16,9 @@ Range Normalization is a [normalization](http://www.heatonresearch.com/wiki/Norm
 
   
 
- [![eq1](http://varunpant.com/static/resources/eq1_thumb.png "eq1")](http://varunpant.com/static/resources/eq1_2.png)
+ [![eq1](/resources/eq1_thumb.png "eq1")](/resources/eq1_2.png)
 
- [![eq2](http://varunpant.com/static/resources/eq2_thumb.png "eq2")](http://varunpant.com/static/resources/eq2_2.png)
+ [![eq2](/resources/eq2_thumb.png "eq2")](/resources/eq2_2.png)
 
  translated to Python 
 

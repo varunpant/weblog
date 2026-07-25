@@ -35,5 +35,5 @@ Its been a while since my last post, had been busy with office work…sigh!!!
 ```
  The choice of display entity(acting as viewport and display canvas) is [WritableBitmap](http://msdn.microsoft.com/en-us/library/system.windows.media.imaging.writeablebitmap.aspx), and the rest is pretty much fun to play.
 
- [Click here to watch demo ](http://varunpant.com/static/resources/Silverlight/water.html) 
+ [Click here to watch demo ](/resources/Silverlight/water.html) 
 

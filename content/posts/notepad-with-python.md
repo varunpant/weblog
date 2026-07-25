@@ -16,7 +16,7 @@ After reading an excellent article by [Kazi Manzur Rashid](http://weblogs.asp.ne
 
  In order to Run python script from Run menu in Notepad++ you must Open Run > Run (or simply press F5), in the window that opens
 
-  [ ![notepad_Run](http://www.varunpant.com/static/resources/notepad_Run_thumb.png "notepad_Run") ](http://www.varunpant.com/static/resources/notepad_Run.png) 
+  [ ![notepad_Run](/resources/notepad_Run_thumb.png "notepad_Run") ](/resources/notepad_Run.png) 
 
   cmd /K "$(FULL\_CURRENT\_PATH)"  this command assumes that Python path i.e.
 

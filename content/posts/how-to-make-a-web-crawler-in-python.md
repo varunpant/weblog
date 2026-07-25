@@ -14,7 +14,7 @@ Here is a very simple web crawler in python
 import sys, thread, Queue, re, urllib, urlparse, time, os, sys
 dupcheck = set()  
 q = Queue.Queue(100) 
-q.put("http://www.varunpant.com") 
+q.put("/") 
 def queueURLs(html, origLink): 
     for url in re.findall(''']+href=["'](.[^"']+)["']''', html, re.I): 
         link = url.split("#", 1)[0] if url.startswith("http") else '{uri.scheme}://{uri.netloc}'.format(uri=urlparse.urlparse(origLink)) + url.split("#", 1)[0] 

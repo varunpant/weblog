@@ -12,7 +12,7 @@ After ages of constantly being one of the most used browsers as well as a seriou
 
  So I was going through various experiments done with Canvas and came across a great example on [Liquid Particle physics simulation](http://spielzeugz.de/html5/liquid-particles.html), which amazingly is written in JavaScript and Canvas element, I was so mesmerized by the application that I had to port it to [SilverLight](http://msdn.microsoft.com/en-us/bb187358.aspx), using [WritableBitmap](http://msdn.microsoft.com/en-us/library/system.windows.media.imaging.writeablebitmap.aspx).
 
- [ ![Liquid Particle](http://www.varunpant.com/static/resources/lqdPrticle_thumb.png "Liquid Particle")](http://www.varunpant.com/static/resources/lqdPrticle.png)
+ [ ![Liquid Particle](/resources/lqdPrticle_thumb.png "Liquid Particle")](/resources/lqdPrticle.png)
 
- [Click Here to watch Demo. ](http://varunpant.com/static/resources/ParticlesSilverLight.html)
+ [Click Here to watch Demo. ](/resources/ParticlesSilverLight.html)
 

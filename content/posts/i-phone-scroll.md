@@ -16,7 +16,7 @@ One of the amazing features of i-phone user interface is smooth panning/scrollin
 
  I have been experimenting with various techniques to bring out similar effect using JavaScript and HTML, I am not quite sure if this would be useful in its present form but with some modifications maybe this sample could prove its worthiness somewhere.
 
- [![iphone](http://www.varunpant.com/static/resources/iphone_thumb_1.png "iphone")](http://www.varunpant.com/static/resources/iphone_1.png)
+ [![iphone](/resources/iphone_thumb_1.png "iphone")](/resources/iphone_1.png)
 
  The code involved is also very little.
 

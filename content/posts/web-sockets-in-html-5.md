@@ -69,5 +69,5 @@ sock.onclose = function (e) {
 ```
   and that's it!!! I plan to add some more examples and perhaps come with something more concrete later, till then I hope you enjoy using this code sample and enhancing it as you desire. 
 
- [A complete example in c# can be downloaded from here ](http://www.varunpant.com/demo/WebSocketServer.rar)
+ [A complete example in c# can be downloaded from here ](/demo/WebSocketServer.rar)
 

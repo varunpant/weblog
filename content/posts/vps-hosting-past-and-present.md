@@ -8,7 +8,7 @@ description = ""
 tags = ["general",".net","web","linode"]
 +++
 
-I had been hosting this blog in the past for an extremely competitive (read cheap) price [here](http://www.arvixe.com/asp_net_web_hosting) at [Arvixe](http://www.arvixe.com/). I was using ASP.net based blogging software called [BlogEngine](http://www.dotnetblogengine.net/). Overall I would describe my experience as pleasant. Arvixe is a great Hosting Provider, has good up time and has plans which are easy on the pocket, and does almost all the common stuff like emails and cpanel ,blah blah that other hosting provider do, but kinda does it on a low price. I was a happy blogger for an year although I could only manage close to 8 posts and a few [demos](http://varunpant.com/lab) in that time.
+I had been hosting this blog in the past for an extremely competitive (read cheap) price [here](http://www.arvixe.com/asp_net_web_hosting) at [Arvixe](http://www.arvixe.com/). I was using ASP.net based blogging software called [BlogEngine](http://www.dotnetblogengine.net/). Overall I would describe my experience as pleasant. Arvixe is a great Hosting Provider, has good up time and has plans which are easy on the pocket, and does almost all the common stuff like emails and cpanel ,blah blah that other hosting provider do, but kinda does it on a low price. I was a happy blogger for an year although I could only manage close to 8 posts and a few [demos](/lab) in that time.
 
  
 >  Enter [Linode](http://www.linode.com/).

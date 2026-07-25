@@ -8,7 +8,7 @@ description = ""
 tags = ["animation","fun","simulation"]
 +++
 
- [ ![limbo_psn](http://varunpant.com/static/resources/limbo_psn_thumb_1.jpg "limbo_psn") ](http://varunpant.com/static/resources/limbo_psn_4.jpg) 
+ [ ![limbo_psn](/resources/limbo_psn_thumb_1.jpg "limbo_psn") ](/resources/limbo_psn_4.jpg) 
 
  LIMBO is a horrifically beautiful, monochrome or rather a gray-scale purgatory painted perhaps while watching Tim burton movie on the side. It was published initially in Jul 2010 by [Microsoft Game Studios](http://en.wikipedia.org/wiki/Microsoft_Game_Studios)(XBLA) and [Playdead](http://en.wikipedia.org/wiki/Playdead)(PSN, Windows), and then later released for Windows platform by [Steam](http://en.wikipedia.org/wiki/Steam_(software)).
 

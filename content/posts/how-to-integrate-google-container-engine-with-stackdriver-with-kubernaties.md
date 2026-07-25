@@ -16,14 +16,14 @@ Most folks have been using [Grafana](http://grafana.org/) or something [similar]
 
  Well, the easiest way to check if [Stackdriver](https://app.google.stackdriver.com/) is configured is to issue a command
 
- gcloud container clusters describe <cluster-name> If the response contains something like monitoringService: monitoring.googleapis.com  then yer all good and you can simply go and visit <https://app.google.stackdriver.com/gke> link which should point you to your cluster.
+ gcloud container clusters describe `<cluster-name>` If the response contains something like monitoringService: monitoring.googleapis.com  then yer all good and you can simply go and visit <https://app.google.stackdriver.com/gke> link which should point you to your cluster.
 
  ![](/media/image_6619659342091470328330123.png)   
  
 
  otherwise issue this command to register sinks with monitoring.googleapis.com
 
- gcloud alpha container clusters update <clustername> --monitoring-service=monitoring.googleapis.com
+ gcloud alpha container clusters update `<clustername>` --monitoring-service=monitoring.googleapis.com
 
  Hope this helps
 

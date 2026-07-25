@@ -1,0 +1,49 @@
+<!-- Non-blocking cookie consent bar. Fixed to the bottom, never overlays a modal,
+     never traps focus, and the page stays fully usable if it is ignored.
+     Wired to Google Consent Mode v2 (defaults set in partials/extended_head.html). -->
+<div id="consent-banner" class="consent" role="region" aria-label="Cookie consent" hidden>
+  <p class="consent__text">
+    This site uses cookies for analytics and ads. You can accept or decline —
+    the site works either way. See the
+    <a href="/arttracer/privacy/">privacy policy</a>.
+  </p>
+  <div class="consent__actions">
+    <button type="button" class="consent__btn consent__btn--accept" data-consent="granted">Accept</button>
+    <button type="button" class="consent__btn" data-consent="denied">Decline</button>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var KEY = "vp-consent";
+    var el = document.getElementById("consent-banner");
+    if (!el) return;
+
+    function read() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
+    function write(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
+
+    function apply(choice) {
+      var granted = choice === "granted";
+      if (typeof gtag === "function") {
+        gtag("consent", "update", {
+          ad_storage: granted ? "granted" : "denied",
+          ad_user_data: granted ? "granted" : "denied",
+          ad_personalization: granted ? "granted" : "denied",
+          analytics_storage: granted ? "granted" : "denied"
+        });
+      }
+    }
+
+    // Only surface the bar when no choice has been recorded yet.
+    if (!read()) el.hidden = false;
+
+    el.addEventListener("click", function (e) {
+      var btn = e.target.closest("[data-consent]");
+      if (!btn) return;
+      var choice = btn.getAttribute("data-consent");
+      write(choice);
+      apply(choice);
+      el.hidden = true;
+    });
+  })();
+</script>

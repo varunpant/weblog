@@ -7,6 +7,14 @@ disqusShortname = "varunpant"
 [pagination]
 pagerSize = 5
 
+# Posts contain hand-authored <img> and <div> markup (no <script> anywhere).
+# With the default unsafe=false, Goldmark silently dropped it and warned on
+# every build. All content here is first-party, so passing it through is safe.
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
 [services]
 [services.googleAnalytics]
 # GA4 property "varuns blog" (stream 15323880732). Hugo's internal template
@@ -31,18 +39,25 @@ id = "G-P8WGKXR03S"
 [languages]
   [languages.en]
     title = "Varun Pant"
-    subtitle = "WebLog"
-    keywords = "Cloud,maps,GIS,Google Cloud,Google Maps,Openlayer,Javascript,go,Hadoop,BigData,Spark"
     copyright = ""
-    menuMore = "Show more"
-    writtenBy = "Varun Pant"
-    readMore = "Read more"
-    readOtherPosts = "Read other posts"
-    newerPosts = "Newer posts"
-    olderPosts = "Older posts"
-    minuteReadingTime = "min read"
-    dateFormatSingle = "2006-01-02"
-    dateFormatList = "2006-01-02"
+
+    # These are read by the theme as $.Site.Params.*, so they must live under
+    # [languages.en.params] — at language level Hugo does not expose them as
+    # params and every one of them silently falls back to the theme default
+    # (which is why the homepage <title> had no subtitle and the keywords
+    # meta tag rendered empty).
+    [languages.en.params]
+      subtitle = "WebLog"
+      keywords = "Cloud,maps,GIS,Google Cloud,Google Maps,Openlayer,Javascript,go,Hadoop,BigData,Spark"
+      menuMore = "Show more"
+      writtenBy = "Varun Pant"
+      readMore = "Read more"
+      readOtherPosts = "Read other posts"
+      newerPosts = "Newer posts"
+      olderPosts = "Older posts"
+      minuteReadingTime = "min read"
+      dateFormatSingle = "2006-01-02"
+      dateFormatList = "2006-01-02"
 
     [languages.en.params.logo]
       logoText = "Varun Pant"

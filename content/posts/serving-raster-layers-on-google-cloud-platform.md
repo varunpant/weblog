@@ -31,7 +31,7 @@ In this blog post, I will write about using [Google cloud storage](https://cloud
 
  You can see the differences in the two examples below, which show a typical tiles file structure (**Z/X/Y.png**), where, in the 4th X column of zoom level 4, there are two images for the Y coordinates. 
 
- [![image](http://varunpant.com/static/resources/image_thumb.png "image")](http://varunpant.com/static/resources/image_2.png)
+ [![image](/resources/image_thumb.png "image")](/resources/image_2.png)
 
  Note that their names are different based on whether counting began at the **top left** or **bottom left**.
 
@@ -69,7 +69,7 @@ In this blog post, I will write about using [Google cloud storage](https://cloud
 ```
  Here is how it looks. 
 
- [![image](http://varunpant.com/static/resources/image_thumb_1.png "image")](http://varunpant.com/static/resources/image_4.png)
+ [![image](/resources/image_thumb_1.png "image")](/resources/image_4.png)
 
  Now we can easily extract the mapnik xml from the tilemill. 
 
@@ -128,19 +128,19 @@ google.maps.event.addDomListener(window, 'load', initialize);
 ```
  If all goes well, then this is how the end result will look like.
 
- [![image](http://varunpant.com/static/resources/image_thumb_2.png "image")](http://varunpant.com/static/resources/image_6.png)
+ [![image](/resources/image_thumb_2.png "image")](/resources/image_6.png)
 
  Here is a [gist](https://gist.github.com/varunpant/aad7e87ea1c8af8a673a) with complete html mark-up.
 
  As stated above, tilestache also allows you to just create static images on the disk instead of serving them, which is very useful if one wants to serve these tiles fronted by a proxy or load it to cloud like Google or amazon data storage.
 
- The Command to do so is tilestache-seed.py –**c** <config name>.cfg –**l** <layername> –**b** <bounding box> **-e** png <list of zoom levels to render>
+ The Command to do so is tilestache-seed.py –**c** `<config name>`.cfg –**l** `<layername>` –**b** `<bounding box>` **-e** png `<list of zoom levels to render>`
 
  In my case, I will use the bounding box of my shapefile and the command goes like this tilestache-seed.py -c ne.cfg -l NE -b 18.9161900000001420 -171.7911106028911700 71.3577635769417500 -66.9646599999999810 -e png 1 2 3 4 5 6 7 8 
 
  This is how the folders are created in my **cache directory**, which is configured in the **ne.cfg** shown above.
 
- [![image](http://varunpant.com/static/resources/image_thumb_3.png "image")](http://varunpant.com/static/resources/image_8.png)
+ [![image](/resources/image_thumb_3.png "image")](/resources/image_8.png)
 
   
 
@@ -151,17 +151,17 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
  1. Sign in to the [Google Developers Console](https://console.developers.google.com/) and click Create Project. 
 
- [![image](http://varunpant.com/static/resources/image_thumb_4.png "image")](http://varunpant.com/static/resources/image_10.png)
+ [![image](/resources/image_thumb_4.png "image")](/resources/image_10.png)
 
  2.Enable billing. 
 
  3. Create a Google Cloud storage bucket, choose the appropriate location and storage class.
 
- [![image](http://varunpant.com/static/resources/image_thumb_5.png "image")](http://varunpant.com/static/resources/image_12.png)
+ [![image](/resources/image_thumb_5.png "image")](/resources/image_12.png)
 
  And that's it you are all set. Finally click the bucket name and you will have the following options 
 
- [![image](http://varunpant.com/static/resources/image_thumb_6.png "image")](http://varunpant.com/static/resources/image_14.png)
+ [![image](/resources/image_thumb_6.png "image")](/resources/image_14.png)
 
  The easiest way to upload folders and tiles here is to click upload folder button and point to the folders on the disk. This is by far the easiest method, however in our case we have only generated tiles for first 8 zoom levels, so they are not much in number and using a web UI upload mechanism will work.
 
@@ -201,7 +201,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
  8. Select Interoperable Access. 
  10. You can find **gs\_access\_key\_id** ,**gs\_secret\_access\_key** for your project. 
  
- [![image](http://varunpant.com/static/resources/image_thumb_7.png "image")](http://varunpant.com/static/resources/image_16.png)
+ [![image](/resources/image_thumb_7.png "image")](/resources/image_16.png)
 
  Once configured run the tile seed command again and now, the tiles would be directly stored in the bucket, to access them use the following format <http://storage.googleapis.com/><bucket\_name>/<path>/<tile.png>.
 

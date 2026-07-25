@@ -14,11 +14,11 @@ This is going to be a short article which will illustrate importing and exportin
 
  Assuming you already have a table in place with the right columns, the command is as follows
 
- COPY <TargetTableName> **FROM** '/path/to/csv/SourceCSVFile.csv' DELIMITERS '**,**' CSV;
+ COPY `<TargetTableName>` **FROM** '/path/to/csv/SourceCSVFile.csv' DELIMITERS '**,**' CSV;
 
  #### Exporting a CSV from a table.
 
- COPY <SourceTableName> **TO** '/path/to/csv/TargetCSVFile' DELIMITERS '**,**' CSV;
+ COPY `<SourceTableName>` **TO** '/path/to/csv/TargetCSVFile' DELIMITERS '**,**' CSV;
 
  Its important to mention here that generally if your data is in unicode or need strict Encoding, then Always set client\_encoding before running any of the above mentioned commands.
 
@@ -32,17 +32,17 @@ This is going to be a short article which will illustrate importing and exportin
 
  A quick fix is to modify the export command by specifying what you would prefer as a null placeholder in exported CSV
 
- COPY <SourceTableName> TO '/path/to/csv/TargetCSVFile' DELIMITERS ',' **NULL as E''**;
+ COPY `<SourceTableName>` TO '/path/to/csv/TargetCSVFile' DELIMITERS ',' **NULL as E''**;
 
  Another common requirement is import or export with the header.
 
  #### Import CSV to table with Header for columns present in first row of csv file.
 
- COPY <TargetTableName> **FROM** '/path/to/csv/SourceCSVFile.csv' DELIMITERS ',' CSV **HEADER**
+ COPY `<TargetTableName>` **FROM** '/path/to/csv/SourceCSVFile.csv' DELIMITERS ',' CSV **HEADER**
 
  #### Export a table to CSV with Headers present in the first row.
 
- COPY <SourceTableName> **TO** '/path/to/csv/TargetCSVFile' DELIMITERS ',' CSV **HEADER**;
+ COPY `<SourceTableName>` **TO** '/path/to/csv/TargetCSVFile' DELIMITERS ',' CSV **HEADER**;
 
  A complete list of all supported settings can be found [here](http://www.postgresql.org/docs/9.1/static/sql-copy.html)
 

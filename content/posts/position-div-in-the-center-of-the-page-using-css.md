@@ -39,9 +39,9 @@ When I first started web programming, creating a center aligned div was one of t
  **Here is how the div would look inside view port without margins**   
 
 
- [![image center align top](http://varunpant.com/static/resources/imgalign2_2.png "image center align top")](http://varunpant.com/static/resources/imgalign2_2.png)
+ [![image center align top](/resources/imgalign2_2.png "image center align top")](/resources/imgalign2_2.png)
 
- **This is how it looks with them (Properly aligned to the center)** [![image center align ](http://varunpant.com/static/resources/divalighn1_4.png "image center align")](http://varunpant.com/static/resources/divalighn1_4.png)
+ **This is how it looks with them (Properly aligned to the center)** [![image center align ](/resources/divalighn1_4.png "image center align")](/resources/divalighn1_4.png)
 
 
 

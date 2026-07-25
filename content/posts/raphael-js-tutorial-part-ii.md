@@ -8,7 +8,7 @@ description = ""
 tags = ["how to","fun","javascript","programming","raphael js"]
 +++
 
-This is the second part of the tutorial about getting started with [Raphael.js](http://raphaeljs.com/). To see the first part go [here](http://www.varunpant.com/posts/raphael-js-tutorial-part-i).
+This is the second part of the tutorial about getting started with [Raphael.js](http://raphaeljs.com/). To see the first part go [here](/posts/raphael-js-tutorial-part-i).
 
  #### Writing Text with Raphael
 

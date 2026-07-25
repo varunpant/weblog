@@ -67,7 +67,7 @@ function showError(error) {
 	    // wpid=false;
 
 ```
- Finally there is a full working example [here](http://www.varunpant.com/static/resources/google/geolocation.html). 
+ Finally there is a full working example [here](/resources/google/geolocation.html). 
 
  
 

@@ -27,7 +27,7 @@ tags = ["general","python","programming","utility","how to","web"]
 
   First we'll need to download [setuptools](http://pypi.python.org/pypi/setuptools).Download the exe and run it. 
 
-  The directory that contains easy\_install is by default c:\<pythonfolder>\Scripts 
+  The directory that contains easy\_install is by default c:\`<pythonfolder>`\Scripts 
 
   All you need to do now is append %PYTHON\_HOME%\Scripts, separated by a semicolon; at the end of path variable in your environment settings as instructed above, as usual enter echo %PATH% to confirm change, then open command prompt and type easy\_install and you should see a warning (its ok we haven't passed in a package name or url ) 
 

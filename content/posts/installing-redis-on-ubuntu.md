@@ -12,7 +12,7 @@ tags = ["redis","ubuntu","how to","utility"]
 
  There are two ways of getting this done, one is perhaps an easy and less verbose method and it involves using an alternative repository [Dotdeb.](http://www.dotdeb.org/) 
 
- A while ago I had posted a [tutorial](http://www.varunpant.com/posts/how-to-set-up-redis-in-ubuntu-linux) about installing redis from the [googlecode](http://redis.googlecode.com/files/redis-2.2.4.tar.gz) repo, but things have changed since then and here I post a fairly recent way of installing it.
+ A while ago I had posted a [tutorial](/posts/how-to-set-up-redis-in-ubuntu-linux) about installing redis from the [googlecode](http://redis.googlecode.com/files/redis-2.2.4.tar.gz) repo, but things have changed since then and here I post a fairly recent way of installing it.
 
  #### Install using aptitude and Dotdeb repo
 

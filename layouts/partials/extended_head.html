@@ -1,3 +1,26 @@
+<!-- Google Consent Mode v2 defaults.
+     MUST run before gtag.js/adsbygoogle.js so the denied defaults are in the
+     dataLayer before any config command fires. Consent is granted only when the
+     visitor accepts in the banner (partials/consent-banner.html). -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  (function () {
+    var stored = null;
+    try { stored = localStorage.getItem("vp-consent"); } catch (e) {}
+    var granted = stored === "granted";
+    gtag("consent", "default", {
+      ad_storage: granted ? "granted" : "denied",
+      ad_user_data: granted ? "granted" : "denied",
+      ad_personalization: granted ? "granted" : "denied",
+      analytics_storage: granted ? "granted" : "denied",
+      functionality_storage: "granted",
+      security_storage: "granted",
+      wait_for_update: 500
+    });
+  })();
+</script>
+
 <!-- Google AdSense loader.
      Only the loader belongs in <head>; the <ins> ad units must sit in the body
      (top banner: partials/header.html, footer banner: partials/extended_footer.html). -->

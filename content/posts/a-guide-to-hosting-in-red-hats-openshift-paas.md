@@ -16,7 +16,7 @@ In this post, I am going to write about [OpenShift](https://openshift.redhat.com
 
  A cartridge is like a capability which an application can use, for eg: mysql, mongodb, phpmyadmin etc. There are some officially supported ones available for quick inclusion otherwise users can [create](https://openshift.redhat.com/community/wiki/introduction-to-cartridge-building) their own as well, even though thats a tricky task.
 
- [![](http://www.varunpant.com/static/resources/image_4.png)]($image6.png)
+ [![](/resources/image_4.png)]($image6.png)
 
  I also like the [pricing structure](https://openshift.redhat.com/community/developers/pricing) of OpenShift (Developers Preview), which may be what many developers are looking for, however the web site says right at the top that it may change in future.
 

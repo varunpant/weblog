@@ -7,12 +7,12 @@ Importing a table from CSV
 &lt;a href="#importing-a-table-from-csv" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
 &lt;/h4&gt;
 &lt;p&gt;Assuming you already have a table in place with the right columns, the command is as follows&lt;/p&gt;
-&lt;p&gt;COPY &lt;!-- raw HTML omitted --&gt; &lt;strong&gt;FROM&lt;/strong&gt; &amp;lsquo;/path/to/csv/SourceCSVFile.csv&amp;rsquo; DELIMITERS &amp;lsquo;&lt;strong&gt;,&lt;/strong&gt;&amp;rsquo; CSV;&lt;/p&gt;
+&lt;p&gt;COPY &lt;code&gt;&amp;lt;TargetTableName&amp;gt;&lt;/code&gt; &lt;strong&gt;FROM&lt;/strong&gt; &amp;lsquo;/path/to/csv/SourceCSVFile.csv&amp;rsquo; DELIMITERS &amp;lsquo;&lt;strong&gt;,&lt;/strong&gt;&amp;rsquo; CSV;&lt;/p&gt;
 &lt;h4 id="exporting-a-csv-from-a-table"&gt;
 Exporting a CSV from a table.
 &lt;a href="#exporting-a-csv-from-a-table" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
 &lt;/h4&gt;
-&lt;p&gt;COPY &lt;!-- raw HTML omitted --&gt; &lt;strong&gt;TO&lt;/strong&gt; &amp;lsquo;/path/to/csv/TargetCSVFile&amp;rsquo; DELIMITERS &amp;lsquo;&lt;strong&gt;,&lt;/strong&gt;&amp;rsquo; CSV;&lt;/p&gt;</description></item><item><title>sqlite3 Bulk Import CSV from command line</title><link>https://varunpant.com/posts/sqlite3-bulk-import-csv-from-command-line/</link><pubDate>Tue, 29 Jan 2013 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/sqlite3-bulk-import-csv-from-command-line/</guid><description>
+&lt;p&gt;COPY &lt;code&gt;&amp;lt;SourceTableName&amp;gt;&lt;/code&gt; &lt;strong&gt;TO&lt;/strong&gt; &amp;lsquo;/path/to/csv/TargetCSVFile&amp;rsquo; DELIMITERS &amp;lsquo;&lt;strong&gt;,&lt;/strong&gt;&amp;rsquo; CSV;&lt;/p&gt;</description></item><item><title>sqlite3 Bulk Import CSV from command line</title><link>https://varunpant.com/posts/sqlite3-bulk-import-csv-from-command-line/</link><pubDate>Tue, 29 Jan 2013 00:00:00 +0000</pubDate><guid>https://varunpant.com/posts/sqlite3-bulk-import-csv-from-command-line/</guid><description>
 &lt;p&gt;I absolutely love &lt;a href="http://www.sqlite.org/"&gt;SQLite&lt;/a&gt;, be it windows, linux or mac, this lightweight database never stops to amaze me.&lt;/p&gt;
 &lt;p&gt;A few days ago I wanted to import a chunk of CSV data, which was 4 GB in size into a table in SQLite.&lt;/p&gt;
 &lt;p&gt;I generally use Firefox &amp;rsquo;s &lt;a href="https://addons.mozilla.org/en-us/firefox/addon/sqlite-manager/"&gt;sqlite-manager&lt;/a&gt; plug-in for usual tasks with SQLite database ,hence decided to use the import interface.&lt;/p&gt;

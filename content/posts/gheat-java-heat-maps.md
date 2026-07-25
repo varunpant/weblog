@@ -8,7 +8,7 @@ description = ""
 tags = ["utility","gis","general","java"]
 +++
 
-[![heat_map](http://varunpant.com/static/resources/heat_map_thumb.jpg "heat_map")](http://varunpant.com/static/resources/heat_map_2.jpg) 
+[![heat_map](/resources/heat_map_thumb.jpg "heat_map")](/resources/heat_map_2.jpg) 
 
  A **heat map** is a graphical representation of data where the individual values contained in a [matrix](http://en.wikipedia.org/wiki/Matrix_(mathematics)) are represented as colors.
 

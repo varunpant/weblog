@@ -18,7 +18,7 @@ tags = ["tilestache"]
 
  ### TileMill and TileStache
 
-  Ok, so now lets quickly create a map server side. In my Map I have a Uk District polygon layer which has been computed to get a count score with UK Crime DataSet November 2014, I simply used Point inside a polygon feature in Qgis to get a score. Then I styled the data using Carto Css in TileMill to a get a Heat Map Like effect. ![](http://www.varunpant.com/static/resources/tilestachedemo/image00.png) 
+  Ok, so now lets quickly create a map server side. In my Map I have a Uk District polygon layer which has been computed to get a count score with UK Crime DataSet November 2014, I simply used Point inside a polygon feature in Qgis to get a score. Then I styled the data using Carto Css in TileMill to a get a Heat Map Like effect. ![](/resources/tilestachedemo/image00.png) 
 
  Here is the Carto Css if you are wondering.
 
@@ -76,7 +76,7 @@ tags = ["tilestache"]
 ```
  
 
-  Its very easy to export Mapnik Configuration xml of your TileMill Project. ![](http://www.varunpant.com/static/resources/tilestachedemo/image02.png) 
+  Its very easy to export Mapnik Configuration xml of your TileMill Project. ![](/resources/tilestachedemo/image02.png) 
 
   This is my Map configuration for TileStache. 
   ```javascript
@@ -129,9 +129,9 @@ map = new google.maps.Map(document.getElementById('map-canvas'),
 ```
  and thats it, we are done. Here is a screenshot of how the map looks. 
 
-  ![](http://www.varunpant.com/static/resources/tilestachedemo/image01.png) 
+  ![](/resources/tilestachedemo/image01.png) 
 
-  I have added a working sample [here ](http://www.varunpant.com/static/resources/tilestachedemo/distribution.zip), in case you wanna check out the full source code. Hope this helps. 
+  I have added a working sample [here ](/resources/tilestachedemo/distribution.zip), in case you wanna check out the full source code. Hope this helps. 
 
  
 

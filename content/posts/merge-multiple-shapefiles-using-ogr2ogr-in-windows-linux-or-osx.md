@@ -36,11 +36,11 @@ ogr2ogr -f “esri shapefile” -update -append merged.shp %f -nln Merged )
 
  Open Qgis and click **Vector** on menu bar, then click on **Data Management Tools** and finally on **Merge shapefiles to one**
 
- ![](http://www.varunpant.com/static/resources/QgisMerge.png)
+ ![](/resources/QgisMerge.png)
 
  This will open a dialog, which will ask for the input source folder and the destination file name, and thats it, click **OK**to begin the process.
 
- ![](http://www.varunpant.com/static/resources/qgismergeD.png)
+ ![](/resources/qgismergeD.png)
 
  ### Creating Index using shapeindex
 

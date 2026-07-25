@@ -15,7 +15,7 @@ tags = ["programming","python","utility","web","how to"]
  Install on windows
 ------------------
 
- If you haven't configured easy\_install on windows, then read [ this ](http://www.varunpant.com/posts/how-to-setup-easy_install-on-windows) article.
+ If you haven't configured easy\_install on windows, then read [ this ](/posts/how-to-setup-easy_install-on-windows) article.
 
  Once easy\_install has been configured believe it or not, all you have to do is open a command prompt and type
 

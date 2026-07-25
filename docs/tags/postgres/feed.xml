@@ -5,9 +5,9 @@ Importing a table from CSV
 &lt;a href="#importing-a-table-from-csv" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
 &lt;/h4&gt;
 &lt;p&gt;Assuming you already have a table in place with the right columns, the command is as follows&lt;/p&gt;
-&lt;p&gt;COPY &lt;!-- raw HTML omitted --&gt; &lt;strong&gt;FROM&lt;/strong&gt; &amp;lsquo;/path/to/csv/SourceCSVFile.csv&amp;rsquo; DELIMITERS &amp;lsquo;&lt;strong&gt;,&lt;/strong&gt;&amp;rsquo; CSV;&lt;/p&gt;
+&lt;p&gt;COPY &lt;code&gt;&amp;lt;TargetTableName&amp;gt;&lt;/code&gt; &lt;strong&gt;FROM&lt;/strong&gt; &amp;lsquo;/path/to/csv/SourceCSVFile.csv&amp;rsquo; DELIMITERS &amp;lsquo;&lt;strong&gt;,&lt;/strong&gt;&amp;rsquo; CSV;&lt;/p&gt;
 &lt;h4 id="exporting-a-csv-from-a-table"&gt;
 Exporting a CSV from a table.
 &lt;a href="#exporting-a-csv-from-a-table" class="h-anchor" aria-hidden="true"&gt;#&lt;/a&gt;
 &lt;/h4&gt;
-&lt;p&gt;COPY &lt;!-- raw HTML omitted --&gt; &lt;strong&gt;TO&lt;/strong&gt; &amp;lsquo;/path/to/csv/TargetCSVFile&amp;rsquo; DELIMITERS &amp;lsquo;&lt;strong&gt;,&lt;/strong&gt;&amp;rsquo; CSV;&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;COPY &lt;code&gt;&amp;lt;SourceTableName&amp;gt;&lt;/code&gt; &lt;strong&gt;TO&lt;/strong&gt; &amp;lsquo;/path/to/csv/TargetCSVFile&amp;rsquo; DELIMITERS &amp;lsquo;&lt;strong&gt;,&lt;/strong&gt;&amp;rsquo; CSV;&lt;/p&gt;</description></item></channel></rss>

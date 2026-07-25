@@ -16,7 +16,7 @@ tags = ["isochrone","javascript","google"]
 
  ### Algorithm
 
- The actual algorithm to calculate Isochrone or Isodistance is perhaps a bit more complicated than the simplistic approach being described here, if you are interested in having a deeper look then I would recommend visiting this [ link ](http://en.wikipedia.org/wiki/Isochrone_map) by OpenStreetMap folks. Here is a [link](https://github.com/varunpant/Google_Isochrone) to my version on github. Open Isochrone.html to take a look at the functionality or visit this hosted [link](http://www.varunpant.com/static/resources/google/Isochrone/isochrone.html). 
+ The actual algorithm to calculate Isochrone or Isodistance is perhaps a bit more complicated than the simplistic approach being described here, if you are interested in having a deeper look then I would recommend visiting this [ link ](http://en.wikipedia.org/wiki/Isochrone_map) by OpenStreetMap folks. Here is a [link](https://github.com/varunpant/Google_Isochrone) to my version on github. Open Isochrone.html to take a look at the functionality or visit this hosted [link](/resources/google/Isochrone/isochrone.html). 
 
  ###  Details
 
@@ -95,7 +95,7 @@ for (var n = 0; n < steps.length; n++) {
 	}
 
 ```
- The whole process can be observed by directions debug lines. ![Isochrone](http://varunpant.com/static/resources/isochrone.gif) 
+ The whole process can be observed by directions debug lines. ![Isochrone](/resources/isochrone.gif) 
 
  
 

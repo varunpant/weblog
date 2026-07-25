@@ -20,7 +20,7 @@ tags = ["python"]
 
  A very simple scraper is created like this
 
- ```import scrapy class MySpider(scrapy.Spider): name = "MySpider" start\_urls = ['https://varunpant.com'] def parse(self, response): # Get page title using xpath. page\_title = response.xpath('//title/text()').extract\_first() print(page\_title) 
+ ```import scrapy class MySpider(scrapy.Spider): name = "MySpider" start\_urls = ['/'] def parse(self, response): # Get page title using xpath. page\_title = response.xpath('//title/text()').extract\_first() print(page\_title) 
 ```
  To **Run**, simply type scrapy runspider scraper.py
 
@@ -48,15 +48,15 @@ tags = ["python"]
  In the simple example above, the code does not extract hyperlinks from the response body, lets modify it to do so.
 
  ```
- import scrapy class MySpider(scrapy.Spider): name = "MySpider" start\_urls = ['https://varunpant.com'] def parse(self, response): all\_links = response.xpath('*//a/@href').extract() for link in all\_links: print(link)
+ import scrapy class MySpider(scrapy.Spider): name = "MySpider" start\_urls = ['/'] def parse(self, response): all\_links = response.xpath('*//a/@href').extract() for link in all\_links: print(link)
 ```
    Line  all\_links = response.xpath('*//a/@href').extract(),  uses xpath and extracts all hyperlinks in the page.
 
- ```/ /contact /archives /feed /posts/integration-testing-with-apache-beam-using-pubsub-and-bigtable-emulators-and-direct-runner http://varunpant.com/posts/integration-testing-with-apache-beam-using-pubsub-and-bigtable-emulators-and-direct-runner#disqus\_thread /posts/gdal-2-on-mac-with-homebrew http://varunpant.com/posts/gdal-2-on-mac-with-homebrew#disqus\_thread /posts/how-to-print-bar-chart-in-chrome-browser-console http://varunpant.com/posts/how-to-print-bar-chart-in-chrome-browser-console#disqus\_thread /posts/how-to-make-https-requests-with-python-httplib2-ssl http://varunpant.com/posts/how-to-make-https-requests-with-python-httplib2-ssl#disqus\_thread /posts/how-to-read-json-from-web-http-request-of-url-via-python-urllib http://varunpant.com/posts/how-to-read-json-from-web-http-request-of-url-via-python-urllib#disqus\_thread /posts/minimum-insertions-to-form-a-palindrome http://varunpant.com/posts/minimum-insertions-to-form-a-palindrome#disqus\_thread /posts/inverse-weighted-distance-interpolation-in-golang http://varunpant.com/posts/inverse-weighted-distance-interpolation-in-golang#disqus\_thread /posts/basic-sorting-algorithms-implemented-in-golang http://varunpant.com/posts/basic-sorting-algorithms-implemented-in-golang#disqus\_thread /posts/reading-and-writing-binary-files-in-go-lang http://varunpant.com/posts/reading-and-writing-binary-files-in-go-lang#disqus\_thread /posts/create-linear-color-gradient-in-go http://varunpant.com/posts/create-linear-color-gradient-in-go#disqus\_thread /?page=2 http://stackoverflow.com/users/95967 https://www.linkedin.com/in/varunpant mailto:varun@varunpant.com https://github.com/varunpant
+ ```/ /contact /archives /feed /posts/integration-testing-with-apache-beam-using-pubsub-and-bigtable-emulators-and-direct-runner /posts/integration-testing-with-apache-beam-using-pubsub-and-bigtable-emulators-and-direct-runner#disqus\_thread /posts/gdal-2-on-mac-with-homebrew /posts/gdal-2-on-mac-with-homebrew#disqus\_thread /posts/how-to-print-bar-chart-in-chrome-browser-console /posts/how-to-print-bar-chart-in-chrome-browser-console#disqus\_thread /posts/how-to-make-https-requests-with-python-httplib2-ssl /posts/how-to-make-https-requests-with-python-httplib2-ssl#disqus\_thread /posts/how-to-read-json-from-web-http-request-of-url-via-python-urllib /posts/how-to-read-json-from-web-http-request-of-url-via-python-urllib#disqus\_thread /posts/minimum-insertions-to-form-a-palindrome /posts/minimum-insertions-to-form-a-palindrome#disqus\_thread /posts/inverse-weighted-distance-interpolation-in-golang /posts/inverse-weighted-distance-interpolation-in-golang#disqus\_thread /posts/basic-sorting-algorithms-implemented-in-golang /posts/basic-sorting-algorithms-implemented-in-golang#disqus\_thread /posts/reading-and-writing-binary-files-in-go-lang /posts/reading-and-writing-binary-files-in-go-lang#disqus\_thread /posts/create-linear-color-gradient-in-go /posts/create-linear-color-gradient-in-go#disqus\_thread /?page=2 http://stackoverflow.com/users/95967 https://www.linkedin.com/in/varunpant mailto:varun@varunpant.com https://github.com/varunpant
 ```
  The final step is to make the parse generator method yield response like so
 
- ```import scrapy class MySpider(scrapy.Spider): name = "MySpider" start\_urls = ['https://varunpant.com'] allowed\_domains = ["varunpant.com"] def parse(self, response): page\_title = response.xpath('//title/text()').extract\_first() print(page\_title) all\_links = response.xpath('*//a/@href').extract() for link in all\_links: yield scrapy.Request( response.urljoin(link), callback=self.parse )
+ ```import scrapy class MySpider(scrapy.Spider): name = "MySpider" start\_urls = ['/'] allowed\_domains = ["varunpant.com"] def parse(self, response): page\_title = response.xpath('//title/text()').extract\_first() print(page\_title) all\_links = response.xpath('*//a/@href').extract() for link in all\_links: yield scrapy.Request( response.urljoin(link), callback=self.parse )
 ```
  This should crawl all hyperlinks found with each page.
 
@@ -64,7 +64,7 @@ tags = ["python"]
 
  Here is a minimalistic code snippet, which saves all crawled pages to the disk.
 
- ```import scrapy import unicodedata import re from pprint import pprint class MySpider(scrapy.Spider): name = "MySpider" allowed\_domains = ["varunpant.com"] start\_urls = ['https://varunpant.com'] def slugify(self,value): value = unicodedata.normalize('NFKD', value).encode('ascii', 'ignore') value = unicode(re.sub('[^\w\s-]', '', value).strip().lower()) value = unicode(re.sub('[-\s]+', '-', value)) return value def save(self,name,content): #save to html in the pages folder p = "pages/%s.html" fn = self.slugify(name) with open(p%name,"w") as f: f.write(content.encode("utf-8")) def parse(self, response): page\_title = response.xpath('//title/text()').extract\_first() page\_body = response.body.decode("utf-8") self.save(page\_title,page\_body) all\_links = response.xpath('*//a/@href').extract() for link in all\_links: yield scrapy.Request( response.urljoin(link), callback=self.parse )
+ ```import scrapy import unicodedata import re from pprint import pprint class MySpider(scrapy.Spider): name = "MySpider" allowed\_domains = ["varunpant.com"] start\_urls = ['/'] def slugify(self,value): value = unicodedata.normalize('NFKD', value).encode('ascii', 'ignore') value = unicode(re.sub('[^\w\s-]', '', value).strip().lower()) value = unicode(re.sub('[-\s]+', '-', value)) return value def save(self,name,content): #save to html in the pages folder p = "pages/%s.html" fn = self.slugify(name) with open(p%name,"w") as f: f.write(content.encode("utf-8")) def parse(self, response): page\_title = response.xpath('//title/text()').extract\_first() page\_body = response.body.decode("utf-8") self.save(page\_title,page\_body) all\_links = response.xpath('*//a/@href').extract() for link in all\_links: yield scrapy.Request( response.urljoin(link), callback=self.parse )
 ```
 
 
