@@ -3,6 +3,9 @@ title = "Privacy Policy"
 date = "2026-07-25"
 author = "Varun Pant"
 url = "/privacy"
+# This page must not track the people reading it. Ships no analytics,
+# no ads, no consent banner and no comments. See partials/no-tracking.html.
+notrack = true
 +++
 
 *Last updated: July 25, 2026*
@@ -15,11 +18,15 @@ Nothing in this website policy applies to them, and nothing in an app's policy
 applies to this website. App pages hosted here carry no analytics, no ads and no
 cookies of any kind.
 
+**This page collects nothing.** It loads no analytics, no ads, no cookies and no
+comments — you can read the policy without being measured for reading it.
+
 ## Summary
 
 This site is a personal blog. There are no accounts, no logins, and nothing is
-sold. Cookies are used for analytics and advertising, and **they are only set if
-you accept them** in the consent banner. Declining leaves the site fully usable.
+sold. On blog pages, cookies are used for analytics and advertising, and **they
+are only set if you accept them** in the consent banner. Declining leaves the
+site fully usable.
 
 ## Cookies and Consent
 

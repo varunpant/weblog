@@ -23,7 +23,7 @@
       {{ end }}
     </div>
 
-    {{ if and site.Config.Services.GoogleAnalytics.ID (not (partial "is-app-page.html" .)) }}
+    {{ if and site.Config.Services.GoogleAnalytics.ID (not (partial "no-tracking.html" .)) }}
       {{ template "_internal/google_analytics.html" . }}
     {{ end }}
   </body>

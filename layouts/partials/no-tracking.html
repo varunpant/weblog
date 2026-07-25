@@ -1,0 +1,10 @@
+{{- /* Returns true for any page that must ship NO analytics, ads, consent
+       banner or comments. Two ways to qualify:
+
+         1. the page is in an app section  (params.appSections in config.toml)
+         2. the page sets  notrack = true  in its front matter
+
+       Used by baseof.html, header.html, extended_head.html and
+       extended_footer.html. */ -}}
+{{- $inAppSection := in (site.Params.appSections | default slice) .Section -}}
+{{- return (or $inAppSection (eq .Params.notrack true)) -}}
